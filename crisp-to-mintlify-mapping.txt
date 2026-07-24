@@ -1,0 +1,81 @@
+# Equip Crisp Helpdesk -> Mintlify Help Center URL Mapping
+# Generated: 2026-07-24 (TEC-7672)
+#
+# Format: crisp_slug -> new_mintlify_slug
+# Crisp URL pattern: https://help.equip.co/en/article/{crisp_slug}/
+# Mintlify URL pattern: https://help.equip.co/{new_slug}
+
+adding-a-video-response-to-equip-assessments-c8mrxw -> /video-response-questions
+adding-removing-team-members-admins-1t2dtln -> /manage-team-members
+anti-cheating-settings-n42w1z -> /anti-cheating-settings
+api-integrations-v51m7f -> /api-integrations
+archiving-an-assessment-fb5swy -> /archive-assessment
+assessment-invitations-vs-preview-1qjcznu -> /invitations-vs-preview
+assessments-tests-questions-the-hierarchy-1lwuvhn -> /assessment-hierarchy
+can-a-candidate-re-attempt-an-assessment-1tm93g -> /candidate-reattempts
+candidate-claims-they-have-submitted-the-assessment-i-cant-see-it-vgjhli -> /candidate-says-submitted
+candidate-faced-or-is-facing-issues-1ip8knq -> /candidate-issues
+candidate-session-recording-151ri06 -> /session-recording
+changing-business-information-after-invoice-issue-17kv4sd -> /change-billing-information
+changing-sender-name-and-email-address-on-email-invites-wcc4k3 -> /custom-sender-email
+chatgpt-ai-usage-detection-1w5w7lz -> /ai-usage-detection
+creating-a-custom-programming-test-19ni041 -> /custom-programming-test
+creating-a-custom-question-bank-quiz-1q1oq6a -> /question-bank-quiz
+credit-deduction-policy-for-assessments-qmfddb -> /credit-deduction-policy
+custom-service-agreements-slas-jo0fg1 -> /custom-slas
+custom-tests-1ijmiji -> /custom-tests
+demo-or-trial-account-1rpi27p -> /demo-or-trial-account
+determining-assessment-duration-w7pubv -> /assessment-duration
+disabling-camera-and-mic-tracking-2ijj3y -> /disable-camera-mic
+do-candidates-see-the-same-or-random-questions-1f3tkgy -> /same-or-random-questions
+downloading-results-and-reports-g1cjo0 -> /download-reports
+email-delivered-opened-clicked-status-11ebjo6 -> /email-status
+email-invitations-credit-deductions-revoke-reclaim-1uwfg7d -> /reclaim-credits
+ensuring-candidates-dont-cheat-ai-proctoring-fxhwzp -> /ai-proctoring
+equip-content-vs-custom-content-1ct7g3d -> /equip-vs-custom-content
+first-purchase-discount-8o5k3s -> /first-purchase-discount
+getting-started-on-equip-k70o7k -> /getting-started
+grading-tests-on-equip-1jbkdfl -> /grading-tests
+how-assessment-urls-in-email-invitations-work-32pz3f -> /invitation-links
+how-can-a-candidate-resume-their-attempt-1qafx3g -> /resume-your-attempt
+how-credits-work-and-how-to-purchase-them-1qybkbb -> /how-credits-work
+how-equip-protects-its-questions-99a4j4 -> /cannot-see-quiz-questions
+how-to-manually-grade-tests-xdniq9 -> /manual-grading
+how-to-unlock-4-questions-3cqmyr -> /preview-assessment
+i-cant-find-a-role-or-skill-i-want-to-assess-for-64q4qt -> /cant-find-role-or-skill
+import-questions-using-excel-1v2d78t -> /import-questions-from-excel
+issues-with-creating-custom-coding-challenges-gwqw44 -> /custom-coding-challenge-issues
+language-support-on-equip-qq7zbc -> /language-support
+negative-points-when-are-they-enabled-can-i-disable-e3s8dg -> /negative-marking
+phone-support-sdinvr -> /contact-support
+previewing-an-assessment-1jgi148 -> /preview-assessment
+proctoring-settings-what-they-are-how-to-change-them-1r09s6c -> /proctoring-settings
+psychometric-tests-opei83 -> /psychometric-tests
+question-limits-per-test-type-k7h2xq -> /question-limits
+question-types-in-custom-quizzes-125r9ku -> /custom-quiz-question-types
+questions-difficulty-levels-and-years-of-experience-10562g2 -> /question-difficulty-levels
+randomize-programming-and-sql-questions-t4x463 -> /randomize-coding-questions
+redirect-url-after-assessment-completion-11bcocj -> /redirect-after-completion
+screen-by-screen-vs-all-at-once-quizzes-1kpnbo7 -> /quiz-display-modes
+sending-email-invitations-to-candidates-rm1ulh -> /email-invitations
+setting-time-limits-for-a-custom-quiz-nkfq1c -> /custom-quiz-time-limits
+sharing-assessment-with-candidates-url-vs-emails-1suhjtv -> /share-url-vs-email
+tds-for-purchases-1fkmsmv -> /tds-for-purchases
+test-scores-and-overall-score-how-assessments-are-evaluated-1qrll7c -> /test-scores-and-overall-score
+test-types-and-mobile-support-1vsyjsn -> /device-compatibility
+test-types-in-an-assessment-iww934 -> /test-types
+testing-for-multiple-skills-at-once-123hbb9 -> /testing-multiple-skills
+time-limits-191sys9 -> /time-limits
+tracking-live-progress-of-your-assessment-xxs6pk -> /live-progress
+understanding-cefr-adaptive-test-scores-uj8zx9 -> /cefr-scores
+using-document-in-custom-tests-4z1kzz -> /documents-in-custom-tests
+using-equip-assessments-with-lever-integration-10h0ree -> /lever-integration
+viewing-and-downloading-invoices-1f6r64i -> /invoices
+what-do-settings-mean-on-equip-gk05nh -> /assessment-settings
+what-is-a-good-assessment-score-by-a-candidate-2vnic3 -> /good-assessment-score
+what-job-boards-does-equip-publish-to-sfxbou -> /job-boards
+what-programming-languages-does-equip-support-jz1eu0 -> /programming-languages
+why-are-some-assessment-results-missing-1ax41uj -> /missing-results
+why-can-i-not-see-quiz-questions-while-creating-assessments-or-viewing-candidate-results-1jhsjpx -> /cannot-see-quiz-questions
+why-psychometric-tests-dont-have-a-score-6cyc1u -> /psychometric-scores
+write-results-to-google-sheets-y4yh9r -> /write-results-to-google-sheets

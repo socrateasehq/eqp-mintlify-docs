@@ -32,8 +32,269 @@
   "navigation": {
     "groups": [
       {
-        "group": "Getting Started",
-        "pages": ["index"]
+        "group": "General",
+        "icon": "book-open",
+        "expanded": true,
+        "pages": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "getting-started",
+              "what-equip-does",
+              "demo-or-trial-account",
+              "language-support",
+              "faqs"
+            ]
+          },
+          {
+            "group": "Support & Policies",
+            "pages": [
+              "contact-support",
+              "custom-slas",
+              "security-privacy"
+            ]
+          }
+        ]
+      },
+      {
+        "group": "ATS",
+        "icon": "briefcase",
+        "expanded": true,
+        "pages": [
+          {
+            "group": "Job Openings & Careers Page",
+            "pages": [
+              {
+                "group": "Creating a Job Opening",
+                "pages": [
+                  "job-post",
+                  "application-form",
+                  "candidate-pipeline"
+                ]
+              },
+              "publish-share-job-posts",
+              "careers-page",
+              "job-boards"
+            ]
+          },
+          {
+            "group": "Resume Screening",
+            "pages": [
+              "bulk-cv-import",
+              "cv-parsing",
+              "job-fit-score"
+            ]
+          },
+          {
+            "group": "Pipeline & Candidates",
+            "pages": [
+              "pipeline-stages",
+              "job-applications-dashboard",
+              "candidate-profile",
+              "scorecards"
+            ]
+          },
+          {
+            "group": "Emails & Communication",
+            "pages": [
+              "emailing-candidates",
+              "email-templates"
+            ]
+          },
+          {
+            "group": "Insights & Talent Rediscovery",
+            "pages": [
+              "ats-insights",
+              "talent-rediscovery",
+              "candidate-search"
+            ]
+          }
+        ]
+      },
+      {
+        "group": "Assessments",
+        "icon": "clipboard-list",
+        "expanded": true,
+        "pages": [
+          {
+            "group": "Creating Assessments",
+            "pages": [
+              "create-assessment",
+              "assessment-hierarchy",
+              "equip-vs-custom-content",
+              "testing-multiple-skills",
+              "question-difficulty-levels",
+              "cant-find-role-or-skill",
+              "assessment-duration",
+              "time-limits",
+              "question-limits",
+              "same-or-random-questions",
+              "quiz-display-modes",
+              "preview-assessment",
+              "assessment-settings",
+              "archive-assessment"
+            ]
+          },
+          {
+            "group": "Test Types",
+            "pages": [
+              "test-types",
+              "programming-languages",
+              "psychometric-tests",
+              "communication-test"
+            ]
+          },
+          {
+            "group": "Custom Content",
+            "pages": [
+              "custom-tests",
+              "custom-quiz-question-types",
+              "ai-graded-questions",
+              "multilingual-tests",
+              "question-bank-quiz",
+              "import-questions-from-excel",
+              "custom-programming-test",
+              "randomize-coding-questions",
+              "custom-quiz-time-limits",
+              "documents-in-custom-tests",
+              "video-response-questions",
+              "custom-coding-challenge-issues"
+            ]
+          },
+          {
+            "group": "Results & Scoring",
+            "pages": [
+              "test-scores-and-overall-score",
+              "grading-tests",
+              "manual-grading",
+              "negative-marking",
+              "good-assessment-score",
+              "cefr-scores",
+              "psychometric-scores",
+              "download-reports",
+              "live-progress",
+              "write-results-to-google-sheets",
+              "missing-results",
+              "cannot-see-quiz-questions"
+            ]
+          }
+        ]
+      },
+      {
+        "group": "AI Interviews",
+        "icon": "comments",
+        "expanded": true,
+        "pages": [
+          {
+            "group": "Interview Types",
+            "pages": [
+              "one-way-vs-conversational",
+              "interview-languages",
+              "interview-workspace"
+            ]
+          },
+          {
+            "group": "Creating Interviews",
+            "pages": [
+              "create-one-way-interview",
+              "create-conversational-interview",
+              "interview-content-types",
+              "interview-settings"
+            ]
+          },
+          {
+            "group": "Reports & Templates",
+            "pages": [
+              "interview-reports",
+              "custom-report-templates"
+            ]
+          }
+        ]
+      },
+      {
+        "group": "Candidate Experience",
+        "icon": "life-ring",
+        "expanded": true,
+        "pages": [
+          {
+            "group": "Invitations & Access",
+            "pages": [
+              "share-url-vs-email",
+              "email-invitations",
+              "email-status",
+              "custom-sender-email",
+              "invitation-links",
+              "invitations-vs-preview",
+              "candidate-reattempts",
+              "redirect-after-completion"
+            ]
+          },
+          {
+            "group": "Taking Tests & Interviews",
+            "pages": [
+              "taking-an-assessment",
+              "taking-an-ai-interview",
+              "candidate-login-methods",
+              "device-compatibility",
+              "demo-tests",
+              "resume-your-attempt"
+            ]
+          },
+          {
+            "group": "Proctoring & Anti-Cheating",
+            "pages": [
+              "ai-proctoring",
+              "proctoring-settings",
+              "anti-cheating-settings",
+              "disable-camera-mic",
+              "session-recording",
+              "ai-usage-detection",
+              "trust-score",
+              "id-verification"
+            ]
+          },
+          {
+            "group": "Troubleshooting",
+            "pages": [
+              "candidate-issues",
+              "candidate-says-submitted"
+            ]
+          }
+        ]
+      },
+      {
+        "group": "Account & Billing",
+        "icon": "credit-card",
+        "expanded": true,
+        "pages": [
+          {
+            "group": "Credits & Billing",
+            "pages": [
+              "how-credits-work",
+              "credit-deduction-policy",
+              "reclaim-credits",
+              "first-purchase-discount",
+              "tds-for-purchases",
+              "invoices",
+              "change-billing-information"
+            ]
+          },
+          {
+            "group": "Team & Organization",
+            "pages": [
+              "manage-team-members",
+              "organization-settings"
+            ]
+          },
+          {
+            "group": "Integrations & API",
+            "pages": [
+              "api-integrations",
+              "lever-integration",
+              "webhooks"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -47,5 +308,6 @@
       "website": "https://equip.co/",
       "linkedin": "https://www.linkedin.com/company/equip-co/"
     }
-  }
+  },
+  "redirects": []
 }

@@ -19,13 +19,15 @@
 ## Job Openings & Careers Page
 
 - Creating a Job Opening
+  - The Job Post
+  - The Application Form
+  - The Candidate Pipeline
 - Publishing and Sharing Job Posts
 - Your Careers Page
 - What Job Boards Does Equip Publish To?
 
-## Applications & Resume Screening
+## Resume Screening
 
-- Application Forms
 - Bulk CV Import
 - How AI CV Parsing Works
 - The AI Job Fit Score
@@ -33,9 +35,8 @@
 ## Pipeline & Candidates
 
 - Pipeline Stages
-- Managing Candidates
+- Job Applications Dashboard
 - The Candidate Profile
-- Candidate Search
 - Scorecards
 
 ## Emails & Communication
@@ -43,14 +44,11 @@
 - Emailing Candidates from the ATS
 - Email Templates
 
-## Offers
-
-- Offer Letters and E-Signatures
-
 ## Insights & Talent Rediscovery
 
 - ATS Insights: Hiring Analytics
 - Talent Rediscovery
+- Candidate Search
 
 # Assessments
 
