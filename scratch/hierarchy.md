@@ -52,46 +52,49 @@
 
 # Assessments
 
-## Creating Assessments
+## Create
 
 - How to Create an Assessment
 - Assessments, Tests, and Questions: The Hierarchy
 - Equip Content vs Custom Content
 - Testing for Multiple Skills at Once
-- Question Difficulty Levels and Years of Experience
-- Can't Find a Role or Skill to Assess For?
 - Determining Assessment Duration
 - Time Limits on Tests
+- Assessment Settings Explained
+
+## Tests & Questions
+
+- Test Types in an Assessment
+- Question Difficulty Levels and Years of Experience
 - Question Limits per Test Type
 - Do Candidates See the Same or Random Questions?
 - Screen-by-Screen vs All-at-Once Quizzes
+- Can't Find a Role or Skill to Assess For?
+- Equip Test Library
+  - Supported Programming Languages
+  - Psychometric Tests: DISC and Big Five
+  - The Communication (CEFR) Test
+- Custom Content
+  - Creating Custom Tests
+  - Question Types in Custom Quizzes
+  - AI-Graded Questions: Text, Audio, and Video Answers
+  - Multilingual Tests
+  - Creating a Custom Question Bank Quiz
+  - Import Questions Using Excel
+  - Creating a Custom Programming Test
+  - Randomizing Programming and SQL Questions
+  - Setting Time Limits for a Custom Quiz
+  - Using Documents in Custom Tests
+  - Adding Video Response Questions
+  - Issues with Custom Coding Challenges
+
+## Run
+
 - Previewing an Assessment
-- Assessment Settings Explained
+- Tracking Live Progress of Your Assessment
 - Archiving an Assessment
 
-## Test Types
-
-- Test Types in an Assessment
-- Supported Programming Languages
-- Psychometric Tests: DISC and Big Five
-- The Communication (CEFR) Test
-
-## Custom Content
-
-- Creating Custom Tests
-- Question Types in Custom Quizzes
-- AI-Graded Questions: Text, Audio, and Video Answers
-- Multilingual Tests
-- Creating a Custom Question Bank Quiz
-- Import Questions Using Excel
-- Creating a Custom Programming Test
-- Randomizing Programming and SQL Questions
-- Setting Time Limits for a Custom Quiz
-- Using Documents in Custom Tests
-- Adding Video Response Questions
-- Issues with Custom Coding Challenges
-
-## Results & Scoring
+## Evaluate
 
 - Test Scores and Overall Score: How Assessments Are Evaluated
 - How Tests Are Graded on Equip
@@ -101,7 +104,6 @@
 - Understanding CEFR Adaptive Test Scores
 - Why Psychometric Tests Don't Have a Score
 - Downloading Results and Reports
-- Tracking Live Progress of Your Assessment
 - Write Results to Google Sheets
 - Why Are Some Assessment Results Missing?
 - Why Can't I See Quiz Questions?

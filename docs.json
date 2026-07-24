@@ -17,8 +17,8 @@
   },
   "font": {
     "headings": {
-      "family": "DM Sans",
-      "weight": 700
+      "family": "Playfair Display",
+      "weight": 600
     },
     "body": {
       "family": "Inter"
@@ -117,52 +117,63 @@
         "expanded": true,
         "pages": [
           {
-            "group": "Creating Assessments",
+            "group": "Create",
             "pages": [
               "create-assessment",
               "assessment-hierarchy",
               "equip-vs-custom-content",
               "testing-multiple-skills",
-              "question-difficulty-levels",
-              "cant-find-role-or-skill",
               "assessment-duration",
               "time-limits",
+              "assessment-settings"
+            ]
+          },
+          {
+            "group": "Tests & Questions",
+            "pages": [
+              "test-types",
+              "question-difficulty-levels",
               "question-limits",
               "same-or-random-questions",
               "quiz-display-modes",
+              "cant-find-role-or-skill",
+              {
+                "group": "Equip Test Library",
+                "pages": [
+                  "programming-languages",
+                  "psychometric-tests",
+                  "communication-test"
+                ]
+              },
+              {
+                "group": "Custom Content",
+                "pages": [
+                  "custom-tests",
+                  "custom-quiz-question-types",
+                  "ai-graded-questions",
+                  "multilingual-tests",
+                  "question-bank-quiz",
+                  "import-questions-from-excel",
+                  "custom-programming-test",
+                  "randomize-coding-questions",
+                  "custom-quiz-time-limits",
+                  "documents-in-custom-tests",
+                  "video-response-questions",
+                  "custom-coding-challenge-issues"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Run",
+            "pages": [
               "preview-assessment",
-              "assessment-settings",
+              "live-progress",
               "archive-assessment"
             ]
           },
           {
-            "group": "Test Types",
-            "pages": [
-              "test-types",
-              "programming-languages",
-              "psychometric-tests",
-              "communication-test"
-            ]
-          },
-          {
-            "group": "Custom Content",
-            "pages": [
-              "custom-tests",
-              "custom-quiz-question-types",
-              "ai-graded-questions",
-              "multilingual-tests",
-              "question-bank-quiz",
-              "import-questions-from-excel",
-              "custom-programming-test",
-              "randomize-coding-questions",
-              "custom-quiz-time-limits",
-              "documents-in-custom-tests",
-              "video-response-questions",
-              "custom-coding-challenge-issues"
-            ]
-          },
-          {
-            "group": "Results & Scoring",
+            "group": "Evaluate",
             "pages": [
               "test-scores-and-overall-score",
               "grading-tests",
@@ -172,7 +183,6 @@
               "cefr-scores",
               "psychometric-scores",
               "download-reports",
-              "live-progress",
               "write-results-to-google-sheets",
               "missing-results",
               "cannot-see-quiz-questions"
