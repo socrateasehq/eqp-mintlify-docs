@@ -292,7 +292,328 @@
       "linkedin": "https://www.linkedin.com/company/equip-co/"
     }
   },
-  "redirects": [],
+  "redirects": [
+    {
+      "source": "/en/article/adding-a-video-response-to-equip-assessments-c8mrxw",
+      "destination": "/video-response-questions"
+    },
+    {
+      "source": "/en/article/adding-removing-team-members-admins-1t2dtln",
+      "destination": "/manage-team-members"
+    },
+    {
+      "source": "/en/article/anti-cheating-settings-n42w1z",
+      "destination": "/anti-cheating-settings"
+    },
+    {
+      "source": "/en/article/api-integrations-v51m7f",
+      "destination": "/api-integrations"
+    },
+    {
+      "source": "/en/article/archiving-an-assessment-fb5swy",
+      "destination": "/archive-assessment"
+    },
+    {
+      "source": "/en/article/assessment-invitations-vs-preview-1qjcznu",
+      "destination": "/invitations-vs-preview"
+    },
+    {
+      "source": "/en/article/assessments-tests-questions-the-hierarchy-1lwuvhn",
+      "destination": "/assessment-hierarchy"
+    },
+    {
+      "source": "/en/article/can-a-candidate-re-attempt-an-assessment-1tm93g",
+      "destination": "/candidate-reattempts"
+    },
+    {
+      "source": "/en/article/candidate-claims-they-have-submitted-the-assessment-i-cant-see-it-vgjhli",
+      "destination": "/candidate-says-submitted"
+    },
+    {
+      "source": "/en/article/candidate-faced-or-is-facing-issues-1ip8knq",
+      "destination": "/candidate-issues"
+    },
+    {
+      "source": "/en/article/candidate-session-recording-151ri06",
+      "destination": "/session-recording"
+    },
+    {
+      "source": "/en/article/changing-business-information-after-invoice-issue-17kv4sd",
+      "destination": "/change-billing-information"
+    },
+    {
+      "source": "/en/article/changing-sender-name-and-email-address-on-email-invites-wcc4k3",
+      "destination": "/custom-sender-email"
+    },
+    {
+      "source": "/en/article/chatgpt-ai-usage-detection-1w5w7lz",
+      "destination": "/ai-usage-detection"
+    },
+    {
+      "source": "/en/article/creating-a-custom-programming-test-19ni041",
+      "destination": "/custom-programming-test"
+    },
+    {
+      "source": "/en/article/creating-a-custom-question-bank-quiz-1q1oq6a",
+      "destination": "/question-bank-quiz"
+    },
+    {
+      "source": "/en/article/credit-deduction-policy-for-assessments-qmfddb",
+      "destination": "/credit-deduction-policy"
+    },
+    {
+      "source": "/en/article/custom-service-agreements-slas-jo0fg1",
+      "destination": "/custom-slas"
+    },
+    {
+      "source": "/en/article/custom-tests-1ijmiji",
+      "destination": "/custom-tests"
+    },
+    {
+      "source": "/en/article/demo-or-trial-account-1rpi27p",
+      "destination": "/demo-or-trial-account"
+    },
+    {
+      "source": "/en/article/determining-assessment-duration-w7pubv",
+      "destination": "/assessment-duration"
+    },
+    {
+      "source": "/en/article/disabling-camera-and-mic-tracking-2ijj3y",
+      "destination": "/disable-camera-mic"
+    },
+    {
+      "source": "/en/article/do-candidates-see-the-same-or-random-questions-1f3tkgy",
+      "destination": "/same-or-random-questions"
+    },
+    {
+      "source": "/en/article/downloading-results-and-reports-g1cjo0",
+      "destination": "/download-reports"
+    },
+    {
+      "source": "/en/article/email-delivered-opened-clicked-status-11ebjo6",
+      "destination": "/email-status"
+    },
+    {
+      "source": "/en/article/email-invitations-credit-deductions-revoke-reclaim-1uwfg7d",
+      "destination": "/reclaim-credits"
+    },
+    {
+      "source": "/en/article/ensuring-candidates-dont-cheat-ai-proctoring-fxhwzp",
+      "destination": "/ai-proctoring"
+    },
+    {
+      "source": "/en/article/equip-content-vs-custom-content-1ct7g3d",
+      "destination": "/equip-vs-custom-content"
+    },
+    {
+      "source": "/en/article/first-purchase-discount-8o5k3s",
+      "destination": "/first-purchase-discount"
+    },
+    {
+      "source": "/en/article/getting-started-on-equip-k70o7k",
+      "destination": "/what-is-equip"
+    },
+    {
+      "source": "/en/article/grading-tests-on-equip-1jbkdfl",
+      "destination": "/grading-tests"
+    },
+    {
+      "source": "/en/article/how-assessment-urls-in-email-invitations-work-32pz3f",
+      "destination": "/invitation-links"
+    },
+    {
+      "source": "/en/article/how-can-a-candidate-resume-their-attempt-1qafx3g",
+      "destination": "/resume-your-attempt"
+    },
+    {
+      "source": "/en/article/how-credits-work-and-how-to-purchase-them-1qybkbb",
+      "destination": "/how-credits-work"
+    },
+    {
+      "source": "/en/article/how-equip-protects-its-questions-99a4j4",
+      "destination": "/cannot-see-quiz-questions"
+    },
+    {
+      "source": "/en/article/how-to-manually-grade-tests-xdniq9",
+      "destination": "/manual-grading"
+    },
+    {
+      "source": "/en/article/how-to-unlock-4-questions-3cqmyr",
+      "destination": "/preview-assessment"
+    },
+    {
+      "source": "/en/article/i-cant-find-a-role-or-skill-i-want-to-assess-for-64q4qt",
+      "destination": "/cant-find-role-or-skill"
+    },
+    {
+      "source": "/en/article/import-questions-using-excel-1v2d78t",
+      "destination": "/import-questions-from-excel"
+    },
+    {
+      "source": "/en/article/issues-with-creating-custom-coding-challenges-gwqw44",
+      "destination": "/custom-coding-challenge-issues"
+    },
+    {
+      "source": "/en/article/language-support-on-equip-qq7zbc",
+      "destination": "/language-support"
+    },
+    {
+      "source": "/en/article/negative-points-when-are-they-enabled-can-i-disable-e3s8dg",
+      "destination": "/negative-marking"
+    },
+    {
+      "source": "/en/article/phone-support-sdinvr",
+      "destination": "/contact-support"
+    },
+    {
+      "source": "/en/article/previewing-an-assessment-1jgi148",
+      "destination": "/preview-assessment"
+    },
+    {
+      "source": "/en/article/proctoring-settings-what-they-are-how-to-change-them-1r09s6c",
+      "destination": "/proctoring-settings"
+    },
+    {
+      "source": "/en/article/psychometric-tests-opei83",
+      "destination": "/psychometric-tests"
+    },
+    {
+      "source": "/en/article/question-limits-per-test-type-k7h2xq",
+      "destination": "/question-limits"
+    },
+    {
+      "source": "/en/article/question-types-in-custom-quizzes-125r9ku",
+      "destination": "/custom-quiz-question-types"
+    },
+    {
+      "source": "/en/article/questions-difficulty-levels-and-years-of-experience-10562g2",
+      "destination": "/question-difficulty-levels"
+    },
+    {
+      "source": "/en/article/randomize-programming-and-sql-questions-t4x463",
+      "destination": "/randomize-coding-questions"
+    },
+    {
+      "source": "/en/article/redirect-url-after-assessment-completion-11bcocj",
+      "destination": "/redirect-after-completion"
+    },
+    {
+      "source": "/en/article/screen-by-screen-vs-all-at-once-quizzes-1kpnbo7",
+      "destination": "/quiz-display-modes"
+    },
+    {
+      "source": "/en/article/sending-email-invitations-to-candidates-rm1ulh",
+      "destination": "/email-invitations"
+    },
+    {
+      "source": "/en/article/setting-time-limits-for-a-custom-quiz-nkfq1c",
+      "destination": "/custom-quiz-time-limits"
+    },
+    {
+      "source": "/en/article/sharing-assessment-with-candidates-url-vs-emails-1suhjtv",
+      "destination": "/share-url-vs-email"
+    },
+    {
+      "source": "/en/article/tds-for-purchases-1fkmsmv",
+      "destination": "/tds-for-purchases"
+    },
+    {
+      "source": "/en/article/test-scores-and-overall-score-how-assessments-are-evaluated-1qrll7c",
+      "destination": "/test-scores-and-overall-score"
+    },
+    {
+      "source": "/en/article/test-types-and-mobile-support-1vsyjsn",
+      "destination": "/device-compatibility"
+    },
+    {
+      "source": "/en/article/test-types-in-an-assessment-iww934",
+      "destination": "/test-types"
+    },
+    {
+      "source": "/en/article/testing-for-multiple-skills-at-once-123hbb9",
+      "destination": "/testing-multiple-skills"
+    },
+    {
+      "source": "/en/article/time-limits-191sys9",
+      "destination": "/time-limits"
+    },
+    {
+      "source": "/en/article/tracking-live-progress-of-your-assessment-xxs6pk",
+      "destination": "/live-progress"
+    },
+    {
+      "source": "/en/article/understanding-cefr-adaptive-test-scores-uj8zx9",
+      "destination": "/cefr-scores"
+    },
+    {
+      "source": "/en/article/using-document-in-custom-tests-4z1kzz",
+      "destination": "/documents-in-custom-tests"
+    },
+    {
+      "source": "/en/article/using-equip-assessments-with-lever-integration-10h0ree",
+      "destination": "/lever-integration"
+    },
+    {
+      "source": "/en/article/viewing-and-downloading-invoices-1f6r64i",
+      "destination": "/invoices"
+    },
+    {
+      "source": "/en/article/what-do-settings-mean-on-equip-gk05nh",
+      "destination": "/assessment-settings"
+    },
+    {
+      "source": "/en/article/what-is-a-good-assessment-score-by-a-candidate-2vnic3",
+      "destination": "/good-assessment-score"
+    },
+    {
+      "source": "/en/article/what-job-boards-does-equip-publish-to-sfxbou",
+      "destination": "/job-boards"
+    },
+    {
+      "source": "/en/article/what-programming-languages-does-equip-support-jz1eu0",
+      "destination": "/programming-languages"
+    },
+    {
+      "source": "/en/article/why-are-some-assessment-results-missing-1ax41uj",
+      "destination": "/missing-results"
+    },
+    {
+      "source": "/en/article/why-can-i-not-see-quiz-questions-while-creating-assessments-or-viewing-candidate-results-1jhsjpx",
+      "destination": "/cannot-see-quiz-questions"
+    },
+    {
+      "source": "/en/article/why-psychometric-tests-dont-have-a-score-6cyc1u",
+      "destination": "/psychometric-scores"
+    },
+    {
+      "source": "/en/article/write-results-to-google-sheets-y4yh9r",
+      "destination": "/write-results-to-google-sheets"
+    },
+    {
+      "source": "/en/category/assessments-1mwpln0",
+      "destination": "/"
+    },
+    {
+      "source": "/en/category/account-team-settings-125txwp",
+      "destination": "/"
+    },
+    {
+      "source": "/en/category/miscellaneous-kecn0y",
+      "destination": "/"
+    },
+    {
+      "source": "/en/category/ats-resume-screening-cbx7l7",
+      "destination": "/"
+    },
+    {
+      "source": "/en/category/general-information-bnm7n8",
+      "destination": "/"
+    },
+    {
+      "source": "/en",
+      "destination": "/"
+    }
+  ],
   "fonts": {
     "heading": {
       "family": "DM Sans",
