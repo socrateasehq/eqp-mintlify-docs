@@ -1,0 +1,51 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "maple",
+  "name": "Equip Help Center",
+  "colors": {
+    "primary": "#1F3B88",
+    "light": "#8FA6E5",
+    "dark": "#1F3B88"
+  },
+  "favicon": "/favicon.png",
+  "appearance": {
+    "default": "light",
+    "strict": true
+  },
+  "background": {
+    "decoration": "grid"
+  },
+  "font": {
+    "headings": {
+      "family": "DM Sans",
+      "weight": 700
+    },
+    "body": {
+      "family": "Inter"
+    }
+  },
+  "seo": {
+    "metatags": {
+      "og:site_name": "Equip Help Center"
+    }
+  },
+  "navigation": {
+    "groups": [
+      {
+        "group": "Getting Started",
+        "pages": ["index"]
+      }
+    ]
+  },
+  "logo": {
+    "light": "/logo/equip-logo.png",
+    "dark": "/logo/equip-logo.png",
+    "href": "/"
+  },
+  "footer": {
+    "socials": {
+      "website": "https://equip.co/",
+      "linkedin": "https://www.linkedin.com/company/equip-co/"
+    }
+  }
+}
