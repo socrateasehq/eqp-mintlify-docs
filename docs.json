@@ -15,15 +15,6 @@
   "background": {
     "decoration": "grid"
   },
-  "font": {
-    "headings": {
-      "family": "Playfair Display",
-      "weight": 600
-    },
-    "body": {
-      "family": "Inter"
-    }
-  },
   "seo": {
     "metatags": {
       "og:site_name": "Equip Help Center"
@@ -319,5 +310,14 @@
       "linkedin": "https://www.linkedin.com/company/equip-co/"
     }
   },
-  "redirects": []
+  "redirects": [],
+  "fonts": {
+    "heading": {
+      "family": "Playfair Display",
+      "weight": 600
+    },
+    "body": {
+      "family": "Inter"
+    }
+  }
 }
