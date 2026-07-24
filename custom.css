@@ -1,0 +1,20 @@
+/* ---- Sidebar visual hierarchy ----
+   Categories (h3.sidebar-title) > Subcategories (group buttons) > Articles (links).
+   Categories: small-caps label style. Subcategories: semibold. Articles: default. */
+
+h3.sidebar-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+ul.sidebar-group > li > button > div > span {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+/* Slightly mute article links so titled rows stand out. */
+ul.sidebar-group a {
+  font-weight: 400;
+}

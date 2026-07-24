@@ -1,0 +1,466 @@
+<!-- generated-from-commit: 65b5fd217fdb8c7fcbaf078630343f83791fb95e | generated-on: 2026-07-22 -->
+
+# Equip Overview
+
+> Equip (https://equip.co) is a self-serve hiring platform where recruiters shortlist candidates and candidates demonstrate skills. It combines four modules that can be used individually or together: an AI-native ATS (free forever), skill Assessments, AI Interviews (one-way and conversational), and AI Resume Screening. Pricing is pay-per-use with credits — no subscriptions, credits never expire, unlimited recruiter accounts.
+
+This document is the source of truth for Equip's recruiter- and candidate-facing functionality. Heading depth encodes priority: `#` sections are the core product pillars (P0), `##` are major features (P1), `###` are sub-features (P2), `####` are details (P3), and bullet points carry fine-grained facts.
+
+## Key Pages
+
+- [Equip Home](https://equip.co/): Online skill assessments, AI interviews, and a free ATS for candidate shortlisting.
+- [Pricing](https://equip.co/pricing/): Pay-per-use credit pricing for assessments and AI interviews; the ATS is free forever.
+- [Features Overview](https://equip.co/features/): Directory of Equip's skill-testing features.
+- [Assessment Features](https://equip.co/assessment-features/): Overview of assessment capabilities for candidate evaluation.
+- [Proctoring & Anti-Cheating](https://equip.co/features/proctoring-prevent-cheating-on-tests/): Automated AI proctoring to prevent cheating during online assessments.
+- [One-Way Video Interviews](https://equip.co/features/one-way-video-interviews/): Asynchronous video interviews for screening communication and soft skills.
+- [Coding Tests](https://equip.co/features/coding-tests/): Automatically evaluated programming assessments.
+- [Psychometric Tests](https://equip.co/features/psychometric-tests/): Personality and behavioral assessments for hiring.
+- [Excel Proficiency Tests](https://equip.co/features/excel-proficiency-tests/): Automated spreadsheet-skill testing.
+- [Typing Tests](https://equip.co/features/typing-tests/): Typing speed and accuracy assessment.
+- [Aptitude Tests](https://equip.co/features/aptitude-tests/): Online aptitude testing for candidate evaluation.
+- [FAQs](https://equip.co/faqs/): Common questions about using Equip.
+- [Customer Stories](https://equip.co/customers/): Case studies of companies hiring with Equip.
+- [Customer Reviews](https://equip.co/reviews/): Third-party reviews of Equip.
+- [Resources](https://equip.co/resources/): Guides on hiring and skill assessment.
+- [Blog](https://equip.co/blog): Hiring tips and product updates.
+- [Comparison Guide](https://equip.co/hackerrank-testgorilla-mettl-imocha-adaface-alternative/): Equip vs HackerRank, TestGorilla, Mettl, iMocha, and Adaface.
+- [HackerRank Alternative](https://equip.co/resources/hackerrank-alternative/): How Equip compares to HackerRank.
+- [TestGorilla Alternative](https://equip.co/resources/testgorilla-alternative/): How Equip compares to TestGorilla.
+- [Mettl Alternative](https://equip.co/resources/mettl-alternative/): How Equip compares to Mercer Mettl.
+- [iMocha Alternative](https://equip.co/resources/imocha-alternative/): How Equip compares to iMocha.
+- [Recruiter Dashboard Demo](https://equip.co/demo/recruiter/home/): Interactive demo of the recruiter dashboard with sample data.
+- [Test Types Demo](https://equip.co/demo/test-types/): Interactive showcase of Equip's test types.
+- [Schedule a Demo](https://equip.co/schedule-demo/): Book a walkthrough with the Equip team.
+- [Recruiter Signup](https://equip.co/account/recruiter-onboarding/): Self-serve recruiter onboarding.
+
+# ATS & Candidate Pipeline
+
+An AI-native applicant tracking system, free with no time limit. Recruiters create job openings, publish job posts, collect applications, and move candidates through a configurable pipeline with team collaboration, email communication, and analytics.
+
+## Job Openings & Job Posts
+
+Each job opening owns a candidate-facing job post and a pipeline. The dashboard lists openings with views and application counts, filterable by employment type, work arrangement, salary range, and created date.
+
+### Job creation wizard
+
+A three-step wizard: **Job Post** (details candidates see), **Application Form** (fields candidates fill out), **Candidate Pipeline** (stages and automations).
+
+#### AI job-description import
+
+- Paste a job description as text, or upload a PDF (max 10 MB); Equip's AI parses it and pre-fills all job fields.
+- Parsing typically takes 30–45 seconds; on failure the form falls back to manual entry.
+- A sample job description (Data Analyst) is available as a starting point.
+
+#### Job details
+
+- Fields: job title/role, min/max years of experience, employment type, seniority level, work arrangement, locations, timezone restrictions, hybrid policy, mandatory and preferred skills, salary range with currency and frequency, minimum education qualification, employment start date, application deadline, and a key callout line.
+- Rich-text sections: Job Summary, Responsibilities, Perks & Benefits, Additional Requirements.
+- Limits: up to 10 mandatory skills and 15 total skills; job summary 50–2,000 characters; application deadline up to 6 months out.
+
+### Job post status & sharing
+
+- Statuses: **Published** (accepting applications), **Hidden** (not visible to candidates), **Archived** (no longer accepting applications).
+- Each post has a shareable application link; candidates who apply through it appear in the applications dashboard.
+
+## Application Forms
+
+### Standard fields
+
+- First Name, Last Name, and Email are always collected. Optional toggleable fields (each can be marked mandatory): Phone, Current City, LinkedIn Profile, Year of Birth, Work Experience, Educational Background, Industries, Skills, Projects/Certifications, CV/Resume, Notice Period, Salary Expectation Range, Portfolio URLs, Languages Known, Willing to Relocate.
+
+### Custom fields & screening questions
+
+- Up to 10 custom fields (boolean, integer, or date) usable as dashboard filters.
+- Up to 5 screening questions (free text, boolean, integer, or date); objective answers are filterable in the dashboard.
+
+## Pipeline Stages
+
+A drag-to-reorder pipeline builder with 11 stage types:
+
+- **Applied** — candidates apply for the position (always first).
+- **Phone Screening** — call candidates; rank and review them with scorecards.
+- **Assessment** — quiz, coding, communication, and other skill tests.
+- **One-Way AI Interview** — fixed questions with text, audio, or video responses.
+- **Conversational AI Interview** — AI interviewer engages in adaptive back-and-forth.
+- **Video Interview** — conducted on your own videoconferencing tool; rank and review.
+- **Custom** — custom stage with optional ranking.
+- **Offered**, **Hired**, **Rejected**, **Withdrawn** — terminal stages.
+
+### Per-stage configuration
+
+- Internal name (what the team sees) and a short candidate-facing stage name.
+- Attach a scorecard, rejection email template, invitation email template, and an assignee per stage.
+- AI interview stages generate their questions automatically when created.
+- Stages that already hold candidates are archived instead of deleted, and can be restored.
+
+### Candidate status
+
+Independent of pipeline stage, each candidate carries a status: Applied, Maybe, Shortlisted, Rejected, or Withdrawn.
+
+## Candidate Management
+
+### Views & filters
+
+- Table view and Kanban view (with collapsible cards and columns).
+- Filter presets: All, Relevant (excludes terminal stages), Mine (assigned to me), Unassigned, Starred, Recent (applied in the last 7 days).
+- Table columns include candidate (with LinkedIn link), stage, fit score, experience, industries, current role, education, expected salary, notice period, languages, and applied date.
+
+### Bulk actions
+
+- Change stage, move to another job post, delete, and star/unstar across selected candidates.
+- "Action pending on" marker per candidate: awaiting team action, awaiting candidate action, or both.
+
+### Candidate profile
+
+- Detail panel with two tabs: **Details** (scores, scorecards, preferences, experience, education, skills, languages, custom fields, screening answers, attachments) and **Candidate Journey** (full activity timeline).
+- Up to 3 attachments per candidate (10 MB each), uploaded by recruiter or candidate.
+- Candidate edits auto-save; resumes can be replaced (PDF/DOC/DOCX).
+- Candidates imported without a verified email show an "Unverified" badge and receive no stage-change emails until verified; recruiters can copy a verification link to share.
+
+### Export
+
+- CSV/Excel export with 32 columns including contact details, stage, fit score and reason, salary expectations, resume URL, recruiter notes, and starred status.
+
+### Moving candidates between jobs
+
+- Applications can be moved to another job post; they land in the first stage of the new pipeline and keep their existing fit score.
+
+## Email Communication
+
+Emails are recruiter-triggered at stage changes — never auto-sent.
+
+### Email templates
+
+- Template types: Rejection, Assessment/AI Interview Invitation, Video Interview Invitation, Custom Stage Invitation, and Offer. Default templates are provided.
+- Template variables (click to copy): candidate name/first name, job title, company name, sender name, job post URL; invitation templates add test link, start-window times (in the candidate's timezone or UTC), and link expiry.
+
+### Stage-change dialogs
+
+- Moving a candidate opens a contextual dialog: simple move, rejection (with a 10-option rejection-reason dropdown), or an invitation flow with email preview.
+- Reply-to address selection (default no-reply@equip.co) and scheduled sending up to 7 days in advance.
+- Credit-cost notice before test/interview invitations; credits are reclaimable if the candidate never starts.
+
+## Scorecards
+
+- Questionnaires for scoring candidates on criteria you define; attach to phone-screening, video-interview, and custom stages.
+- Default scorecard criteria: Communication, Technical Skills, Problem Solving, Cultural Fit.
+- Scores appear on candidate profiles and feed team analytics.
+
+## Team Collaboration
+
+- Invite unlimited teammates (business email domains) with no per-recruiter cost; join by invite email or a team join code.
+- Assignees on stages and individual applications.
+- Per-candidate recruiter notes.
+- Candidate Journey activity log records 32 event types — applications, stage and status changes, notes, assignee changes, scorecard submissions, sent/scheduled emails, resume re-uploads, and offer-letter events — attributed to team member or candidate.
+- A lightweight reporting structure (set managers/reportees) powers team-scoped analytics.
+
+## ATS Insights (Analytics)
+
+A hiring-analytics dashboard with five sections: Key Metrics, Pipeline & Funnel, Velocity, Team, and Quality & Source.
+
+- Scope toggle: **Solo** (your openings) or **Squad** (includes your direct and indirect reports).
+- Date ranges: last 7/30/90 days, last 12 months, or custom; filter by specific openings.
+- 20 charts including: active openings, applications, in-pipeline count, hires, average time to hire, offer acceptance rate; application funnel (Applied → Shortlisted → Offered → Hired) with click-to-drilldown; pipeline snapshot and stage drop-off; time-to-hire trends, average time in stage, time to offer, offer turnaround; team performance and average scorecard by recruiter; applications by source, job-fit score distribution, rejections by reason, and offer outcomes.
+- Charts export to CSV.
+
+## Offer Stage
+
+- The Offered stage supports an offer email template with a signing-link variable.
+- Offer letters with e-signature tracking (Draft → Sent → Viewed → Signed by Candidate → Counter-Signed → Completed; plus Voided/Declined), signed by the candidate alone or candidate and recruiter. Early rollout.
+
+## Careers Page
+
+- Auto-generated public careers page listing all published job posts, at a custom company URL slug.
+- Candidates can search jobs and filter by employment type and work arrangement.
+- Customizable with your logo and custom CSS; embeddable on your own site via a provided embed code.
+
+# Assessments
+
+Skill tests recruiters assemble into multi-test assessments, taken by candidates online with proctoring. Tests come from Equip's pre-built library or the recruiter's own custom content.
+
+## Assessment Builder
+
+- Three-step builder: add tests, order them and set per-test weightage, then configure settings. Estimated total duration is computed automatically.
+- Every test type offers **Equip Content** (pre-built library tests) and **My Content** (recruiter-authored custom tests).
+- Role-based setup: pick a job role and skills to get suggested tests at appropriate difficulty levels.
+- Bulk-import questions from Excel (.xlsx): AI-test imports support HTML-formatted question text and options; quiz templates support Markdown formatting and LaTeX for equations.
+- Coding/SQL question randomization: define a pool so each candidate receives a random variant.
+- Question limits per test type: quizzes hold up to 25 questions (Equip library) or 100 (custom); programming, SQL, and CSS tests hold 1; Excel up to 6; typing up to 3; video response up to 4. A quiz covers up to 6 skills.
+- Free unlimited previews before inviting anyone: preview as a recruiter (jump freely between tests, no proctoring) or as a candidate (the real experience); Equip library quizzes preview with sample questions.
+- Assessments can be archived (candidates see them as closed; all results are retained) and un-archived at any time; assessments are never deleted.
+
+## Test Types
+
+- **Quizzes** — MCQs, multiple-correct answers, essay-type questions, and more.
+- **Programming** — automatically evaluated coding tests in a browser code editor. Supported languages: C, C++, C#, Dart, Go, Java, JavaScript, NodeJS, TypeScript, Kotlin, PHP, Python (including an AI/ML environment), Ruby, Rust, Scala, Swift, and SQL; additional languages can be enabled on request.
+- **Communication (CEFR)** — AI evaluates Reading, Writing, Speaking, and Listening with scenario-based questions, graded on the CEFR scale from below-A1 (Below Beginner) through C2 (Near-Native). The test is adaptive: candidates self-assess a starting level, difficulty adjusts across up to 6 question sets, and the overall grade weights the final two sets most heavily.
+- **Psychometric** — personality and behavioral tests for soft skills: DISC (24 questions, 12 minutes) and OCEAN/Big Five (50 questions, 25 minutes). Psychometric tests are deliberately unscored and excluded from the overall assessment score.
+- **Video Response** — candidates answer questions by recording videos (up to 4 question screens).
+- **Typing Test** — typing speed and accuracy.
+- **SQL** — automatically evaluated SQL questions (SELECT, INSERT, UPDATE, and more).
+- **Excel** — Excel formula skills in a simulated spreadsheet, auto-evaluated; difficulty levels from Medium to Expert.
+- **CSS** — write CSS in a code editor to replicate a target design, with the candidate's output compared to the target at desktop, tablet, and mobile breakpoints; graded manually by the recruiter.
+
+### Quiz question formats
+
+- Single-correct MCQ, multiple-correct, short text answer, single-line input, fill-in-the-blank (cloze), matching, categorization, comprehension passages, preference questions, voice input, transcription, auto-graded text, embedded code editor, question pools, and answer-any-N groups.
+
+### AI-graded question formats
+
+- Question types: one-way prompts, MCQ, and multiple-answer; answer formats: text, audio, or video.
+- Text answers: minimum/maximum word limits and an optional per-question AI evaluation prompt.
+- Audio/video answers: min/max duration, up to 5 retakes, optional auto-start recording, and optional restrictions on how many times candidates can replay their recording.
+- MCQ/MCA: 1–100 points per question, optional negative marking, and option randomization.
+- Multilingual questions: enable multiple languages per test and provide per-language question text; candidates choose their language before starting.
+
+## Assessment Settings
+
+- Assessment title (shown to candidates, max 100 characters).
+- Start window: "Cannot Start Before" and "Cannot Start After" date-times.
+- Additional candidate details to collect: phone number, LinkedIn URL, student ID, college name, graduation year, department, work experience.
+- Custom instructions (rich text) shown before the test.
+- Google Sheets sync of results, completion-notification emails, and a post-completion redirect URL.
+- Per-test settings: duration, max attempts, question shuffling, negative marking, cutoff scores, and grade-release method. Time limits are recruiter-set on custom tests; Equip library tests come with fixed time limits.
+- Candidate-facing language selector for multilingual assessments.
+
+## Proctoring & Anti-Cheating
+
+Automated proctoring (powered by AutoProctor) with per-test configurable tracking options:
+
+- **Detect Audio** — records noise and audio cues in the background.
+- **Detect Face** — captures a photo if the camera sees no face or multiple faces.
+- **Detect Switched Tab** — detects when the candidate switches to another tab or application.
+- **Switched Tab Screenshot** — additionally captures a screenshot of the tab the candidate switched to (supported browsers).
+- **Take Random Photos** — captures candidate photos at random moments throughout the test.
+- **Detect Multiple Monitors** — detects more than one connected display (supported browsers).
+- **Capture Photo Before Start** — takes a candidate photo before each test begins.
+- **Enforce Full Screen** — the test cannot be taken outside full-screen mode.
+- **Record User Session** — records the candidate's screen and interactions (mouse, keyboard) for playback.
+- **Auxiliary Device** — the candidate pairs their phone as a second camera for enhanced proctoring.
+- **Enforce Desktop** — blocks phones/tablets; useful for coding tests needing a large screen.
+- **Disable Copy/Paste** — disables copy and paste inside the test.
+
+### Proctoring behavior
+
+- Sensible defaults per test type (e.g. audio detection is off for tests with spoken answers; session recording is off for Excel tests).
+- Candidates see exactly which proctoring measures are active before starting, and consent to the proctoring report being shared with the recruiter.
+- Google Chrome is recommended to candidates; screenshot and multiple-monitor detection require Chromium-based browsers; video interviews on iOS require Safari.
+
+### Identity verification & advanced measures
+
+- **ID Card Verification** — the candidate photographs a government/institution ID; the face and name are matched against the test-taker (paid add-on).
+- **Impersonation Detection** — flags when the person on camera doesn't match across the session (paid add-on).
+- Device fingerprinting, and IP recording with geolocation, on every attempt.
+- Multi-session detection: attempts opened from another tab, browser, device, or IP are flagged.
+- Optional auto-submit after a set number of tab switches.
+- Proctoring is resilient to connectivity loss: evidence is captured offline and synced when the connection returns.
+
+### Trust Score
+
+- Each completed attempt gets a 0–100% Trust Score summarizing the reliability and authenticity of the session, shown atop the candidate report.
+
+## Scoring & Evaluation
+
+- Auto-graded: programming, SQL, Excel, MCQ/MCA, and typing.
+- Negative marking is always on for MCQs in Equip library quizzes (set automatically to the question's points divided by its number of options) and optional for custom content.
+- Manually graded: video responses and CSS challenges — recruiters review the submission (for CSS, side by side with the target design) and award points.
+- AI-graded: text, audio, and video answers are evaluated by Equip AI, guided by optional per-question evaluation prompts and a test-level evaluation context.
+- Evaluation modes: per-question only, or per-question plus a holistic report generated from a report template.
+- Manual overrides: recruiters can edit scores on any response.
+
+## Results & Reports
+
+- Assessment dashboard: searchable candidate list with statuses (Uncategorized, Shortlisted, Hired, Rejected), score and cutoff filters, and bulk status updates or pipeline-stage moves.
+- Individual candidate report with three tabs: **Test Summary** (per-test and per-question results), **Proctoring** (evidence: photos, tab switches, audio flags), and **Session Recording** (screen playback).
+- Detailed per-question results for programming, Excel, and CSS tests; media playback for audio/video answers.
+- Async PDF report export.
+- Per-candidate actions: shortlist/reject/hire, notes, and a copyable report link.
+
+## Invitations
+
+- Email invitations (1 credit per candidate per test in the assessment) with saved rich-text templates and delivery tracking (sent, delivered, opened).
+- Two link modes: unique one-time links per candidate, or a shared public link.
+- Unattempted invitations are reclaimable for credit.
+
+# AI Interviews
+
+AI-conducted interviews attached to a job opening. Two families: **One-way** (pre-set questions, recorded answers, AI-graded) and **Conversational** (real-time voice AI that adapts its questions).
+
+## One-Way AI Interviews
+
+- A fixed set of questions; candidates respond with video, audio, or text.
+- Built from reusable templates; all questions are visible at once and answered in any order, in a single session.
+- 1 credit per candidate submission.
+- Suited to high-volume screening (30+ candidates).
+
+## Conversational AI Interviews
+
+A live, spoken interview with an AI interviewer that asks follow-ups based on the candidate's answers.
+
+### Creation from a job description
+
+- Paste a job description (up to 7,500 characters), set years of experience and optional focus areas, and Equip drafts interview topics automatically.
+- Two formats: **Quick** (~15 minutes, 3–5 topics, 5–10 questions, 2 credits) and **Comprehensive** (~30 minutes, 5–10 topics, 10–25 questions, 3 credits).
+
+### Interview content
+
+Three item types, freely mixed and reordered:
+
+- **Question** — asked word-for-word as written, no follow-ups.
+- **Topic** — a theme the AI explores in its own words, with 0–5 follow-ups per topic.
+- **Scenario** — reference material shown to the candidate in a side panel that they respond to.
+- Per-item difficulty: Medium, Hard, or Expert.
+- "Instructions for AI Interviewer": free-text guidance up to 4,000 characters (e.g. "Start with easier questions, and then make them harder").
+
+### Interview languages
+
+- Conducted in the recruiter's chosen language: English (US, India, UK), Hindi, Kannada, Telugu, Tamil, Marathi, Bengali, Spanish (Spain, US), French, German, Portuguese (Brazil), or Italian.
+
+### Workspace (code & written answers)
+
+- An optional Workspace panel lets candidates answer in code (editor with syntax highlighting; languages include Python, JavaScript, TypeScript, Java, Go, C++, C#, Ruby, Rust, SQL, or candidate's choice) or plain text.
+- Per-item answer mode: spoken, written, or candidate's choice.
+
+### Candidate experience
+
+- Live video call layout with the "Equip AI Interviewer", self-view, and a real-time transcript.
+- Automatic reconnection with clear status banners on network interruptions, and a grace window so brief disconnects don't end the interview.
+- Optional setting to let candidates restart an unfinished attempt; only the submitted attempt is graded. Conversational interviews cannot be resumed once submitted.
+- Optional availability window restricting when candidates can start.
+
+## Interview Evaluation & Reports
+
+- AI-generated report per candidate: overall recommendation, strengths, areas for improvement, summary, and per-topic performance scores.
+- Full interview transcript and session recording, seekable from the transcript; code written in the Workspace is captured with snapshots.
+- Recruiters can re-evaluate or re-transcribe an interview on demand.
+- PDF export; proctoring and session-recording tabs when enabled.
+
+### Custom report templates
+
+- Team-defined holistic evaluation templates: an evaluation prompt, a structured output schema, and a custom report layout with live preview. (Gradual rollout.)
+
+## Interview Integrity
+
+- The same proctoring options as assessments (face detection, tab-switch detection, session recording, and the rest) apply to AI interviews.
+- Camera and microphone are verified in a pre-interview equipment test; interviews are recorded server-side with transcripts retained.
+
+# Resume Screening
+
+Collect resumes, auto-extract structured candidate data with AI CV parsing, and rank applicants with an AI Job Fit Score.
+
+## Resume Collection
+
+### Candidate self-apply with resume autofill
+
+- Candidates upload a resume (PDF, up to 10 MB) on the application form and the parser pre-fills the form; parsing typically takes 30–45 seconds, with manual fill as fallback.
+
+### Bulk CV import
+
+- Recruiters upload up to 100 CVs at once (PDF, 10 MB each); each is parsed and a job application is created automatically at 0.01 credits per CV.
+- Batch progress tracking with per-file success/failure reasons (missing email, missing name, duplicate application, parsing failure).
+- Bulk-imported candidates are marked unverified and receive no stage-change emails until their email is verified.
+- Application source is tracked (direct application vs bulk CV upload) and reported in analytics.
+
+## CV Parsing
+
+- Extracted fields: name, email, phone, current city, LinkedIn URL, portfolio URLs, languages known, education (degree, institution, field, years, grade), work experience (role, company, dates, description, employment type), skills (with years and expertise level), and industry experience.
+- Parsed values are normalized against Equip's canonical databases of skills, roles, cities, companies, and educational institutions (institution matching is country-aware).
+
+## Job Fit Ranking Criteria
+
+- Recruiters choose up to 3 ranking criteria from six: Skills (relevance to the job description), Experience (more years weighted higher), Education (degrees and institutions), Previous Companies (employment pedigree), Seniority (managerial weight), and Industry (relevance of industry background).
+- Drag to prioritize; plus a free-text criterion up to 200 characters (e.g. "Prefer candidates with AWS experience").
+- With no criteria selected, the score uses default AI judgment. Criteria changes apply to future applications; a re-rank action re-scores existing active candidates.
+
+## Job Fit Score
+
+- Every applicant gets a 0–100 fit score with a one-line AI explanation, shown in the applications table and Kanban cards.
+- Scoring is relative: candidates are scored against benchmarks from the same job's applicant pool, keeping rankings consistent as volume grows.
+- Scores can be calculated on demand per candidate, and the whole pool can be re-ranked after criteria changes.
+
+# Candidate Experience
+
+Everything a candidate sees, from invitation to completion. Candidates access tests via emailed or shared links — no account setup is required beyond email verification.
+
+## Invitations & Sign-In
+
+- Invitation emails with the assessment or interview link; recruiters control the template and can insert the link anywhere.
+- Sign-in via magic link or a 6-digit email login code (30-minute expiry); Google sign-in available for candidates.
+- The application/registration step collects only the fields the recruiter enabled, and only those still missing.
+
+## Pre-Test Flow
+
+- Instructions page greets the candidate by name, shows the assessment structure ("test n of N" progress), per-test instructions, and any recruiter-provided custom instructions.
+- Per-test-type guidance is shown automatically (e.g. quiz navigation rules, coding language choices, Excel formula requirements, typing-test timer behavior).
+- **Demo/practice tests**: candidates are encouraged to take a one-minute demo test to get familiar with the interface and verify their device works with proctoring; demo tests are skippable.
+- Device compatibility checks: desktop-only tests are flagged with a "Desktop Only" badge; browser recommendations are shown up front.
+- Camera/microphone permission setup with browser-specific guides and mic/camera test buttons.
+- For AI tests and interviews, a three-step pre-start wizard: review the format, test devices (5-second recording playback; conversational interviews add a read-aloud mic calibration), then start.
+
+## Test-Taking
+
+- Timers with a persistent time-remaining display; per-test durations are recruiter-set for custom tests and fixed for Equip library tests.
+- Mobile-friendly test types: quizzes, psychometric, CEFR communication, and video response. Desktop-only: programming, SQL, CSS, Excel, and typing.
+- Quiz modes: one-question-at-a-time (with or without back-navigation) or all-questions-at-once.
+- Coding in a browser editor with language selection; SQL, Excel (simulated spreadsheet), and CSS (live output vs target design) environments.
+- Audio/video answers with visible retake counts and min/max duration enforcement.
+- Upload progress tracking on submission, with clear diagnostics if a slow connection delays media uploads.
+
+## Interruptions & Resumption
+
+- Assessments resume after disconnects or accidental tab closes where the test type allows it; conversational AI interviews cannot be resumed once submitted.
+- Start-window enforcement with clear messaging ("You can only start the assessment after/before {time}").
+- Invalid or already-used links, expired deadlines, and deleted attempts each show specific explanatory messages.
+
+## Completion & Results
+
+- Completion confirmation screen; recruiters can configure an automatic redirect after submission.
+- Results are recruiter-gated: candidates are directed to contact the recruiter for outcomes. Candidate-facing scores, certificates, or badges are not provided.
+
+## Privacy & Consent
+
+- Candidates see the active proctoring measures before starting and consent to the proctoring report being available to the recruiter.
+- Session recordings mask question content.
+
+# Pricing, Billing & Account
+
+Self-serve and pay-per-use. The ATS is free forever; assessments and AI interviews consume credits. No subscriptions, no per-recruiter seat fees, and credits never expire.
+
+## Credits & Pricing
+
+- 1 credit = $1 (USD) or ₹90 (INR; ₹95 from August 1, 2026). Currency is determined by the team's country.
+- Costs: assessments = 1 credit per candidate per test (a 3-test assessment costs 3 credits per candidate, deducted as the candidate starts each test); one-way AI interview = 1 credit; conversational AI interview = 2 (Quick) or 3 (Comprehensive) credits; bulk CV import = 0.01 credits per CV; application re-ranking = 0.5 credits.
+- Minimum purchase $10/₹900; up to 5,000 credits per transaction; 18% GST applies in India with optional GSTIN capture.
+- Volume discounts at purchase: 5% at 500+, 10% at 1,000+, 15% at 2,000+ credits.
+- First-purchase discount for new teams: 50% off within 7 days of signup, 25% within 21 days (capped at ₹5,000 / $60).
+
+## Payments & Invoices
+
+- Card payments via Stripe; UPI, NEFT, and cards via Razorpay in India.
+- Self-serve billing portal for invoices, billing address, and tax information.
+
+## Credit Management
+
+- **Credit Usage** ledger — a bank-statement-style history of purchases, deductions, reclaims, and adjustments, exportable to CSV.
+- **Reclaim Credits** — recover credits from invitations sent more than 24 hours ago where the candidate never started; reclaiming invalidates that candidate's link.
+- Low-balance email alerts to the team admin.
+- The balance can run up to 25 credits negative: below zero, results are hidden until topped up; below −25, candidates can no longer start attempts. Open invitations are capped at the credit balance plus 25.
+
+## Free Credits
+
+- New teams start with free trial credits ($10 worth) to try assessments and interviews before paying.
+- A referral program grants rewards for referring other companies.
+
+## Signup & Login
+
+- Self-serve signup with a work email (personal-domain emails are not accepted for teams): create a new team or join an existing one with a join code.
+- Passwordless recruiter login via a 6-digit email code.
+
+## Team & Organization Settings
+
+- Unlimited team members at no cost. Two roles: **Team Admin** (exactly one; invites/removes members and can transfer admin) and **Member** (full recruiter access).
+- Member invitations are restricted to the team's email domain; pending invites are managed on the Team page.
+- Optional reporting structure (managers/reportees) used by analytics.
+- Organization settings: brand name (shown to candidates on instructions and emails), legal entity name (used on invoices), company size, timezone for invitations, default dashboard, and organization logo (shown to candidates).
+- User profile: name, phone, and profile photo; email is fixed.

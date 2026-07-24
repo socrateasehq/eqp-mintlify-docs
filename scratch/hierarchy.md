@@ -1,47 +1,30 @@
-# General
-
-## Getting Started
-
-- Getting Started on Equip
-- What Equip Does: ATS, Assessments, and AI Interviews
-- Demo and Trial Accounts
-- Language Support on Equip
-- FAQs
-
-## Support & Policies
-
-- Contacting Equip Support
-- Custom Service Agreements (SLAs)
-- Security, Privacy & Candidate Data
+# ⚡ Equip in 10 Sentences (single top-level article, no category)
 
 # ATS
 
-## Job Openings & Careers Page
+## Job Openings
 
 - Creating a Job Opening
   - The Job Post
   - The Application Form
   - The Candidate Pipeline
-- Publishing and Sharing Job Posts
+- Sharing Job Posts
 - Your Careers Page
 - What Job Boards Does Equip Publish To?
 
 ## Resume Screening
 
+- What is the Job Fit Score?
+- How CV Parsing Works
 - Bulk CV Import
-- How AI CV Parsing Works
-- The AI Job Fit Score
 
-## Pipeline & Candidates
+## Job Applications Dashboard
 
+- Candidates and CVs
+- Candidate Profile
+- Changing Stages (includes section: The Email That Gets Sent)
 - Pipeline Stages
-- Job Applications Dashboard
-- The Candidate Profile
 - Scorecards
-
-## Emails & Communication
-
-- Emailing Candidates from the ATS
 - Email Templates
 
 ## Insights & Talent Rediscovery
@@ -147,6 +130,7 @@
 - Taking an AI Interview
 - Candidate Login Methods
 - Device and Browser Compatibility
+- Language Support on Equip
 - Demo and Practice Tests
 - How to Resume Your Attempt
 
@@ -177,6 +161,7 @@
 - TDS for Purchases
 - Viewing and Downloading Invoices
 - Changing Business Information After an Invoice
+- Demo and Trial Accounts
 
 ## Team & Organization
 
@@ -188,3 +173,10 @@
 - API Integrations
 - Using Equip Assessments with Lever
 - Webhooks
+
+## Support & Policies
+
+- FAQs
+- Contacting Equip Support
+- Custom Service Agreements (SLAs)
+- Security, Privacy & Candidate Data

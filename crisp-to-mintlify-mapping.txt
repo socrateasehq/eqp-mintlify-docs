@@ -34,7 +34,7 @@ email-invitations-credit-deductions-revoke-reclaim-1uwfg7d -> /reclaim-credits
 ensuring-candidates-dont-cheat-ai-proctoring-fxhwzp -> /ai-proctoring
 equip-content-vs-custom-content-1ct7g3d -> /equip-vs-custom-content
 first-purchase-discount-8o5k3s -> /first-purchase-discount
-getting-started-on-equip-k70o7k -> /getting-started
+getting-started-on-equip-k70o7k -> /what-is-equip
 grading-tests-on-equip-1jbkdfl -> /grading-tests
 how-assessment-urls-in-email-invitations-work-32pz3f -> /invitation-links
 how-can-a-candidate-resume-their-attempt-1qafx3g -> /resume-your-attempt

@@ -21,39 +21,15 @@
     }
   },
   "navigation": {
-    "groups": [
-      {
-        "group": "General",
-        "icon": "book-open",
-        "expanded": true,
-        "pages": [
-          {
-            "group": "Getting Started",
-            "pages": [
-              "getting-started",
-              "what-equip-does",
-              "demo-or-trial-account",
-              "language-support",
-              "faqs"
-            ]
-          },
-          {
-            "group": "Support & Policies",
-            "pages": [
-              "contact-support",
-              "custom-slas",
-              "security-privacy"
-            ]
-          }
-        ]
-      },
+    "pages": [
+      "what-is-equip",
       {
         "group": "ATS",
         "icon": "briefcase",
         "expanded": true,
         "pages": [
           {
-            "group": "Job Openings & Careers Page",
+            "group": "Job Openings",
             "pages": [
               {
                 "group": "Creating a Job Opening",
@@ -63,7 +39,7 @@
                   "candidate-pipeline"
                 ]
               },
-              "publish-share-job-posts",
+              "sharing-job-posts",
               "careers-page",
               "job-boards"
             ]
@@ -71,24 +47,19 @@
           {
             "group": "Resume Screening",
             "pages": [
-              "bulk-cv-import",
+              "job-fit-score",
               "cv-parsing",
-              "job-fit-score"
+              "bulk-cv-import"
             ]
           },
           {
-            "group": "Pipeline & Candidates",
+            "group": "Job Applications Dashboard",
             "pages": [
-              "pipeline-stages",
-              "job-applications-dashboard",
+              "candidates-and-cvs",
               "candidate-profile",
-              "scorecards"
-            ]
-          },
-          {
-            "group": "Emails & Communication",
-            "pages": [
-              "emailing-candidates",
+              "changing-stages",
+              "pipeline-stages",
+              "scorecards",
               "email-templates"
             ]
           },
@@ -237,6 +208,7 @@
               "taking-an-ai-interview",
               "candidate-login-methods",
               "device-compatibility",
+              "language-support",
               "demo-tests",
               "resume-your-attempt"
             ]
@@ -277,7 +249,8 @@
               "first-purchase-discount",
               "tds-for-purchases",
               "invoices",
-              "change-billing-information"
+              "change-billing-information",
+              "demo-or-trial-account"
             ]
           },
           {
@@ -293,6 +266,15 @@
               "api-integrations",
               "lever-integration",
               "webhooks"
+            ]
+          },
+          {
+            "group": "Support & Policies",
+            "pages": [
+              "faqs",
+              "contact-support",
+              "custom-slas",
+              "security-privacy"
             ]
           }
         ]
@@ -313,8 +295,8 @@
   "redirects": [],
   "fonts": {
     "heading": {
-      "family": "Playfair Display",
-      "weight": 600
+      "family": "DM Sans",
+      "weight": 700
     },
     "body": {
       "family": "Inter"
