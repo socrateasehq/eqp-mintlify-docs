@@ -53,7 +53,7 @@
             ]
           },
           {
-            "group": "Job Applications Dashboard",
+            "group": "Applications Dashboard",
             "pages": [
               "candidates-and-cvs",
               "candidate-profile",
@@ -64,7 +64,7 @@
             ]
           },
           {
-            "group": "Insights & Talent Rediscovery",
+            "group": "Insights & Rediscovery",
             "pages": [
               "ats-insights",
               "talent-rediscovery",

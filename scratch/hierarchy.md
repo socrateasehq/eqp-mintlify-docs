@@ -18,7 +18,7 @@
 - How CV Parsing Works
 - Bulk CV Import
 
-## Job Applications Dashboard
+## Applications Dashboard
 
 - Candidates and CVs
 - Candidate Profile
@@ -27,7 +27,7 @@
 - Scorecards
 - Email Templates
 
-## Insights & Talent Rediscovery
+## Insights & Rediscovery
 
 - ATS Insights: Hiring Analytics
 - Talent Rediscovery

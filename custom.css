@@ -32,10 +32,11 @@ nav[aria-label="Pages"] > div + div {
    both the large category above and the sentence-case articles below. */
 ul.sidebar-group > li > button > div > span {
   font-size: 0.8125rem;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.02em;
   color: #6b7280;
+  -webkit-font-smoothing: antialiased;
 }
 
 .dark ul.sidebar-group > li > button > div > span {
