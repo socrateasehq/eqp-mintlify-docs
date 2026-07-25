@@ -1,3 +1,8 @@
+/* Hide the eyebrow label above page titles (it repeats the sidebar subcategory). */
+.eyebrow {
+  display: none !important;
+}
+
 /* Hide "Powered by Mintlify" footer branding. */
 footer a[href*="mintlify.com"] {
   display: none !important;
@@ -31,7 +36,7 @@ nav[aria-label="Pages"] > div + div {
    The uppercase + letterspacing reads as a label, which separates it from
    both the large category above and the sentence-case articles below. */
 ul.sidebar-group > li > button > div > span {
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.02em;

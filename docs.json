@@ -22,7 +22,6 @@
   },
   "navigation": {
     "pages": [
-      "what-is-equip",
       {
         "group": "ATS",
         "icon": "briefcase",
@@ -622,5 +621,6 @@
     "body": {
       "family": "Inter"
     }
-  }
+  },
+  "navbar": {}
 }
