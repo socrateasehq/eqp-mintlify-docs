@@ -1,20 +1,54 @@
-/* ---- Sidebar visual hierarchy ----
-   Categories (h3.sidebar-title) > Subcategories (group buttons) > Articles (links).
-   Categories: small-caps label style. Subcategories: semibold. Articles: default. */
-
-h3.sidebar-title {
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+/* Hide "Powered by Mintlify" footer branding. */
+footer a[href*="mintlify.com"] {
+  display: none !important;
 }
 
+/* ---- Sidebar visual hierarchy ----
+   Three levels, each distinguished by a different signal rather than weight alone:
+   1. Category  (h3.sidebar-title)      - large, dark, with generous space above
+   2. Subcategory (group toggle button) - small-caps label, letterspaced, muted
+   3. Article   (links)                 - regular text, indented under its rail  */
+
+/* 1. Categories: the biggest thing in the sidebar. */
+h3.sidebar-title {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #111827;
+}
+
+.dark h3.sidebar-title {
+  color: #f3f4f6;
+}
+
+/* Breathing room between categories so each block reads as a section. */
+#sidebar-content > div + div,
+nav[aria-label="Pages"] > div + div {
+  margin-top: 1.25rem;
+}
+
+/* 2. Subcategories: small-caps label style, not bold body text.
+   The uppercase + letterspacing reads as a label, which separates it from
+   both the large category above and the sentence-case articles below. */
 ul.sidebar-group > li > button > div > span {
+  font-size: 0.875rem;
   font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #6b7280;
+}
+
+.dark ul.sidebar-group > li > button > div > span {
+  color: #9ca3af;
+}
+
+/* 3. Articles: plain sentence-case, the quietest level. */
+ul.sidebar-group a {
+  font-weight: 400;
   font-size: 0.875rem;
 }
 
-/* Slightly mute article links so titled rows stand out. */
-ul.sidebar-group a {
-  font-weight: 400;
+/* Hide the Previous / Next pagination block at the bottom of every article. */
+#pagination {
+  display: none !important;
 }
