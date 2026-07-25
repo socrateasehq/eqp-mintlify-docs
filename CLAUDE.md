@@ -4,7 +4,7 @@
 
 1. **TL;DR only when it earns its place** — Add a `<Tip>` at the top only when the article is detailed and the title poses a question worth answering upfront. Skip it for straightforward how-to or settings pages.
 
-2. **One visual element per section** — Every H2 section should contain at least one non-text element: table, callout, steps, or code block. Screenshots come in a later media pass; where one clearly belongs, leave an HTML comment `<!-- screenshot: what it should show -->`.
+2. **One visual element per section** — Every H2 section should contain at least one non-text element: table, callout, steps, or code block. Screenshots come in a later media pass; where one clearly belongs, leave an MDX comment `{/* screenshot: what it should show */}`. Never use HTML comments (`<!-- -->`): MDX parses them as JSX and the page fails to render.
 
 3. **Bold the key terms** — Within body text, bold the critical concept or feature name on first mention.
 
@@ -29,6 +29,7 @@
 - English only. USD and INR both exist; state currency-specific facts carefully.
 - Do not invent facts. Every claim must come from the codebase, equip.co/llms.txt, or the original Crisp article. If a detail is unknown, write around it rather than guessing numbers or limits.
 - Frontmatter: keep the existing `title` and `description`; remove the migration `<Note>` stub when writing real content.
+- **Escape dollar amounts** as `\$10`. A bare `$` starts LaTeX math mode in Mintlify and can break the page.
 
 ## Style Exemplars
 
