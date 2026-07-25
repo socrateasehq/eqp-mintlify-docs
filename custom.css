@@ -31,10 +31,10 @@ nav[aria-label="Pages"] > div + div {
    The uppercase + letterspacing reads as a label, which separates it from
    both the large category above and the sentence-case articles below. */
 ul.sidebar-group > li > button > div > span {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.02em;
   color: #6b7280;
 }
 
