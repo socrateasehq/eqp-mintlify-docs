@@ -1,3 +1,10 @@
+/* Hide the empty bar pinned to the sidebar bottom. It hosts navbar links, which we
+   do not use, so it renders as dead space. The :has() guard means it reappears
+   automatically if navbar links are ever configured again. */
+#sidebar > ul:has(> li > div:empty) {
+  display: none !important;
+}
+
 /* Hide the eyebrow label above page titles (it repeats the sidebar subcategory). */
 .eyebrow {
   display: none !important;
@@ -36,7 +43,7 @@ nav[aria-label="Pages"] > div + div {
    The uppercase + letterspacing reads as a label, which separates it from
    both the large category above and the sentence-case articles below. */
 ul.sidebar-group > li > button > div > span {
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.02em;

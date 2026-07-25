@@ -149,8 +149,8 @@
     intro.textContent = "What's Equip?";
     intro.title = 'Equip in 10 Sentences';
     intro.style.cssText =
-      'color:#6b7280;font-size:0.6875rem;font-weight:500;white-space:nowrap;text-decoration:none;' +
-      'transition:color .15s;line-height:1;';
+      'color:#6b7280;font-size:0.75rem;font-weight:500;white-space:nowrap;text-decoration:none;' +
+      'transition:color .15s;line-height:1;margin-right:0.375rem;';
     hover(intro);
 
     var home = document.createElement('a');
