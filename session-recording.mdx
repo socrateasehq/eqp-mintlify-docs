@@ -1,9 +1,9 @@
 ---
 title: "Candidate Session Recording"
-description: "Record and replay the candidate's screen and interactions."
+description: "Record and replay the candidate's screen and interactions during a test."
 ---
 
-**Session Recording** is one of Equip's [anti-cheating measures](/ai-proctoring). It captures the candidate's screen and interactions while they attempt a test, so you can later replay the attempt exactly as the candidate experienced it.
+**Session Recording** is one of Equip's [proctoring measures](/ai-proctoring). It captures the candidate's screen and interactions while they attempt a test, so you can later replay the attempt exactly as the candidate experienced it.
 
 ## What Gets Recorded
 
@@ -11,7 +11,7 @@ When the **Record User Session** proctoring setting is on, Equip records the can
 
 | Captured | Examples |
 |---|---|
-| **Screen activity** | Every screen the candidate saw during the test |
+| **Screen activity** | Every screen the candidate moved through during the test |
 | **Mouse activity** | Cursor movements and clicks |
 | **Keyboard activity** | What the candidate typed |
 | **Equip notifications** | In-test prompts and warnings the candidate received |
@@ -39,9 +39,13 @@ Session Recording is controlled per test through the **Record User Session** tog
   </Step>
 </Steps>
 
+<!-- screenshot: Test Order tab with the Edit Settings panel open, Record User Session toggle highlighted -->
+
 <Note>
-Session Recording is on by default for most test types. It is off by default for Excel tests and for video-based test types, where the candidate is already on camera. Proctoring defaults on tests built from Equip's content cannot be modified; tests with your own custom content are fully configurable.
+Session Recording is on by default for most test types. It is off by default for Excel tests and for video-based test types such as Video Response, where the candidate is already on camera. Proctoring defaults on tests built from Equip's content cannot be modified; tests with your own custom content are fully configurable.
 </Note>
+
+[AI Interviews](/one-way-vs-conversational) support the same proctoring options as assessments. When Session Recording is enabled, the interview report includes a session-recording tab as well.
 
 ## Playback
 
@@ -57,17 +61,9 @@ Use Session Recording together with the [Trust Score](/trust-score). If a candid
 
 Playback is also the fastest way to verify a candidate's report of a technical issue, such as a question that did not load. If you need Equip's help, email hello@equip.co with the Session Recording URL and the time range where the issue appears, for example "1:05 to 1:20".
 
-## Privacy Masking
-
-Session recordings mask question content in playback. You still see the candidate's full activity: their navigation, clicks, typing, and any notifications they received.
-
-<Note>
-This is consistent with how Equip protects its question bank elsewhere: recruiters never see the actual questions from Equip's quiz library, only representative samples. See [Why can I not see Quiz questions?](/cannot-see-quiz-questions) for the full explanation.
-</Note>
-
 ## Related Resources
 
-- [AI Proctoring](/ai-proctoring) - Overview of all the anti-cheating measures that run alongside Session Recording
+- [AI Proctoring](/ai-proctoring) - Overview of all the proctoring measures that run alongside Session Recording
 - [Proctoring Settings](/proctoring-settings) - Every proctoring toggle, including Record User Session, and their defaults
 - [Trust Score](/trust-score) - How to interpret the score that tells you when a recording is worth reviewing
 - [Candidate Issues](/candidate-issues) - Using recordings to troubleshoot problems candidates report mid-test

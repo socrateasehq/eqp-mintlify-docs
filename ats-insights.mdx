@@ -31,6 +31,7 @@ A few charts deserve extra explanation:
 
 - The **Application funnel** tracks candidates through Applied, Shortlisted, Offered, and Hired. Click any funnel step to drill down into the candidates behind the number.
 - **In pipeline** counts candidates who are currently in a non-terminal stage. It reflects right now, so it ignores the selected date range.
+- **Avg time to hire** is the average number of days from application to hire.
 - **Offer outcomes** breaks offers down into Sent, Viewed, Signed, and Declined counts.
 - **Avg scorecard by recruiter** averages the [scorecards](/scorecards) each teammate has submitted, which helps you spot unusually harsh or lenient evaluators.
 
@@ -40,7 +41,7 @@ Some KPIs need a minimum amount of data. **Avg time to hire** appears after your
 
 ## Filters, Date Ranges, and Grouping
 
-The filter bar at the top of the page controls what every chart shows. You can combine a date range, a scope, and a job-opening filter, and the bar summarizes your selection, for example "Just you · {from} → {to}".
+The filter bar at the top of the page controls what every chart shows. You can combine a date range, a scope, and a job-opening filter, and the bar summarizes your current selection, for example "Just you" followed by the selected dates.
 
 | Control | Options |
 |---|---|
@@ -54,6 +55,8 @@ Individual charts have their own display controls on top of the global filters:
 - **Trend granularity**: view trend charts Weekly or Monthly.
 - **Chart size**: resize any chart to Small, Medium, or Large to build the layout you want.
 
+<!-- screenshot: a chart with its Group by and size controls open -->
+
 <Tip>
 Grouping is the fastest way to compare. For example, group Applications by Source to see which channel fills your pipeline, or group by Recruiter to compare workloads across the team.
 </Tip>
@@ -64,8 +67,8 @@ The **Solo / Squad** toggle decides whose hiring activity the dashboard covers.
 
 | Scope | What it includes | Filter bar summary |
 |---|---|---|
-| **Solo** | Only your own job openings and activity | "Just you · ..." |
-| **Squad** | You plus your direct and indirect reports | "Squad of N · ..." |
+| **Solo** | Only your own job openings and activity | "Just you" |
+| **Squad** | You plus your direct and indirect reports | "Squad of N" |
 
 Squad scope relies on your team's **reporting structure**, the manager-and-reportee mapping defined in your organization settings. Until a reporting structure is set up, there is no squad to aggregate, so the toggle only becomes useful once managers and reportees are assigned.
 
@@ -95,7 +98,7 @@ CSV exports are handy for leadership reviews: export the Application funnel and 
 
 ## Related Resources
 
-- [Candidate Pipeline](/candidate-pipeline) - The applications dashboard that generates the data behind these charts
+- [Candidates and CVs](/candidates-and-cvs) - The applications dashboard that generates the data behind these charts
 - [Pipeline Stages](/pipeline-stages) - How stages are structured, which drives funnel and drop-off metrics
 - [Scorecards](/scorecards) - Submitted scorecards feed the Avg scorecard by recruiter chart
 - [Job Fit Score](/job-fit-score) - The AI score behind the Job-fit score distribution chart

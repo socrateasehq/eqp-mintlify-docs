@@ -3,15 +3,13 @@ title: "API Integrations"
 description: "Use Equip's REST APIs to invite candidates and pull results from your own ATS or internal systems."
 ---
 
-<Tip>
-Equip's **REST APIs** let you invite candidates and fetch their results from your own system, so you never have to manage the pipeline in the Equip dashboard. Access requires an API Key, a one-time $500 setup fee, and a minimum monthly purchase of 500 credits.
-</Tip>
+Equip's **REST APIs** let you run assessments from inside your own ATS or internal tools. You invite candidates and fetch their results programmatically, so you never have to manage the pipeline in the Equip dashboard.
+
+Candidates still attempt the assessment on the Equip website. The API only replaces the recruiter side of the workflow: sending invitations and collecting scores.
 
 ## What the API Offers
 
-Say you want to run Equip assessments from inside your ATS, or you have an internal system and do not want to invite candidates and check results manually. Equip's **REST APIs** automate both ends of that workflow.
-
-Candidates still attempt the assessment on the Equip website. You simply never need to open the Equip dashboard to send invitations or collect scores.
+The API automates both ends of the assessment workflow. Your system triggers the invitation, Equip runs the test, and your system pulls the result back.
 
 | You can | You cannot |
 |---|---|
@@ -29,13 +27,15 @@ There is no recurring platform fee for the integration itself. Enabling it has t
 1. A one-time setup fee of **$500**, which converts to 500 credits in your balance.
 2. A minimum monthly purchase of **500 credits**.
 
-These are normal Equip **credits**: they never expire, and you spend them on your regular usage (assessments and AI interviews) exactly as described on the [Pricing Page](https://equip.co/pricing/). So the money you pay for the integration is consumed by the hiring you were already doing.
+These are normal Equip **credits**: they never expire, and you spend them on your regular usage exactly as described on the [Pricing Page](https://equip.co/pricing/). So the money you pay for the integration is consumed by the hiring you were already doing.
 
 <Note>
 Credits work the same way for API-driven invitations as for dashboard invitations. See [How Credits Work](/how-credits-work) for deduction and reclaim rules.
 </Note>
 
 ## Getting Access
+
+Every team has its own **API Key**, issued by the Equip team on request. There is no self-serve page to generate one.
 
 <Steps>
   <Step title="Create a team">
@@ -48,12 +48,16 @@ Credits work the same way for API-driven invitations as for dashboard invitation
     This means $500 actually paid, not necessarily 500 credits. For example, with a 25% [first purchase discount](/first-purchase-discount), 500 credits would cost you $375, so you would need to buy 667 credits to reach $500 paid.
   </Step>
   <Step title="Request your API Key">
-    Email hello@equip.co or use the in-product chat. The Equip team issues your team's **API Key**; there is no self-serve page to generate one.
+    Email hello@equip.co or use the in-product chat, and the Equip team issues your team's API Key.
   </Step>
   <Step title="Keep purchasing 500 credits per month">
     Continue buying at least 500 credits each month to retain API access.
   </Step>
 </Steps>
+
+<Warning>
+Treat your API Key like a password. Anyone who has it can invite candidates and read results on your team's behalf, spending your team's credits.
+</Warning>
 
 ## Explore the APIs
 

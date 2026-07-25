@@ -3,11 +3,22 @@ title: "AI Interview Reports"
 description: "The AI-generated evaluation, transcript, and session recording for each candidate's AI interview."
 ---
 
-Every completed AI interview produces a detailed report for the candidate's attempt: an AI-generated evaluation, the full transcript, and a recording of the session. This page explains what each part of the report contains and how to work with it.
+Every completed AI interview produces a detailed report for the candidate's attempt: an **AI-generated evaluation**, the full transcript, and a recording of the session. This page explains what each part of the report contains and how to work with it.
 
 ## The AI-Generated Report
 
-Open a candidate's report from the interview's results list. Depending on the settings you enabled, the report shows up to three tabs:
+To open a report:
+
+<Steps>
+  <Step title="Open the interview's results">
+    From the **AI Interviews** dashboard, open the interview and go to its results list.
+  </Step>
+  <Step title="Select a candidate">
+    Click the candidate whose attempt you want to review. Their report opens with the evaluation front and center.
+  </Step>
+</Steps>
+
+Depending on the settings you enabled, the report shows up to three tabs:
 
 | Tab | What it contains | When it appears |
 |---|---|---|
@@ -22,9 +33,9 @@ For a **conversational interview**, the default Test Summary includes:
 - **Recommendation**: the AI's overall hiring recommendation for the candidate.
 - **Strengths** and **Areas for Improvement**: concise lists drawn from the candidate's answers.
 - **Summary**: a narrative overview of how the interview went.
-- **Topic Performance**: one score card per topic, with a color-coded percentage score.
+- **Topic Performance**: one score card per topic, with a color-coded percentage score. Topic scores are weighted by difficulty: Medium items carry 10 points, Hard 20, and Expert 30.
 
-For a **one-way interview**, the report shows each question alongside the candidate's answer and its AI grade. Scoring uses the points assigned per question, and conversational topics are weighted by difficulty: Medium questions carry 10 points, Hard 20, and Expert 30.
+For a **one-way interview**, the report shows each question alongside the candidate's answer and its AI grade. Scoring uses the points you assigned to each question when building the template.
 
 <Note>
 Teams with **AI Interview Report Templates** enabled can replace the default summary with a custom, template-driven evaluation. If a template is attached to the interview, the report renders your custom layout instead. See [Custom Report Templates](/custom-report-templates).
@@ -73,6 +84,6 @@ These are maintenance actions and are not always visible on the report page. If 
 ## Related Resources
 
 - [Custom Report Templates](/custom-report-templates) - Replace the default report with your own evaluation prompt and layout
-- [One-way vs Conversational Interviews](/one-way-vs-conversational) - How the two interview types differ, including how they are graded
+- [One-Way vs Conversational Interviews](/one-way-vs-conversational) - How the two interview types differ, including how they are graded
 - [Interview Workspace](/interview-workspace) - Let candidates answer in code or written text during conversational interviews
 - [Session Recording](/session-recording) - How screen and action recording works during proctored sessions

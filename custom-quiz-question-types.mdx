@@ -5,7 +5,7 @@ description: "All question formats available in custom quizzes, from multiple ch
 
 Quizzes are not limited to multiple-choice questions. A **custom quiz** supports a wide range of question formats, so you can test how candidates think, write, speak, and organize information, not just what they can recognize in a list of options.
 
-For every question, you can set a **timer**, **points**, and **negative points** while creating the quiz. You can also choose whether candidates see questions one at a time or all at once; see [Quiz Display Modes](/quiz-display-modes) for the trade-offs.
+While [creating a custom quiz](/custom-tests), you can set **points** and optional **negative points** for each question. Timers are set per question or for the whole test, depending on whether the quiz shows questions one at a time or all at once; see [Quiz Display Modes](/quiz-display-modes) and [Time Limits in Custom Quizzes](/custom-quiz-time-limits).
 
 <Note>
 A custom quiz can hold up to **100 questions**. If you need more, add a second quiz to the same assessment. See [Question Limits per Test](/question-limits).
@@ -26,7 +26,7 @@ Objective questions have defined correct answers, which makes them fast to grade
 | **Categorize** | A set of items that candidates must sort into the correct buckets. |
 
 <Tip>
-Negative marking is optional in custom quizzes. If you use the auto-calculate option, negative points equal the question's points divided by the number of options. Negative points are never auto-assigned to MCAs. See [Negative Marking](/negative-marking).
+Negative marking is optional in custom quizzes. If you use the auto-calculate option, negative points equal the question's points divided by the number of options. Negative points are never auto-assigned to MCAs; see [Negative Marking](/negative-marking) for details.
 </Tip>
 
 ## Text and Voice Formats
@@ -57,6 +57,8 @@ Advanced formats combine multiple elements, such as a passage with nested questi
 | **Document** | Upload a PDF and ask multiple sub-questions based on it. Ideal for case studies. See [Using Documents in Custom Tests](/documents-in-custom-tests). |
 | **Answer Any** | Create a set of questions, say 5, and let each candidate answer any 3 of them. |
 | **Question Pool** | Add several questions to a pool; each candidate is shown one question chosen at random from it. |
+
+<!-- screenshot: a Document question with a PDF and sub-questions, as the candidate sees it -->
 
 <Warning>
 The **Coding Editor** question type does not run the candidate's code, so it is best for evaluating approach and style. If you want code that compiles and runs against test cases, create a [custom programming test](/custom-programming-test) instead.

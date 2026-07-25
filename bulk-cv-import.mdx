@@ -3,19 +3,19 @@ title: "Bulk CV Import"
 description: "Upload up to 100 CVs at once and let AI parse them into applications."
 ---
 
-If you have a folder of CVs from a job board, an agency, or an old ATS, you do not need to add candidates one by one. **Bulk CV Import** lets you upload up to 100 CVs in a single batch. Equip parses each file and creates a job application automatically.
+If you have a folder of CVs from a job board, an agency, or an old ATS, you do not need to add candidates one by one. **Bulk CV Import** lets you upload up to 100 CVs in a single batch. Equip parses each file with AI and creates a job application automatically.
 
 ## Uploading CVs
 
-Each batch is uploaded into a specific job opening, so every parsed CV becomes an application in that job's pipeline.
+Each batch is uploaded into a specific job opening, so every parsed CV becomes an application in that job's candidate pipeline.
 
 <Steps>
   <Step title="Open the job opening">
-    Go to the job opening you want to add candidates to. All applications created by the import will appear in this job's candidate pipeline.
+    Go to the job opening you want to add candidates to. All applications created by the import will appear in this job's pipeline.
   </Step>
   <Step title="Select your PDF files">
     Use the uploader labeled **Select PDF files to upload**. It accepts PDF files only, up to 100 files per batch, with a maximum size of 10 MB per file.
-    <!-- screenshot: bulk CV upload dialog showing "Select PDF files to upload" with the PDF-only and file limits hint -->
+    <!-- screenshot: bulk CV upload dialog showing "Select PDF files to upload" with the "PDF only · Max 100 files · Max 10MB each" hint -->
   </Step>
   <Step title="Start the import">
     Confirm the upload. Equip checks your team's credit balance before starting, then processes the batch in the background. You can leave the page while it runs.
@@ -56,20 +56,24 @@ The batch detail page shows total, processed, success, failed, and skipped count
 <!-- screenshot: batch detail page with progress counts and per-file success/failed/skipped lists -->
 
 <Note>
-Common failure reasons are a missing email, a missing name, a duplicate application for the same job, or a CV the parser could not read. Fix the file or the duplicate, then re-upload just the affected CVs in a new batch.
+Common failure reasons are a missing email, a missing name, a duplicate application for the same job, or a CV the parser could not read. Fix the file or resolve the duplicate, then re-upload just the affected CVs in a new batch.
 </Note>
 
 ## Unverified Candidates
 
-Candidates added through Bulk CV Import never confirmed their email address themselves, so Equip marks them as **unverified**. On the candidate profile, an amber icon next to the email shows "Email not verified".
+Candidates added through Bulk CV Import never confirmed their email address themselves, so Equip marks them as **unverified**. On the candidate profile, an amber icon next to the email opens a popover that reads "Email not verified".
 
 Unverified candidates receive **no stage-change emails**. You can move them through the pipeline freely, but invitation and rejection emails are held back until the email is verified. This protects you from emailing addresses that were parsed incorrectly.
+
+<Warning>
+If you invite an unverified candidate to an assessment or AI interview stage, the invite dialog shows a warning and no email goes out. Verify the candidate's email first if you want them to receive the invitation.
+</Warning>
 
 <Tip>
 To verify a candidate, open their profile and copy the **verification link** from the email popover, then share it with the candidate directly. Once they verify, stage-change emails work as usual.
 </Tip>
 
-Each imported application also records its **source** as "Bulk CV Upload", so you can filter the pipeline by source and compare imported candidates against direct applicants in your analytics.
+Each imported application also records its **source** as "Bulk CV Upload". The [ATS Insights](/ats-insights) dashboard reports applications by source, so you can compare imported candidates against direct applicants.
 
 ## Related Resources
 

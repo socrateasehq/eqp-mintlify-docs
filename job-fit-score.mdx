@@ -1,19 +1,19 @@
 ---
 title: "What is the Job Fit Score?"
-description: "How every applicant gets a 0-100 fit score, and how to tune the ranking."
+description: "How every applicant gets a 0-100 fit score, and how to tune the ranking with criteria of your choice."
 ---
 
 <Tip>
-Every applicant to a job opening automatically gets a **Job Fit Score** from 0 to 100, along with a one-line AI explanation of why they scored that way. You can tune the score by choosing up to 3 ranking criteria, and re-rank existing candidates whenever you change them.
+Every applicant to a job opening automatically gets a **Job Fit Score** from 0 to 100, along with a one-line AI explanation of why they scored that way. You can steer the score by choosing up to 3 ranking criteria, and re-rank existing candidates whenever you change them.
 </Tip>
 
-The Job Fit Score is part of Equip's free ATS. It turns a pile of resumes into a ranked list, so you review the most promising applicants first instead of reading applications in the order they arrived.
+The **Job Fit Score** is part of Equip's free ATS. It turns a pile of resumes into a ranked list, so you review the most promising applicants first instead of reading applications in the order they arrived.
 
 ## How Scoring Works
 
 When a candidate applies, Equip's AI reads their parsed application (skills, work experience, education, and more) against your job description and produces a **fit score** between 0 and 100, shown with one decimal place. Each score comes with a short **AI explanation** summarizing the reasoning.
 
-The score appears next to every candidate in the applications table and on **Kanban** cards, and you can sort the table by **Fit Score** to see your strongest applicants at the top.
+The score appears next to every candidate in the applications table and on **Kanban** cards, and you can sort the table by **Fit Score** to bring your strongest applicants to the top. The score and its explanation are also included when you export applications to CSV or Excel.
 
 <!-- screenshot: applications table sorted by Fit Score, with the score and AI explanation visible -->
 
@@ -38,7 +38,7 @@ By default, the AI uses its own judgment about what makes a candidate a good fit
 | **Seniority** | More managerial positions get higher weightage | Always available |
 | **Industry** | Relevance of the candidate's industry experience to the role | Industries |
 
-Drag your selected criteria to prioritize them: the criterion at the top carries the most weight. A criterion is only available if your [application form](/application-form) collects the field it depends on, so enable the relevant field first if an option is missing.
+Drag your selected criteria to prioritize them: the criterion at the top carries the most weight. A criterion is only available if your [application form](/application-form) collects the field it depends on, so enable the relevant field first if an option appears missing.
 
 <!-- screenshot: ranking criteria picker with three criteria selected and drag handles visible -->
 
@@ -69,12 +69,28 @@ Re-ranking costs **0.5 credits per candidate** re-scored. Initial scoring of new
 </Warning>
 
 <Note>
-Moving a candidate to a different job post does not trigger re-scoring: the application keeps its existing fit score. See [Changing Stages](/changing-stages) for how moves between jobs work.
+Moving a candidate to a different job post does not trigger re-scoring: the application keeps its existing fit score. See [Changing Stages](/changing-stages) for how candidate moves work.
 </Note>
+
+## Using the Score in Your Workflow
+
+The fit score is a prioritization signal, not a verdict. Use it to decide **who to review first**, then confirm your read with the candidate's full profile, [scorecards](/scorecards), and assessment results before rejecting anyone.
+
+A few places the score shows up beyond the applications table:
+
+| Where | What you see |
+|---|---|
+| **Kanban cards** | The fit score on each candidate card, so you can scan a stage at a glance |
+| **CSV/Excel export** | The score and its AI explanation as columns in exported application data |
+| **Insights** | A job-fit score distribution chart, so you can gauge the overall quality of a job's applicant pool |
+
+<Tip>
+Sort by **Fit Score**, review the top of the list first, and use candidate **status** (Shortlisted, Maybe, Rejected) to record your own judgment as you go. See [ATS Insights](/ats-insights) for the distribution chart and other pipeline analytics.
+</Tip>
 
 ## Related Resources
 
 - [CV Parsing](/cv-parsing) - How Equip extracts the structured data the fit score is built on
 - [Application Form](/application-form) - Enable the fields your ranking criteria depend on
-- [Candidate Pipeline](/candidate-pipeline) - Sort, filter, and act on candidates by fit score
+- [Candidates and CVs](/candidates-and-cvs) - Sort, filter, and act on candidates by fit score
 - [How Credits Work](/how-credits-work) - What re-ranking and other actions cost

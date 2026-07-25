@@ -21,7 +21,7 @@ Webhooks are configured at the **team level**. Your team has a single webhook UR
     There is no self-serve settings page for webhooks yet. Send your endpoint URL to the Equip team over the in-product live chat or by emailing [hello@equip.co](mailto:hello@equip.co), and they will configure it for your team.
   </Step>
   <Step title="Verify with a real completion">
-    Once the URL is set, have a candidate complete an assessment or AI interview and confirm your endpoint receives the event.
+    Once the URL is set, have a candidate complete an assessment or AI interview and confirm your endpoint receives the event. Remember that events arrive only after grading is fully complete.
   </Step>
 </Steps>
 
@@ -102,12 +102,12 @@ Deliveries are **fire-and-forget**: Equip sends each event in the background and
 | Duplicates | Deduplicated; each event is sent once per attempt |
 
 <Warning>
-If your endpoint is down or takes longer than 10 seconds to respond, the event is **not retried** and is lost. Keep your endpoint fast and reliable, and treat the report URLs in each payload as the way to recover any results you missed.
+If your endpoint is down or takes longer than 10 seconds to respond, the event is **not retried** and is lost. Keep your endpoint fast and reliable. If you miss an event, the results are still safe on Equip: open the candidate's report on your dashboard, or pull results through the [API](/api-integrations).
 </Warning>
 
 ## Related Resources
 
-- [API & Integrations](/api-integrations) - Pull results and invite candidates programmatically
+- [API Integrations](/api-integrations) - Pull results and invite candidates programmatically
 - [Write Results to Google Sheets](/write-results-to-google-sheets) - No-code alternative for exporting results
 - [Lever Integration](/lever-integration) - Trigger Equip assessments from your Lever pipeline
 - [Test Scores and Overall Score](/test-scores-and-overall-score) - How the scores in webhook payloads are calculated

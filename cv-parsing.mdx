@@ -18,7 +18,19 @@ Resumes enter Equip through two flows, and both are parsed automatically:
 | **Candidate self-apply** | The candidate, on the application form | PDF, up to 10 MB | The parsed data pre-fills the application form for the candidate to review and submit |
 | **Bulk CV import** | The recruiter | PDF only, up to 100 files per batch, 10 MB each | Each successfully parsed CV creates a job application automatically, at 0.01 credits per CV |
 
-Parsing typically takes **30 to 45 seconds** for a self-apply upload. If parsing does not complete, the candidate can simply fill in the form manually.
+For a candidate applying through your job post link, the flow looks like this:
+
+<Steps>
+  <Step title="Upload a resume">
+    The candidate opens your job post, starts the application, and uploads their resume as a PDF of up to 10 MB.
+  </Step>
+  <Step title="Wait for parsing">
+    Parsing typically takes **30 to 45 seconds**. Equip extracts the resume's contents into the form fields.
+  </Step>
+  <Step title="Review and submit">
+    The candidate checks the pre-filled details, corrects anything the parser got wrong, completes any remaining fields, and submits.
+  </Step>
+</Steps>
 
 <!-- screenshot: application form with resume upload field and pre-filled details -->
 
@@ -69,10 +81,12 @@ Parsing can occasionally fail, and the outcome depends on the flow:
 | **Candidate self-apply** | The form is not pre-filled; the candidate enters their details manually and can still submit |
 | **Bulk CV import** | The file is listed as failed in the batch report with a reason |
 
-Bulk import failure reasons include **missing email**, **missing name**, **duplicate application**, and **parsing failure**. The batch detail page lists every file by category so you can see exactly which resumes need attention.
+Bulk import failure reasons include **missing email**, **missing name**, **duplicate application**, and **parsing failure**. The batch detail page lists every file by category, so you can see exactly which resumes need attention.
+
+<!-- screenshot: bulk CV import batch detail page with per-file failure reasons -->
 
 <Warning>
-Only supported file types are parsed. Application-form and bulk-import uploads must be **PDF files of 10 MB or less**. Scanned image-only PDFs with no selectable text are the most common cause of a parsing failure.
+Only supported file types are parsed. Application-form and bulk-import uploads must be **PDF files of 10 MB or less**. Other formats are rejected before parsing begins.
 </Warning>
 
 If a candidate's resume changes later, a recruiter can replace it from the candidate profile. Replacement uploads accept **PDF, DOC, and DOCX** files up to 10 MB, and the re-upload is logged in the Candidate Journey.

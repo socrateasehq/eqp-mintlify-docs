@@ -21,13 +21,14 @@ A **Conversational Interview** is a live, spoken interview with the **Equip AI I
 | **Adaptive follow-ups** | No | Yes, the AI adapts to each answer |
 | **Response types** | Video, audio, or text per question | Spoken; optional written or code answers via the Workspace |
 | **Built from** | Reusable question templates | A job description, from which Equip drafts topics |
+| **Questions** | Up to 20 per interview | Quick: 5 to 10; Comprehensive: 10 to 25 |
 | **Grading** | AI-graded per question | AI report with recommendation, strengths, and topic scores |
 | **Credits per candidate** | 1 | 2 (Quick) or 3 (Comprehensive) |
 
 <!-- screenshot: AI Interviews dashboard showing the "Add AI Interview" button with the Conversational Interview and One-Way Interview options -->
 
 <Note>
-Conversational interviews come in two formats: **Quick** runs about 15 minutes with 3 to 5 topics and 5 to 10 questions, while **Comprehensive** runs about 30 minutes with 5 to 10 topics and 10 to 25 questions.
+Conversational interviews come in two formats: **Quick** runs about 15 minutes with 3 to 5 topics, while **Comprehensive** runs about 30 minutes with 5 to 10 topics. You pick the format when creating the interview.
 </Note>
 
 ## When to Use Each
@@ -36,7 +37,7 @@ The right type depends on where the candidate sits in your pipeline and how much
 
 Use a **one-way interview** for high-volume screening, typically when you have 30 or more candidates. Because every candidate answers the same questions, results are easy to compare side by side, and candidates can complete the interview whenever it suits them.
 
-Use a **conversational interview** for deeper evaluation, such as a second-round or L2 interview. The AI explores each topic in its own words, asks up to 5 follow-ups per topic, and can present **Scenarios** (reference material shown in a side panel) for the candidate to respond to.
+Use a **conversational interview** for deeper evaluation, such as a second-round or L2 interview. The AI explores each topic in its own words and asks up to 5 follow-ups per topic. It can also present **Scenarios**, reference material shown in a side panel for the candidate to respond to; Scenarios are rolling out gradually and may not be available to every team yet.
 
 | Situation | Recommended type |
 |---|---|
@@ -45,7 +46,7 @@ Use a **conversational interview** for deeper evaluation, such as a second-round
 | Evaluating communication with video responses | One-Way |
 | Second-round or in-depth evaluation | Conversational (Comprehensive) |
 | A short, focused screen with follow-ups | Conversational (Quick) |
-| Interviewing in a language other than English | Conversational |
+| A spoken interview in a language other than English | Conversational |
 
 <Note>
 Conversational interviews can be conducted in 15 languages, including English (US, India, UK), Hindi, Kannada, Telugu, Tamil, Marathi, Bengali, Spanish (Spain, US), French, German, Portuguese (Brazil), and Italian. See [Interview Languages](/interview-languages) for details.
@@ -67,16 +68,28 @@ If a candidate never starts the interview, you can reclaim the credits. See [Rec
 
 ## What Candidates Experience
 
-Both interview types start with a three-step **pre-interview wizard**: candidates review the interview format, test their camera and microphone with a 5-second recording playback, and then begin. Conversational interviews add a read-aloud microphone calibration so the AI can hear the candidate clearly.
+Both interview types start with the same three-step **pre-interview wizard**:
 
-In a **one-way interview**, candidates work through the question list at their own pace within one session. For audio and video questions they get up to 5 retakes, and for text questions they write within the word limits you set.
+<Steps>
+  <Step title="Review the format">
+    Candidates see what the interview involves before anything is recorded.
+  </Step>
+  <Step title="Test camera and microphone">
+    A 5-second recording with playback confirms that both devices work. Conversational interviews add a read-aloud microphone calibration so the AI can hear the candidate clearly.
+  </Step>
+  <Step title="Start the interview">
+    Candidates confirm they are ready and the interview begins.
+  </Step>
+</Steps>
 
-In a **conversational interview**, candidates join a live video-call layout with the Equip AI Interviewer, a self-view, and a real-time transcript. If their network drops, Equip reconnects automatically with clear status banners so brief disconnects do not end the interview.
+In a **one-way interview**, candidates work through the question list at their own pace within one session. For audio and video questions they get up to 5 retakes, depending on the settings you choose, and for text questions they write within the word limits you set.
+
+In a **conversational interview**, candidates join a live video-call layout with the Equip AI Interviewer, a self-view, and a real-time transcript. If their network drops, Equip reconnects automatically with clear status banners, so brief disconnects do not end the interview.
 
 <!-- screenshot: candidate view of a conversational interview showing the AI interviewer, self-view, and live transcript -->
 
 <Warning>
-A conversational interview cannot be resumed once it is submitted. You can optionally allow candidates to restart an unfinished attempt, in which case only the submitted attempt is graded.
+Once a candidate submits a conversational interview, it cannot be resumed or retaken from the same invitation. You can optionally allow candidates to restart an unfinished attempt, in which case only the submitted attempt is graded.
 </Warning>
 
 The same [proctoring options](/proctoring-settings) available for assessments apply to AI interviews, and candidates see the active measures and consent before starting.

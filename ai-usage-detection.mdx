@@ -1,10 +1,10 @@
 ---
 title: "ChatGPT and AI Usage Detection"
-description: "How Equip detects candidates using ChatGPT, Interview Coder, and other AI tools during assessments, and how to review the evidence."
+description: "How Equip detects candidates using ChatGPT, InterviewCoder, and other AI tools during assessments, and how to review the evidence."
 ---
 
 <Tip>
-tl;dr: Standard proctoring catches AI tools opened in another tab. For stealth tools like Interview Coder, or AI on a second phone, enable **Auxiliary Device** proctoring: the candidate pairs their phone with their computer, and the phone's camera watches their keyboard, hands, and screen throughout the test. It is free, just disabled by default.
+tl;dr: Standard proctoring catches AI tools opened in another tab. For stealth tools like InterviewCoder, or AI on a second phone, enable **Auxiliary Device** proctoring: the candidate pairs their phone with their computer, and the phone's camera watches their keyboard, hands, and screen throughout the test. It is free, just disabled by default.
 </Tip>
 
 ## How Detection Works
@@ -15,7 +15,7 @@ Equip uses a **layered approach** to AI usage detection. Each layer closes off a
 |---|---|
 | Copying the question into ChatGPT | **Disable Copy & Paste** makes it hard to move question text out of the test |
 | Opening ChatGPT in another tab or app | **Enforce Full Screen** and **Detect Switched Tab** flag the switch, and **Switched Tab Screenshot** captures what they switched to |
-| Overlay tools on the same computer (Cluely, Interview Coder) | **Auxiliary Device** proctoring, which films the screen from outside the computer |
+| Overlay tools on the same computer (Cluely, InterviewCoder) | **Auxiliary Device** proctoring, which films the screen from outside the computer |
 | Asking AI on a second phone | **Auxiliary Device** proctoring, which shows their hands and surroundings |
 
 The first two layers come from Equip's standard [proctoring settings](/proctoring-settings) and [anti-cheating settings](/anti-cheating-settings). Stealth overlay tools and second devices are invisible to in-browser proctoring, so only the **Auxiliary Device** layer can catch them.
@@ -80,6 +80,8 @@ On supported phone browsers, Equip keeps the phone awake for the whole test. If 
 ## Reviewing Flags
 
 At the end of the test, you review everything from the candidate's report. With Auxiliary Device enabled, you get the phone's evidence on top of the regular proctoring report.
+
+<!-- screenshot: candidate report showing the surroundings video and keyboard screenshots from the auxiliary device -->
 
 | Evidence | What it shows |
 |---|---|

@@ -5,6 +5,8 @@ description: "Start windows, candidate login, details to collect, custom instruc
 
 Every assessment has a **Settings** tab where you define how candidates interact with it: when they can start, how they log in, what details they must provide, and what happens after they finish. You can edit these settings anytime from your Recruiter Dashboard, even after inviting candidates.
 
+The assessment builder has three tabs: **Tests**, **Test Order**, and **Settings**. This article covers the Settings tab, plus the per-test options that live in Test Order.
+
 <!-- screenshot: Settings tab of the Assessment Settings page -->
 
 ## General Settings
@@ -19,7 +21,7 @@ The Settings tab covers the assessment as a whole. The main options are:
 | **Custom Instructions** | Rich-text instructions shown before the assessment. Adding your own replaces Equip's default instructions. |
 | **Redirect URL** | Sends candidates to a page of your choice after they complete the assessment. |
 
-Equip's default instructions already explain points, negative marking, duration, proctoring, and demo tests. Customize them only if you genuinely need to, because your text **overrides the defaults entirely**.
+Equip's default instructions already explain points, negative marking, duration, proctoring, and demo tests. They are enough for any candidate to proceed on their own, so customize them only if you genuinely need to: your text **replaces the defaults entirely**.
 
 <Tip>
 If you share a public assessment link rather than unique per-candidate links, enable **LinkedIn login only**. Creating a fake LinkedIn account is much harder than creating a fake Google account, which deters people from previewing your questions.
@@ -27,7 +29,7 @@ If you share a public assessment link rather than unique per-candidate links, en
 
 ## Start Window
 
-Use the Timer section to restrict when candidates can begin the assessment. You can set either condition, or both:
+Use the **Timer** section to restrict when candidates can begin the assessment. You can set either condition, or both:
 
 | Setting | Effect |
 |---|---|
@@ -58,7 +60,7 @@ To collect more, use **Gather Additional Details** and select **Yes** for each f
 - Department
 - Work Experience (in years)
 
-Candidates provide these details right after opening the assessment, **before starting the first test**, so you never receive a submission without them.
+Candidates provide these details right after opening the assessment, **before starting the first test**, so you never receive a submission without them. The values also appear in your exported results.
 
 <!-- screenshot: Gather Additional Details toggles in the Settings tab -->
 
@@ -80,6 +82,10 @@ Some settings apply to individual tests rather than the whole assessment. These 
     For Programming and SQL tests, click the **Randomize** icon to attach multiple questions so each candidate receives one at random.
   </Step>
 </Steps>
+
+<Warning>
+If any test is left with a weightage of 0, it will not contribute to the overall score. Equip warns you about this when you save, so review weightages before inviting candidates.
+</Warning>
 
 <Note>
 Time limits on Equip's own content are fixed and cannot be changed. Only **Custom Tests** let you set your own per-question or per-test timers. Psychometric and Typing Tests carry no weightage and are excluded from the overall score.

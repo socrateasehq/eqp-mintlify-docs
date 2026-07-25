@@ -9,7 +9,7 @@ Every email invitation carries a **unique, one-time assessment link** tied to th
 
 ## Unique Links per Candidate
 
-When you send [email invitations](/email-invitations), every recipient gets the same email body. The only difference between the emails is the **assessment link**: each candidate receives a unique URL that can be used by them alone.
+When you send [email invitations](/email-invitations), every recipient gets the same email body. The only difference between the emails is the **assessment link**: each candidate receives a unique URL that only they can use.
 
 Here is what happens when a candidate clicks their link.
 
@@ -18,24 +18,26 @@ Here is what happens when a candidate clicks their link.
     The link identifies which email address it was sent to. It works on any device and any supported browser.
   </Step>
   <Step title="Equip sends a verification code">
-    A one-time code goes to the **invited email address**, not to whoever opened the link. The candidate can also verify with a magic link in the same email, or use **Sign In with Google**.
+    A one-time code goes to the **invited email address**, not to whoever opened the link. The candidate can also verify with a magic link in the same email, or use **Sign In with Google**. See [Candidate Login Methods](/candidate-login-methods) for the full sign-in flow.
   </Step>
   <Step title="Candidate verifies and starts">
     After entering the code, the candidate is taken straight to the assessment. No password or account setup is needed.
   </Step>
 </Steps>
 
+<!-- screenshot: candidate email verification page with the 6-digit code prompt -->
+
 <Note>
 Because the verification code always goes to the original invitee's inbox, **forwarding a link does not transfer the invitation**. If Candidate 1 shares their link with Candidate 2, the code still lands in Candidate 1's inbox, so Candidate 2 cannot proceed.
 </Note>
 
-The verification code is 6 digits, and both the code and the magic link expire **30 minutes** after they are sent. The candidate can simply request a new one from the same page if theirs expires.
+The verification code is 6 digits, and both the code and the magic link expire **30 minutes** after they are sent. If theirs expires, the candidate can simply request a new one from the same page.
 
 ### Switching devices
 
 The link and the email address are bound together, so Equip recognizes the same candidate even on a different device. Clicking the link again resumes the attempt with the remaining time intact: a candidate who left a test with 10 minutes remaining continues with 10 minutes on the new device.
 
-This also means a fresh invitation cannot grant a second attempt. If a candidate has an unfinished attempt, any new link you send them resumes that same attempt. See [Candidate Re-attempts](/candidate-reattempts) for how to allow a genuine retake.
+This also means a fresh invitation cannot grant a second attempt. If a candidate has an unfinished attempt, any new link you send them resumes that same attempt. See [Candidate Re-Attempts](/candidate-reattempts) for how to allow a genuine retake.
 
 ## Link Expiry
 
@@ -49,7 +51,7 @@ By default, invitation links **never expire**. You control expiry per batch of i
 | 1 to 365 | Links stop working that many days after sending |
 
 <Tip>
-Setting an expiry is a simple way to keep your pipeline moving: candidates see a real deadline, and stale invitations stop being usable on their own. If you instead need to control the exact start window, use the **Cannot Start Before** and **Cannot Start After** assessment settings.
+Setting an expiry is a simple way to keep your pipeline moving: candidates see a real deadline, and stale invitations stop being usable on their own. If you instead need to control the exact start window, use the **Cannot Start Before** and **Cannot Start After** [assessment settings](/assessment-settings).
 </Tip>
 
 ## Invalid and Already-Used Links
@@ -78,5 +80,5 @@ Reclaiming a credit is destructive: it revokes the candidate's link and permanen
 
 - [Email Invitations](/email-invitations) - How to send invitations, upload recipients, and set link expiry
 - [Share URL vs Email Invitations](/share-url-vs-email) - When to use unique links versus a public assessment URL
-- [Candidate Re-attempts](/candidate-reattempts) - Why new links resume old attempts and how to allow retakes
+- [Candidate Re-Attempts](/candidate-reattempts) - Why new links resume old attempts and how to allow retakes
 - [Email Status](/email-status) - Track whether invitations were delivered, opened, and clicked

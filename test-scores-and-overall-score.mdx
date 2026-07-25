@@ -34,13 +34,13 @@ You can edit an awarded score at any time using the pencil icon on a response. T
 
 **Weightage** tells Equip how important each test is. All tests get equal weightage by default, and the sum of all weightages is always 100. If Programming matters twice as much as the Quiz, give it 67 and the Quiz 33.
 
-The Overall Score is the weightage-weighted combination of each test's percentage score:
+To calculate the Overall Score, Equip multiplies each test's percentage score by its weightage and adds up the contributions:
 
 | Test | Weightage | Candidate's score | Contribution |
 |---|---|---|---|
 | Test 1 | 70 | 40/50 (0.8) | 0.8 x 70 = 56 |
 | Test 2 | 30 | 10/20 (0.5) | 0.5 x 30 = 15 |
-| **Overall Score** | | | **71%** |
+| **Overall Score** | | | **56 + 15 = 71%** |
 
 To set or change weightage:
 
@@ -68,7 +68,7 @@ A test with weightage 0 contributes nothing to the Overall Score. Equip warns yo
 
 Equip does not define a universal passing score; what counts as good depends on your role and hiring bar. The results dashboard gives you **score and cutoff filters** so you can view only the candidates above your threshold.
 
-A reliable approach is relative shortlisting: sort candidates by Overall Score and take the top N into the next round. You can then update statuses (**Shortlisted**, **Rejected**, **Hired**) individually or in bulk. For guidance on choosing a threshold, see [What Is a Good Assessment Score?](/good-assessment-score).
+A reliable approach is relative shortlisting: sort candidates by Overall Score and take the top N into the next round. Candidates start as **Uncategorized**, and you can mark them **Shortlisted**, **Rejected**, or **Hired** individually or in bulk. For guidance on choosing a threshold, see [What Is a Good Assessment Score?](/good-assessment-score).
 
 <Warning>
 Grade any ungraded questions before comparing Overall Scores or applying a cutoff. Otherwise you may shortlist against incomplete scores.

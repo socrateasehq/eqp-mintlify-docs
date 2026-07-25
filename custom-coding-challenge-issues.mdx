@@ -3,7 +3,9 @@ title: "Issues with Custom Coding Challenges"
 description: "Troubleshoot custom coding challenges: common setup mistakes, how to validate your test cases, and where to get help."
 ---
 
-Equip has a large library of coding questions, categorized by programming language and difficulty level. You can also build your own coding questions as [Custom Tests](/custom-programming-test). Because coding challenges are **graded automatically**, a small setup mistake can silently break grading for every candidate. This article covers the most common issues and how to catch them before candidates do.
+Equip has a large library of coding questions, categorized by programming language and difficulty level. You can also build your own coding questions as [Custom Tests](/custom-programming-test).
+
+Because coding challenges are **graded automatically**, a small setup mistake can silently break grading for every candidate. This article covers the most common issues and how to catch them before candidates do.
 
 ## Common Problems
 
@@ -13,7 +15,7 @@ A coding challenge is far more complex to set up than a quiz. Even experienced d
 |---|---|
 | **Input/output mismatch** | Even the slightest change in how input is read or output is printed can mark every candidate's submission as incorrect |
 | **Broken boilerplate** | The driver or starter code for one of the enabled languages does not compile or does not match the expected solution format |
-| **Missing edge cases** | Test cases pass for the happy path but fail on boundary values, so incorrect solutions score full marks |
+| **Missing edge cases** | Test cases cover the happy path but skip boundary values, so incorrect solutions can still score full marks |
 | **Unclear instructions** | Different platforms implement coding challenges differently; candidates used to another platform get stuck if your problem statement does not spell out the expected format |
 
 <Warning>
@@ -37,7 +39,7 @@ If you do build your own challenge, validate it thoroughly before inviting anyon
     Work through your **sample test cases** and **real test cases** by hand. Confirm the expected output matches exactly, including spacing and line breaks.
   </Step>
   <Step title="Attempt the challenge in Preview">
-    Add the test to an assessment and open it in [Preview](/preview-assessment). Submit a known-correct solution in each enabled language and confirm all test cases pass.
+    Add the test to an assessment and open it in [Preview](/preview-assessment). Custom-test questions appear in the preview exactly as candidates will see them, so submit a known-correct solution in each enabled language and confirm all test cases pass.
   </Step>
 </Steps>
 

@@ -7,7 +7,7 @@ An Equip **assessment** is a set of tests that candidates attempt one by one. Wh
 
 ## Available Test Types
 
-These are the test types you can add from the **Tests** tab when creating an assessment, listed in the order they appear in the builder.
+These are the test types you can add from the **Tests** tab when creating an assessment, listed in the order they appear in the builder. An assessment can contain any number of tests, and you can combine types freely.
 
 <!-- screenshot: test type list in the Tests tab of Create Assessment -->
 
@@ -21,7 +21,7 @@ These are the test types you can add from the **Tests** tab when creating an ass
 | **Typing Test** | Typing speed and accuracy. | No |
 | **SQL Test** | SQL query writing, evaluated automatically. | No |
 | **Excel Test** | Spreadsheet formula skills in a simulated spreadsheet, evaluated automatically. | No |
-| **CSS Test** | Front-end styling: candidates write CSS to reproduce a target design, compared at desktop, tablet, and mobile breakpoints. | No |
+| **CSS Test** | Front-end styling: candidates write CSS to reproduce a target design, checked at desktop, tablet, and mobile breakpoints. | No |
 
 <Note>
 Desktop-only test types show a **Desktop Only** badge to candidates, so they know in advance to use a laptop or desktop computer.
@@ -35,17 +35,19 @@ Every test type offers two sources of questions: **Equip Content**, the pre-buil
 Equip Content is the fastest way to launch: questions are battle-tested and matched to the candidate's experience level. Choose custom content when you need full control over questions, points, and timers. See [Equip Content vs Custom Content](/equip-vs-custom-content) for a full comparison.
 </Tip>
 
-## Auto-Graded vs Manually Graded
+Quizzes also come in two display modes: **one-by-one** (a single question per screen, which is how Equip's own quizzes always work) and **all-at-once** (every question on one page, available for custom quizzes). See [Quiz Display Modes](/quiz-display-modes) for how each behaves.
 
-Most test types are scored automatically the moment a candidate submits. A few need a human reviewer.
+## How Each Test Type Is Graded
+
+Most test types are scored automatically the moment a candidate submits. A few need a human reviewer, and two never count toward the overall score.
 
 | Grading | Test Types |
 |---|---|
-| **Auto-graded** | Quiz (MCQ, MCA, and similar question types), Programming, SQL, English Communication (CEFR), Excel, Typing Test |
+| **Auto-graded** | Quiz (MCQ, MCA, and similar question types), Programming Test, SQL Test, English Communication (CEFR), Excel Test |
 | **Manually graded** | Video Response, CSS Test |
-| **Not scored** | Psychometric |
+| **Excluded from the overall score** | Psychometric, Typing Test |
 
-**Psychometric tests** are subjective, so they carry no points and are excluded from the overall score. Results appear as a personality graph instead. The **Typing Test** also carries no weightage in the overall score.
+**Psychometric tests** are subjective, so they carry no points and their results appear as a personality graph instead. The **Typing Test** reports speed and accuracy, but its weightage is fixed at 0, so neither type affects the overall score.
 
 <Note>
 Within a custom quiz, a few question types such as short-text answers, single-line inputs, and voice inputs are graded manually even though the quiz itself is mostly auto-graded. A submission's overall score stays marked as ungraded until you grade every pending test. See [Grading Tests](/grading-tests) for the workflow.

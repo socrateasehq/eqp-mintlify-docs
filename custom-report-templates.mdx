@@ -8,32 +8,32 @@ description: "Define your own evaluation prompt, output schema, and report layou
 </Tip>
 
 <Note>
-Custom report templates are on a gradual rollout and may not be available to your team yet. If you do not see **AI Interview Reports** under Templates, [contact support](/contact-support).
+Custom report templates are on a gradual rollout and may not be enabled for every team yet. If you do not see **AI Interview Reports** under Templates, [contact support](/contact-support).
 </Note>
 
 ## Create a Report Template
 
-Templates live in their own library, so one template can be reused across many interviews.
+Templates live in their own library, separate from any single interview, so one template can be reused across many interviews.
 
 <Steps>
   <Step title="Open the templates page">
     Go to **Templates** and open **AI Interview Reports**. The list shows each template's Name, Description, Status badge (**Active** or **Archived**), and Created date.
   </Step>
-  <Step title="Name the template">
+  <Step title="Name the new template">
     Enter a **Template Name** (up to 100 characters, for example "Technical Interview Evaluation") and a short **Description** (up to 255 characters) so teammates know when to use it.
   </Step>
   <Step title="Fill in the editor tabs">
-    Complete the three required tabs: **LLM Prompt**, **Response Schema**, and **Jinja Template**. Use the **Preview** tab to check the result before saving.
+    Complete the three required tabs: **LLM Prompt**, **Response Schema**, and **Jinja Template**. Use the fourth tab, **Preview**, to check the rendered result before saving.
   </Step>
 </Steps>
 
 <!-- screenshot: AI Interview Reports template list showing name, status, and created date -->
 
-Only **Active** templates can be attached to an interview. Archive a template to retire it without deleting it.
+Only **Active** templates can be attached to an interview. Archive a template to retire it from the dropdown without deleting it.
 
 ## Evaluation Prompts
 
-The **LLM Prompt** tab holds the instructions the AI follows when it evaluates candidate responses. When a template is attached, this prompt-driven evaluation runs instead of the default evaluator, so the prompt is where you set the bar.
+The **LLM Prompt** tab holds the instructions the AI follows when it evaluates candidate responses. When a template is attached to an interview, this prompt-driven evaluation runs instead of the default evaluator, so the prompt is where you set the bar.
 
 Write the prompt the way you would brief a human interviewer. State the competencies to assess, how to weigh them, and what separates a strong answer from a weak one.
 
@@ -79,7 +79,7 @@ Keep the field names in your Jinja layout identical to the field names in your R
 
 ## Attach a Template to an Interview
 
-Attach templates per interview from the conversational interview's settings page, using the **Report Template** dropdown in the Settings section. Only **Active** templates appear in the list.
+Templates are attached per interview. On the conversational interview's settings page, pick a template from the **Report Template** dropdown in the Settings section. Only **Active** templates appear in the list.
 
 | | Default report | Custom template report |
 |---|---|---|
@@ -91,12 +91,12 @@ Attach templates per interview from the conversational interview's settings page
 Leave the dropdown blank to keep the default report. Once a template is attached, a custom report is generated from it after each interview, and the rendered report appears in place of the default summary on the candidate's results page.
 
 <Note>
-You can switch back at any time by selecting the **None** option in the dropdown, which restores the default report for future interviews.
+You can switch back at any time by selecting **None** in the dropdown, which restores the default report for future interviews.
 </Note>
 
 ## Related Resources
 
-- [Interview Reports](/interview-reports) - What the default conversational report contains and where reports live
+- [AI Interview Reports](/interview-reports) - What the default conversational report contains and where reports live
 - [Interview Settings](/interview-settings) - Every option on the interview settings page, including the Report Template dropdown
 - [Create a Conversational Interview](/create-conversational-interview) - Set up the interview your template will report on
 - [Contact Support](/contact-support) - Ask for access if the feature is not visible to your team yet

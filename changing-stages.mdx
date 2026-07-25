@@ -31,12 +31,16 @@ What happens next depends on the target stage:
 
 | Target stage | Dialog you see |
 |---|---|
-| **Phone Screening**, **Hired**, **Withdrawn**, other non-email stages | Simple move, no email involved |
-| **Rejected** | Rejection dialog with reason dropdown and optional rejection email |
+| **Phone Screening**, **Hired**, **Withdrawn**, other stages without an email step | Simple move, no email involved |
+| **Rejected** | Rejection dialog with a reason dropdown and optional rejection email |
 | **Assessment**, **One-Way AI Interview**, **Conversational AI Interview** | Invitation dialog with email preview and a credit notice |
 | **Video Interview**, **Custom** | Invitation dialog with email preview, no credits involved |
 
 Assessment and AI interview invitations consume **credits**. The dialog states the cost up front, for example "We'll deduct N credit(s) now." along with "Reclaimable if not attempted." As a baseline, an assessment or one-way AI interview costs 1 credit per candidate, and a conversational AI interview costs 2 credits (Quick) or 3 credits (Comprehensive).
+
+<Note>
+Assessments with more than 2 tests can carry an extra per-test deduction, for example "We'll deduct 0.5 credits per candidate when they start the third test." The invitation dialog always spells out the exact policy before you send.
+</Note>
 
 <Warning>
 If your team's balance cannot cover the invitations, the move is blocked with "Insufficient credits (need X, have Y)". Top up your balance and try again.
@@ -83,7 +87,7 @@ To change the wording, edit the template rather than the individual email. Templ
 Candidates with an **unverified email** trigger a warning in the invite dialog and receive no stage-change emails until their address is verified. This applies to bulk-imported candidates in particular; you can copy a verification link from their profile to share with them.
 </Warning>
 
-Every send is logged. The **Candidate Journey** tab records events like "sent/scheduled assessment invite", "sent/scheduled AI interview invite", and "sent/scheduled rejection email", so your team can always see who sent what and when.
+Every action is logged. The **Candidate Journey** tab records the stage change itself plus events like "sent/scheduled assessment invite", "sent/scheduled AI interview invite", and "sent/scheduled rejection email", so your team can always see who sent what and when.
 
 ## Scheduling and Reply-To
 
@@ -111,5 +115,5 @@ Rejecting candidates late at night? Schedule the rejection emails for the next m
 
 - [Pipeline Stages](/pipeline-stages) - Configure the stages, templates, and assignees candidates move through
 - [Email Templates](/email-templates) - Customize the invitation, rejection, and offer emails with variables
-- [Candidate Pipeline](/candidate-pipeline) - Table and Kanban views, filters, and bulk actions on the dashboard
+- [Candidates and CVs](/candidates-and-cvs) - Table and Kanban views, filters, and bulk actions on the dashboard
 - [Reclaim Credits](/reclaim-credits) - Get credits back when invited candidates never attempt
