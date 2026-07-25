@@ -3,18 +3,93 @@ title: "Creating a Custom Programming Test"
 description: "Author your own auto-evaluated coding challenges."
 ---
 
+Equip's library includes many ready-made programming questions across multiple languages and difficulty levels. But sometimes you have a very specific problem you want candidates to solve. For that, use **Custom Tests** to create your own **Programming Test**, complete with your problem statement, languages, and test cases.
+
 <Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/creating-a-custom-programming-test-19ni041/). Sections below outline the planned content.
+Equip recommends its own coding content for most teams. Library questions have been battle-tested by thousands of candidates, and unlike Equip quizzes, you can pick the exact coding question and see it in results. Build a custom challenge only when you need a problem the library does not cover. See [Issues with Custom Coding Challenges](/custom-coding-challenge-issues) for why setup mistakes are costly.
 </Note>
 
 ## Setting Up the Challenge
 
-Coming soon.
+Custom programming tests are created from the **Custom Tests** section of your Recruiter Dashboard, then added to any assessment.
+
+<Steps>
+  <Step title="Open Custom Tests">
+    Log in as a recruiter and open the **Custom Tests** section from the sidebar of your Assessments Dashboard.
+    <!-- screenshot: Custom Tests section in the recruiter sidebar -->
+  </Step>
+  <Step title="Create a new Coding Challenge">
+    Click the **Coding Challenge** tab, then **Add New**, and select **Programming Test**.
+  </Step>
+  <Step title="Write the problem statement">
+    Describe the task clearly: what the program should do, the input format, and the expected output format. Ambiguous instructions are the most common reason candidates get stuck.
+    <!-- screenshot: problem statement editor for a custom programming test -->
+  </Step>
+  <Step title="Choose languages and boilerplates">
+    Enable the programming languages candidates may use, and provide a **boilerplate** (also called driver or starter code) for each one.
+  </Step>
+  <Step title="Add test cases">
+    Write the **sample test cases** and **real test cases** that Equip will use to run and evaluate submissions, then save the test.
+  </Step>
+</Steps>
+
+<Note>
+Custom tests belong to your whole team. Teammates can view, edit, and reuse the same programming test across multiple assessments.
+</Note>
 
 ## Test Cases
 
-Coming soon.
+Programming tests are **auto-evaluated**: Equip runs each submission against the test cases you define and grades it automatically. You provide two kinds of test cases when creating the challenge.
+
+| Test case type | Purpose |
+|---|---|
+| **Sample test cases** | Shown to candidates as worked examples of the input and expected output, so they understand the format before submitting. |
+| **Real test cases** | Used to evaluate the candidate's submission and produce the score. |
+
+Cover the obvious happy path, but also add edge cases: empty inputs, boundary values, and large inputs where relevant.
+
+<Warning>
+Be exact with input and output formats. Even a tiny mismatch, such as a stray space or a missing newline in your expected output, can mark every submission incorrect. Equip does not triage broken custom coding questions, because these issues are nearly always a setup error in the question itself.
+</Warning>
+
+<Tip>
+Before inviting candidates, [preview the assessment](/preview-assessment) and solve your own challenge end to end. It is the fastest way to catch boilerplate or test-case mistakes, and previews are free and unlimited.
+</Tip>
 
 ## Choosing Languages
 
-Coming soon.
+You decide which languages candidates can submit in. Every enabled language needs its own **boilerplate** so the candidate starts from working scaffolding that reads input and prints output in the format your test cases expect.
+
+Equip supports C, C++, C#, Dart, Go, Java, JavaScript, NodeJS, TypeScript, Kotlin, PHP, Python (including an AI/ML environment), Ruby, Rust, Scala, Swift, and SQL. See [Supported Programming Languages](/programming-languages) for the exact versions.
+
+<Note>
+A programming test must have at least one language enabled; the assessment builder will not let you proceed without one. If you need a language that is not listed, contact us on live chat and we can enable additional languages for your account.
+</Note>
+
+## Adding the Test to an Assessment
+
+A custom test cannot be shared with candidates directly. It must sit inside an assessment.
+
+<Steps>
+  <Step title="Open the assessment settings">
+    From your dashboard, open the settings of a new or existing assessment.
+  </Step>
+  <Step title="Go to the Tests tab">
+    Select the **Tests** tab and click **Programming** in the left sidebar.
+  </Step>
+  <Step title="Add your test">
+    Hover over the **Add Programming** button and select **My Content**, then pick your custom programming test.
+    <!-- screenshot: Add Programming button with My Content option -->
+  </Step>
+</Steps>
+
+<Tip>
+Each programming test holds one question. To give different candidates different problems, create several custom challenges and use the Randomize option in the **Test Order** tab so each candidate receives one at random. See [Randomizing Coding Questions](/randomize-coding-questions).
+</Tip>
+
+## Related Resources
+
+- [Custom Tests](/custom-tests) - Overview of all custom test types you can create
+- [Supported Programming Languages](/programming-languages) - Languages and versions available for coding tests
+- [Randomizing Coding Questions](/randomize-coding-questions) - Serve a random challenge from a pool to each candidate
+- [Issues with Custom Coding Challenges](/custom-coding-challenge-issues) - Common setup mistakes and Equip's support policy

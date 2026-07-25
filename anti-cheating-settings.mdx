@@ -1,20 +1,82 @@
 ---
 title: "Anti-Cheating Settings"
-description: "Full-screen enforcement, copy/paste blocking, and tab-switch rules."
+description: "Randomize question order, shuffle choices, disable copy/paste, and auto-submit on tab switches to keep assessments fair."
 ---
 
+Apart from [AI proctoring](/ai-proctoring), Equip has a set of **anti-cheating settings** that make it harder for candidates to share answers or use outside help. They are configured per test, and they work independently of the camera, microphone, and screen tracking that proctoring provides.
+
 <Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/anti-cheating-settings-n42w1z/). Sections below outline the planned content.
+These four settings are separate from the [proctoring settings](/proctoring-settings) panel, which controls tracking options like face detection, tab-switch detection, and full-screen enforcement.
 </Note>
 
-## Full Screen and Desktop Enforcement
+## What Each Setting Does
 
-Coming soon.
+| Setting | What It Does |
+|---|---|
+| **Randomize the question order** | For quizzes that show questions all at once, each candidate sees the questions in a different order. Question-bank quizzes, such as quizzes built on Equip's content, are inherently randomized because the questions themselves are picked at random. Randomization is also available for [Programming and SQL tests](/randomize-coding-questions). |
+| **Shuffle choices within a question** | For quizzes with MCQs and MCAs, the answer choices appear in a different order for each candidate. |
+| **Disable Copy & Paste** | The candidate cannot copy the question text or paste anything into the test tab. Especially useful for coding challenges. |
+| **Auto-submit on Tab-switch** | If the candidate switches to a different tab more than a number of times you set, the test is submitted automatically. |
 
-## Copy/Paste and Tab Switching
+Randomization means two candidates sitting next to each other see different question sequences and different choice orders. Copying answers from a neighbor, or circulating a list like "question 3 is option B", stops working.
 
-Coming soon.
+<Note>
+Candidates are told which measures are active before they start. When copy/paste is blocked, for example, they see **Copy/Paste Disabled** listed among the active measures.
+</Note>
 
-## Auto-Submit Rules
+## Defaults for Tests with Equip's Content
 
-Coming soon.
+If a test uses **Equip's content**, the anti-cheating settings below are applied automatically based on the [test type](/test-types). You **cannot change** these defaults.
+
+| Test Type | Randomize Questions | Shuffle Choices | Disable Copy-Paste | Auto-submit on Tab-switch |
+|---|---|---|---|---|
+| Quiz | Yes | Yes | Yes | No |
+| Programming | Yes | N/A | Yes | No |
+| CSS | N/A | N/A | Yes | No |
+| SQL | Yes | N/A | Yes | No |
+| Video Response | No | N/A | No | No |
+
+N/A means the setting does not apply: the test contains only one question, or its questions have no choices to shuffle.
+
+<Warning>
+Defaults on Equip-content tests are locked to protect the shared question bank. For the same reason, recruiters see only sample questions when previewing Equip quizzes, never the questions candidates receive.
+</Warning>
+
+## Configure Settings on Custom Tests
+
+If a test uses your own content, all four settings are configurable **per test**.
+
+<!-- screenshot: anti-cheating settings panel while editing a custom test -->
+
+<Steps>
+  <Step title="Open the custom test">
+    Edit your assessment and open the [custom test](/custom-tests) you want to configure.
+  </Step>
+  <Step title="Adjust the anti-cheating options">
+    Turn each of the four settings on or off. For **Auto-submit on Tab-switch**, also set how many tab switches are allowed before the test is submitted.
+  </Step>
+  <Step title="Save the test">
+    Save your changes and update the assessment.
+  </Step>
+</Steps>
+
+<Tip>
+Enable **Disable Copy & Paste** on custom coding challenges. Without it, candidates can paste the problem statement into an AI tool and paste a solution back in seconds.
+</Tip>
+
+## How These Settings Work with Proctoring
+
+Anti-cheating settings and proctoring form a layered defense. Note the difference between the two tab-switch controls: **Detect Switched Tab** (a proctoring setting) records every switch as a violation in the report, while **Auto-submit on Tab-switch** goes further and ends the test once the limit is crossed.
+
+Together, disabled copy/paste, **Enforce Full Screen**, and tab-switch detection make on-device AI tools like ChatGPT impractical: the question is hard to extract, and opening another tab breaks full screen and gets captured. Stealth overlay tools and AI on a second phone are caught by [Auxiliary Device proctoring](/ai-usage-detection), which uses the candidate's phone as a second camera.
+
+<Note>
+Every violation, whether from proctoring or tab switching, feeds into the candidate's [Trust Score](/trust-score), shown at the top of each report with timestamped evidence.
+</Note>
+
+## Related Resources
+
+- [Proctoring Settings](/proctoring-settings) - The 11 per-test tracking toggles that complement these settings
+- [Detecting AI Usage](/ai-usage-detection) - How Equip catches ChatGPT, overlay tools, and second devices
+- [Custom Tests](/custom-tests) - Build tests with your own content and full control over settings
+- [Trust Score](/trust-score) - How violation evidence rolls up into a single reliability score

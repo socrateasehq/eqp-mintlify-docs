@@ -1,20 +1,117 @@
 ---
 title: "Interview Settings"
-description: "Availability windows, restart policy, and proctoring options."
+description: "Configure availability windows, the restart policy, proctoring, and other options for your AI interviews."
 ---
 
+Every AI interview has a **Settings** page where you control when candidates can start, whether they can restart an unfinished attempt, and how the session is proctored. This article covers each option and where to find it.
+
+## Open the Settings Page
+
+<Steps>
+  <Step title="Go to the AI Interviews dashboard">
+    Open **AI Interviews** from the sidebar. Each interview in the list has **Invite**, **Preview**, and **Settings** links.
+  </Step>
+  <Step title="Click Settings">
+    The settings page opens for that interview. Use **Preview** in the header at any time to see the candidate experience in a new tab, or **View Candidates** to jump to results.
+  </Step>
+</Steps>
+
+<!-- screenshot: AI Interviews dashboard showing the Settings link for an interview -->
+
+The layout differs slightly by interview type:
+
+| Interview type | Settings page structure |
+|---|---|
+| **Conversational** | Numbered sections: 1 Interview type, 2 Job setup, 3 Interview configuration, 4 Settings, 5 Proctoring |
+| **One-way** | Job Title, Linked Template, Additional Instructions, Timer Settings, Proctoring Settings |
+
 <Note>
-This is a new article for the Equip Help Center. Sections below outline the planned content.
+For one-way interviews, the questions themselves live in the **linked template**, not on the settings page. The settings page controls the job title (up to 100 characters), which template is linked, and the options described below.
 </Note>
 
 ## Availability Window
 
-Coming soon.
+The availability window is optional. When set, candidates can start the interview **only inside this window**; outside it, the interview does not accept new attempts.
+
+<Steps>
+  <Step title="Set the start of the window">
+    Use the **Cannot Start Before** date and time picker. Candidates who open their link earlier cannot begin yet.
+  </Step>
+  <Step title="Set the end of the window">
+    Use the **Cannot Start After** picker. The end must be after the start, or the page shows a validation error.
+  </Step>
+  <Step title="Remove a limit if you change your mind">
+    Click **Clear date & time** under either field. Leaving both fields empty means candidates can start any time.
+  </Step>
+</Steps>
+
+<Note>
+You enter times in your own local time zone, and Equip stores them as UTC. Candidates in other time zones see the window applied correctly; no conversion math is needed on your side.
+</Note>
+
+<!-- screenshot: Availability window fields with Cannot Start Before and Cannot Start After pickers -->
 
 ## Restart Policy
 
-Coming soon.
+The **Allow resuming unfinished attempt** toggle controls what happens when a candidate leaves before submitting. It is **off by default**.
+
+| Toggle state | What candidates experience |
+|---|---|
+| **Off** (default) | A candidate who leaves mid-interview cannot come back and restart. |
+| **On** | Candidates can restart if they leave before submitting. Restarts are unlimited until they submit, and only the submitted attempt is graded. |
+
+<Warning>
+Once a candidate submits, the attempt is final. A conversational interview cannot be resumed or retaken after submission, regardless of this toggle.
+</Warning>
+
+<Tip>
+If a candidate's browser or tab dies mid-recording, Equip keeps a short recovery grace period of 10 minutes to salvage the recording. Turning on the restart toggle is still the safer option for candidates on unreliable connections.
+</Tip>
 
 ## Proctoring Options
 
-Coming soon.
+The **Proctoring Settings** section is collapsible and collapsed by default. AI interviews use the same proctoring options as Equip assessments, powered by AutoProctor. Candidates see which measures are active and consent before starting.
+
+| Setting | What it does |
+|---|---|
+| **Detect Audio** | Records noise and audio cues in the background |
+| **Detect Face** | Captures a photo if the camera detects no faces or multiple faces |
+| **Detect Switched Tab** | Detects when the candidate switches to a different tab or application |
+| **Switched Tab Screenshot** | Captures a screenshot on tab switch, on supported browsers |
+| **Take Random Photos** | Takes a few photos of the candidate throughout the session |
+| **Prevent Multiple Monitors** | Blocks candidates with more than one monitor until extra displays are disconnected, on supported browsers |
+| **Capture Photo Before Start Test** | Takes a photo before the session starts |
+| **Enforce Full Screen** | The candidate cannot proceed without full-screen mode |
+| **Record User Session** | Records the screen and actions such as mouse clicks and keyboard typing |
+| **Auxiliary Device** | The candidate pairs their phone with their computer for an extra camera angle |
+| **Enforce Desktop** | Requires a large screen, useful for coding-heavy interviews |
+| **Disable Copy Paste** | Prevents copying and pasting during the session |
+
+<Note>
+**Switched Tab Screenshot** depends on **Detect Switched Tab**. You cannot turn off tab detection while the screenshot option is enabled.
+</Note>
+
+If you enable **Record User Session**, the candidate's report gains a **Session Recording** tab; enabling any proctoring option adds a **Proctoring** tab. See [Interview Reports](/interview-reports) for how the evidence appears.
+
+<!-- screenshot: expanded Proctoring Settings section with toggles -->
+
+## Other Settings
+
+A few more options live in the settings section, some of which are being rolled out gradually and may not appear for every team yet.
+
+| Setting | What it controls |
+|---|---|
+| **Candidate instructions** | Rich-text notes shown to candidates, up to 1,000 characters. On one-way interviews this field is labeled **Additional Instructions**. |
+| **Enable Workspace** | Conversational only. Adds a Workspace panel where candidates can write answers in code or plain text; you then choose per item whether the answer is spoken, written, or either. Off by default and available to teams in the gradual rollout. |
+| **Report Template** | Conversational only. Attaches a custom report template; leave it blank to use the default report with summary, strengths, weaknesses, and topic scores. Available to teams in the gradual rollout. |
+
+<Tip>
+Use candidate instructions for logistics the AI would not know: dress code for video answers, what to have on hand, or who to contact if something breaks.
+</Tip>
+
+## Related Resources
+
+- [Proctoring Settings](/proctoring-settings) - The same proctoring options explained in the context of assessments
+- [Interview Workspace](/interview-workspace) - How the code and text Workspace works for candidates and in reports
+- [Custom Report Templates](/custom-report-templates) - Replace the default interview report with your own template
+- [Candidate Reattempts](/candidate-reattempts) - How reattempts work across assessments and interviews

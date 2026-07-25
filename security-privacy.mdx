@@ -1,24 +1,101 @@
 ---
 title: "Security, Privacy & Candidate Data"
-description: "How Equip handles candidate consent, recordings, and data protection."
+description: "How Equip handles candidate consent, session recordings, question security, and data protection."
 ---
 
-<Note>
-This is a new article for the Equip Help Center. Sections below outline the planned content.
-</Note>
+Equip is built on a simple principle: candidates should always know how they are being monitored, and recruiters should be able to trust that assessment content and candidate data stay protected. This article explains how consent, recordings, and data handling work across the platform.
 
 ## Candidate Consent
 
-Coming soon.
+Equip never proctors a candidate silently. Before an assessment or AI interview begins, every candidate sees exactly which **proctoring measures** are active for their attempt, such as camera monitoring, audio detection, tab-switch tracking, or session recording.
+
+<!-- screenshot: candidate pre-test screen listing the active proctoring measures -->
+
+<Steps>
+  <Step title="Review the active measures">
+    The pre-test instructions list every proctoring measure the recruiter has enabled. Nothing runs that is not shown on this screen.
+  </Step>
+  <Step title="Grant device permissions">
+    If the camera or microphone is required, the candidate grants browser permissions and can test both devices before starting. Browser-specific guides help with permission issues.
+  </Step>
+  <Step title="Consent and start">
+    By starting the attempt, the candidate consents to the listed measures and to the **proctoring report** being shared with the recruiter's team.
+  </Step>
+</Steps>
+
+<Note>
+Proctoring defaults are tuned per test type. For example, audio detection is off for tests with spoken answers, so candidates are not flagged for doing exactly what the test asks.
+</Note>
+
+If your hiring process requires a lighter touch, you can turn individual measures off, including camera and microphone access, in the assessment's proctoring settings.
 
 ## Session Recording Privacy
 
-Coming soon.
+When **Record User Session** is enabled, Equip records the candidate's screen and interactions (mouse and keyboard) for playback in the candidate report. This is one of the strongest anti-cheating signals, so Equip applies specific privacy safeguards to it.
+
+| Safeguard | What it means |
+|---|---|
+| **Disclosed upfront** | Session recording appears in the list of active measures the candidate consents to before starting. |
+| **Question content is masked** | Recordings mask the question content on screen, so leaked footage cannot expose the question bank. |
+| **Recruiter-gated access** | Recordings are available only inside the candidate's report on the recruiter dashboard, not to candidates or the public. |
+| **Off where it adds no value** | Session recording is disabled by default for some test types, such as Excel tests. |
+
+<!-- screenshot: Session Recording tab inside a candidate report -->
+
+<Note>
+Results are recruiter-gated in general. Candidates do not receive scores, reports, or recordings from Equip; they are directed to contact the recruiter for outcomes.
+</Note>
 
 ## Data Protection
 
-Coming soon.
+### Account Access
+
+Recruiter accounts require a **work email address**. Signups from personal domains such as gmail.com or outlook.com are rejected, which keeps candidate data and question content inside verified companies.
+
+Login is **passwordless**: recruiters sign in with a 6-digit code sent to their email, and each code expires in 30 minutes. There is no Equip password that can be phished, reused, or leaked.
+
+<Tip>
+Each email domain maps to exactly one team, so colleagues join your existing team instead of creating parallel accounts with separate copies of candidate data.
+</Tip>
+
+### Candidate Data Deletion
+
+Equip supports permanent deletion of a candidate's data. Deletion removes the candidate's test attempts, job applications, email records, and personal information, and it propagates to the systems that store attempt content.
+
+<Note>
+Deletion targets candidate data only. If the same email address also belongs to a recruiter or admin account, that account is not affected.
+</Note>
+
+If a candidate asks you to erase their data, or you need a deletion for your own retention policy, contact Equip over chat or at hello@equip.co with the candidate's email address.
+
+<Warning>
+Deletion is permanent. Reports, scores, and proctoring evidence for the deleted candidate cannot be recovered, so download anything you need first.
+</Warning>
+
+### Question Content Security
+
+Leaked questions make an assessment worthless, so Equip protects its question bank in layers:
+
+- **Access is gated.** Real questions are visible only to recruiter accounts or to candidates invited to a specific assessment. Only sample content is public, and search engines cannot index real questions.
+- **Quiz questions are hidden from everyone.** Recruiters cannot see Equip's quiz questions during assessment creation or in candidate reports. Questions are also picked and ordered randomly per candidate, so two candidates starting together rarely see the same questions.
+- **Coding questions rely on pool size.** Recruiters can view coding questions, and the large pool across languages makes memorizing them impractical.
+- **Questions are refreshed.** Internal tools track how often each question has been seen, and overexposed questions are retired so new candidates never see them.
+- **Suspicious accounts are blocked.** Recruiter accounts showing suspicious activity, such as harvesting questions, are shut down.
 
 ## Compliance
 
-Coming soon.
+Equip is a self-serve platform, and every customer is covered by the same standard legal framework.
+
+| Your annual contract value | What applies |
+|---|---|
+| **Under $25,000** | Standard Terms of Service, Privacy Policy, and public pricing. Equip does not sign custom MSAs, SLAs, or DPAs, modify legal terms, or complete bespoke security questionnaires at this tier. |
+| **$25,000 or more** | Custom paperwork, such as limited redlines, vendor forms, and tailored SLAs, is considered subject to review. Share your requirements and timeline with the team. |
+
+For questions about Equip's security practices or documentation, reach out over chat or email hello@equip.co.
+
+## Related Resources
+
+- [AI Proctoring](/ai-proctoring) - How Equip's proctoring measures work during an attempt
+- [Session Recording](/session-recording) - Enabling and reviewing screen recordings in candidate reports
+- [Disable Camera and Mic](/disable-camera-mic) - Running assessments without camera or microphone access
+- [Custom Service Agreements & SLAs](/custom-slas) - When Equip signs custom legal paperwork

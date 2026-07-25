@@ -3,22 +3,113 @@ title: "Changing Stages"
 description: "Move candidates through your pipeline, and control the emails that go out."
 ---
 
+Moving a candidate to a new stage is the most common action in the Equip ATS. Depending on the stage you pick, Equip shows a contextual dialog: a simple move, a rejection flow, or an invitation flow with a full email preview.
+
 <Note>
-This is a new article for the Equip Help Center. Sections below outline the planned content.
+Equip never emails candidates automatically. Every stage-change email is triggered by you, and you always see exactly what will be sent before it goes out.
 </Note>
 
 ## Moving Candidates Between Stages
 
-Coming soon.
+You can change stages from the applications dashboard in both **Table** and **Kanban** views, for one candidate or many at once.
+
+<Steps>
+  <Step title="Select the candidates">
+    Open a candidate, or select multiple candidates in the table to use the bulk **change stage** action.
+  </Step>
+  <Step title="Pick the target stage">
+    Choose the destination stage from the stage dropdown. The dialog that opens depends on the type of stage you are moving to.
+  </Step>
+  <Step title="Review and confirm">
+    For invitation stages, review the email preview, set an optional Reply-To and schedule, then send. For a simple move, just confirm.
+  </Step>
+</Steps>
+
+<!-- screenshot: change-stage dropdown open on the applications dashboard -->
+
+What happens next depends on the target stage:
+
+| Target stage | Dialog you see |
+|---|---|
+| **Phone Screening**, **Hired**, **Withdrawn**, other non-email stages | Simple move, no email involved |
+| **Rejected** | Rejection dialog with reason dropdown and optional rejection email |
+| **Assessment**, **One-Way AI Interview**, **Conversational AI Interview** | Invitation dialog with email preview and a credit notice |
+| **Video Interview**, **Custom** | Invitation dialog with email preview, no credits involved |
+
+Assessment and AI interview invitations consume **credits**. The dialog states the cost up front, for example "We'll deduct N credit(s) now." along with "Reclaimable if not attempted." As a baseline, an assessment or one-way AI interview costs 1 credit per candidate, and a conversational AI interview costs 2 credits (Quick) or 3 credits (Comprehensive).
+
+<Warning>
+If your team's balance cannot cover the invitations, the move is blocked with "Insufficient credits (need X, have Y)". Top up your balance and try again.
+</Warning>
 
 ## Rejections and Statuses
 
-Coming soon.
+Moving candidates to the **Rejected** stage opens the **Reject candidate(s)** dialog. Pick a rejection reason from the dropdown; these reasons power the "Rejections by reason" chart in ATS Insights, so consistent tagging pays off later.
+
+The 10 rejection reasons are: **Not enough experience**, **Skills mismatch**, **Overqualified**, **Salary expectations too high**, **Location/relocation concerns**, **Culture fit**, **Position filled**, **Incomplete application**, **No response from candidate**, and **Other**.
+
+<!-- screenshot: Reject candidate(s) dialog with reason dropdown and email checkbox -->
+
+The dialog also has a **Send rejection email to candidates** checkbox. It is off by default, so rejecting a candidate silently is a single click; tick the box only when you want the rejection email to go out.
+
+Separately from the pipeline stage, every candidate carries a **status**. Stage and status answer different questions:
+
+| | Pipeline stage | Candidate status |
+|---|---|---|
+| Answers | Where is the candidate in the process? | What is your verdict so far? |
+| Values | Your configured stages (Applied through Hired) | Applied, Maybe, Shortlisted, Rejected, Withdrawn |
+| Changes when | You move the candidate | You update it independently, at any stage |
+
+<Tip>
+Use status as a lightweight triage layer. You can mark a candidate **Shortlisted** or **Maybe** while they are still sitting in an early stage, without touching the pipeline.
+</Tip>
 
 ## The Email That Gets Sent
 
-Coming soon.
+Invitation and rejection dialogs render the email from your **email templates**, filled in with the candidate's details, and show a preview before anything is sent. Each stage can have its own template attached in the pipeline builder.
+
+| Stage type | Template used |
+|---|---|
+| Assessment, One-Way AI Interview, Conversational AI Interview | Assessment/AI Interview Invitation |
+| Video Interview | Video Interview Invitation |
+| Custom | Custom Stage Invitation |
+| Rejected (checkbox ticked) | Rejection Email |
+
+<!-- screenshot: invitation dialog showing the rendered email preview -->
+
+To change the wording, edit the template rather than the individual email. Templates support variables like the candidate's name, the job title, and the test link; see [Email Templates](/email-templates).
+
+<Warning>
+Candidates with an **unverified email** trigger a warning in the invite dialog and receive no stage-change emails until their address is verified. This applies to bulk-imported candidates in particular; you can copy a verification link from their profile to share with them.
+</Warning>
+
+Every send is logged. The **Candidate Journey** tab records events like "sent/scheduled assessment invite", "sent/scheduled AI interview invite", and "sent/scheduled rejection email", so your team can always see who sent what and when.
 
 ## Scheduling and Reply-To
 
-Coming soon.
+Before sending, the dialog gives you two controls over delivery.
+
+**Reply-To** sets who receives candidate replies. Pick any team member; it defaults to you. If no Reply-To is set, the email is sent from **no-reply@equip.co** and replies go nowhere.
+
+**Schedule Send** delays delivery instead of sending immediately:
+
+| Unit | Range |
+|---|---|
+| Minutes | 1 to 10,080 |
+| Hours | 1 to 168 |
+| Days | 1 to 7 |
+
+All three units cap out at the same point: emails can be scheduled at most **7 days** ahead.
+
+<!-- screenshot: schedule send and reply-to options in the invitation dialog -->
+
+<Tip>
+Rejecting candidates late at night? Schedule the rejection emails for the next morning so they arrive during business hours.
+</Tip>
+
+## Related Resources
+
+- [Pipeline Stages](/pipeline-stages) - Configure the stages, templates, and assignees candidates move through
+- [Email Templates](/email-templates) - Customize the invitation, rejection, and offer emails with variables
+- [Candidate Pipeline](/candidate-pipeline) - Table and Kanban views, filters, and bulk actions on the dashboard
+- [Reclaim Credits](/reclaim-credits) - Get credits back when invited candidates never attempt

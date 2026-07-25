@@ -1,20 +1,84 @@
 ---
 title: "Can a Candidate Re-Attempt?"
-description: "Attempt limits and how to allow a candidate to try again."
+description: "Attempt limits, how to allow a candidate to try again, and what a re-attempt costs in credits."
 ---
 
+Candidates sometimes ask for a second chance: a laptop died mid-test, a link expired, or you simply want to give a strong applicant another shot. This page explains Equip's one-attempt rule and the exact steps to allow a re-attempt.
+
+<Tip>
+tl;dr: A candidate can attempt an assessment only once. To let them try again, delete their existing attempt from the Results page and re-invite them. Every invitation deducts a credit, so a full re-attempt costs one extra credit.
+</Tip>
+
+## One Attempt Per Candidate
+
+Every candidate can attempt an assessment **only once**. There is no setting that raises this limit; giving someone another attempt always requires action from you as the recruiter.
+
+Because of this rule, an unfinished assessment is **always resumed** for the same email ID. Even if you send a fresh invitation with a brand-new link, clicking that new link continues the original attempt from where the candidate left off.
+
 <Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/can-a-candidate-re-attempt-an-assessment-1tm93g/). Sections below outline the planned content.
+Equip identifies a candidate by their **email ID**. If the same person uses two different email IDs, Equip counts them as two different candidates, since it has no way to know they are the same person.
 </Note>
 
-## Max Attempts Setting
+Before deleting anything, check whether the candidate actually needs a re-attempt. Many requests are really resume situations:
 
-Coming soon.
+| Situation | Candidate's status | What to do |
+|---|---|---|
+| Device or connection issue | Has not started Test 1 | Candidate clicks the same link again, on any device. The assessment starts from Test 1 |
+| Device or connection issue | Finished Test 1 of 2 | Candidate clicks the same link again. The assessment resumes from Test 2 |
+| Invitation link expired | Any | Re-invite them, then reclaim the credit from the previous invitation |
+| You want to give another chance | Finished the assessment | Delete their attempt and re-invite them, or clone the assessment and invite them to the clone |
 
 ## Allowing a Re-Attempt
 
-Coming soon.
+To give a candidate a true fresh start, delete their existing attempt (finished or not) and invite them again.
+
+<Steps>
+  <Step title="Open the Results page">
+    Go to the assessment's Results page and locate the candidate whose attempt you want to remove.
+  </Step>
+  <Step title="Delete the attempt">
+    Click the red **Delete** icon at the far right of the candidate's row. This clears the attempt completely.
+  </Step>
+  <Step title="Re-invite the candidate">
+    Send a new invitation. Since the old attempt no longer exists, the candidate starts the assessment from scratch.
+  </Step>
+</Steps>
+
+<!-- screenshot: Results page with the red Delete icon at the far right of a candidate row -->
+
+<Warning>
+Deleting an attempt permanently removes the candidate's scores and answers. If you may need the results later, download the candidate's report before deleting.
+</Warning>
+
+### Alternative: clone the assessment
+
+If you want to keep the original attempt on record, **clone the assessment** and invite the candidate to the clone instead. Their first attempt stays intact on the original assessment, and the clone gives them a clean slate.
+
+### If the candidate never received the invite
+
+Check the invitation's **Status** on the Track Invitations tab before re-inviting:
+
+- **Bounced**: the email ID is likely wrong. Correct it and re-invite the right address.
+- **Delivered, Opened, or Clicked**: the email reached them. Ask the candidate to check Spam and other folders.
+- Still missing: re-invite them and reclaim the credit from the earlier invitation.
 
 ## Credits and Re-Attempts
 
-Coming soon.
+Equip **always deducts a credit on each invitation**, including re-invitations. What changes between scenarios is whether you can reclaim the earlier credit:
+
+| Candidate's progress | Previous credit | What you pay |
+|---|---|---|
+| Has not started the assessment | Reclaimable, since the invitation went unused | Only the new invitation's credit |
+| Started but did not finish | Reclaim it before re-inviting; the candidate restarts from scratch | You pay for the re-attempt |
+| Finished the assessment | Not reclaimable | You pay again, so the candidate costs 2 credits in total |
+
+<Note>
+Credits are reclaimable only when the invitation was sent more than 24 hours ago and the candidate has not started the first test. Reclaiming a credit also revokes the candidate's link and deletes any test data tied to it.
+</Note>
+
+## Related Resources
+
+- [Resume Your Attempt](/resume-your-attempt) - What candidates should do after a refresh, crash, or device change
+- [Reclaim Credits](/reclaim-credits) - Conditions for getting credits back on unused invitations
+- [Email Invitations](/email-invitations) - Sending and tracking assessment invitations
+- [Email Status](/email-status) - What Sent, Delivered, Opened, Clicked, and Bounced mean

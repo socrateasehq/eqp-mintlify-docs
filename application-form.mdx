@@ -1,20 +1,93 @@
 ---
 title: "The Application Form"
-description: "Step 2 of creating a job opening: the fields candidates fill out."
+description: "Step 2 of creating a job opening: choose the fields candidates fill out, add custom fields, and set screening questions."
 ---
 
-<Note>
-This is a new article for the Equip Help Center. Sections below outline the planned content.
-</Note>
+The **Application Form** is the second step of the three-step job creation wizard, between **Job Post** and **Candidate Pipeline**. It controls exactly what information candidates provide when they apply.
+
+The builder shows a **live preview** of the candidate-facing form, so you always see what applicants will see. You can revisit and edit the form later from the job's Settings page, which has the same three tabs as the wizard.
+
+<!-- screenshot: application form builder with field toggles on the left and live candidate preview on the right -->
+
+<Tip>
+Candidates do not have to type everything by hand. When they upload their CV, Equip parses it and pre-fills the form automatically. See [CV Parsing](/cv-parsing) for how this works.
+</Tip>
 
 ## Standard Fields
 
-Coming soon.
+Equip ships with a set of **standard fields**, grouped in the builder into basic, professional, and additional sections. Toggle each field on or off, and mark any enabled field as mandatory.
+
+| Field | Default | Notes |
+|---|---|---|
+| **First Name**, **Last Name**, **Email** | Always on | Mandatory and locked; every application needs these |
+| **Phone Number** | On, mandatory | Can be made optional or turned off |
+| **Work Experience** | On, mandatory | Roles, companies, and dates |
+| **Educational Background** | On, mandatory | Degrees and institutions |
+| **Industries** | On, mandatory | Industry experience |
+| **Skills** | On, mandatory | Skills with experience levels |
+| **CV/Resume** | On, mandatory | Uploading a CV also pre-fills the rest of the form |
+| **Notice Period** | On, mandatory | Useful for sorting candidates by availability |
+| **Current City** | Off | |
+| **LinkedIn Profile** | Off | |
+| **Year of Birth** | Off | |
+| **Projects/Certifications** | Off | |
+| **Salary Expectation Range** | Off | Sortable in the applications dashboard when enabled |
+| **Portfolio URLs** | Off | |
+| **Languages Known** | Off | |
+| **Willing to Relocate** | Off | |
+
+<Note>
+Some fields power other Equip features. The [Job Fit Score](/job-fit-score) ranking criteria depend on what you collect: Skills requires the **Skills** field, Experience and Previous Companies require **Work Experience**, Education requires **Educational Background**, and Industry requires **Industries**.
+</Note>
+
+<Warning>
+Every mandatory field adds friction. A long form can discourage good candidates from completing their application, so only require fields you will actually use to evaluate or contact them.
+</Warning>
 
 ## Custom Fields
 
-Coming soon.
+When the standard fields do not cover something you need, add **custom fields**. Each job opening supports up to **10 custom fields**.
+
+<Steps>
+  <Step title="Add a custom field">
+    In the Application Form step, create a new custom field and give it a label of at least 3 characters, for example "Do you hold a valid driving license?".
+  </Step>
+  <Step title="Pick the answer type">
+    Choose **Boolean** (yes/no), **Integer** (a number), or **Date**.
+  </Step>
+  <Step title="Configure the details">
+    Optionally add a placeholder to guide candidates, and toggle whether the field is mandatory.
+  </Step>
+</Steps>
+
+Custom field answers appear on each [candidate's profile](/candidate-profile), and you can use them as **filters** in the applications dashboard. That makes them ideal for structured facts you want to slice candidates by, such as certifications held or earliest start date.
+
+<!-- screenshot: adding a custom field with the Boolean / Integer / Date type selector -->
 
 ## Screening Questions
 
-Coming soon.
+**Screening questions** are questions candidates answer as part of the application. Each job opening supports up to **5 screening questions**.
+
+Screening questions accept four answer types:
+
+| Answer type | Best for | Filterable in dashboard |
+|---|---|---|
+| **Text** | Open-ended answers, such as "Why do you want this role?" | No |
+| **Boolean** | Yes/no eligibility checks, such as work authorization | Yes |
+| **Integer** | Numeric answers, such as years with a specific tool | Yes |
+| **Date** | Date answers, such as earliest joining date | Yes |
+
+Objective answer types (Boolean, Integer, Date) become **dashboard filters**, so you can instantly narrow the pipeline to candidates who meet a requirement. Text answers are there for you to read on the candidate profile.
+
+<Tip>
+Prefer objective answer types for hard requirements and save Text questions for the one or two things you genuinely want to read in the candidate's own words.
+</Tip>
+
+<!-- screenshot: candidate-facing application form showing screening questions at the end -->
+
+## Related Resources
+
+- [Creating a Job Post](/job-post) - Step 1 of the wizard: the details candidates see
+- [The Candidate Pipeline](/candidate-pipeline) - Step 3 of the wizard: stages and automations
+- [CV Parsing](/cv-parsing) - How resume uploads pre-fill the application form
+- [Job Fit Score](/job-fit-score) - How form fields feed AI candidate ranking

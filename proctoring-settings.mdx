@@ -3,18 +3,96 @@ title: "Proctoring Settings and How to Change Them"
 description: "Every proctoring option, its default, and per-test configuration."
 ---
 
-<Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/proctoring-settings-what-they-are-how-to-change-them-1r09s6c/). Sections below outline the planned content.
-</Note>
+Every test in an assessment carries its own set of **proctoring settings**. When you create an assessment, each test starts with sensible defaults for its test type, and you can adjust them per test from the assessment's settings.
+
+Proctoring on Equip is powered by AutoProctor. Candidates see exactly which measures are active before they start, and they consent to the proctoring report being shared with you.
 
 ## Available Settings
 
-Coming soon.
+Each test has 11 proctoring toggles. Here is what each one does:
+
+| Setting | What It Does |
+|---|---|
+| **Detect Audio** | Records noise and audio cues in the background. |
+| **Detect Face** | Captures a photo if the camera detects no faces (camera covered, or nobody in view) or multiple faces. |
+| **Detect Switched Tab** | Detects when the candidate switches to a different tab or application. |
+| **Switched Tab Screenshot** | Captures a screenshot of the tab the candidate switched to. Works on Chrome, Edge, Safari, and Firefox desktop browsers. |
+| **Take Random Photos** | Captures a few photos of the candidate at random points throughout the test. |
+| **Prevent Multiple Monitors** | Blocks candidates connected to more than one monitor from taking the test until they disconnect the extra displays. Requires a Chromium-based browser. |
+| **Capture Photo Before Start Test** | Takes a photo of the candidate's face before the test starts. For the first test in an assessment, this is enabled by default. |
+| **Enforce Full Screen** | Candidates cannot take the test without entering full-screen mode. Recommended to discourage tab switching. |
+| **Enforce Desktop** | Candidates can only use a desktop or laptop. Useful for coding challenges that need a large screen. |
+| **Record User Session** | Records the candidate's screen and actions (mouse clicks, keyboard typing) as they attempt the test. |
+| **Auxiliary Device** | Candidates must pair their phone as a second camera watching their hands, keyboard, and screen. |
+
+<!-- screenshot: proctoring settings panel with the 11 toggles inside Edit Settings -->
+
+<Note>
+**Switched Tab Screenshot** depends on **Detect Switched Tab**. Enabling the screenshot option automatically turns on tab detection, and disabling tab detection turns the screenshot option off.
+</Note>
+
+A related option, **Disable Copy & Paste**, lives with the test's anti-cheating settings rather than this panel. See [Anti-Cheating Settings](/anti-cheating-settings) for that and other question-level protections.
+
+<Tip>
+Some measures run on every attempt regardless of these toggles, such as device fingerprinting, IP recording, and multi-session detection. See [AI Proctoring](/ai-proctoring) for the full picture, including how the evidence appears in the candidate report.
+</Tip>
 
 ## Defaults by Test Type
 
-Coming soon.
+New tests start with most settings **on**. The exceptions depend on the test type, because some measures make no sense for certain formats: for example, **Detect Audio** stays off for spoken-answer tests, where talking is the whole point.
+
+**Auxiliary Device** is off by default for every test type. You must enable it explicitly.
+
+| Test Type | Off by Default |
+|---|---|
+| **Quiz** (all variants) | Enforce Desktop |
+| **Programming, SQL, CSS, Typing** | None (all settings on) |
+| **Excel** | Record User Session |
+| **Video Response** | Detect Audio, Detect Face, Take Random Photos, Capture Photo Before Start Test, Record User Session, Enforce Full Screen, Enforce Desktop |
+| **Psychometric** | Detect Audio, Detect Face, Detect Switched Tab, Switched Tab Screenshot, Take Random Photos, Capture Photo Before Start Test, Enforce Full Screen, Prevent Multiple Monitors, Enforce Desktop |
+| **English Communication (CEFR)** | Detect Audio |
+| **AI Interview (One-way)** | Detect Audio, Enforce Desktop |
+| **AI Interview (Conversational)** | Detect Audio, Detect Face, Take Random Photos, Enforce Desktop |
+
+<Note>
+For video response tests, camera-related options stay off because you already see the candidate on camera in every answer. The recruiter UI keeps those toggles locked for custom video response tests too.
+</Note>
+
+<Warning>
+Tests built from **Equip's content library** keep their default proctoring settings; you cannot modify them. Only **custom tests** are fully configurable. See [Disabling Camera and Mic Tracking](/disable-camera-mic) for what this means in practice.
+</Warning>
 
 ## Changing Settings
 
-Coming soon.
+Proctoring settings are edited per test after the assessment is created.
+
+<Steps>
+  <Step title="Create the assessment">
+    The assessment is created with the default proctoring settings for each test type.
+  </Step>
+  <Step title="Open the assessment's Settings">
+    From your assessment dashboard, open the settings of the assessment you want to change.
+  </Step>
+  <Step title="Go to the Test Order tab">
+    Click **Edit Settings** for the test you want to modify.
+  </Step>
+  <Step title="Toggle the settings you need">
+    Switch individual options on or off, then click **Save Settings**.
+  </Step>
+  <Step title="Click Update">
+    Your changes apply to future attempts of that test.
+  </Step>
+</Steps>
+
+<!-- screenshot: Test Order tab showing Edit Settings link for a test -->
+
+<Tip>
+The panel includes **Enable All** and **Disable All** links, so you can flip every toggle at once and then fine-tune from there.
+</Tip>
+
+## Related Resources
+
+- [AI Proctoring](/ai-proctoring) - How Equip's automated proctoring works end to end
+- [Anti-Cheating Settings](/anti-cheating-settings) - Question randomization, copy-paste blocking, and auto-submit on tab switch
+- [Disabling Camera and Mic Tracking](/disable-camera-mic) - Which tests allow turning camera and mic monitoring off
+- [Session Recording](/session-recording) - Reviewing the screen recording of a candidate's attempt

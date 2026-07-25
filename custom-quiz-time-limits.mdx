@@ -3,14 +3,68 @@ title: "Setting Time Limits for a Custom Quiz"
 description: "Where and how to set the duration of custom quizzes."
 ---
 
-<Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/setting-time-limits-for-a-custom-quiz-nkfq1c/). Sections below outline the planned content.
-</Note>
+<Tip>
+Time limits can only be set on **Custom Tests**, the tests you create yourself. Where the timer goes depends on the quiz's display mode: one-by-one quizzes use a timer per question, and all-at-once quizzes use a single timer for the whole test.
+</Tip>
 
 ## Where to Set Time Limits
 
-Coming soon.
+You set time limits while creating or editing a **Custom Quiz**. Timers live inside the quiz itself, not in the assessment settings.
+
+<Steps>
+  <Step title="Open your Custom Quiz">
+    From the Assessments Dashboard, open the **Custom Tests** section in the sidebar and select the quiz you want to edit.
+  </Step>
+  <Step title="Set the timer">
+    While adding or editing a question, set its **timer** along with its points and any negative points. If your quiz shows all questions at once, set a single time limit for the entire test instead.
+  </Step>
+  <Step title="Save the quiz">
+    Save your changes. Candidates who start the quiz after you save will see the updated timers.
+  </Step>
+</Steps>
+
+<!-- screenshot: custom quiz editor showing the per-question timer field -->
+
+<Note>
+If you are using **Equip Content**, every question already has a fixed timer that cannot be changed. See [Time Limits on Equip](/time-limits) for how those timers work.
+</Note>
+
+Which timer you can set depends on the quiz's **display mode**:
+
+| Display mode | How questions appear | Where the time limit goes |
+|---|---|---|
+| **One-by-one** (screen-by-screen) | One question per screen, like Typeform | Per question only |
+| **All-at-once** | Every question on one page, like Google Forms | Whole test only |
+
+<Tip>
+Importing questions from Excel? The template's **Time** column accepts a value in seconds for each question, so you can set timers in bulk. See [Import Questions from Excel](/import-questions-from-excel).
+</Tip>
 
 ## Per-Test Duration
 
-Coming soon.
+An **all-at-once** quiz has a single countdown for the whole test. Candidates can move between questions freely, bookmark questions, and return to them until the test timer runs out.
+
+There are no per-question timers in this mode. If you want to control how long candidates spend on each individual question, switch the quiz to one-by-one mode instead.
+
+<Note>
+There is no time limit for an **entire assessment**, only for the tests and questions inside it. Candidates may take breaks between tests, so the overall end time cannot be controlled. See [Assessment Duration](/assessment-duration) for details.
+</Note>
+
+The **Test Order** tab of your assessment settings shows an **Estimated Assessment Duration** based on the timers in each test. If a custom test has questions without timers, this estimate can be inaccurate.
+
+## Switching Between Display Modes
+
+Custom quizzes can switch between one-by-one and all-at-once modes at any time. When you switch, the time limit model switches with it: per-question timers apply in one-by-one mode, and a single test timer applies in all-at-once mode.
+
+<Warning>
+Changes take effect as soon as you save. Candidates who start the quiz after you save will see the updated question flow and timers, so avoid switching modes in the middle of an active hiring drive.
+</Warning>
+
+For a deeper comparison of the two modes, including skipping, progress bars, and bookmarking, see [Quiz Display Modes](/quiz-display-modes).
+
+## Related Resources
+
+- [Quiz Display Modes](/quiz-display-modes) - How one-by-one and all-at-once quizzes differ for candidates
+- [Time Limits on Equip](/time-limits) - Which test types support timers and at what level
+- [Assessment Duration](/assessment-duration) - Why assessments have no overall time limit
+- [Import Questions from Excel](/import-questions-from-excel) - Set question timers in bulk via the import template

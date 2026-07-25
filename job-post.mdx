@@ -3,22 +3,107 @@ title: "The Job Post"
 description: "Step 1 of creating a job opening: the details candidates see."
 ---
 
-<Note>
-This is a new article for the Equip Help Center. Sections below outline the planned content.
-</Note>
+When you create a job opening on Equip, a three-step wizard walks you through **Job Post** (details candidates see), **Application Form** (fields candidates fill out), and **Candidate Pipeline** (stages and automations). This article covers the first step: the job post itself.
+
+<Tip>
+The fastest way to fill in a job post is to upload an existing job description PDF or paste its text. Equip's AI parses it and pre-fills every field, usually in 30-45 seconds. See [AI Job-Description Import](#ai-job-description-import) below.
+</Tip>
 
 ## Job Details
 
-Coming soon.
+The job details section captures the structured facts about the role. Candidates see these on the public job post, and Equip uses them to power filters on your [careers page](/careers-page) and the [Job Fit Score](/job-fit-score).
+
+<!-- screenshot: job creation wizard, step 1 (Job Post) with the job details form -->
+
+You can specify:
+
+- **Job title / role** and minimum and maximum **years of experience**
+- **Employment type**, **seniority level**, and **work arrangement**
+- **Locations** (cities), location restrictions, and an optional timezone restriction (a zone plus an overlap window in hours)
+- A **hybrid policy** description for hybrid roles
+- **Mandatory and preferred skills**
+- **Salary range** with currency and frequency, and a **minimum education qualification**
+- **Employment start date** and **application deadline**
+- A **key callout**, a short highlight line that stands out on the post
+
+The dropdown fields offer these options:
+
+| Field | Options |
+|---|---|
+| **Employment type** | Full-time, Part-time, Contract, Internship, Other |
+| **Seniority level** | Intern, Entry-level, Junior, Mid-level, Senior, Lead, Manager, Director |
+| **Work arrangement** | On-site, Remote, Hybrid |
+| **Salary frequency** | Yearly, Monthly, Weekly, Hourly, Fixed, Other |
+| **Minimum education** | High School, Diploma, Bachelor's, Master's, PhD |
+
+<Note>
+You can edit any of these details after the job opening is created. The opening's Settings page has the same three tabs as the creation wizard: Job Post, Application Form, and Candidate Pipeline.
+</Note>
 
 ## AI Job-Description Import
 
-Coming soon.
+If you already have a job description, you do not need to retype it. Upload it and let Equip's AI fill in the form.
+
+<Steps>
+  <Step title="Upload or paste your JD">
+    On the Job Post step, use **Upload Job Description PDF** to drag and drop a PDF or click **Choose PDF File** to browse. PDF is the only supported file format, with a 10 MB size limit. You can also paste the job description as plain text instead.
+  </Step>
+  <Step title="Wait for parsing">
+    Equip shows "Uploading file..." and then "Processing your PDF...". Parsing usually takes 30-45 seconds.
+  </Step>
+  <Step title="Review the pre-filled fields">
+    The AI pre-fills all job fields, including the rich-text sections. Review each field, correct anything the parser missed, and continue to the next step.
+  </Step>
+</Steps>
+
+<Note>
+If parsing does not complete within about a minute, Equip shows "Unable to Parse PDF" and switches to manual entry. Nothing is lost; you simply fill in the fields yourself.
+</Note>
+
+<Tip>
+Starting from scratch? Equip provides a **sample job description** for a Data Analyst role that you can load as a starting point and adapt.
+</Tip>
 
 ## Rich-Text Sections
 
-Coming soon.
+Beyond the structured fields, the job post has four **rich-text sections** where you describe the role in your own words:
+
+| Section | What to put in it |
+|---|---|
+| **Job Summary** | A concise overview of the role and why it matters |
+| **Responsibilities** | What the person will actually do day to day |
+| **Perks** | Benefits, culture, and anything that makes the role attractive |
+| **Additional Requirements** | Anything not covered by the structured fields, such as certifications or travel expectations |
+
+Keep these sections candidate-focused and scannable. The structured job details already cover experience, skills, salary, and location, so use the rich-text sections for context rather than repeating those facts.
+
+<!-- screenshot: rich-text editor showing the Job Summary section -->
 
 ## Field Limits
 
-Coming soon.
+Equip validates the job post before it can be published. These are the limits to keep in mind:
+
+| Field | Limit |
+|---|---|
+| **Job Summary** | 50 to 2,000 characters |
+| **Years of experience** | Maximum 50 years; the gap between minimum and maximum can be at most 20 years |
+| **Salary range** | Maximum salary can be at most 3x the minimum salary |
+| **Skills** | Up to 10 mandatory skills, 15 skills in total |
+| **Hybrid policy** | 10 to 300 characters |
+| **Location restriction** | Minimum 3 characters |
+| **Timezone restriction** | 1 to 12 hours of overlap |
+| **Application deadline** | Up to 6 months in the future |
+| **Key callout** | Maximum 200 characters and 30 words |
+
+<Warning>
+The application deadline cannot be set more than 6 months out. If your role stays open longer, extend the deadline from the opening's Settings page before it passes.
+</Warning>
+
+Once the job post is complete, continue to the [Application Form](/application-form) step to choose which fields candidates fill out.
+
+## Related Resources
+
+- [The Application Form](/application-form) - Step 2 of the wizard: the fields candidates must fill out
+- [Pipeline Stages](/pipeline-stages) - Step 3 of the wizard: stages and automations for your pipeline
+- [Sharing Job Posts](/sharing-job-posts) - Get the application link and publish your job post
+- [Careers Page](/careers-page) - Show all your published job posts on a branded public page

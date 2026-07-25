@@ -3,18 +3,94 @@ title: "Credit Deduction Policy"
 description: "Exactly when credits are deducted for assessments and interviews."
 ---
 
-<Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/credit-deduction-policy-for-assessments-qmfddb/). Sections below outline the planned content.
-</Note>
+<Tip>
+Equip deducts **1 credit per test in the assessment, per candidate**. The first credit is deducted when you send the invitation; each remaining credit is deducted only when the candidate starts that test. If a candidate never starts, you can reclaim the invitation credit.
+</Tip>
 
 ## When Credits Are Deducted
 
-Coming soon.
+An Equip assessment is made up of one or more **tests**. For example, an assessment with 1 Quiz and 1 Programming Question contains 2 tests, so each candidate who completes it costs 2 credits.
+
+To check how many tests an assessment contains, open the assessment's **Settings** link and visit the **Test Order** tab.
+
+<!-- screenshot: assessment Settings page, Test Order tab showing the list of tests -->
+
+Credits are deducted at these moments:
+
+| Event | Credits deducted |
+|---|---|
+| You invite a candidate to the assessment | 1st credit, immediately on send |
+| Candidate starts Test #2 | 2nd credit |
+| Candidate starts Test #3 | 3rd credit, and so on |
+
+A test counts as **started** when its questions load for the candidate. The invitation credit is deducted even if the email bounces or is never opened.
+
+<Note>
+If the candidate never starts Test #1, you can [reclaim the invitation credit](/reclaim-credits) once 24 hours have passed. The net effect: you pay 1 credit for each test a candidate actually starts.
+</Note>
+
+### A Worked Example
+
+Say you invite 10 candidates to a 2-test assessment:
+
+| Candidate group | Credits used |
+|---|---|
+| 2 candidates never start | 2 (invitation credits, reclaimable) |
+| 3 candidates finish only Test 1 | 3 (invitation credits only) |
+| 5 candidates finish both tests | 10 (5 invitations + 5 Test #2 starts) |
+| **Total** | **15 charged, 2 reclaimable** |
+
+### Duplicate Invitations
+
+If you try to invite the same candidate to the same assessment twice, Equip warns you first. If you proceed, 2 credits are deducted in total.
+
+<Tip>
+Invited someone twice by mistake? The unused invitation's credit becomes reclaimable 24 hours after it was sent.
+</Tip>
+
+<Note>
+Why deduct on invite rather than on start? Equip once saw an account send 50,000 spam invitations. Charging at send time keeps the platform safe for candidates, and the reclaim flow ensures honest recruiters never pay for unused invitations.
+</Note>
 
 ## Costs by Product
 
-Coming soon.
+The **ATS** (job posts, pipeline, resume screening) is free. Credits are only spent on assessments, AI interviews, and a few optional AI actions. 1 credit equals **$1** (USD) or **₹90** (INR).
+
+| Action | Cost |
+|---|---|
+| Assessment | 1 credit per candidate per test |
+| One-way AI interview | 1 credit per candidate |
+| Conversational AI interview (Quick) | 2 credits per candidate |
+| Conversational AI interview (Comprehensive) | 3 credits per candidate |
+| Job Fit Score re-ranking | 0.5 credits per candidate |
+| Bulk CV import | 0.01 credits per CV |
+
+<Note>
+You cannot merge tests to reduce the per-test cost. Programming and SQL tests allow only 1 question per test, and a Quiz is capped at 25 questions with Equip content or 100 with custom content. See [Question Limits](/question-limits) for details.
+</Note>
 
 ## Negative Balance Rules
 
-Coming soon.
+Your balance is allowed to dip slightly below zero so that candidates mid-assessment are never blocked abruptly. There are two thresholds to know:
+
+| Balance | What happens |
+|---|---|
+| Below 0 | Your team cannot see any candidate results until you top up |
+| Below -25 | Candidates can no longer attempt your assessments |
+
+Because the floor is **-25 credits**, the maximum number of candidates you can invite at any point is your current credit balance plus 25.
+
+<Warning>
+Results stay hidden the moment your balance goes negative. If candidates are actively attempting an assessment, top up before the balance crosses 0 so you can review their results without interruption.
+</Warning>
+
+<Tip>
+Equip emails the team admin when the balance drops past 20 credits and again past 5 credits, so you get advance warning before hitting these thresholds. Every deduction is itemized on the **Credit Usage** page under Account in the sidebar.
+</Tip>
+
+## Related Resources
+
+- [How Credits Work](/how-credits-work) - Pricing, free trial credits, and how to purchase more
+- [Reclaim Credits](/reclaim-credits) - Get credits back for invitations that were never used
+- [Assessment Hierarchy](/assessment-hierarchy) - How assessments, tests, and questions fit together
+- [Email Invitations](/email-invitations) - How to invite candidates to an assessment

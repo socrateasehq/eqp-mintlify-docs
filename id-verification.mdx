@@ -1,20 +1,69 @@
 ---
 title: "ID Verification and Impersonation Detection"
-description: "Paid add-ons that verify the test-taker's identity."
+description: "Verify who is really taking the test with two paid add-ons: ID Card Verification and Impersonation Detection."
 ---
 
-<Note>
-This is a new article for the Equip Help Center. Sections below outline the planned content.
-</Note>
+Standard [AI proctoring](/ai-proctoring) tells you how a candidate behaved during a test. These two add-ons answer a more fundamental question: is the person on camera actually the candidate you invited? Both are **paid add-ons** that extend Equip's built-in proctoring.
 
 ## ID Card Verification
 
-Coming soon.
+**ID Card Verification** confirms the test-taker's identity before any questions appear. The candidate photographs an official ID, and Equip matches it against the person sitting the test.
+
+<Steps>
+  <Step title="Candidate photographs their ID">
+    At the start of the test, the candidate holds up a government-issued or institution-issued ID card to the camera and captures a photo of it.
+  </Step>
+  <Step title="Equip matches the face">
+    The photo on the ID card is compared with the face of the person on camera.
+  </Step>
+  <Step title="Equip matches the name">
+    The name printed on the ID is checked against the candidate taking the test.
+  </Step>
+</Steps>
+
+<!-- screenshot: candidate holding an ID card up to the camera during the verification step -->
+
+<Note>
+Even without this add-on, the **Capture Photo Before Start Test** proctoring setting takes a photo of the candidate's face before every test. ID Card Verification goes further by checking that face and name against an official document.
+</Note>
 
 ## Impersonation Detection
 
-Coming soon.
+A check at the start cannot catch someone who swaps in after the test begins. **Impersonation Detection** uses AI to watch the camera feed across the entire session and raises a flag when the person on camera does not match, for example when a different person takes over partway through the attempt.
+
+The two add-ons cover different moments of the attempt:
+
+| Add-on | When it runs | What it catches |
+|---|---|---|
+| **ID Card Verification** | Once, at the start of the test | A test-taker whose face or name does not match the ID |
+| **Impersonation Detection** | Continuously, throughout the session | A different person appearing on camera after the test has started |
+
+<Tip>
+Treat these flags like any other proctoring signal. If an attempt is flagged, open the **Proctoring** tab of the candidate's report to review the photo evidence alongside the [Trust Score](/trust-score) before making a decision.
+</Tip>
 
 ## Enabling These Add-Ons
 
-Coming soon.
+Both features are paid add-ons and are switched off by default. They are separate from the standard per-test proctoring toggles, so you will not find them in the regular settings panel. To add them to your assessments, reach out to the Equip team through the in-app chat or write to hello@equip.co.
+
+For context, here is how they sit alongside the identity measures Equip already runs at no extra cost:
+
+| Identity measure | Cost | When it applies |
+|---|---|---|
+| Device fingerprinting | Included | Every attempt, always on |
+| IP recording with geolocation | Included | Every attempt, always on |
+| Multi-session detection | Included | Every attempt, always on |
+| Capture Photo Before Start Test | Included | Optional per-test proctoring toggle |
+| ID Card Verification | Paid add-on | Enabled on request |
+| Impersonation Detection | Paid add-on | Enabled on request |
+
+<Note>
+Want to see these checks in action first? Equip has a self-serve public demo of ID verification and impersonation detection that runs without logging in. Ask the team for the demo link when you get in touch.
+</Note>
+
+## Related Resources
+
+- [AI Proctoring](/ai-proctoring) - Overview of everything Equip's proctoring monitors during a test
+- [Proctoring Settings](/proctoring-settings) - The standard per-test toggles, including Capture Photo Before Start Test
+- [Trust Score](/trust-score) - How to read the 0 to 100% reliability score on every report
+- [Session Recording](/session-recording) - Replay a candidate's screen when you need to verify a flag

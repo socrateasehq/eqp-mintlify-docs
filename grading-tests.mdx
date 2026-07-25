@@ -1,20 +1,107 @@
 ---
 title: "How Tests Are Graded on Equip"
-description: "Auto-graded, AI-graded, and manually graded test types."
+description: "Which test types are auto-graded, which use AI grading, and which need manual grading, plus how to spot and clear ungraded submissions."
 ---
 
-<Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/grading-tests-on-equip-1jbkdfl/). Sections below outline the planned content.
-</Note>
+<Tip>
+Most tests on Equip are graded automatically the moment a candidate submits. A few question and test types, such as video responses and CSS challenges, wait for you: they show an **ungraded** label until you award points, and the candidate's overall score stays ungraded until every test is graded.
+</Tip>
+
+Equip offers a variety of [test types](/test-types), and each test type can contain multiple question types. How a test is graded depends on both: some are scored instantly by Equip, some are evaluated by AI, and some need a recruiter to assign points.
 
 ## Auto-Graded Tests
 
-Coming soon.
+**Auto-graded tests** are scored by Equip as soon as the candidate submits. You do not need to do anything; points appear in the results immediately.
+
+| Test type | Graded automatically? |
+|---|---|
+| Quiz | Yes, for most question types (see below) |
+| Programming Test | Yes |
+| SQL Test | Yes |
+| English Communication (CEFR) | Yes |
+| Attention to Detail | Yes |
+| Excel Test | Yes |
+| Psychometric | Not scored (see note below) |
+| Video Response | No, graded manually |
+| CSS Challenge | No, graded manually |
+
+<Note>
+**Psychometric tests** are subjective, so they carry no points and no weightage. Candidates get a personality graph instead of a score, and the test is excluded from the overall score. See [Psychometric Scores](/psychometric-scores) for how to read the results.
+</Note>
+
+### Grading by quiz question type
+
+Within a quiz, grading depends on the **question type**. Auto-graded question types include:
+
+- **MCQ** (single correct answer)
+- **MCA** (multiple correct answers)
+- **Categorize**
+- **Transcription**
+- **Autograded Text** (exact-match expected answer)
+
+These quiz question types are graded manually by the recruiter:
+
+- **Voice Input**
+- **Short Text** (essay-style answers)
+- **Single-line Input**
+
+<Tip>
+MCQs in Equip's own quiz content always carry **negative marking**, and it cannot be turned off. For custom quizzes, negative points are optional. See [Negative Marking](/negative-marking) for the details.
+</Tip>
 
 ## AI-Graded Answers
 
-Coming soon.
+**AI-graded questions** sit between the two: Equip's AI evaluates the response and assigns points, and you can override the result whenever you disagree.
+
+AI grading applies to open-ended answers in AI-graded tests and AI interviews, across three answer formats:
+
+| Answer format | What the AI evaluates |
+|---|---|
+| **Text** | The written answer, within the word limits you set |
+| **Audio** | The candidate's recorded spoken response |
+| **Video** | The candidate's recorded video response |
+
+You can steer the evaluation with an optional **per-question AI evaluation prompt**, and provide test-level evaluation context that applies to the whole test. The AI grades each response against your criteria.
+
+<Note>
+AI scores are not final. Open any response and adjust the awarded points manually; the test score and overall score recalculate automatically. See [AI-Graded Questions](/ai-graded-questions) for setup details.
+</Note>
 
 ## Manually Graded Tests
 
-Coming soon.
+Two test types always need a recruiter to grade them: **Video Response** (video interview) tests and **CSS Challenges**. Quizzes containing Voice Input, Short Text, or Single-line Input questions also need a manual pass for those questions.
+
+### Finding ungraded submissions
+
+<Steps>
+  <Step title="Open the assessment results">
+    Tests that still need grading are labeled **ungraded** on the results page. A candidate's overall score also shows as ungraded until every one of their tests is graded.
+  </Step>
+  <Step title="Filter with Show Ungraded">
+    Use the **Show Ungraded** filter on the Recruiter Dashboard to list every submission in the assessment that still needs grading.
+  </Step>
+  <Step title="Grade each pending question">
+    Inside a test, ungraded questions are clearly labeled. Review the candidate's response, then click the **pencil icon** to assign points.
+  </Step>
+</Steps>
+
+<!-- screenshot: assessment results page showing the ungraded label and Show Ungraded filter -->
+
+Once you grade a test, its ungraded label disappears for that candidate. When all of their tests are graded, the ungraded label clears from the overall score too.
+
+### Editing points after grading
+
+Grading is never locked in. Wherever you see the **pencil icon**, you can change the points for a question, even if it was already graded automatically or manually.
+
+<Note>
+When you change a question's points, Equip recalculates the test score and the candidate's overall score automatically. Weightages you set in the Test Order tab still apply; see [Test Scores and Overall Score](/test-scores-and-overall-score) for how the overall score is computed.
+</Note>
+
+For step-by-step walkthroughs of grading video responses and CSS challenges, including the question filters that speed up bulk grading, see [Manual Grading](/manual-grading).
+
+## Related Resources
+
+- [Manual Grading](/manual-grading) - Step-by-step guide to grading video responses and CSS challenges
+- [Test Scores and Overall Score](/test-scores-and-overall-score) - How per-test scores and weightages combine into the overall score
+- [AI-Graded Questions](/ai-graded-questions) - Configure text, audio, and video questions evaluated by AI
+- [Negative Marking](/negative-marking) - How negative points work in Equip and custom quizzes

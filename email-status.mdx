@@ -1,20 +1,77 @@
 ---
 title: "Email Status: Delivered, Opened, Clicked"
-description: "What each invitation email status means."
+description: "What each invitation email status means, and what to do when an email bounces or a candidate says they never received it."
 ---
 
+When you invite candidates by email, Equip tracks what happens to every invitation it sends. This lets you see, per candidate, whether the email reached them, whether they opened it, and whether they clicked the assessment link.
+
 <Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/email-delivered-opened-clicked-status-11ebjo6/). Sections below outline the planned content.
+Status tracking is only available for **email invitations**. Candidates who join through a shared public URL are not tracked this way. See [Share URL vs Email Invitations](/share-url-vs-email) for the full comparison.
 </Note>
 
 ## Tracking Statuses
 
-Coming soon.
+Each invitation's status appears in the **Track Invitations** tab of the invite page.
+
+<Steps>
+  <Step title="Open the invite page">
+    From your dashboard, click **Invite** under the assessment whose invitations you want to check.
+  </Step>
+  <Step title="Switch to Track Invitations">
+    Click the **Track Invitations** tab. You will see a table listing every candidate you have invited.
+  </Step>
+  <Step title="Check the Status column">
+    The **Status** column shows the current state of each candidate's invitation email. Statuses update automatically as events happen, so a candidate can move from Sent to Delivered to Opened to Clicked over time.
+  </Step>
+</Steps>
+
+<!-- screenshot: Track Invitations tab showing the invitations table with the Status column -->
 
 ## What Each Status Means
 
-Coming soon.
+Equip surfaces five statuses for invitation emails:
+
+| Status | Meaning |
+|---|---|
+| **Sent** | The initial status, applied as soon as the email is sent |
+| **Bounced** | The email could not be delivered (invalid address, full inbox, and similar causes) |
+| **Delivered** | The email successfully reached the candidate's inbox |
+| **Opened** | The candidate opened the email |
+| **Clicked** | The candidate clicked a link in the email |
+
+These statuses are authoritative. If an email shows **Delivered**, **Opened**, or **Clicked**, you can be certain that event actually happened, even if the candidate says otherwise.
+
+<Note>
+Some email clients, especially mobile apps, block open tracking. A candidate may have opened the email while the status still says **Delivered**. The reverse never happens: a status is never more advanced than reality.
+</Note>
+
+<Tip>
+The default invitation template contains exactly one link, the assessment link. So **Clicked** means the candidate clicked the assessment link. If you add extra links while customizing the [email template](/email-invitations), Equip cannot tell which link was clicked.
+</Tip>
 
 ## When Emails Bounce
 
-Coming soon.
+A **Bounced** status means the invitation never reached the candidate, usually because the address is invalid or their inbox is full. Here is how to recover:
+
+<Steps>
+  <Step title="Verify the email address">
+    Check the address for typos. Confirm the correct address with the candidate through another channel if needed.
+  </Step>
+  <Step title="Re-invite with the correct address">
+    Send a fresh invitation to the corrected address from the **Send Invitations** tab.
+  </Step>
+  <Step title="Reclaim the unused credit">
+    Since the bounced invitation was never used, you can reclaim its credit. See [Reclaim Credits](/reclaim-credits) for the conditions and steps.
+  </Step>
+</Steps>
+
+<Warning>
+If the status says **Delivered** but the candidate cannot find the email, do not re-send immediately. Ask them to check their Spam folder and any other inboxes first; the email definitely reached their mail server. If it still cannot be found, re-invite them and reclaim the old credit.
+</Warning>
+
+## Related Resources
+
+- [Email Invitations](/email-invitations) - How to send invitations and customize the email template
+- [Invitation Links](/invitation-links) - How unique links, expiry, and revoking work
+- [Candidate Re-attempts](/candidate-reattempts) - What to do when a candidate says they never got the invite
+- [Reclaim Credits](/reclaim-credits) - Recover credits from unused invitations

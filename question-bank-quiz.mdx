@@ -1,20 +1,110 @@
 ---
 title: "Creating a Custom Question Bank Quiz"
-description: "Build quizzes that draw random questions from a larger pool."
+description: "Build quizzes that draw random questions from a larger pool of your own questions."
 ---
 
-<Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/creating-a-custom-question-bank-quiz-1q1oq6a/). Sections below outline the planned content.
-</Note>
+Equip's own quizzes automatically show different questions to different candidates. If you want the same randomization with your own questions, create a **Question Bank** and a **Question Bank Quiz**. This article walks through both, plus two lighter alternatives for randomizing individual questions.
 
 ## Setting Up the Question Bank
 
-Coming soon.
+A **Question Bank (QB)** is a large pool of your own questions. Each question carries a number of **points**, and those points double as the question's difficulty level: a 1-point question is easier than a 5-point question.
+
+<Steps>
+  <Step title="Open Custom Tests">
+    From the Assessments Dashboard, click the **Custom Tests** link in the sidebar.
+  </Step>
+  <Step title="Create a Question Bank">
+    Choose the **Question Bank** test type and create a new bank. Give it a clear name, such as the skill it covers, because you will pick banks by name later.
+  </Step>
+  <Step title="Add questions and assign points">
+    Add your questions to the bank, assigning points to each one. Save the bank when you are done.
+  </Step>
+</Steps>
+
+<!-- screenshot: creating a Question Bank in the Custom Tests section -->
+
+<Tip>
+Create one bank per skill, for example *Java* and *Logical Reasoning*. A single Question Bank Quiz can then mix questions from several banks.
+</Tip>
+
+<Note>
+Like all custom tests, Question Banks belong to your whole team. Teammates can see and edit them, and the same bank can feed quizzes in multiple assessments.
+</Note>
+
+## Creating the Question Bank Quiz
+
+<Warning>
+You cannot add a Question Bank to an assessment directly. You must first create a **Question Bank Quiz (QBQ)** that draws from it.
+</Warning>
+
+A QBQ defines how many questions to draw at each points level, from each bank. Every candidate then receives their own random selection matching that recipe.
+
+For example, with a *Java* bank and a *Logical Reasoning* bank, you could configure:
+
+| Question Bank | Points per question | Questions drawn |
+|---|---|---|
+| Java | 1 | 3 |
+| Java | 2 | 2 |
+| Logical Reasoning | 1 | 3 |
+
+Each candidate sees 8 questions in total, but not the same 8. You can also build a QBQ from a single bank.
+
+<!-- screenshot: choosing questions per difficulty level while creating a Question Bank Quiz -->
+
+<Note>
+The difficulty levels you see while building the QBQ correspond to the points you assigned per question when creating the Question Bank.
+</Note>
+
+## Adding the Quiz to an Assessment
+
+Once the QBQ exists, add it to any new or existing assessment.
+
+<Steps>
+  <Step title="Open the assessment settings">
+    From the Recruiter Dashboard, open the settings of the assessment you want to edit.
+  </Step>
+  <Step title="Go to the Tests tab">
+    Under the **Tests** tab, select the **Quiz** option on the left.
+  </Step>
+  <Step title="Add your quiz">
+    Click **Add Quiz** and choose **My Content**.
+  </Step>
+  <Step title="Select the QBQ">
+    Pick your Question Bank Quiz from the list and save the assessment.
+  </Step>
+</Steps>
+
+<!-- screenshot: selecting a Question Bank Quiz under My Content in the Tests tab -->
 
 ## Question Pools
 
-Coming soon.
+A full QBQ is not the only way to randomize. Regular custom quizzes offer two question types that add randomness or choice to specific questions:
+
+| Approach | How questions are picked | Best for |
+|---|---|---|
+| **Question Bank Quiz** | Random draw across the whole quiz, by points level and bank | Large pools where every candidate should get a different set |
+| **Question Pool** question | One random question from a small pool you define | Randomizing a few questions inside an otherwise fixed quiz |
+| **Answer Any** group | Candidate chooses which N of M questions to answer | Giving candidates a choice, such as picking essay prompts |
+
+A **Question Pool** question lives inside a regular custom quiz. You add several variants to the pool, and each candidate is shown one of them at random.
+
+<Tip>
+Use a Question Pool when most of your quiz should stay identical for every candidate and only certain questions need per-candidate variation.
+</Tip>
 
 ## Answer-Any-N Groups
 
-Coming soon.
+The **Answer Any** question type groups several questions together and asks the candidate to answer any N of them. For example, you can present 4 short-answer prompts and require responses to any 2.
+
+Unlike a Question Pool, the candidate sees all the questions in the group and decides which ones to attempt. This suits open-ended sections where letting candidates play to their strengths is the point.
+
+<Note>
+Question Pool and Answer Any are two of the many question types available in custom quizzes. See [Question Types in Custom Quizzes](/custom-quiz-question-types) for the full list.
+</Note>
+
+## Related Resources
+
+- [Custom Tests](/custom-tests) - How custom tests work, who can edit them, and how to reuse them
+- [Same or Random Questions?](/same-or-random-questions) - How randomization works across all Equip test types
+- [Question Types in Custom Quizzes](/custom-quiz-question-types) - Every question type you can use, including Question Pool and Answer Any
+- [Import Questions from Excel](/import-questions-from-excel) - Bulk-add MCQ and MCA questions instead of typing them one by one

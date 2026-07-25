@@ -3,18 +3,100 @@ title: "Custom Report Templates"
 description: "Define your own evaluation prompt, output schema, and report layout."
 ---
 
+<Tip>
+**Custom report templates** replace the default conversational interview report with a holistic evaluation you design yourself. You write the instructions the AI follows, define the exact fields it must return, and build the HTML layout the report renders in.
+</Tip>
+
 <Note>
-This is a new article for the Equip Help Center. Sections below outline the planned content.
+Custom report templates are on a gradual rollout and may not be available to your team yet. If you do not see **AI Interview Reports** under Templates, [contact support](/contact-support).
 </Note>
+
+## Create a Report Template
+
+Templates live in their own library, so one template can be reused across many interviews.
+
+<Steps>
+  <Step title="Open the templates page">
+    Go to **Templates** and open **AI Interview Reports**. The list shows each template's Name, Description, Status badge (**Active** or **Archived**), and Created date.
+  </Step>
+  <Step title="Name the template">
+    Enter a **Template Name** (up to 100 characters, for example "Technical Interview Evaluation") and a short **Description** (up to 255 characters) so teammates know when to use it.
+  </Step>
+  <Step title="Fill in the editor tabs">
+    Complete the three required tabs: **LLM Prompt**, **Response Schema**, and **Jinja Template**. Use the **Preview** tab to check the result before saving.
+  </Step>
+</Steps>
+
+<!-- screenshot: AI Interview Reports template list showing name, status, and created date -->
+
+Only **Active** templates can be attached to an interview. Archive a template to retire it without deleting it.
 
 ## Evaluation Prompts
 
-Coming soon.
+The **LLM Prompt** tab holds the instructions the AI follows when it evaluates candidate responses. When a template is attached, this prompt-driven evaluation runs instead of the default evaluator, so the prompt is where you set the bar.
+
+Write the prompt the way you would brief a human interviewer. State the competencies to assess, how to weigh them, and what separates a strong answer from a weak one.
+
+<Tip>
+Be explicit about every field you expect the AI to fill in. If your schema has a `communication_score`, tell the prompt what a high or low communication score should mean.
+</Tip>
 
 ## Output Schema
 
-Coming soon.
+The **Response Schema** tab defines the structure of the AI's evaluation as a **JSON schema**. The editor validates that your schema is well-formed JSON, and the AI's output is constrained to match it.
+
+Every field you define here becomes a variable you can place in the report layout. For example:
+
+```json
+{
+  "type": "object",
+  "properties": {
+    "overall_summary": { "type": "string" },
+    "communication_score": { "type": "number" }
+  }
+}
+```
+
+<Note>
+The schema is what makes reports comparable across candidates. Because every evaluation returns the same fields, you can scan a pipeline of reports and compare like with like.
+</Note>
 
 ## Report Layout and Preview
 
-Coming soon.
+The **Jinja Template** tab is where you design the report itself. Write HTML and drop in schema fields as Jinja variables, for example:
+
+```html
+<div>{{ overall_summary }}</div>
+```
+
+The **Preview** tab renders your layout live. Paste sample data as JSON, such as `{"communication_score": 85}`, to see exactly how a finished report will look before any candidate has interviewed.
+
+<!-- screenshot: template editor Preview tab rendering sample data -->
+
+<Warning>
+Keep the field names in your Jinja layout identical to the field names in your Response Schema. A variable that does not exist in the schema will never receive a value.
+</Warning>
+
+## Attach a Template to an Interview
+
+Attach templates per interview from the conversational interview's settings page, using the **Report Template** dropdown in the Settings section. Only **Active** templates appear in the list.
+
+| | Default report | Custom template report |
+|---|---|---|
+| **Evaluation** | Equip's standard evaluator | Your LLM Prompt, run holistically across the interview |
+| **Contents** | Recommendation, Strengths, Areas for Improvement, Summary, Topic Performance | The fields defined in your Response Schema |
+| **Layout** | Fixed | Your Jinja Template |
+| **Setup needed** | None | An Active template attached to the interview |
+
+Leave the dropdown blank to keep the default report. Once a template is attached, a custom report is generated from it after each interview, and the rendered report appears in place of the default summary on the candidate's results page.
+
+<Note>
+You can switch back at any time by selecting the **None** option in the dropdown, which restores the default report for future interviews.
+</Note>
+
+## Related Resources
+
+- [Interview Reports](/interview-reports) - What the default conversational report contains and where reports live
+- [Interview Settings](/interview-settings) - Every option on the interview settings page, including the Report Template dropdown
+- [Create a Conversational Interview](/create-conversational-interview) - Set up the interview your template will report on
+- [Contact Support](/contact-support) - Ask for access if the feature is not visible to your team yet

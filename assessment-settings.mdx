@@ -1,24 +1,93 @@
 ---
 title: "Assessment Settings Explained"
-description: "Start windows, candidate details, instructions, and per-test options."
+description: "Start windows, candidate login, details to collect, custom instructions, and per-test options."
 ---
 
-<Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/what-do-settings-mean-on-equip-gk05nh/). Sections below outline the planned content.
-</Note>
+Every assessment has a **Settings** tab where you define how candidates interact with it: when they can start, how they log in, what details they must provide, and what happens after they finish. You can edit these settings anytime from your Recruiter Dashboard, even after inviting candidates.
+
+<!-- screenshot: Settings tab of the Assessment Settings page -->
 
 ## General Settings
 
-Coming soon.
+The Settings tab covers the assessment as a whole. The main options are:
+
+| Setting | What It Does |
+|---|---|
+| **Assessment Title** | The name candidates see. Maximum 100 characters. Required. |
+| **Login Providers** | Choose **Google**, **LinkedIn**, or both for candidate login. At least one must be enabled. |
+| **Write results to Google Sheets** | Streams results to a spreadsheet in real time. Grant **hello@equip.co** Editor access to your sheet first. |
+| **Custom Instructions** | Rich-text instructions shown before the assessment. Adding your own replaces Equip's default instructions. |
+| **Redirect URL** | Sends candidates to a page of your choice after they complete the assessment. |
+
+Equip's default instructions already explain points, negative marking, duration, proctoring, and demo tests. Customize them only if you genuinely need to, because your text **overrides the defaults entirely**.
+
+<Tip>
+If you share a public assessment link rather than unique per-candidate links, enable **LinkedIn login only**. Creating a fake LinkedIn account is much harder than creating a fake Google account, which deters people from previewing your questions.
+</Tip>
 
 ## Start Window
 
-Coming soon.
+Use the Timer section to restrict when candidates can begin the assessment. You can set either condition, or both:
+
+| Setting | Effect |
+|---|---|
+| **Cannot Start Before** | Candidates cannot begin until this date and time. |
+| **Cannot Start After** | Candidates cannot begin after this date and time. |
+
+Whichever option you enable, you must specify both a date and a time for it.
+
+<Warning>
+The times you pick are in **your local time zone**. If your candidates are in other time zones, convert carefully before you set the window, or some candidates may find the assessment locked when they expect it to be open.
+</Warning>
+
+<Note>
+The start window controls when candidates can **begin**, not when they must finish. There is no assessment-level time limit; timers apply at the test or question level. See [Time Limits](/time-limits) for details.
+</Note>
 
 ## Candidate Details to Collect
 
-Coming soon.
+Equip automatically captures each candidate's **name, email address, and profile picture** when they log in with Google or LinkedIn. You do not need to configure anything for these.
+
+To collect more, use **Gather Additional Details** and select **Yes** for each field you want candidates to fill in manually:
+
+- Phone Number
+- LinkedIn URL
+- Student ID
+- College Name
+- Graduation Year
+- Department
+- Work Experience (in years)
+
+Candidates provide these details right after opening the assessment, **before starting the first test**, so you never receive a submission without them.
+
+<!-- screenshot: Gather Additional Details toggles in the Settings tab -->
 
 ## Per-Test Settings
 
-Coming soon.
+Some settings apply to individual tests rather than the whole assessment. These live in the **Test Order** tab, not the Settings tab:
+
+<Steps>
+  <Step title="Open the Test Order tab">
+    From the Assessment Settings page, switch from the Settings tab to **Test Order**. You will also see the estimated total assessment duration here.
+  </Step>
+  <Step title="Reorder tests and set weightage">
+    Drag tests to change their order and assign a **weightage** to each. Weightages must add up to 100 and determine each test's contribution to the overall score.
+  </Step>
+  <Step title="Adjust proctoring per test">
+    Click into each test's proctoring options to control camera, microphone, and other monitoring settings for that test.
+  </Step>
+  <Step title="Randomize coding questions (optional)">
+    For Programming and SQL tests, click the **Randomize** icon to attach multiple questions so each candidate receives one at random.
+  </Step>
+</Steps>
+
+<Note>
+Time limits on Equip's own content are fixed and cannot be changed. Only **Custom Tests** let you set your own per-question or per-test timers. Psychometric and Typing Tests carry no weightage and are excluded from the overall score.
+</Note>
+
+## Related Resources
+
+- [Proctoring Settings](/proctoring-settings) - Configure camera, microphone, and anti-cheating options per test
+- [Time Limits](/time-limits) - How timers work at the question, test, and assessment level
+- [Write Results to Google Sheets](/write-results-to-google-sheets) - Full setup guide for the real-time spreadsheet integration
+- [Test Scores and Overall Score](/test-scores-and-overall-score) - How weightages turn individual test scores into one overall score

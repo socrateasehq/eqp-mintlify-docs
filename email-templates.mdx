@@ -1,20 +1,99 @@
 ---
 title: "Email Templates"
-description: "Template types, variables, and stage-transition emails."
+description: "Template types, variables, and how stage-transition emails reach candidates."
 ---
 
-<Note>
-This is a new article for the Equip Help Center. Sections below outline the planned content.
-</Note>
+Equip includes **email templates** for every candidate-facing message your pipeline can send: invitations, rejections, and offers. Default templates are provided for each type, and you can edit them or create your own with dynamic variables that fill in per candidate.
 
 ## Template Types
 
-Coming soon.
+There are five template purposes. Each maps to a specific moment in your [candidate pipeline](/candidate-pipeline):
+
+| Template Type | When It Is Used |
+|---|---|
+| **Assessment/AI Interview Invitation** | Inviting a candidate to an Assessment, One-Way AI Interview, or Conversational AI Interview stage |
+| **Video Interview Invitation** | Inviting a candidate to a Video Interview stage run on your own videoconferencing tool |
+| **Custom Stage Invitation** | Inviting a candidate to a Custom stage |
+| **Rejection Email** | Optionally notifying a candidate when you reject them from any non-terminal stage |
+| **Offer Email** | Sending an offer, with a link for the candidate to sign the offer letter |
+
+Templates are managed in the **Templates** section of your account, and each pipeline stage can have its own template attached. In the pipeline builder, you can attach an invitation template to Assessment, AI Interview, Video Interview, and Custom stages, and a rejection template to any non-terminal stage.
+
+<!-- screenshot: email templates list in the Templates section -->
+
+<Note>
+Templates are rich text, so you can format the message and place the test link or signing link wherever you like in the body.
+</Note>
 
 ## Template Variables
 
-Coming soon.
+Variables are placeholders that Equip replaces with real values when the email is sent. In the template editor, each variable is **click-to-copy** and shows an example value, so you can paste it straight into your message.
+
+These variables work in every template type:
+
+| Variable | Fills In |
+|---|---|
+| `candidate_name` | Candidate Full Name |
+| `candidate_first_name` | Candidate First Name |
+| `job_title` | Job Title |
+| `company_name` | Company Name |
+| `sender_name` | Sender Name |
+| `job_post_url` | Job Post URL |
+
+<!-- screenshot: template editor with the click-to-copy variables panel -->
+
+### Invitation variables
+
+Assessment and AI Interview invitation templates add variables for the link and its timing rules:
+
+| Variable | Fills In |
+|---|---|
+| `test_link` | Assessment or AI Interview Link |
+| `stage_type` | Assessment or AI Interview |
+| `cannot_start_before_time_in_your_timezone` | Earliest Start Time (Your Timezone) |
+| `cannot_start_before_time_in_utc` | Earliest Start Time (UTC) |
+| `cannot_start_after_time_in_your_timezone` | Latest Start Time (Your Timezone) |
+| `cannot_start_after_time_in_utc` | Latest Start Time (UTC) |
+| `link_expiry_in_days` | Link Expiry (Days) |
+
+Video Interview and Custom Stage invitation templates add a `stage_type` variable that fills in the **Stage Type**.
+
+### Offer email variables
+
+The Offer Email template adds `signing_link`, the **Offer Letter Signing Link** the candidate uses to view and sign their offer.
+
+<Tip>
+Include the timezone-aware start-window variables in invitation emails. Candidates see the deadline in their own timezone, which cuts down on missed attempts and support questions.
+</Tip>
 
 ## Stage-Transition Emails
 
-Coming soon.
+Emails are **recruiter-triggered**, never automatic. Moving a candidate to a new stage opens a contextual dialog, and you decide whether an email goes out.
+
+<Steps>
+  <Step title="Move the candidate">
+    Change the candidate's stage from the applications dashboard or their profile. If the target stage sends email, a dialog opens with a preview of the message built from that stage's template.
+  </Step>
+  <Step title="Review the email">
+    Check the preview with the variables filled in for this candidate. For rejections, the **Send rejection email to candidates** checkbox is off by default, so no rejection email is sent unless you tick it.
+  </Step>
+  <Step title="Choose sending options">
+    Optionally set a **Reply-To** team member so candidate replies reach a real inbox. Without one, the email is sent from no-reply@equip.co. You can also use **Schedule Send** to delay delivery by minutes, hours, or days, up to 7 days ahead.
+  </Step>
+  <Step title="Send">
+    Confirm to send or schedule. The action is logged in the candidate's journey, for example "sent assessment invite" or "scheduled rejection email".
+  </Step>
+</Steps>
+
+<!-- screenshot: stage-change invitation dialog with email preview and schedule send -->
+
+<Warning>
+Candidates with an **unverified email address** do not receive stage-change emails. The invite dialog warns you, and you can copy a verification link from the candidate's profile to share with them.
+</Warning>
+
+## Related Resources
+
+- [Changing Stages](/changing-stages) - The full stage-change flow, including credits and rejection reasons
+- [Pipeline Stages](/pipeline-stages) - Which stage types support invitation and rejection templates
+- [Custom Sender Email](/custom-sender-email) - Send candidate emails from your own domain
+- [Email Status](/email-status) - Track whether invitations were sent, delivered, and opened

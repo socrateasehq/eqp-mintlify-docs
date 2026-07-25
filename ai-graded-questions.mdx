@@ -3,22 +3,87 @@ title: "AI-Graded Questions: Text, Audio, and Video Answers"
 description: "Questions evaluated by Equip AI, guided by your evaluation prompts."
 ---
 
-<Note>
-This is a new article for the Equip Help Center. Sections below outline the planned content.
-</Note>
+**AI-graded questions** let candidates answer in their own words, in writing or on camera, and have Equip AI evaluate every response for you. You set the question, the answer format, and an optional evaluation prompt; Equip scores each answer and can also produce a holistic report.
+
+<Tip>
+Use AI-graded questions when a multiple-choice option list cannot capture the answer: explanations, self-introductions, situational judgment, or spoken communication. For questions with one objectively correct answer, a standard auto-graded quiz question is faster and cheaper to review.
+</Tip>
 
 ## Question Types
 
-Coming soon.
+AI-graded tests and one-way AI interviews support three question types:
+
+| Question Type | What the Candidate Does | How It Is Graded |
+|---|---|---|
+| **One-Way** | Responds to a fixed prompt in text, audio, or video | Evaluated by Equip AI |
+| **Multiple Choice** | Picks the one correct option | Auto-graded instantly |
+| **Multiple Answer** | Picks all correct options | Auto-graded instantly |
+
+Mixing types is common: a few Multiple Choice questions for quick knowledge checks, plus One-Way questions for depth.
+
+<Note>
+Conversational AI interviews use their own content types (Question, Topic, and Scenario) because the AI interviewer adapts its follow-ups live. See [Interview Content Types](/interview-content-types) for those.
+</Note>
+
+<!-- screenshot: AI test builder showing the question type selector (One-Way, Multiple Choice, Multiple Answer) -->
 
 ## Answer Formats
 
-Coming soon.
+Every One-Way question specifies one of three **answer formats**: Text, Audio, or Video. Each format has its own guardrails you can tune per question.
+
+| Format | Controls You Can Set | Defaults |
+|---|---|---|
+| **Text** | Minimum and maximum word count | 50 to 250 words, up to a maximum of 1,000 |
+| **Audio** | Minimum and maximum duration, number of retakes, auto-start recording, replay limit | 30 to 180 seconds, 5 retakes |
+| **Video** | Same controls as Audio | 30 to 180 seconds, 5 retakes |
+
+For audio and video, the duration can be set anywhere from 5 to 180 seconds. **Auto-start recording** begins capturing without the candidate pressing a button, which prevents over-rehearsed answers. You can also limit how many times a candidate replays their own recording before submitting (5 playbacks by default).
+
+<Note>
+Candidates see the retake count and duration limits on screen while answering, and they complete a device check with a short test recording before the first question. Audio and video responses show a **Processing** status while Equip AI transcribes and evaluates them, then change to **Graded**.
+</Note>
+
+<!-- screenshot: candidate view of a video answer in progress with retakes remaining and timer visible -->
 
 ## Evaluation Prompts
 
-Coming soon.
+An **evaluation prompt** tells Equip AI what a good answer looks like for a specific question. It is optional: without one, the AI grades the response on general relevance and quality against the question itself.
+
+A prompt can be up to 100 words. The best prompts read like instructions to a human grader:
+
+```text
+Award full points if the candidate names a concrete project, explains
+their own role in it, and mentions a measurable outcome. Deduct points
+for vague claims with no specifics. Ignore grammar and accent.
+```
+
+Beyond per-question prompts, two test-level options shape the evaluation:
+
+| Setting | What It Does |
+|---|---|
+| **Evaluation context** | Background you give the AI about the role or test, applied to every question |
+| **Holistic report** | On top of per-question scores, generates an overall report from a [report template](/custom-report-templates) |
+
+<Tip>
+AI scores are a starting point, not a verdict. You can manually override the score on any response, and the test and overall scores recompute automatically. See [Manual Grading](/manual-grading).
+</Tip>
 
 ## Points and Negative Marking
 
-Coming soon.
+Point values are set per question while building the test:
+
+- **One-Way questions** carry a points value that the AI awards fully or partially based on answer quality. New questions default to 10 points.
+- **Multiple Choice and Multiple Answer questions** can be worth 1 to 100 points each, with optional **negative marking** for wrong answers and optional randomization of option order.
+
+<Warning>
+Negative marking on AI tests is opt-in, unlike Equip library quizzes where MCQ negative marking is always on. If you enable it, say so in your test instructions so candidates know guessing has a cost.
+</Warning>
+
+If your test targets candidates in multiple regions, you can provide question text in several languages and let each candidate pick theirs before starting. See [Multilingual Tests](/multilingual-tests).
+
+## Related Resources
+
+- [Create a One-Way Interview](/create-one-way-interview) - Build an interview from AI-graded questions
+- [Manual Grading](/manual-grading) - Review and override AI-awarded scores
+- [Custom Report Templates](/custom-report-templates) - Design the holistic evaluation report
+- [Multilingual Tests](/multilingual-tests) - Offer questions in the candidate's language

@@ -1,20 +1,76 @@
 ---
 title: "What Is the Trust Score?"
-description: "The 0-100% score summarizing how reliable a session was."
+description: "The 0-100% score that summarizes how reliable a candidate's proctored session was."
 ---
 
-<Note>
-This is a new article for the Equip Help Center. Sections below outline the planned content.
-</Note>
+<Tip>
+The **Trust Score** is a 0 to 100% rating shown at the top of every candidate report. It summarizes how likely it is that the candidate attempted the test fairly. As a rule of thumb, review the full proctoring evidence for any score below about 80%.
+</Tip>
+
+Every completed attempt on Equip receives a Trust Score. Instead of asking you to sift through photos, screenshots, and audio clips for every candidate, the score condenses all proctoring signals into a single number so you can focus your review where it matters.
+
+<!-- screenshot: candidate report header showing the Trust Score at the top -->
 
 ## How the Trust Score Is Calculated
 
-Coming soon.
+Equip's proctoring is powered by **AutoProctor**, and the Trust Score is computed automatically from the events recorded during the attempt. Violations detected by the active proctoring measures lower the score; a clean session keeps it high.
+
+The signals that can generate violations depend on which [proctoring settings](/proctoring-settings) are enabled for each test. Typical examples include:
+
+| Signal | Evidence captured |
+|---|---|
+| **Switched tabs or applications** | Event log, and a screenshot on supported browsers |
+| **No face or multiple faces on camera** | Photos from the webcam |
+| **Background noise or voices** | Audio recordings |
+| **Leaving full screen** | Event log with timestamps |
+| **Resuming from another tab, browser, or device** | Multi-session detection with IP and device details |
+
+<Note>
+Candidates see exactly which proctoring measures are active before they start, and they consent to the proctoring report being shared with you. Measures you have disabled do not generate violations, so they cannot affect the score.
+</Note>
+
+Each test in an assessment gets its own Trust Score, and per-test scores are included when you [download results](/download-reports).
 
 ## Reading the Score
 
-Coming soon.
+A higher score means fewer and less serious violations were recorded. Use the score to triage candidates, not as a final verdict on its own.
+
+| Score | What it suggests | What to do |
+|---|---|---|
+| **Around 80% and above** | The session looks reliable | No action usually needed |
+| **Below about 80%** | Enough violations to warrant a look | Review the full proctoring report |
+
+<Warning>
+A low score is a signal, not proof of cheating. Harmless events, such as background noise at home or an accidental tab switch, can register as violations. Always check the evidence before rejecting a candidate.
+</Warning>
 
 ## Acting on Low Scores
 
-Coming soon.
+When a score falls below your comfort threshold, the candidate report gives you everything needed to make a fair call.
+
+<Steps>
+  <Step title="Open the candidate's report">
+    From the results page, open the candidate. The report has three tabs: **Test Summary**, **Proctoring**, and **Session Recording**.
+  </Step>
+  <Step title="Review the Proctoring tab">
+    This tab lists every violation with a timestamp and its evidence: candidate photos, switched-tab screenshots, and audio flags. Check whether the events look deliberate or incidental.
+    <!-- screenshot: Proctoring tab showing a violations list with timestamps and evidence thumbnails -->
+  </Step>
+  <Step title="Watch the Session Recording">
+    If [session recording](/session-recording) was enabled, play back the candidate's screen and actions to see exactly what happened. Playback controls let you speed up and skip inactive sections.
+  </Step>
+  <Step title="Decide with full context">
+    Weigh the evidence against the candidate's test performance. If the violations are benign, proceed as normal; if they clearly show unfair behavior, you can reject the candidate with confidence.
+  </Step>
+</Steps>
+
+<Tip>
+If many candidates score low on the same assessment, revisit its proctoring setup. For example, **Detect Audio** in a noisy environment or strict full-screen enforcement can produce frequent but harmless violations.
+</Tip>
+
+## Related Resources
+
+- [AI Proctoring Overview](/ai-proctoring) - How Equip monitors camera, microphone, and screen during attempts
+- [Proctoring Settings](/proctoring-settings) - The per-test toggles that determine which violations are detected
+- [Session Recording](/session-recording) - Replay a candidate's screen to verify a low score
+- [Download Reports](/download-reports) - Export results, including per-test Trust Scores

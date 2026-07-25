@@ -1,20 +1,66 @@
 ---
 title: "Write Results to Google Sheets"
-description: "Sync assessment results to a Google Sheet automatically."
+description: "Sync assessment results to a Google Sheet automatically, in real time, as candidates complete each test."
 ---
 
-<Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/write-results-to-google-sheets-y4yh9r/). Sections below outline the planned content.
-</Note>
+Equip can write assessment results directly to a **Google Sheet** as candidates finish each test. Unlike [Export to Excel](/download-reports), which gives you a snapshot at the moment you export, the Google Sheets sync updates in real time, so you never need to re-export as more candidates complete the assessment.
 
 ## Enabling the Sync
 
-Coming soon.
+The setting lives in your assessment's **Settings** tab, under **Miscellaneous**.
+
+<Steps>
+  <Step title="Create a Google Spreadsheet">
+    Create a new, empty spreadsheet in your Google account. This is where Equip will write the results.
+  </Step>
+  <Step title="Grant Editor access to hello@equip.co">
+    Use the spreadsheet's Share option to give **Editor** permission to `hello@equip.co`. Equip needs this to create sheets and write rows.
+  </Step>
+  <Step title="Paste the spreadsheet URL in assessment settings">
+    Open the assessment's **Settings** tab, find **Write results to Google Sheets** under **Miscellaneous**, and paste the spreadsheet URL.
+    <!-- screenshot: assessment Settings tab, Miscellaneous section, Write results to Google Sheets field -->
+  </Step>
+  <Step title="Save the assessment">
+    Click **Create/Update** to save your settings. The sync is now active for all future attempts.
+  </Step>
+</Steps>
+
+<Warning>
+If `hello@equip.co` does not have Editor permission on the spreadsheet, Equip cannot write to it. In that case, Equip emails the assessment creator asking them to enable Editor access.
+</Warning>
 
 ## What Gets Synced
 
-Coming soon.
+Once candidates start attempting the assessment, Equip automatically creates **one sheet per test** plus an **overall assessment sheet** inside your spreadsheet. A candidate's row is written as soon as they complete each test.
+
+| Sheet | Columns |
+|---|---|
+| **Assessment sheet** (overall) | Email, Name, Overall Score, Start Date, Start Time, End Date, End Time |
+| **Test sheet** (one per test) | Email, Name, Points Scored, Percentage Scored, Trust Score, Start Date, Start Time, End Date, End Time |
+
+You can [view a sample results spreadsheet](https://docs.google.com/spreadsheets/d/1TmWMzzIb92SK4SKm_L7cjaNCJyXM747YPWRVN75pb_Y/edit#gid=428284911) to see exactly what the output looks like.
+
+<!-- screenshot: sample Google Sheet with Equip-created assessment and test sheets -->
+
+<Tip>
+Give your assessment and each test a distinct title. The sheet names come from those titles, so distinct names make the spreadsheet much easier to read.
+</Tip>
 
 ## Troubleshooting
 
-Coming soon.
+Most sync issues come down to a few known causes:
+
+- **Older attempts are missing.** Only candidates who attempt the assessment **after** you set up the sync are written to the sheet. Results from earlier attempts do not appear retroactively; use [Export Results](/download-reports) to get those.
+- **The sync stopped working.** Check that `hello@equip.co` still has Editor permission and that the spreadsheet URL saved in assessment settings is correct.
+- **Rows stopped appearing after edits to the spreadsheet.** Do not rename the sheets Equip creates, and do not change their column names. Equip relies on both to find where to write.
+
+<Note>
+The Google Sheet is a convenient live view, not the source of truth. The full results, including per-question detail and proctoring evidence, always remain available on your Equip dashboard.
+</Note>
+
+## Related Resources
+
+- [Download Reports](/download-reports) - Export results to Excel or PDF instead of a live sync
+- [Test Scores and Overall Score](/test-scores-and-overall-score) - How the scores written to the sheet are calculated
+- [Missing Results](/missing-results) - Why a candidate might not appear in your results
+- [Webhooks](/webhooks) - Push results to your own systems programmatically

@@ -3,14 +3,55 @@ title: "Randomizing Programming and SQL Questions"
 description: "Give each candidate a random variant from a question pool."
 ---
 
-<Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/randomize-programming-and-sql-questions-t4x463/). Sections below outline the planned content.
-</Note>
+<Tip>
+Attach multiple questions to a single Programming or SQL test, and each candidate receives one of them at random. This makes leaked questions far less useful to other candidates.
+</Tip>
+
+By default, a coding test on Equip has one **fixed question**: every candidate who takes the test solves the same problem. If you are worried that candidates might share the question with others, use the **Randomize** feature to turn that single question into a pool of interchangeable variants.
 
 ## Defining a Question Pool
 
-Coming soon.
+You set up randomization from the assessment's settings, not from the test itself.
+
+<Steps>
+  <Step title="Open the assessment's settings">
+    From the Recruiter Dashboard, open **Settings** for the relevant assessment and switch to the **Test Order** tab.
+  </Step>
+  <Step title="Click the Randomize icon">
+    Find the coding test you want to randomize and click its **Randomize** icon.
+    <!-- screenshot: Test Order tab with the Randomize icon highlighted on a coding test -->
+  </Step>
+  <Step title="Select the questions">
+    Pick the questions for the pool from the list of available coding questions, then save.
+    <!-- screenshot: question selection list for randomizing a coding test -->
+  </Step>
+</Steps>
+
+That is all it takes. The test now serves a random variant instead of a fixed question.
+
+<Warning>
+For Programming tests, every question in the pool must keep at least one **enabled programming language**. The builder blocks you from saving a variant with no languages enabled.
+</Warning>
+
+<Note>
+Randomization applies to **Programming** and **SQL** tests, which contain exactly one question per test by design. To test more coding skills, add another coding test to the same assessment.
+</Note>
 
 ## How Variants Are Assigned
 
-Coming soon.
+When a candidate starts the test, Equip picks **one question at random** from the pool you selected. Different candidates therefore see different problems, so a question shared in one batch does not help the next candidate.
+
+Assignment is automatic. You cannot choose which candidate gets which variant, and candidates never see the other questions in the pool.
+
+You keep full visibility after the attempt: coding test results show exactly **which question the candidate attempted**, along with their submitted code and score.
+
+<Tip>
+Keep the questions in a pool at a **similar difficulty level** so scores stay comparable across candidates. Since each candidate is graded on a different problem, an uneven pool makes shortlisting by score less fair.
+</Tip>
+
+## Related Resources
+
+- [Do Candidates See the Same or Random Questions?](/same-or-random-questions) - How randomization works across every test type
+- [Creating a Custom Programming Test](/custom-programming-test) - Build your own coding questions to include in a pool
+- [Supported Programming Languages](/programming-languages) - Languages and versions available in coding tests
+- [Creating an Assessment](/create-assessment) - The full builder walkthrough, including the Test Order tab

@@ -3,18 +3,83 @@ title: "How to Resume Your Attempt"
 description: "Continue after a disconnect or accidental tab close."
 ---
 
-<Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/how-can-a-candidate-resume-their-attempt-1qafx3g/). Sections below outline the planned content.
-</Note>
+<Tip>
+Click the same assessment link again, on any device. Equip automatically resumes your attempt wherever possible. If it cannot be resumed, your recruiter must delete the attempt and invite you again.
+</Tip>
 
 ## When You Can Resume
 
-Coming soon.
+On Equip, **resuming** means the assessment is opened again after it was already started. It does not matter whether the original tab is still open or was closed; all of these count as resuming:
+
+- Refreshing the page
+- Opening the assessment link in a different tab
+- Opening the assessment link in a different browser or on a different device
+
+Whether you can pick up where you left off depends on where the **time limit** lives for the test you were on. Equip has no assessment-level timer; timers apply to individual tests or individual questions. See [Time Limits](/time-limits) for the full picture.
+
+| Test type | Timer lives at | Resumption behavior |
+|---|---|---|
+| Video Response | Question level | Type 1 |
+| One-by-one Quiz | Question level | Type 1 |
+| All-at-once Quiz | Test level | Type 2 |
+| Programming Test | Test level | Type 2 |
+| CSS Test | Test level | Type 2 |
+| SQL Test | Test level | Type 2 |
+
+**Type 1 (per-question timer):** the question you were on is forfeited. If you disconnect on Question 3 of a one-by-one quiz, you must skip it and continue from Question 4. Because you have not yet seen the next question, Equip does not need to check any time limits, so you can resume any number of times.
+
+**Type 2 (per-test timer):** the clock keeps running in real time, even while you are disconnected. A 45-minute test started at 11:00 AM always ends at 11:45 AM. If you close the tab at 11:20 AM and return at 11:30 AM, you have 15 minutes left.
+
+<Note>
+If you were invited by email with a unique link, you can switch to a completely different device and your remaining time carries over. An attempt with 10 minutes left continues with 10 minutes left.
+</Note>
 
 ## How to Resume
 
-Coming soon.
+You do not need to contact anyone to resume. Just reopen the assessment.
+
+<Steps>
+  <Step title="Find your assessment link">
+    Use the link from your invitation email, or the shared link your recruiter gave you. It is the same link you used to start.
+  </Step>
+  <Step title="Open the link on any device">
+    Sign in again with the **same email ID** you used before. Equip identifies your attempt by your email ID, so a different email would start a different candidate's attempt.
+  </Step>
+  <Step title="Continue the assessment">
+    Equip drops you back into the test you were on. For one-by-one quizzes, skip the interrupted question and move to the next one.
+  </Step>
+</Steps>
+
+<!-- screenshot: candidate resuming an assessment, "Continue with the Assessment" screen -->
+
+<Warning>
+In a **one-by-one quiz**, the question that was on screen when you disconnected cannot be answered again. You must skip it, and it earns no points.
+</Warning>
+
+<Note>
+Proctoring is resilient to connectivity loss. Any evidence captured while you were offline is synced automatically once your connection returns, so a brief disconnect does not invalidate your session.
+</Note>
 
 ## Tests That Cannot Be Resumed
 
-Coming soon.
+Some situations block resumption entirely. In every case, Equip shows an explanatory screen instead of the test.
+
+| Situation | What happens |
+|---|---|
+| A Type 2 test's end time has passed | The test cannot be resumed; a 45-minute test that started at 11:00 AM cannot be reopened at 11:50 AM |
+| The assessment is already finished | The link shows the completion screen; a finished attempt cannot be reopened |
+| The invitation link is invalid, already used, or expired | A specific error page explains why the link no longer works |
+| The attempt was deleted by the recruiter | The old link no longer resumes anything; a fresh invitation is needed |
+
+If your attempt genuinely cannot be resumed, ask your recruiter for help. They can **delete the attempt** from their Results page and send you a new invitation so you can start fresh. See [Candidate Re-attempts](/candidate-reattempts) for how that works.
+
+<Note>
+A re-invitation after a deleted attempt costs the recruiter another credit, so it is used only when automatic resumption is truly impossible.
+</Note>
+
+## Related Resources
+
+- [Taking an Assessment](/taking-an-assessment) - The full candidate flow from invitation to completion
+- [Time Limits](/time-limits) - Why timers apply per test or per question, never per assessment
+- [Candidate Re-attempts](/candidate-reattempts) - How recruiters reset an attempt so you can start over
+- [Candidate Issues](/candidate-issues) - Troubleshooting steps when a test will not load or misbehaves

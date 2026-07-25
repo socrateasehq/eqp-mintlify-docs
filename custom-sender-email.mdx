@@ -3,18 +3,66 @@ title: "Changing the Sender Name and Email"
 description: "Customize who invitation emails appear to come from."
 ---
 
-<Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/changing-sender-name-and-email-address-on-email-invites-wcc4k3/). Sections below outline the planned content.
-</Note>
+When you invite candidates by email, Equip sends the invitation on your behalf. You can control the **sender name** candidates see and the **reply-to address** their responses go to, but not the "from" address itself. This article explains each part of the sender identity and how to change it.
 
 ## The Default Sender
 
-Coming soon.
+Every invitation email has three sender-related parts, and each behaves differently:
+
+| Part | Default value | Can you change it? |
+|---|---|---|
+| **From address** | hello@equip.co | No, it is fixed for all accounts |
+| **Sender name** | Your first and last name | Yes, via your Profile page |
+| **Reply-to address** | Your email address | Yes, via your Profile page or the Sender dropdown |
+
+Emails always go out from **hello@equip.co**. Sending from Equip's own address keeps deliverability high and avoids the domain verification setup that sending from your company address would require.
+
+<Note>
+Candidates still see a personal touch. The email displays your name as the sender, and clicking **Reply** addresses the response to your email ID, not to hello@equip.co.
+</Note>
 
 ## Customizing the Sender
 
-Coming soon.
+The sender name on invitation emails is your first and last name as saved on your Equip profile. To change what candidates see, update your profile.
+
+<Steps>
+  <Step title="Open your Profile page">
+    Go to your [Profile page](https://equip.co/account/profile/) in the Equip dashboard.
+  </Step>
+  <Step title="Update your name">
+    Edit your first and last name. This combined name appears as the sender on every invitation you send.
+  </Step>
+  <Step title="Send invitations as usual">
+    Open the **Invite** link under your assessment and send from the **Send Invitations** tab. New emails use the updated name.
+  </Step>
+</Steps>
+
+<!-- screenshot: Profile page with first and last name fields highlighted -->
+
+<Warning>
+There is no way to change the "from" email ID. It is always hello@equip.co, even if you change your name and reply-to details.
+</Warning>
 
 ## Reply-To Addresses
 
-Coming soon.
+The **reply-to address** is the email ID of the team member who sends the invitation. When a candidate hits Reply, their message lands in that person's inbox.
+
+You have two ways to control it:
+
+| Approach | How it works |
+|---|---|
+| **Change your own email** | Update the email address on your [Profile page](https://equip.co/account/profile/). Future invitations you send use the new address as reply-to. |
+| **Send as a teammate** | Use the **Sender** dropdown on the **Send Invitations** tab, which lists your team members' email addresses. Alternatively, ask that teammate to send the invitation themselves. |
+
+<!-- screenshot: Send Invitations tab with the Sender dropdown expanded -->
+
+<Tip>
+The **Sender** dropdown only shows people already on your Equip team. If the address you need is missing, invite that person first. See [Manage Team Members](/manage-team-members).
+</Tip>
+
+## Related Resources
+
+- [Email Invitations](/email-invitations) - How to invite candidates and configure the invitation email
+- [Email Status](/email-status) - Track whether invitations were delivered, opened, and clicked
+- [Share URL vs Email](/share-url-vs-email) - Compare email invitations with a shared public link
+- [Manage Team Members](/manage-team-members) - Add teammates whose emails can appear as the sender

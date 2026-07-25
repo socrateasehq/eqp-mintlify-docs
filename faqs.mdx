@@ -1,24 +1,222 @@
 ---
 title: "Frequently Asked Questions"
-description: "Quick answers to the most common questions about Equip."
+description: "Quick answers to the most common questions about Equip's pricing, assessments, AI interviews, and candidate experience."
 ---
 
-<Note>
-This is a new article for the Equip Help Center. Sections below outline the planned content.
-</Note>
+Find quick answers to the questions recruiters and candidates ask most often. If your question is not covered here, reach out via [Contact Support](/contact-support): live chat responses arrive in minutes, and emails to hello@equip.co are answered within 24 hours.
 
 ## Pricing and Credits
 
-Coming soon.
+<AccordionGroup>
+  <Accordion title="How much does Equip cost?">
+    Equip is **pay-per-use**. You buy credits and spend them only when candidates actually use the product. There are no subscriptions and no per-recruiter seat fees, and credits never expire.
+
+    | What you use | Cost |
+    |---|---|
+    | **ATS** (job posts, pipeline, careers page) | Free forever |
+    | **Assessment** | 1 credit per candidate per test |
+    | **One-way AI interview** | 1 credit per candidate |
+    | **Conversational AI interview** | 2 credits (Quick) or 3 credits (Comprehensive) |
+    | **Job Fit Score re-ranking** | 0.5 credits per candidate |
+    | **Bulk CV import** | 0.01 credits per CV |
+
+    1 credit costs **$1** (USD) or **₹90** (INR). Your team's currency is determined by its country. See [How Credits Work](/how-credits-work) for the full billing model.
+  </Accordion>
+
+  <Accordion title="Is there a free trial or demo account?">
+    There is no separate demo account, and you do not need one. Every new team gets **10 free trial credits** on signup, enough to assess up to 10 candidates before paying anything.
+
+    Even without credits you can create unlimited assessments, invite unlimited teammates, and preview unlimited tests. To explore before signing up, open the [sample recruiter dashboard](https://equip.co/demo/recruiter/home/) with pre-filled data.
+
+    <Note>
+    Recruiter accounts require a **work email**. Personal domains such as gmail.com or outlook.com cannot create a team. See [Demo or Trial Account](/demo-or-trial-account) for details.
+    </Note>
+  </Accordion>
+
+  <Accordion title="When are credits deducted?">
+    For assessments, the policy is **1 credit per test the candidate actually starts**:
+
+    <Steps>
+      <Step title="Invitation sent">
+        The first credit is deducted immediately when you invite the candidate, even if the email bounces or is never opened.
+      </Step>
+      <Step title="Each later test starts">
+        When the candidate starts Test 2, the second credit is deducted; Test 3 deducts the third, and so on. A test counts as started when its questions load.
+      </Step>
+      <Step title="Candidate never starts">
+        If the candidate never starts the first test, you can reclaim the invitation credit after 24 hours.
+      </Step>
+    </Steps>
+
+    The full policy, with a worked example, is in [Credit Deduction Policy](/credit-deduction-policy).
+  </Accordion>
+
+  <Accordion title="What if a candidate never attempts, or I invited them twice?">
+    Both situations are covered by **Reclaim Credits** (sidebar: Account, then Reclaim Credits). Any invitation sent more than 24 hours ago where the candidate has not started the first test is eligible.
+
+    If you invite the same candidate twice, Equip warns you first; proceeding deducts 2 credits, and you can reclaim the unused invitation after 24 hours.
+
+    <Warning>
+    Reclaiming a credit invalidates that candidate's invitation link and deletes their test data. To assess them later, you must invite them again. See [Reclaim Credits](/reclaim-credits).
+    </Warning>
+  </Accordion>
+
+  <Accordion title="Do you offer discounts?">
+    Volume discounts are applied automatically at checkout:
+
+    | Credits purchased | Discount |
+    |---|---|
+    | 500 or more | 5% off |
+    | 1,000 or more | 10% off |
+    | 2,000 or more | 15% off |
+
+    New teams also get a **first-purchase discount**: 50% off within 7 days of team creation, or 25% off within 21 days, capped at ₹5,000 (India) or $60 (elsewhere). Only one discount applies per purchase, whichever saves you more. See [First Purchase Discount](/first-purchase-discount).
+
+    <!-- screenshot: Purchase Credits page showing discounted cost breakdown -->
+  </Accordion>
+
+  <Accordion title="Is there a minimum or maximum purchase?">
+    The minimum purchase is **10 credits** ($10 or ₹900). You can buy up to **5,000 credits** in a single transaction. In India, 18% GST is added, and you can enter your GSTIN so it appears on the invoice.
+
+    Payments are processed by Stripe (cards), and in India via Razorpay (UPI, NEFT, and cards). After payment, your balance updates automatically and the invoice is emailed to the team admin. See [Invoices](/invoices) for self-serve invoice downloads.
+  </Accordion>
+</AccordionGroup>
 
 ## Assessments
 
-Coming soon.
+<AccordionGroup>
+  <Accordion title="Can I test multiple skills in one assessment?">
+    Yes. An assessment is a sequence of **tests**, each targeting a skill. The three-step builder lets you add tests, order them, and set per-test weightage; the estimated total duration is computed automatically.
+
+    A single quiz can also cover up to 6 skills on its own. See [Testing Multiple Skills](/testing-multiple-skills) and [Assessment Hierarchy](/assessment-hierarchy).
+  </Accordion>
+
+  <Accordion title="What test types are available?">
+    Equip offers nine test types:
+
+    | Test type | Graded by |
+    |---|---|
+    | **Quiz** (MCQ, multiple-correct, essay, and more) | Auto or AI |
+    | **Programming** (17+ languages in a browser editor) | Auto |
+    | **SQL** | Auto |
+    | **Excel** (simulated spreadsheet) | Auto |
+    | **Typing** | Auto |
+    | **Communication (CEFR)** for Reading, Writing, Speaking, Listening | AI |
+    | **Psychometric** (DISC, OCEAN/Big Five) | Unscored by design |
+    | **Video Response** | Recruiter |
+    | **CSS** (replicate a target design) | Recruiter |
+
+    See [Test Types](/test-types) for details on each.
+  </Accordion>
+
+  <Accordion title="Can I use my own questions?">
+    Yes. Every test type offers **Equip Content** (pre-built library tests) and **My Content** (your own custom tests). You can author questions directly or bulk-import them from Excel, with Markdown and LaTeX support for quizzes.
+
+    See [Equip vs Custom Content](/equip-vs-custom-content) to decide which fits your role.
+  </Accordion>
+
+  <Accordion title="How does Equip prevent cheating?">
+    Assessments run with **AI proctoring**: face detection, tab-switch detection with screenshots, audio monitoring, random photos, multiple-monitor detection, full-screen enforcement, session recording, and optional ID verification.
+
+    Each completed attempt gets a **Trust Score** from 0 to 100% summarizing how reliable the session was, shown at the top of the candidate report. Candidates see exactly which measures are active before starting and give consent. See [AI Proctoring](/ai-proctoring) and [Trust Score](/trust-score).
+  </Accordion>
+
+  <Accordion title="Can I try an assessment before inviting candidates?">
+    Yes, previews are **free and unlimited**. Preview as a recruiter to jump freely between tests without proctoring, or as a candidate to get the exact real experience. Equip library quizzes preview with sample questions so the live question pool stays protected.
+
+    See [Preview an Assessment](/preview-assessment).
+  </Accordion>
+
+  <Accordion title="What happens when I archive an assessment?">
+    Candidates see an archived assessment as closed, but **all results are retained** and you can un-archive it at any time. Assessments are never deleted.
+
+    See [Archive an Assessment](/archive-assessment).
+  </Accordion>
+</AccordionGroup>
 
 ## AI Interviews
 
-Coming soon.
+<AccordionGroup>
+  <Accordion title="What is the difference between one-way and conversational interviews?">
+    | | **One-Way** | **Conversational** |
+    |---|---|---|
+    | Format | Fixed questions, recorded video, audio, or text answers | Live spoken interview with an AI interviewer that asks follow-ups |
+    | Questions | All visible at once, answered in any order | Adaptive, based on the candidate's answers |
+    | Length | Single session | Quick (about 15 minutes) or Comprehensive (about 30 minutes) |
+    | Cost | 1 credit per candidate | 2 credits (Quick) or 3 credits (Comprehensive) |
+    | Best for | High-volume screening (30+ candidates) | Deeper evaluation with follow-up probing |
+
+    See [One-Way vs Conversational](/one-way-vs-conversational) for guidance on choosing.
+  </Accordion>
+
+  <Accordion title="How are conversational interviews created?">
+    Paste a job description (up to 7,500 characters), set the years of experience and optional focus areas, and Equip drafts the interview topics automatically. You can then mix three content types: **Questions** (asked word for word), **Topics** (explored by the AI with follow-ups), and **Scenarios** (reference material the candidate responds to).
+
+    See [Create a Conversational Interview](/create-conversational-interview).
+  </Accordion>
+
+  <Accordion title="What languages can the AI interviewer speak?">
+    Conversational interviews run in the language you choose: English (US, India, UK), Hindi, Kannada, Telugu, Tamil, Marathi, Bengali, Spanish (Spain, US), French, German, Portuguese (Brazil), or Italian.
+
+    See [Interview Languages](/interview-languages).
+  </Accordion>
+
+  <Accordion title="Can a candidate restart an interview?">
+    You can optionally allow candidates to **restart an unfinished attempt**; only the submitted attempt is graded. Once a conversational interview is submitted, it cannot be resumed or retaken.
+
+    Brief network drops do not end the interview: automatic reconnection and a grace window keep the session alive. See [Candidate Reattempts](/candidate-reattempts).
+  </Accordion>
+
+  <Accordion title="What do interview reports include?">
+    Each candidate gets an AI-generated report with an **overall recommendation**, strengths, areas for improvement, a summary, and per-topic scores. You also get the full transcript and a session recording that is seekable from the transcript, plus PDF export.
+
+    You can re-evaluate or re-transcribe an interview on demand. See [Interview Reports](/interview-reports).
+  </Accordion>
+</AccordionGroup>
 
 ## Candidates
 
-Coming soon.
+<AccordionGroup>
+  <Accordion title="Do candidates need to create an account?">
+    No account setup is needed beyond **email verification**. Candidates open the emailed or shared link and sign in with a magic link or a 6-digit email code that expires in 30 minutes; Google sign-in is also available.
+
+    See [Candidate Login Methods](/candidate-login-methods).
+  </Accordion>
+
+  <Accordion title="Can candidates take tests on a phone?">
+    It depends on the test type:
+
+    | Works on mobile | Desktop only |
+    |---|---|
+    | Quizzes, psychometric tests, CEFR communication tests, video responses | Programming, SQL, CSS, Excel, and typing tests |
+
+    Google Chrome is recommended. Tab-switch screenshots and multiple-monitor detection need a Chromium-based browser, and video interviews on iOS require Safari. See [Device Compatibility](/device-compatibility).
+  </Accordion>
+
+  <Accordion title="What happens if a candidate loses internet connection?">
+    Assessments **resume after disconnects** or accidental tab closes wherever the test type allows it, and proctoring evidence captured offline syncs when the connection returns. Conversational AI interviews reconnect automatically with a grace window for brief drops, but cannot be resumed once submitted.
+
+    See [Resume Your Attempt](/resume-your-attempt).
+  </Accordion>
+
+  <Accordion title="Do candidates see their scores?">
+    No. Results are **recruiter-gated**: candidates see a completion confirmation and are directed to contact the recruiter for outcomes. Equip does not provide candidate-facing scores, certificates, or badges.
+
+    <Tip>
+    Candidates unsure whether their attempt went through can be reassured by the completion screen; recruiters can verify on their side in [Live Progress](/live-progress).
+    </Tip>
+  </Accordion>
+
+  <Accordion title="How is candidate privacy protected?">
+    Before starting, candidates see exactly which **proctoring measures** are active and consent to the proctoring report being shared with the recruiter. Session recordings mask question content.
+
+    Candidates are also offered a skippable one-minute **demo test** to check that their device and camera work before the real attempt. See [Demo Tests](/demo-tests).
+  </Accordion>
+</AccordionGroup>
+
+## Related Resources
+
+- [What is Equip?](/what-is-equip) - Overview of the ATS, Assessments, and AI Interviews pillars
+- [How Credits Work](/how-credits-work) - The full pay-per-use billing model
+- [Taking an Assessment](/taking-an-assessment) - The candidate experience from invitation to submission
+- [Contact Support](/contact-support) - Live chat and email channels for recruiters and candidates

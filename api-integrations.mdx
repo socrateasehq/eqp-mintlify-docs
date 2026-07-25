@@ -1,16 +1,73 @@
 ---
 title: "API Integrations"
-description: "Integrate Equip with your own systems."
+description: "Use Equip's REST APIs to invite candidates and pull results from your own ATS or internal systems."
 ---
 
-<Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/api-integrations-v51m7f/). Sections below outline the planned content.
-</Note>
+<Tip>
+Equip's **REST APIs** let you invite candidates and fetch their results from your own system, so you never have to manage the pipeline in the Equip dashboard. Access requires an API Key, a one-time $500 setup fee, and a minimum monthly purchase of 500 credits.
+</Tip>
 
 ## What the API Offers
 
-Coming soon.
+Say you want to run Equip assessments from inside your ATS, or you have an internal system and do not want to invite candidates and check results manually. Equip's **REST APIs** automate both ends of that workflow.
+
+Candidates still attempt the assessment on the Equip website. You simply never need to open the Equip dashboard to send invitations or collect scores.
+
+| You can | You cannot |
+|---|---|
+| Invite candidates to an assessment programmatically | Fetch question content directly (for example, "give me 100 Python MCQs") |
+| Pull candidates' results into your own system | Have candidates attempt tests outside of Equip |
+
+<Note>
+The API does not expose Equip's question bank. If your assessment uses Equip content, questions are still picked automatically from the **Question Bank** and shown only to the candidate during their attempt.
+</Note>
+
+## Costs
+
+There is no recurring platform fee for the integration itself. Enabling it has two components:
+
+1. A one-time setup fee of **$500**, which converts to 500 credits in your balance.
+2. A minimum monthly purchase of **500 credits**.
+
+These are normal Equip **credits**: they never expire, and you spend them on your regular usage (assessments and AI interviews) exactly as described on the [Pricing Page](https://equip.co/pricing/). So the money you pay for the integration is consumed by the hiring you were already doing.
+
+<Note>
+Credits work the same way for API-driven invitations as for dashboard invitations. See [How Credits Work](/how-credits-work) for deduction and reclaim rules.
+</Note>
 
 ## Getting Access
 
-Coming soon.
+<Steps>
+  <Step title="Create a team">
+    Sign up for a recruiter account at [equip.co](https://equip.co/account/recruiter-onboarding/) with your work email.
+  </Step>
+  <Step title="Trial Equip with free credits">
+    Use your free signup credits to confirm the product works for your use case before committing to the integration.
+  </Step>
+  <Step title="Purchase $500 worth of credits">
+    This means $500 actually paid, not necessarily 500 credits. For example, with a 25% [first purchase discount](/first-purchase-discount), 500 credits would cost you $375, so you would need to buy 667 credits to reach $500 paid.
+  </Step>
+  <Step title="Request your API Key">
+    Email hello@equip.co or use the in-product chat. The Equip team issues your team's **API Key**; there is no self-serve page to generate one.
+  </Step>
+  <Step title="Keep purchasing 500 credits per month">
+    Continue buying at least 500 credits each month to retain API access.
+  </Step>
+</Steps>
+
+## Explore the APIs
+
+A public [Postman collection](https://www.postman.com/solar-comet-241985-1/equip-api-v3/collection/6tuspon/equip-api-v3-documentation) documents the available endpoints. You can browse it freely, but every request needs your team's API Key.
+
+For a walkthrough of wiring the pieces together, follow this [integration guide](https://gist.github.com/siddharth-soc/255c00f83c35a9a40355189346c6fb19).
+
+<Tip>
+You do not always need the full API. If you only want results pushed to you when candidates finish, [webhooks](/webhooks) are simpler. If you use Lever, the native [Lever integration](/lever-integration) needs no code at all.
+</Tip>
+
+## Related Resources
+
+- [Webhooks](/webhooks) - Get completed assessment and interview results pushed to your endpoint
+- [Lever Integration](/lever-integration) - Trigger Equip assessments from Lever stages, no code required
+- [How Credits Work](/how-credits-work) - Purchasing, pricing, and how credits are deducted
+- [Write Results to Google Sheets](/write-results-to-google-sheets) - A no-code way to export results automatically

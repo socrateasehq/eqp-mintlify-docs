@@ -1,16 +1,122 @@
 ---
 title: "Using Equip Assessments with Lever"
-description: "Send Equip assessments from your Lever pipeline."
+description: "Send Equip assessments from your Lever pipeline and get results written back to each candidate's Lever profile."
 ---
 
-<Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/using-equip-assessments-with-lever-integration-10h0ree/). Sections below outline the planned content.
-</Note>
+The **Lever integration** connects your Lever pipeline to Equip. When you move a candidate into a dedicated pipeline stage, Equip automatically emails them the assessment mapped to that job posting. Once they finish, the results appear on their Lever opportunity.
 
 ## Setting Up the Integration
 
-Coming soon.
+Setup happens in two places: you enable the integration on Equip, then configure your Lever account to work with it.
+
+<Note>
+You need the **Super Admin** access role in Lever to set up the integration. The integration is available to Equip customers on the Premium Plan; if you are unsure whether your team qualifies, reach out on chat or email hello@equip.co.
+</Note>
+
+### Enable the Integration on Equip
+
+<Steps>
+  <Step title="Open the Integrations page">
+    On the Equip recruiter dashboard, click the **Integrations** link in the sidebar.
+  </Step>
+  <Step title="Configure Lever">
+    Find the **Lever** card and click **Configure**.
+  </Step>
+  <Step title="Accept the permissions">
+    Review the permissions Equip requests, then click **Accept**.
+  </Step>
+</Steps>
+
+<!-- screenshot: Integrations page with the Lever card and Configure button -->
+
+### Configure Lever
+
+<Steps>
+  <Step title="Enable the stage-change webhook">
+    In Lever, go to **Settings > Integrations & API > Webhooks** and toggle on the **CANDIDATE STAGE CHANGE** webhook if it is not already enabled.
+  </Step>
+  <Step title="Add an Equip Assessment stage">
+    Create a new pipeline stage named **Equip Assessment**. Moving a candidate into this stage is what triggers Equip to send the assessment.
+  </Step>
+</Steps>
+
+<!-- screenshot: Lever webhooks settings with CANDIDATE STAGE CHANGE toggled on -->
+
+### Map Job Postings to Assessments
+
+After you accept the permissions, Equip redirects you to a mapping page. This is where you decide which assessment each Lever job posting should use.
+
+<Steps>
+  <Step title="Pick a job posting and an assessment">
+    Select a Lever job posting and the Equip assessment you want candidates for that posting to take.
+  </Step>
+  <Step title="Create the mapping">
+    Click the **Map** button. Once the link succeeds, a tag containing the Equip assessment's ID appears on the job posting in Lever.
+  </Step>
+</Steps>
+
+<Tip>
+Mappings work per job posting. If a candidate for job posting X is moved to the Equip Assessment stage, Equip emails them the assessment mapped to X, so you can use different assessments for different roles.
+</Tip>
+
+## Inviting Candidates from Lever
+
+Once setup is complete, you never need to leave Lever to invite candidates.
+
+<Steps>
+  <Step title="Open the candidate">
+    In Lever, go to the **Candidates** tab and open the candidate you want to assess.
+  </Step>
+  <Step title="Assign a job if needed">
+    If no job is associated with the candidate, click **Choose Job** and select the relevant job posting.
+  </Step>
+  <Step title="Move them to the Equip Assessment stage">
+    Move the candidate into the **Equip Assessment** stage. Equip automatically emails them a link to the mapped assessment.
+  </Step>
+</Steps>
+
+<Warning>
+If the candidate's Lever profile has no email address, Equip cannot send the invitation. Instead, Equip emails you to flag that the email ID is missing on Lever. Add the candidate's email address and move them through the stage again.
+</Warning>
 
 ## How Results Sync
 
-Coming soon.
+When a candidate completes the assessment, Equip adds a **note** to their Lever opportunity. The note contains a summary of their scores and a link to the detailed report on Equip, where you can review individual test results and the proctoring summary.
+
+<!-- screenshot: Lever opportunity showing the Equip results note with score summary -->
+
+Equip also assigns a **Lever Score** based on the candidate's overall assessment percentage:
+
+| Equip Assessment Percentage | Lever Score |
+|---|---|
+| 0 - 34% | 1 (Strong No Hire) |
+| 35 - 49% | 2 (No Hire) |
+| 50 - 74% | 3 (Hire) |
+| 75 - 100% | 4 (Strong Hire) |
+
+<Note>
+The Lever note is a summary. For question-level detail, grading, and proctoring evidence, open the linked report on Equip.
+</Note>
+
+## Disabling the Integration
+
+You can revoke Equip's access from within Lever at any time.
+
+<Steps>
+  <Step title="Open Lever's API settings">
+    In Lever, navigate to the **Integrations & API** settings page.
+  </Step>
+  <Step title="Find the Equip app">
+    Open the **Authorized Apps** tab and locate the Equip app.
+  </Step>
+  <Step title="Revoke access">
+    Click **Revoke Access** to disable the integration.
+  </Step>
+</Steps>
+
+## Related Resources
+
+- [Create an Assessment](/create-assessment) - Build the assessment you will map to your Lever job postings
+- [API Integrations](/api-integrations) - Invite candidates and pull results programmatically with Equip's REST APIs
+- [Webhooks](/webhooks) - Push completed assessment results to your own systems
+- [Email Invitations](/email-invitations) - How Equip's assessment invitation emails work

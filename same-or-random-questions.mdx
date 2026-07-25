@@ -3,18 +3,73 @@ title: "Do Candidates See the Same or Random Questions?"
 description: "How question selection and shuffling work across candidates."
 ---
 
-<Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/do-candidates-see-the-same-or-random-questions-1f3tkgy/). Sections below outline the planned content.
-</Note>
+<Tip>
+Candidates do not see the same quiz. Equip draws questions from large **question banks** and randomizes the questions, their order, and their options, so candidates sitting next to each other cannot collaborate.
+</Tip>
 
 ## Question Randomization
 
-Coming soon.
+Every quiz built with **Equip Content** is randomized in three independent ways:
+
+| Randomization | What it means |
+|---|---|
+| **Different questions** | Each candidate gets a different set of questions drawn from a large pool. For an MS Excel skill, one candidate may be asked about `SUM()` while another is asked about `AVERAGE()`. |
+| **Different order** | Even when two candidates happen to receive the same question, it appears at a different position. Candidate A may see it first; Candidate B may see it tenth. |
+| **Shuffled options** | The answer options of an MCQ appear in a different order for each candidate. Candidate A may see options in the order `x`, `y`, `z`; Candidate B may see `y`, `z`, `x`. |
+
+This makes the assessment safe even for in-person drives like campus recruitment, where many candidates attempt the same quiz at the same time in the same room.
+
+<Note>
+Recruiters cannot see or select the individual questions in an Equip Content quiz, either while creating the assessment or in candidate results. The question banks are proprietary: anyone can create a recruiter account, so exposing the questions would compromise test integrity. Instead, results show skill-wise and difficulty-wise breakdowns. See [Why Can I Not See Quiz Questions?](/cannot-see-quiz-questions) for details.
+</Note>
 
 ## Shuffling Settings
 
-Coming soon.
+Randomization behavior depends on the test type. The table below shows whether you can select the exact questions and what gets randomized:
+
+| Test Type | Can Select Questions? | Randomization |
+|---|---|---|
+| Quiz (Equip Content) | No | Questions, order, and options are all randomized |
+| Programming | Yes | Possible, by attaching multiple questions to one test |
+| SQL | Yes | Possible, by attaching multiple questions to one test |
+| English Communication (CEFR) | No | Randomized |
+| Excel | Yes | Questions are not randomized, but the numbers within questions are |
+| Psychometric | No | No randomization (standardized tests) |
+
+Want the same randomization for your own questions? Create a **Question Bank** with a large pool of your questions, then add a **Question Bank Quiz** that draws a set number of questions per points level for each candidate. See [Question Bank Quiz](/question-bank-quiz) for the setup.
+
+<Tip>
+If you want full control over the exact MCQs each candidate sees, create a **Custom Quiz** instead. Custom quizzes let you write, view, and reorder every question yourself.
+</Tip>
 
 ## Coding and SQL Question Pools
 
-Coming soon.
+Programming and SQL tests hold one question per test, but you can associate multiple questions with the same test so that each candidate receives one at random.
+
+<Steps>
+  <Step title="Open Assessment Settings">
+    From the Recruiter Dashboard, open the assessment and click **Settings**.
+  </Step>
+  <Step title="Go to the Test Order tab">
+    The randomization control lives here, alongside test weightage and proctoring settings.
+  </Step>
+  <Step title="Click the Randomize icon">
+    Find the **Randomize** icon next to your coding test.
+  </Step>
+  <Step title="Select the question pool">
+    Pick the questions from the list of available coding questions. Each candidate is served one question from this pool at random.
+  </Step>
+</Steps>
+
+<!-- screenshot: Test Order tab with the Randomize icon highlighted next to a Programming test -->
+
+<Note>
+Unlike Equip quizzes, Equip's coding content lets you pick the exact question and see it in candidate results. Randomizing coding questions is optional.
+</Note>
+
+## Related Resources
+
+- [Randomize Coding Questions](/randomize-coding-questions) - Full guide to serving random Programming and SQL questions
+- [Why Can I Not See Quiz Questions?](/cannot-see-quiz-questions) - Why Equip quiz questions stay hidden from recruiters
+- [Question Bank Quiz](/question-bank-quiz) - Randomize your own questions with a custom question bank
+- [Question Difficulty Levels](/question-difficulty-levels) - How Equip matches question difficulty to experience level

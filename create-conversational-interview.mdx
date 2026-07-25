@@ -3,18 +3,80 @@ title: "Creating a Conversational AI Interview"
 description: "Generate an adaptive AI interview from a job description."
 ---
 
-<Note>
-This is a new article for the Equip Help Center. Sections below outline the planned content.
-</Note>
+A **Conversational AI Interview** is a live, spoken interview where Equip's AI interviewer asks questions in real time and adapts its follow-ups to each candidate's answers. You do not write the questions yourself: paste a job description, and Equip drafts the interview topics for you.
 
 ## Creating from a Job Description
 
-Coming soon.
+Start from the AI Interviews dashboard and let Equip's AI do the heavy lifting.
+
+<!-- screenshot: Create Conversational Interview page with job description form -->
+
+<Steps>
+  <Step title="Open the creation page">
+    Go to **AI Interviews** in your dashboard and click **Add AI Interview**, then choose **Conversational Interview**.
+  </Step>
+  <Step title="Pick the interview type">
+    Select either the **Quick Interview** or **Comprehensive Interview** card. This choice sets the interview's length, question limits, and credit cost (see the comparison below).
+  </Step>
+  <Step title="Paste the job description">
+    Fill in the **Job description** field (up to 7,500 characters). Keep it focused on the role and the key skills; the AI drafts interview topics directly from this text.
+  </Step>
+  <Step title="Link a job opening">
+    Under **Job opening**, either pick an existing job opening from the dropdown or create a new one by entering a **Job opening title** (for example, "Senior Frontend Developer").
+  </Step>
+  <Step title="Set years of experience">
+    Enter the minimum **Years of experience**, and optionally a maximum. If you selected an existing job opening, this range is pre-populated from it and locked.
+  </Step>
+  <Step title="Add extra context (optional)">
+    Use **Additional context** (up to 1,000 characters) to call out specific focus areas, skills to emphasize, or special requirements.
+  </Step>
+  <Step title="Generate the interview">
+    Click **Generate interview topics**. Equip's AI drafts the topics, each with evaluation criteria, a follow-up count, and a difficulty level, and takes you straight to the interview's Settings page.
+  </Step>
+</Steps>
+
+<Note>
+Generated topics arrive with a difficulty of **Medium**, **Hard**, or **Expert**. You can review, edit, reorder, or delete every generated item before inviting candidates; see [Questions, Topics and Scenarios](/interview-content-types).
+</Note>
 
 ## Quick vs Comprehensive
 
-Coming soon.
+The interview type you pick in the first step controls how deep the interview goes and how many credits each candidate submission costs.
+
+| | **Quick Interview** | **Comprehensive Interview** |
+|---|---|---|
+| Approximate duration | ~15 minutes | ~30 minutes |
+| Topics | 3 to 5 | 5 to 10 |
+| Total questions | 5 to 10 | 10 to 25 |
+| Credits per candidate | 2 | 3 |
+| Best for | Fast screening rounds | Deeper evaluation rounds |
+
+You can change the type later on the interview's settings page. Switching from Comprehensive to Quick is blocked if the interview already has more questions than Quick allows (maximum 10); remove some questions first, then switch.
+
+<Tip>
+Credits are only deducted when a candidate submits the interview. If a candidate never starts, you can reclaim the credits; see [How Credits Work](/how-credits-work).
+</Tip>
 
 ## Instructions for the AI Interviewer
 
-Coming soon.
+Beyond the topics themselves, you can steer how the AI conducts the interview. On the interview's settings page, the **Instructions for AI Interviewer** field accepts free-text guidance of up to 4,000 characters.
+
+Use it to shape tone, pacing, and evaluation style. For example:
+
+- "Start with easier questions, and then make them harder."
+- "Score higher if they use simpler words."
+
+<!-- screenshot: Instructions for AI Interviewer field on the conversational settings page -->
+
+<Note>
+These instructions guide the AI's behavior across the whole interview. For per-question control, edit the individual items and their difficulty and follow-up settings instead.
+</Note>
+
+After generation, finish configuring the interview on its Settings page: review the topics, set the interview language, add candidate instructions, and choose proctoring options. See [AI Interview Settings](/interview-settings) for every option.
+
+## Related Resources
+
+- [One-way vs Conversational Interviews](/one-way-vs-conversational) - Decide which interview format fits your hiring round
+- [Questions, Topics and Scenarios](/interview-content-types) - Edit the generated items and their follow-ups
+- [AI Interview Settings](/interview-settings) - Configure language, availability, workspace, and proctoring
+- [How Credits Work](/how-credits-work) - Credit costs and how to reclaim unused credits

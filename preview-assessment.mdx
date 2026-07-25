@@ -3,18 +3,94 @@ title: "Previewing an Assessment"
 description: "Preview for free as a recruiter or as a candidate before inviting anyone."
 ---
 
-<Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/previewing-an-assessment-1jgi148/). Sections below outline the planned content.
-</Note>
+<Tip>
+Previews are **free and unlimited** for you and your whole team. Inviting anyone, including yourself, deducts credits like a normal candidate attempt. Preview first, invite later.
+</Tip>
 
 ## Recruiter Preview vs Candidate Preview
 
-Coming soon.
+Once you create an assessment, a **Preview** link appears on your dashboard. Existing assessments also show a **Preview** button at the top of the Assessment Settings page.
+
+<Steps>
+  <Step title="Open your assessment">
+    Go to the Recruiter Dashboard and locate the assessment you want to check.
+  </Step>
+  <Step title="Click Preview">
+    Use the preview link on the dashboard, or open the assessment's settings and click **Preview** at the top.
+  </Step>
+  <Step title="Choose a preview mode">
+    Pick **As a Recruiter** for a quick look, or **As a Candidate** for the full candidate experience.
+  </Step>
+</Steps>
+
+<!-- screenshot: preview mode selector showing "As a Recruiter" and "As a Candidate" options -->
+
+The two modes serve different purposes:
+
+| | As a Recruiter | As a Candidate |
+|---|---|---|
+| **Best for** | Quickly checking how tests look | Experiencing exactly what candidates see |
+| **Test navigation** | Jump freely between tests | Must finish each test before the next one appears |
+| **Proctoring** | Disabled, no camera or screen sharing | Enabled, you grant camera and screen-share access |
+
+<Note>
+Use **As a Candidate** at least once before sharing an assessment widely. It surfaces anything a candidate will encounter, including permission prompts and test order.
+</Note>
 
 ## Sample Questions in Previews
 
-Coming soon.
+The questions you see while previewing depend on the **test type** and whether the test uses Equip's content or your own.
+
+| Content Source | Test Type | Questions in Preview |
+|---|---|---|
+| Your content | Any test type | Same as the candidate |
+| Equip's content | Everything except Quiz | Same as the candidate |
+| Equip's content | Quiz | **Sample questions** only |
+
+For Equip-content quizzes, previews draw from a separate **Sample Question Bank** rather than the real one. Sample questions are matched to the same skill and difficulty you configured, so they are representative of what candidates will face.
+
+This protection exists because anyone can self-onboard a team on Equip. Showing real quiz questions in previews would let people harvest the question bank and compromise test integrity.
+
+<Note>
+If the Sample Question Bank has fewer questions than you configured, your preview shows fewer questions. For example, if you added 10 Medium-level Python MCQs but only 5 samples exist, you preview 5. Candidates still see all 10, because being allowed to select 10 during creation means the real bank has at least 10.
+</Note>
+
+<Warning>
+The only way to see the real Equip quiz questions is to invite yourself as a candidate, and that deducts credits from your account. If you need full visibility into questions, consider a [custom quiz](/custom-tests) instead.
+</Warning>
 
 ## Unlocking Locked Questions
 
-Coming soon.
+When you create an account, Equip-content quizzes let you add up to **4 questions per skill, per difficulty level**. For example, for the Python skill you can add 4 Medium, 4 Hard, and 4 Expert questions.
+
+To add more than 4, purchase **at least 25 credits in a single transaction**. This unlocks up to 10 questions per skill per difficulty level.
+
+<Steps>
+  <Step title="Purchase 25 or more credits">
+    Make a single purchase of at least 25 credits. The credits never expire and are used only for candidate assessments.
+  </Step>
+  <Step title="Return to the assessment builder">
+    Open the Tests tab of your assessment and increase the question count for the skills you need.
+  </Step>
+</Steps>
+
+<!-- screenshot: locked question count in the Tests tab prompting a credit purchase -->
+
+This limit exists so that people cannot create free accounts just to browse Equip's question database. It applies narrowly:
+
+| Content | Question Limit Before Unlocking |
+|---|---|
+| Equip-content quizzes | 4 per skill per difficulty |
+| Equip content for other test types (Programming, SQL, CSS, Video Response) | No unlock needed |
+| Custom content | No unlock needed |
+
+<Note>
+Each Equip-content quiz also has an overall cap of 25 questions. If you need more, add a second quiz to the same assessment.
+</Note>
+
+## Related Resources
+
+- [Assessment Invitations vs Preview](/invitations-vs-preview) - When each costs credits and what candidates see
+- [Why You Cannot See Quiz Questions](/cannot-see-quiz-questions) - The reasoning behind hidden Equip quiz questions
+- [Creating an Assessment](/create-assessment) - Build the assessment you want to preview
+- [How Credits Work](/how-credits-work) - Purchasing credits and how they are deducted

@@ -3,18 +3,94 @@ title: "The Candidate Pipeline"
 description: "Step 3 of creating a job opening: setting up your hiring stages."
 ---
 
-<Note>
-This is a new article for the Equip Help Center. Sections below outline the planned content.
-</Note>
+The **Candidate Pipeline** is the third and final step of the job creation wizard, after Job Post and Application Form. Here you define the stages candidates move through, from application to hire, and the automations attached to each stage.
+
+Everything you set up here can be changed later. Open the job's Settings page and switch to the **Candidate Pipeline** tab to edit stages after the job is live.
+
+<!-- screenshot: pipeline builder in step 3 of the job creation wizard, showing stage cards -->
 
 ## Choosing Stages
 
-Coming soon.
+Every pipeline starts with the **Applied** stage. It is a system stage, always comes first, and is where every new application lands. From there, you add the stages that match your hiring process.
+
+Equip offers 11 stage types:
+
+| Stage type | What it is for |
+|---|---|
+| **Applied** | Candidates apply for the position. Always the first stage. |
+| **Phone Screening** | Call candidates. Rank and review them. |
+| **Assessment** | Quiz, coding, communication, and other skill tests. |
+| **One-Way AI Interview** | Fixed questions. Evaluate subjective responses via text, audio, or video. |
+| **Conversational AI Interview** | An AI bot auto-generates questions and engages in back-and-forth. |
+| **Video Interview** | Use your own videoconferencing tool. Rank and review candidates. |
+| **Custom** | A custom stage with optional ranking. |
+| **Offered** | System stage for candidates you extend an offer to. Supports an offer email and offer letter. |
+| **Hired** | Terminal stage for successful candidates. |
+| **Rejected** | Terminal stage for candidates you turn down. |
+| **Withdrawn** | Terminal stage for candidates who drop out. |
+
+<Note>
+When you add a **One-Way AI Interview** or **Conversational AI Interview** stage, Equip automatically creates the interview for that stage. You can then review and adjust it before inviting candidates.
+</Note>
+
+The three terminal stages (**Hired**, **Rejected**, **Withdrawn**) and the system stages cannot be deleted. They are the fixed endpoints of every pipeline.
 
 ## Reordering and Naming
 
-Coming soon.
+The pipeline builder is **drag-to-reorder**: pick up any stage card and drop it where it belongs in your process.
+
+Each stage carries two names:
+
+| Name | Who sees it | Limit |
+|---|---|---|
+| **Candidate-facing stage name** | Candidates, in emails and updates about their application | Up to 20 characters |
+| **Internal name** | Your team, in dashboards and reports | Up to 200 characters |
+
+This lets you keep candidate-facing labels short and friendly (for example, "Interview") while your team sees something more specific (for example, "Round 2: System Design with Hiring Manager").
+
+<Warning>
+If you delete a stage that already holds candidates, Equip archives it instead of deleting it. You will see the message "Stage has candidates and was archived instead of deleted". Archived stages can be restored at any time, so no candidate data is lost.
+</Warning>
+
+<!-- screenshot: dragging a stage card to reorder the pipeline -->
 
 ## Attaching Templates and Assignees
 
-Coming soon.
+Each stage can carry its own automations: email templates, a scorecard, and an assignee. What you can attach depends on the stage type:
+
+| Attachment | Available on |
+|---|---|
+| **Invitation email template** | Assessment, One-Way AI Interview, Conversational AI Interview, Video Interview, Custom |
+| **Rejection email template** | All non-terminal stages except Offered |
+| **Scorecard** | Phone Screening, Video Interview, Custom |
+| **Assignee** | All stages except Hired, Rejected, and Withdrawn |
+
+To configure a stage:
+
+<Steps>
+  <Step title="Open the stage">
+    Click the stage card in the pipeline builder to open its configuration.
+  </Step>
+  <Step title="Attach templates">
+    Pick an **invitation email template** for stages where candidates receive an invite, and a **rejection email template** so rejections from this stage use consistent wording. Defaults are provided, and you can manage your own under Templates.
+  </Step>
+  <Step title="Attach a scorecard">
+    For Phone Screening, Video Interview, and Custom stages, select a **scorecard** so interviewers rate every candidate against the same criteria.
+  </Step>
+  <Step title="Set an assignee">
+    Choose the team member responsible for candidates in this stage. Assignees power the "Mine" filter on the applications dashboard, so everyone knows what is on their plate.
+  </Step>
+</Steps>
+
+<Note>
+Attaching an email template does not mean emails go out automatically. Emails on Equip are always recruiter-triggered: when you move a candidate to a stage, you choose whether to send the email, and you can preview it first.
+</Note>
+
+<!-- screenshot: stage configuration panel with template and assignee dropdowns -->
+
+## Related Resources
+
+- [Pipeline Stages](/pipeline-stages) - A deeper look at each stage type and when to use it
+- [Changing Stages](/changing-stages) - How to move candidates through the pipeline you built
+- [Email Templates](/email-templates) - Create and customize the templates you attach to stages
+- [Scorecards](/scorecards) - Build scorecard templates for structured interviewer feedback

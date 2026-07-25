@@ -1,24 +1,90 @@
 ---
 title: "Assessments, Tests, and Questions: The Hierarchy"
-description: "How assessments, tests, and questions relate to each other."
+description: "How assessments, tests, and questions relate to each other on Equip."
 ---
 
-<Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/assessments-tests-questions-the-hierarchy-1lwuvhn/). Sections below outline the planned content.
-</Note>
+Equip uses three building blocks: **assessments**, **tests**, and **questions**. Understanding how they fit together makes every other part of the platform, from creating assessments to reading results, much easier to follow.
+
+<Tip>
+The short version: an **assessment** contains one or more **tests**, and each test contains one or more **questions**. You invite candidates to an assessment; they attempt its tests one by one.
+</Tip>
 
 ## How the Hierarchy Works
 
-Coming soon.
+Everything on Equip follows the same three-level structure: **Assessment > Test > Question**. You always share an assessment with candidates, never an individual test or question.
+
+<!-- screenshot: hierarchy diagram showing an assessment containing multiple tests, each containing questions -->
+
+| Level | What it is | Example |
+|---|---|---|
+| **Assessment** | The container you invite candidates to; maps to a role | Python Developer assessment |
+| **Test** | One skill evaluation taken in a single sitting | A Python quiz, a programming challenge |
+| **Question** | The individual items inside a test | An MCQ, a coding problem |
+
+<Note>
+Candidates attempt the tests inside an assessment one by one, and each test must be completed in a single sitting. They can take breaks between tests.
+</Note>
 
 ## Assessments
 
-Coming soon.
+An **assessment** is what you invite candidates to, and where you later see their results. It typically maps to a specific role, such as Python Developer or Account Executive.
+
+An assessment can contain any number of tests. For example, a Python Developer assessment might combine a Python quiz with a programming challenge, so you evaluate both theory and hands-on skill in one invitation.
+
+<Note>
+Each test in an assessment carries a **weightage**, and the weightages combine into the candidate's overall score. See [Test Scores and Overall Score](/test-scores-and-overall-score) for how this works.
+</Note>
 
 ## Tests
 
-Coming soon.
+Each assessment is made up of one or more **tests**. A test evaluates one skill or format: a quiz, a programming challenge, a video response, an English communication test, and so on.
+
+For every test type, the content can come from one of two sources:
+
+| Source | What it means |
+|---|---|
+| **Equip Content** | Pre-built tests and question banks from Equip's library |
+| **My Content** | Custom Tests you create with your own questions |
+
+You can freely mix both sources in the same assessment. See [Equip Content vs Custom Content](/equip-vs-custom-content) for a detailed comparison of what each allows.
+
+### Custom Tests
+
+A **Custom Test** is a test you build with your own questions, such as a custom quiz or a video response test. Once created, you can reuse it across assessments.
+
+<Steps>
+  <Step title="Open your assessment's Tests tab">
+    Go to the assessment's settings and open the **Tests** tab.
+  </Step>
+  <Step title="Select the test type">
+    Pick the matching test type, for example Video Response.
+  </Step>
+  <Step title="Add your content">
+    Click the **Add** button, then choose **My Content** and select your Custom Test.
+  </Step>
+</Steps>
+
+<!-- screenshot: Tests tab showing the Add button with the My Content option -->
 
 ## Questions
 
-Coming soon.
+A test is made up of one or more **questions**. How many questions a test holds, and how they are shown, depends on the test type:
+
+| Pattern | Example |
+|---|---|
+| A single question | A programming challenge |
+| Multiple questions shown one by one | A quiz using Equip's content |
+| Multiple questions shown all at once | A custom quiz in all-at-once mode |
+
+<Note>
+Question limits vary by test type. For example, Equip content quizzes hold up to 25 questions, while programming tests contain exactly one challenge each. See [Question Limits](/question-limits) for the full list.
+</Note>
+
+If you want a coding problem and a quiz for the same role, add them as two separate tests within one assessment; a single test cannot mix a programming challenge with quiz questions.
+
+## Related Resources
+
+- [Create an Assessment](/create-assessment) - Put the hierarchy into practice with the assessment builder
+- [Test Types](/test-types) - Every test type Equip offers, from quizzes to Excel tests
+- [Equip Content vs Custom Content](/equip-vs-custom-content) - What each content source lets you control
+- [Question Limits](/question-limits) - Maximum questions allowed per test type

@@ -3,18 +3,83 @@ title: "How CV Parsing Works"
 description: "What Equip extracts from resumes and how values are normalized."
 ---
 
+<Tip>
+When a resume is uploaded to Equip, AI extracts the candidate's contact details, work experience, education, and skills into structured fields, then matches those values against Equip's canonical databases so every profile is searchable and comparable.
+</Tip>
+
+Equip's **CV parsing** turns an unstructured resume file into a structured candidate profile. The same parser runs whether a candidate applies themselves or a recruiter imports resumes in bulk.
+
+## Where Parsing Happens
+
+Resumes enter Equip through two flows, and both are parsed automatically:
+
+| Flow | Who uploads | File rules | What happens next |
+|---|---|---|---|
+| **Candidate self-apply** | The candidate, on the application form | PDF, up to 10 MB | The parsed data pre-fills the application form for the candidate to review and submit |
+| **Bulk CV import** | The recruiter | PDF only, up to 100 files per batch, 10 MB each | Each successfully parsed CV creates a job application automatically, at 0.01 credits per CV |
+
+Parsing typically takes **30 to 45 seconds** for a self-apply upload. If parsing does not complete, the candidate can simply fill in the form manually.
+
+<!-- screenshot: application form with resume upload field and pre-filled details -->
+
 <Note>
-This is a new article for the Equip Help Center. Sections below outline the planned content.
+Candidates added through bulk import are marked as **email not verified** and do not receive stage-change emails until their address is verified. See [Bulk CV Import](/bulk-cv-import) for the full workflow.
 </Note>
 
 ## Extracted Fields
 
-Coming soon.
+The parser extracts the following data from each resume:
+
+| Category | Fields extracted |
+|---|---|
+| **Contact details** | Name, email, phone, current city, LinkedIn URL, portfolio URLs |
+| **Work experience** | Role, company, dates, description, employment type |
+| **Education** | Degree, institution, field of study, years, grade |
+| **Skills** | Each skill with years of experience and an expertise level: Intermediate, Advanced, or Expert |
+| **Other** | Languages known, industry experience |
+
+The extracted values appear on the [Candidate Profile](/candidate-profile) under sections such as Experience, Education, and Preferences. They also power dashboard filters, [Candidate Search](/candidate-search), and [Talent Rediscovery](/talent-rediscovery).
+
+<Tip>
+Parsed data is the raw material for the [Job Fit Score](/job-fit-score). The cleaner the structured profile, the more useful the AI ranking of your applicant pool.
+</Tip>
 
 ## Normalization
 
-Coming soon.
+Raw resume text is messy: the same skill, city, or employer can be written a dozen ways. After extraction, Equip **normalizes** each value against its canonical databases of:
+
+- **Skills**
+- **Roles**
+- **Cities**
+- **Companies**
+- **Educational institutions**
+
+This means "JS", "Javascript", and "JavaScript" resolve to one skill, so filters, search, and fit scoring treat them identically.
+
+<Note>
+Institution matching is **country-aware**. A university name is resolved in the context of its country, which avoids mixing up similarly named institutions in different regions.
+</Note>
 
 ## Parsing Failures
 
-Coming soon.
+Parsing can occasionally fail, and the outcome depends on the flow:
+
+| Flow | What happens on failure |
+|---|---|
+| **Candidate self-apply** | The form is not pre-filled; the candidate enters their details manually and can still submit |
+| **Bulk CV import** | The file is listed as failed in the batch report with a reason |
+
+Bulk import failure reasons include **missing email**, **missing name**, **duplicate application**, and **parsing failure**. The batch detail page lists every file by category so you can see exactly which resumes need attention.
+
+<Warning>
+Only supported file types are parsed. Application-form and bulk-import uploads must be **PDF files of 10 MB or less**. Scanned image-only PDFs with no selectable text are the most common cause of a parsing failure.
+</Warning>
+
+If a candidate's resume changes later, a recruiter can replace it from the candidate profile. Replacement uploads accept **PDF, DOC, and DOCX** files up to 10 MB, and the re-upload is logged in the Candidate Journey.
+
+## Related Resources
+
+- [Bulk CV Import](/bulk-cv-import) - Upload up to 100 resumes at once and track per-file results
+- [Job Fit Score](/job-fit-score) - How parsed profiles are ranked against your criteria
+- [Candidate Profile](/candidate-profile) - Where extracted fields appear and how to edit them
+- [Application Form](/application-form) - Configure which fields candidates fill out when applying

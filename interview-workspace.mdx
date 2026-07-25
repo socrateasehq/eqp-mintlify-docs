@@ -1,20 +1,90 @@
 ---
 title: "The Workspace: Code and Written Answers"
-description: "Let candidates answer in code or text alongside the spoken interview."
+description: "Let candidates answer in code or plain text alongside the spoken conversational interview."
 ---
 
-<Note>
-This is a new article for the Equip Help Center. Sections below outline the planned content.
-</Note>
+<Tip>
+The **Workspace** is an optional panel in conversational interviews where candidates type answers in code or plain text instead of, or alongside, speaking. Enable it once per interview, then choose for each topic or question whether the answer should be spoken, written, or either.
+</Tip>
 
 ## Enabling the Workspace
 
-Coming soon.
+The Workspace is a per-interview setting for **conversational interviews**. It is off by default.
 
-## Coding Answers
+<Steps>
+  <Step title="Open the interview's settings">
+    From the AI Interviews dashboard, open your conversational interview's **Settings** page.
+  </Step>
+  <Step title="Turn on Enable Workspace">
+    In the **Settings** section, switch on **Enable Workspace**. This adds a Workspace panel to the candidate's interview screen where they can write answers in code or plain text.
+  </Step>
+  <Step title="Set the answer format per item">
+    Once the Workspace is enabled, every topic and question in your interview gets an **Answer format** selector. Review each item and decide whether the candidate should speak, write, or choose for themselves.
+  </Step>
+</Steps>
 
-Coming soon.
+<!-- screenshot: conversational interview settings page with the Enable Workspace toggle switched on -->
+
+<Note>
+The Workspace is being rolled out gradually and may not be available on every account yet. If you do not see the **Enable Workspace** toggle, [contact support](/contact-support) to ask about access.
+</Note>
 
 ## Answer Modes
 
-Coming soon.
+With the Workspace enabled, each interview item has an **Answer format** that tells the AI interviewer how to collect the response.
+
+| Answer format | What happens |
+|---|---|
+| **Spoken** (default) | The candidate answers out loud, as in a normal conversational interview. |
+| **Written** | The AI asks the candidate to write the answer in the Workspace. |
+| **Either** | The candidate chooses whether to speak or write. |
+
+Use **Written** for items where you want to see exact output, such as a code exercise or a precisely worded answer. Keep **Spoken** for discussion-style topics so the interview still feels like a conversation.
+
+<Note>
+Workspace answers are limited to **5,000 characters** per item. Candidates see an error if they exceed this, so keep written exercises scoped to something that fits comfortably within that space.
+</Note>
+
+<!-- screenshot: Answer format selector on an interview item showing Spoken, Written, and Either options -->
+
+## Coding Answers
+
+The Workspace has two tabs on the candidate side: a **code editor** with syntax highlighting and a **plain text** area for prose answers and notes.
+
+In the code editor, candidates pick from these language options:
+
+- Python, JavaScript, TypeScript, Java
+- Go, C++, C#, Ruby, Rust
+- SQL
+- **Any (candidate chooses)**
+
+<Tip>
+There is no per-item language dropdown for recruiters. If a question must be answered in a specific language, state it in the question or topic text, for example "Solve this in Python". The AI interviewer enforces the requirement during the interview.
+</Tip>
+
+The plain text tab works the same way for non-code answers: candidates type their response directly into the panel while the conversation continues.
+
+<!-- screenshot: candidate view of a conversational interview with the Workspace code editor open beside the video call -->
+
+## Workspace Answers in Reports
+
+Everything written in the Workspace flows into the candidate's [interview report](/interview-reports), so you can review the work exactly as it happened.
+
+| What is captured | How it appears in the report |
+|---|---|
+| **Final code** | The candidate's finished code, with the language they used. |
+| **Timestamped snapshots** | Intermediate versions of the code, taken as the candidate typed. |
+| **Written answers** | Plain text responses shown alongside the transcript. |
+
+Snapshots are **seekable against the interview recording**. Click a snapshot to jump the recording to that moment and watch how the candidate reasoned through the problem, not just what they submitted.
+
+<Note>
+For dedicated coding evaluation at scale, Equip also offers [custom programming tests](/custom-programming-test) as part of Assessments. The Workspace is best when you want code and conversation together in a single live interview.
+</Note>
+
+## Related Resources
+
+- [Create a Conversational Interview](/create-conversational-interview) - Set up the interview the Workspace attaches to
+- [Questions, Topics, and Scenarios](/interview-content-types) - The item types you assign answer formats to
+- [AI Interview Settings](/interview-settings) - Every other toggle on the conversational settings page
+- [AI Interview Reports](/interview-reports) - Where Workspace answers and code snapshots show up

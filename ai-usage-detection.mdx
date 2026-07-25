@@ -1,16 +1,101 @@
 ---
 title: "ChatGPT and AI Usage Detection"
-description: "How Equip flags AI-assisted answers."
+description: "How Equip detects candidates using ChatGPT, Interview Coder, and other AI tools during assessments, and how to review the evidence."
 ---
 
-<Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/chatgpt-ai-usage-detection-1w5w7lz/). Sections below outline the planned content.
-</Note>
+<Tip>
+tl;dr: Standard proctoring catches AI tools opened in another tab. For stealth tools like Interview Coder, or AI on a second phone, enable **Auxiliary Device** proctoring: the candidate pairs their phone with their computer, and the phone's camera watches their keyboard, hands, and screen throughout the test. It is free, just disabled by default.
+</Tip>
 
 ## How Detection Works
 
-Coming soon.
+Equip uses a **layered approach** to AI usage detection. Each layer closes off a different way candidates might reach for ChatGPT or similar tools.
+
+| How a candidate might use AI | What catches it |
+|---|---|
+| Copying the question into ChatGPT | **Disable Copy & Paste** makes it hard to move question text out of the test |
+| Opening ChatGPT in another tab or app | **Enforce Full Screen** and **Detect Switched Tab** flag the switch, and **Switched Tab Screenshot** captures what they switched to |
+| Overlay tools on the same computer (Cluely, Interview Coder) | **Auxiliary Device** proctoring, which films the screen from outside the computer |
+| Asking AI on a second phone | **Auxiliary Device** proctoring, which shows their hands and surroundings |
+
+The first two layers come from Equip's standard [proctoring settings](/proctoring-settings) and [anti-cheating settings](/anti-cheating-settings). Stealth overlay tools and second devices are invisible to in-browser proctoring, so only the **Auxiliary Device** layer can catch them.
+
+<Note>
+Alongside these layers, every attempt records device fingerprints and IP addresses, and flags multi-session activity such as resuming the test from another browser or device.
+</Note>
+
+## Auxiliary Device Proctoring
+
+**Auxiliary Device** is an enhanced proctoring option that works alongside the default proctoring settings of an assessment. The candidate pairs their phone with their computer, and the phone acts as a second camera pointed at their keyboard, fingers, and screen.
+
+### How to enable it
+
+<Steps>
+  <Step title="Open the assessment">
+    Create a new assessment or open an existing one from your dashboard.
+  </Step>
+  <Step title="Go to the Test Order tab">
+    In the assessment settings, open the **Test Order** tab.
+  </Step>
+  <Step title="Enable the Aux Device option">
+    Turn on the **Aux Device** option for the test.
+    <!-- screenshot: Test Order tab with the Aux Device option enabled -->
+  </Step>
+  <Step title="Save your changes">
+    For an existing assessment, click **Update**. For a new assessment, click **Next** and then **Create**.
+  </Step>
+</Steps>
+
+<Note>
+Auxiliary Device proctoring is **completely free**. There is no extra credit cost; it is simply disabled by default.
+</Note>
+
+### What candidates do
+
+<Steps>
+  <Step title="Open the test on a computer">
+    The candidate clicks the test link on a computer or laptop. If they open it on a phone, they are asked to switch to a computer first.
+  </Step>
+  <Step title="Scan the QR code">
+    Equip shows a QR code on the computer screen. The candidate scans it with their phone to pair the two devices.
+    <!-- screenshot: QR code pairing screen shown to the candidate -->
+  </Step>
+  <Step title="Record a scan of the surroundings">
+    Using the phone, the candidate records a sweep of their surroundings. This video is uploaded for you to review later.
+  </Step>
+  <Step title="Position the phone">
+    The candidate places the phone so its camera feed shows their keyboard and hands. Equip captures a screenshot of this feed every few seconds.
+  </Step>
+  <Step title="Take the test as usual">
+    Proctoring on the computer continues in parallel, exactly as it would without the auxiliary device.
+  </Step>
+</Steps>
+
+<Warning>
+Candidates cannot skip pairing. If Auxiliary Device proctoring is enabled on any test, the questions will not load until a phone is paired.
+</Warning>
+
+On supported phone browsers, Equip keeps the phone awake for the whole test. If the phone still locks, the candidate sees a warning on their computer that the camera feed is inactive and must fix it before continuing.
 
 ## Reviewing Flags
 
-Coming soon.
+At the end of the test, you review everything from the candidate's report. With Auxiliary Device enabled, you get the phone's evidence on top of the regular proctoring report.
+
+| Evidence | What it shows |
+|---|---|
+| **Proctoring report** | Standard violations from the computer: tab switches, face detection photos, audio flags, each with timestamps |
+| **Surroundings video** | The candidate's room scan recorded on the phone before the test started |
+| **Keyboard screenshots** | Periodic captures from the phone camera showing hands, keyboard, and screen |
+
+Start with the **Trust Score** at the top of the report. If it is low, work through the violations and evidence, and watch the surroundings video and keyboard screenshots for signs of a second device or another person.
+
+<Tip>
+If something looks suspicious but inconclusive, play back the [Session Recording](/session-recording) of the candidate's screen to see exactly what they did at that moment.
+</Tip>
+
+## Related Resources
+
+- [AI Proctoring](/ai-proctoring) - Overview of how Equip's automated proctoring works
+- [Proctoring Settings](/proctoring-settings) - All per-test proctoring toggles, including Aux Device
+- [Anti-Cheating Settings](/anti-cheating-settings) - Disable copy-paste, randomize questions, and auto-submit on tab switch
+- [Trust Score](/trust-score) - How to read the reliability score on every candidate report

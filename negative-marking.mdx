@@ -1,20 +1,71 @@
 ---
 title: "Negative Marking: When It Applies"
-description: "When negative points are enabled and whether you can disable them."
+description: "When negative points are enabled, how deductions are calculated, and whether you can disable them."
 ---
 
-<Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/negative-points-when-are-they-enabled-can-i-disable-e3s8dg/). Sections below outline the planned content.
-</Note>
+<Tip>
+Only multiple-choice questions (MCQs) in Equip's own library quizzes carry negative points, and that cannot be turned off. Custom content never has negative marking unless you add it yourself.
+</Tip>
 
 ## Equip Library Quizzes
 
-Coming soon.
+Equip supports many [test types](/test-types), such as Quizzes, Programming Tests, and Video Response. Negative marking applies in exactly one place: **MCQs inside Equip-content quizzes**. Other test types, and non-MCQ question types, carry no negative points.
+
+Candidates always see the deduction upfront. The negative points for each question are displayed on the question itself, so nobody is penalized by surprise.
+
+<!-- screenshot: negative points shown on an Equip quiz MCQ during an attempt -->
+
+You cannot disable negative marking on Equip's library quizzes. Candidates can get lucky when guessing MCQs, and a small penalty makes them think twice before picking an option at random. This keeps scores comparable and meaningful.
+
+<Note>
+Because of negative marking, scores on Equip-content quizzes can look lower than you expect. That is by design: use them for relative shortlisting rather than absolute judgments. See [What Is a Good Assessment Score?](/good-assessment-score) for guidance.
+</Note>
 
 ## Custom Content
 
-Coming soon.
+If you would rather test without negative marking, create your own questions with [Custom Tests](/custom-tests). Negative points are fully under your control there.
+
+| | Equip Content | Custom Content |
+|---|---|---|
+| **Negative points on MCQs** | Always on | Optional, per question |
+| **Can you change or remove them?** | No | Yes |
+| **Who sets the value** | Equip, automatically | You |
+
+<Steps>
+  <Step title="Open Custom Tests">
+    From the sidebar of the Assessments Dashboard, click **Custom Tests** and create or edit a quiz.
+  </Step>
+  <Step title="Set points per question">
+    While adding each question, set its points, timer, and negative points. Skip negative points on any question where you do not want deductions.
+  </Step>
+  <Step title="Add the quiz to an assessment">
+    In the assessment's Tests tab, add the quiz under **My Content**. An assessment can freely mix Equip content and custom tests.
+  </Step>
+</Steps>
+
+<Tip>
+Importing questions from Excel? The importer offers an **Autocalculate Negative Points** option that fills in deductions for MCQs automatically. See [Import Questions from Excel](/import-questions-from-excel).
+</Tip>
 
 ## How Deductions Are Calculated
 
-Coming soon.
+When negative points are assigned automatically, the formula is:
+
+```
+negative points = question points / number of options
+```
+
+For example, a **2-point MCQ with 4 options** deducts **0.5 points** for a wrong answer. Equip's library quizzes use this calculation, and the Excel importer's Autocalculate option applies the same formula to your custom MCQs.
+
+<Note>
+Multiple-answer questions (MCAs) are never auto-assigned negative points. Automatic deductions apply to single-answer MCQs only.
+</Note>
+
+A candidate's test score is simply the sum of points earned minus any deductions, and it feeds into the overall assessment score through test weightages.
+
+## Related Resources
+
+- [Equip Content vs Custom Content](/equip-vs-custom-content) - Full comparison of what you can and cannot change per content type
+- [Test Scores and Overall Score](/test-scores-and-overall-score) - How per-test points roll up into the overall score
+- [Import Questions from Excel](/import-questions-from-excel) - Bulk-add custom questions with auto-calculated negative points
+- [What Is a Good Assessment Score?](/good-assessment-score) - Interpreting scores that negative marking has pulled down

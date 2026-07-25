@@ -3,18 +3,66 @@ title: "Why Can't I See Quiz Questions?"
 description: "Why Equip library questions stay hidden while creating assessments and viewing results."
 ---
 
-<Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/why-can-i-not-see-quiz-questions-while-creating-assessments-or-viewing-candidate-results-1jhsjpx/). Sections below outline the planned content.
-</Note>
+<Tip>
+Equip hides its library quiz questions from everyone, including recruiters, so candidates can never find them in advance. Results give you skill-wise and difficulty-wise breakdowns instead. If you need full question visibility, use a Custom Quiz.
+</Tip>
 
 ## Question Protection
 
-Coming soon.
+When you use **Equip Content**, quizzes draw questions at random from Equip's **question banks**. You choose the skills and difficulty level; Equip picks the exact questions for each candidate.
+
+Question leaks are the biggest threat to any online assessment. Equip is self-serve, so anyone with a business email can create a recruiter account. If quiz questions were visible in the builder or in reports, a determined candidate could create their own team, build an identical assessment, and attempt it repeatedly to uncover the question bank.
+
+To keep your assessments fair, Equip protects its questions in several ways:
+
+| Protection | How it works |
+|---|---|
+| **Restricted access** | Real questions are never shown without a recruiter account or a valid assessment invitation. Only sample content is public. |
+| **No search indexing** | Because questions sit behind account access, search engines cannot index them. Searching for Equip questions surfaces only samples. |
+| **Business emails only** | Personal email domains cannot create recruiter accounts, and accounts showing suspicious activity are blocked. |
+| **Randomization** | Each candidate gets different questions from the pool, in a different order, with shuffled answer options. |
+| **Question refresh** | Equip tracks how often each question has been seen and retires older questions, replacing them with new ones. |
+
+<Note>
+Even two candidates who start the same assessment at the same moment will likely see no common questions, and almost certainly not in the same order.
+</Note>
 
 ## What You Can See
 
-Coming soon.
+Hiding the questions does not mean hiding performance. Candidate reports include a **skill-wise and difficulty-wise breakdown** for every Equip quiz, so you can see exactly where a candidate was strong or weak without exposing the questions themselves.
+
+<!-- screenshot: skill-wise and difficulty-wise breakdown in a candidate's quiz report -->
+
+Visibility also differs by test type. The strict policy applies only to Equip quizzes:
+
+| Test type (Equip Content) | Select questions while creating? | See questions in results? |
+|---|---|---|
+| **Quiz** | No | No |
+| **Programming, SQL, CSS** | Yes | Yes |
+
+Coding challenges can stay visible because the risk is much lower. The coding pool is large relative to demand, one question works across many programming languages, and memorizing a full coding solution is far harder than memorizing an MCQ answer.
+
+<Warning>
+Equip does not share its quiz questions even on request. This applies to all teams equally, which is exactly what keeps the questions safe for your assessments too.
+</Warning>
 
 ## Custom Content Is Different
 
-Coming soon.
+If your process requires seeing every question a candidate answered, create a **Custom Quiz**. The content is yours, only your team can see it, and none of the restrictions above apply.
+
+With a Custom Quiz you can:
+
+- Write and select every question yourself, with **15 question types** to choose from.
+- See a full **question-wise breakdown** of each candidate's responses and points in results.
+- Set your own points, timers, and optional negative marking per question.
+
+<Note>
+You can mix Equip Content and Custom Tests freely in one assessment. Many teams pair an Equip quiz for broad screening with a Custom Quiz for role-specific questions they want full visibility into.
+</Note>
+
+## Related Resources
+
+- [Same or Random Questions](/same-or-random-questions) - How Equip randomizes questions, order, and options per candidate
+- [Equip vs Custom Content](/equip-vs-custom-content) - Full comparison of what each content type lets you control
+- [Custom Tests](/custom-tests) - Create your own tests with complete question visibility
+- [Question Difficulty Levels](/question-difficulty-levels) - How difficulty maps to experience levels in Equip quizzes

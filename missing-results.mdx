@@ -1,20 +1,86 @@
 ---
 title: "Why Are Some Assessment Results Missing?"
-description: "Reasons a candidate's results may not appear."
+description: "Reasons a candidate's attempt may not appear on the results page, and how to find it."
 ---
 
-<Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/why-are-some-assessment-results-missing-1ax41uj/). Sections below outline the planned content.
-</Note>
+<Tip>
+A candidate's attempt is usually missing for one of four reasons: the **Show Unfinished** filter is off, the attempt was deleted, the assessment's tests changed after the attempt (a **Delinked Test Attempt**), or your credit balance has gone negative. Only deleted attempts are unrecoverable.
+</Tip>
 
 ## Common Causes
 
-Coming soon.
+If you cannot find a candidate on an assessment's results page, work through these causes in order:
+
+| Cause | What Happened | Can You See the Result? |
+|---|---|---|
+| **Unfinished attempt** | The candidate started but has not submitted every test, and the **Show Unfinished** filter is not selected. | Yes. Select **Show Unfinished** in the results filters. |
+| **Deleted attempt** | You or a teammate deleted the candidate's attempt. | No. Deleted attempts cannot be restored. |
+| **Delinked Test Attempt** | The assessment's set of tests changed after the candidate attempted it. | Yes, via the delinked attempts link on the results dashboard. |
+| **Negative credit balance** | Your team's balance dropped below zero. | Yes, after you top up. See the section below. |
+
+<Warning>
+Deleting an attempt is permanent. Confirm with your team before removing any candidate's attempt, because there is no way to restore it.
+</Warning>
+
+### Delinked Test Attempts
+
+When you change which tests an assessment contains, results recorded before the change are no longer comparable with results recorded after it. Equip therefore removes the older attempts from the main results page and calls them **Delinked Test Attempts**.
+
+For example, suppose your assessment originally had a quiz with 5 Medium-difficulty **Finance** questions and a Video Response test, and Candidate X attempted it. You then swap Finance for **Accounting** and remove the Video Response test, after which Candidates Y and Z attempt the assessment.
+
+The results page now shows only Y and Z. Candidate X's test scores and overall score cannot be fairly compared with theirs because the underlying tests are different, so X's attempts are delinked rather than mixed in.
+
+### Viewing Delinked Test Attempts
+
+The results dashboard includes a link that takes you straight to any delinked test attempts, so the candidate's work is never lost. Their individual test submissions remain fully viewable there.
+
+<!-- screenshot: results dashboard highlighting the delinked test attempts link -->
+
+<Note>
+Restoring an **Equip-content quiz** to its earlier settings does not relink old quiz attempts, because of how Equip's question banks are configured. Switching Accounting back to Finance still leaves Candidate X's quiz attempt delinked. Re-adding a removed **Custom Test**, such as the Video Response above, does bring those attempts back to the results page.
+</Note>
 
 ## Credit Balance and Hidden Results
 
-Coming soon.
+Equip lets your team's credit balance run up to 25 credits into the negative, so a busy hiring drive is not interrupted the moment your balance hits zero. That flexibility comes with two limits.
+
+| Balance | Effect on Results and Candidates |
+|---|---|
+| **Below 0** | New results are hidden until you top up your credits. |
+| **Below -25** | Candidates can no longer start attempts. |
+
+Open invitations are also capped at your current credit balance plus 25. Once you purchase credits and the balance is positive again, the hidden results become visible.
+
+<Tip>
+Enable low-balance email alerts for your team admin and top up before a large drive, so results are never hidden mid-review. See [How Credits Work](/how-credits-work) for the full deduction policy.
+</Tip>
 
 ## What to Check
 
-Coming soon.
+Run through this checklist before contacting support:
+
+<Steps>
+  <Step title="Turn on the Show Unfinished filter">
+    On the assessment's results page, select **Show Unfinished** in the filters. Candidates who have not yet submitted every test appear only when this filter is on.
+  </Step>
+  <Step title="Look for delinked test attempts">
+    If the assessment's tests were edited after some candidates attempted it, open the delinked attempts link on the results dashboard to find their submissions.
+  </Step>
+  <Step title="Check your credit balance">
+    If your balance is negative, results are hidden until you top up. Purchase credits and the results reappear.
+  </Step>
+  <Step title="Ask your team about deletions">
+    Check whether a teammate deleted the attempt. Deleted attempts cannot be restored, so the candidate would need to be invited again.
+  </Step>
+</Steps>
+
+<Note>
+Still cannot find the attempt after all four checks? Reach out through live chat and share the assessment name and the candidate's email address, and we will investigate. See [Contact Support](/contact-support).
+</Note>
+
+## Related Resources
+
+- [Test Scores and Overall Score](/test-scores-and-overall-score) - How individual test scores and weightages combine on the results page
+- [How Credits Work](/how-credits-work) - Credit deductions, negative balances, and top-ups
+- [Reclaim Credits](/reclaim-credits) - Recover credits from invitations that were never started
+- [A Candidate Says They Submitted](/candidate-says-submitted) - What to do when a candidate reports finishing but you see nothing

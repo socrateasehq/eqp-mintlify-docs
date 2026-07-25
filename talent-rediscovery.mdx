@@ -1,20 +1,92 @@
 ---
 title: "Talent Rediscovery"
-description: "Re-rank your past applicants against a new job description."
+description: "Search every past applicant across your job openings and re-rank them against a new role."
 ---
 
+Your best candidate for a new role may have already applied to an old one. **Talent Rediscovery** searches every candidate who has ever applied to any of your team's job openings and ranks them against the role you are hiring for now.
+
+Open it from the sidebar under **ATS → Talent Rediscovery**. The page shows how many past candidates your team has, so you know the size of the pool before you start.
+
 <Note>
-This is a new article for the Equip Help Center. Sections below outline the planned content.
+Talent Rediscovery is part of Equip's free ATS. Searching and ranking your past candidates does not consume any credits.
 </Note>
 
 ## How Rediscovery Works
 
-Coming soon.
+There are two ways to start a search. You can upload a **job description**, which opens a modal where you paste the JD and Equip extracts the search criteria for you. Or you can set a **skill filter** directly and refine from there.
+
+<Steps>
+  <Step title="Open Talent Rediscovery">
+    In the sidebar, go to **ATS → Talent Rediscovery**. The empty state shows your team's total number of past candidates.
+  </Step>
+  <Step title="Set your criteria">
+    Click **Upload a Job Description** and paste the JD so Equip can extract criteria, or set a skill filter above the results to begin.
+  </Step>
+  <Step title="Review the ranked results">
+    Once a skills filter is set, each candidate receives a **relevance score**. Scan the ranked list and refine your filters as needed.
+  </Step>
+  <Step title="Open a candidate's detail panel">
+    Click a candidate to see their full application history across all your openings, including the stage and fit score of each application, plus their work and education history.
+  </Step>
+</Steps>
+
+<!-- screenshot: Talent Rediscovery empty state with "Rediscover Your Talent Pool" heading and Upload a Job Description button -->
+
+Each result row packs in everything you need to judge a candidate without opening their profile:
+
+| Column | What it shows |
+|---|---|
+| Contact info | Name and contact details |
+| Experience | Estimated current experience alongside the original value from their application |
+| Skills | Per-skill years (aged) and expertise level |
+| Latest role | Most recent role and company |
+| Latest application | The job opening they last applied to and the stage they reached |
+| Source | How the candidate entered your ATS |
+| Activity | Whether they attempted an assessment or AI interview |
+| Relevance score | Overall score with a skills, experience, and recency breakdown |
 
 ## Scoring Weights
 
-Coming soon.
+Relevance scoring activates as soon as a **skills filter** is set. Every candidate in the results is scored on three components, and you control how much each one counts.
+
+| Component | Default weight | Editable |
+|---|---|---|
+| **Skills** | 50% | Yes |
+| **Experience** | 30% | Yes |
+| **Recency** | 20% | Derived |
+
+The three weights must always sum to 100. You edit Skills and Experience directly, and **Recency** takes whatever remains.
+
+<Tip>
+Hiring for a fast-moving stack? Lower the Experience weight so Recency rises, and recent applicants with fresher skills float to the top.
+</Tip>
+
+Each candidate's relevance score comes with a per-component breakdown, so you can see whether a high ranking is driven by skill match, depth of experience, or how recently they applied.
+
+## How Experience Is Estimated
+
+Candidates keep gaining experience after they apply, so Talent Rediscovery ages their numbers forward. A banner on the page reminds you: "Experience and per-skill years are estimated based on time since each candidate applied."
+
+The estimation works in two parts:
+
+- **Total experience** grows by the time elapsed since the candidate applied.
+- **Per-skill years** grow proportionally to that same elapsed time.
+
+<Warning>
+Aged figures are estimates, not facts. A candidate may have switched stacks or taken a break since applying. The results show both the aged and the original values, so always confirm current experience with the candidate before making decisions.
+</Warning>
 
 ## Exporting Results
 
-Coming soon.
+Once you have a ranked list you are happy with, you can **export the results** to work with them outside Equip.
+
+<Tip>
+Export a rediscovery run before opening a new role to build a warm longlist for your hiring manager. Reaching out to past applicants is usually faster and cheaper than sourcing cold candidates.
+</Tip>
+
+## Related Resources
+
+- [Candidate Search](/candidate-search) - Look up a specific candidate by name or email across all activity
+- [Job Fit Score](/job-fit-score) - How Equip ranks active applicants within a single job opening
+- [Candidate Profile](/candidate-profile) - What lives in a candidate's detail panel and journey
+- [Bulk CV Import](/bulk-cv-import) - Grow your talent pool by importing up to 100 CVs at once

@@ -1,20 +1,91 @@
 ---
 title: "Your Careers Page"
-description: "The auto-generated public page listing your published jobs."
+description: "The auto-generated public page listing your published jobs, hosted by Equip and customizable with your logo and CSS."
 ---
 
+Equip generates a public **careers page** for your company automatically. It lists every published job opening at a single URL you can share, link from your website, or embed directly on your own site.
+
+## Enable Your Careers Page
+
+The careers page lives in your account settings. Turning it on takes under a minute.
+
+<Steps>
+  <Step title="Open the settings">
+    Go to **Account → Careers Page** in your Equip dashboard.
+  </Step>
+  <Step title="Turn on the toggle">
+    Enable the careers page. Equip generates a URL **slug** for you automatically.
+  </Step>
+  <Step title="Set your slug">
+    Edit the slug if you want a cleaner name, for example `your-company`. Slugs can be up to 30 characters.
+  </Step>
+  <Step title="Copy your public URL">
+    Your page is live at `https://equip.co/companies/{slug}/hiring/`. Use the copy button to grab the URL, or open it in a new tab to see it as candidates will.
+  </Step>
+</Steps>
+
+<!-- screenshot: Account → Careers Page settings with the enable toggle and slug field -->
+
 <Note>
-This is a new article for the Equip Help Center. Sections below outline the planned content.
+The careers page is part of Equip's ATS, which is free. Publishing jobs and hosting your careers page does not consume credits.
 </Note>
 
 ## What It Includes
 
-Coming soon.
+The public page shows every job post with the **Published** status. Jobs you set to Hidden or Archived do not appear, so the page stays in sync with your pipeline without any manual updates.
+
+Each job appears as a card showing its **work arrangement**, **employment type**, **locations**, and **mandatory skills**. Candidates click through to the full job post and apply directly.
+
+Candidates can also narrow down the list themselves:
+
+| Feature | What candidates can do |
+|---|---|
+| **Search box** | Type into "Search jobs..." to find roles by keyword |
+| **Work Arrangement filter** | Show only On-site, Remote, or Hybrid roles |
+| **Location filter** | Filter by city |
+| **Employment Type filter** | Show only Full-time, Part-time, Contract, Internship, or Other roles |
+| **Skills filter** | Filter by the skills a job requires |
+
+If no jobs match the active filters, candidates see "No jobs found matching your criteria."
+
+<!-- screenshot: public careers page with job cards, search box, and filters -->
 
 ## Customization
 
-Coming soon.
+You can brand the careers page so it feels like part of your own site.
+
+- **Company logo**: the page uses the logo from your organization settings.
+- **Custom CSS**: the settings page has a **Custom CSS** field where you can restyle any part of the page, for example changing the hero background with a rule like `#careers-hero { background-color: ...; }`.
+
+<Warning>
+Write plain CSS rules only. Do not wrap your styles in `<style>` tags; Equip adds those for you.
+</Warning>
+
+<!-- screenshot: Custom CSS field with an example rule applied to the careers page -->
 
 ## Embedding on Your Site
 
-Coming soon.
+If you already have a company website, you do not need to rebuild your jobs list there. The settings page provides a copyable **Embed Code**, an HTML link that points visitors to your Equip careers page.
+
+<Steps>
+  <Step title="Copy the embed code">
+    On **Account → Careers Page**, copy the provided embed code.
+  </Step>
+  <Step title="Paste it into your site">
+    Add the snippet wherever you want the careers link to appear, such as your site's Careers or Jobs section.
+  </Step>
+  <Step title="Publish your site">
+    Visitors who click the link land on your Equip careers page with your live openings.
+  </Step>
+</Steps>
+
+<Note>
+The embed code includes a comment asking that the link stay crawlable by search engines and count as a backlink. Keeping it intact helps both your jobs and your site get discovered.
+</Note>
+
+## Related Resources
+
+- [Sharing Job Posts](/sharing-job-posts) - Share individual application links by email, WhatsApp, or social media
+- [Publishing to Job Boards](/job-boards) - How to list your Equip jobs on LinkedIn, Indeed, and other boards
+- [Creating a Job Post](/job-post) - Set up the openings that appear on your careers page
+- [Organization Settings](/organization-settings) - Upload the company logo your careers page displays

@@ -1,20 +1,110 @@
 ---
 title: "Creating Custom Tests"
-description: "Author your own tests when the library doesn't cover your needs."
+description: "Author your own tests when Equip's library doesn't cover your needs, and add them to any assessment."
 ---
 
-<Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/custom-tests-1ijmiji/). Sections below outline the planned content.
-</Note>
+A **Custom Test** is a test you create with your own questions. Equip supports several test types, and you can build a test of most types with your own content, then add it to any assessment.
+
+An assessment can contain only Equip's questions, only your Custom Tests, or a mix of both. See [Equip Content vs Custom Content](/equip-vs-custom-content) for a full comparison.
 
 ## When to Use Custom Content
 
-Coming soon.
+Equip's library covers hundreds of skills, so start there. Reach for a Custom Test when:
+
+| Situation | Why a Custom Test helps |
+|---|---|
+| The skill is not in Equip's **Question Bank** | You can write questions for any skill, in any language |
+| You want **company-specific questions**, like "Why do you want to join our company?" | These need your own wording and manual evaluation |
+| You need control over **timers, points, or negative marking** | Only Custom Tests let you set time limits and points per question |
+| You want to **see every question and response** in results | Equip quiz questions stay hidden; custom quiz responses are fully visible |
+
+<Tip>
+Missing a skill? Before building your own test, ask Equip via live chat. If the skill is broadly useful, Equip can create the test for you for free. See [Can't Find Your Role or Skill](/cant-find-role-or-skill).
+</Tip>
 
 ## Supported Test Types
 
-Coming soon.
+You can create Custom Tests of these types from the **Custom Tests** section:
+
+| Test Type | What it is |
+|---|---|
+| **Quiz** | MCQs, multiple-correct, essay-type, and more; supports up to 100 questions and 14+ [question types](/custom-quiz-question-types) |
+| **Coding Challenge** | Your own [programming or SQL problem](/custom-programming-test) with test cases and starter code |
+| **Question Bank** | A large pool of your questions, organized by points; not added to assessments directly |
+| **Question Bank Quiz** | A quiz that draws a random set of questions from one or more [Question Banks](/question-bank-quiz) |
+| **Video Response** | Questions candidates answer by [recording a video](/video-response-questions); graded manually |
+
+<Note>
+A Question Bank on its own cannot be added to an assessment. Pair it with a Question Bank Quiz to serve randomized questions to candidates.
+</Note>
 
 ## Creating Your First Custom Test
 
-Coming soon.
+<Steps>
+  <Step title="Open the Custom Tests section">
+    From the Assessments Dashboard, click the **Custom Tests** link in the sidebar.
+    <!-- screenshot: Custom Tests link in the Assessments Dashboard sidebar -->
+  </Step>
+  <Step title="Choose a test type">
+    Pick the type of test you want to create, such as Quiz or Coding Challenge.
+  </Step>
+  <Step title="Create and save the test">
+    Add your questions, set points and timers where applicable, and save.
+    <!-- screenshot: custom quiz builder with questions added -->
+  </Step>
+  <Step title="Add the test to an assessment">
+    Open a new or existing assessment's settings. In the **Tests** tab, select the test type on the left, click **Add**, then choose **My Content** and select your Custom Test.
+    <!-- screenshot: Add > My Content picker in the Tests tab -->
+  </Step>
+</Steps>
+
+<Tip>
+For custom quizzes, you can also bulk-add questions instead of typing them one by one. See [Import Questions from Excel](/import-questions-from-excel).
+</Tip>
+
+## Viewing Custom Quiz Results
+
+A key benefit of a **Custom Quiz** is detailed visibility into responses. When you open a candidate's result for a custom quiz, you can see each question, the candidate's answer, and the points scored.
+
+To download the responses of all candidates for a quiz:
+
+<Steps>
+  <Step title="Open Custom Tests">
+    Click **Custom Tests** in the sidebar.
+  </Step>
+  <Step title="Locate the quiz">
+    Find the Custom Quiz whose results you want.
+  </Step>
+  <Step title="Open the results dashboard">
+    Click the **Analytics** icon next to the quiz.
+  </Step>
+  <Step title="Download">
+    Click **Excel Download**.
+  </Step>
+</Steps>
+
+<Warning>
+The export contains all responses for that quiz across every assessment it is used in. Either use one quiz per assessment, or filter the exported file by assessment.
+</Warning>
+
+## FAQs
+
+**Can I add the same Custom Test to multiple assessments?**
+Yes. A Custom Test is reusable across any number of assessments.
+
+**Can I share a Custom Test directly with candidates?**
+No. A Custom Test must be added to an assessment, and candidates must be invited to that assessment.
+
+**Will my teammates see the tests I create?**
+Yes. Like assessments, every Custom Test belongs to your entire team. Teammates can view, edit, and remove it.
+
+<Note>
+Thinking about writing your own coding challenge? Equip generally recommends its battle-tested library questions instead, since small setup mistakes in test cases can mark every submission incorrect. See [Custom Coding Challenge Issues](/custom-coding-challenge-issues).
+</Note>
+
+## Related Resources
+
+- [Equip Content vs Custom Content](/equip-vs-custom-content) - Detailed comparison of what each option allows
+- [Custom Quiz Question Types](/custom-quiz-question-types) - All the question formats a custom quiz supports
+- [Creating a Custom Programming Test](/custom-programming-test) - Build your own coding challenge step by step
+- [Can't Find Your Role or Skill](/cant-find-role-or-skill) - Ask Equip to build the test for you

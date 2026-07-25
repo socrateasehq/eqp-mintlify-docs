@@ -3,18 +3,99 @@ title: "ATS Insights: Hiring Analytics"
 description: "The analytics dashboard: funnel, velocity, team, and quality metrics."
 ---
 
+<Tip>
+**Insights** is Equip's built-in hiring analytics dashboard. It packs 20 charts into five sections, so you can answer questions like "Where do candidates drop off?", "How long does hiring take?", and "Which source sends the best applicants?" without exporting anything to a spreadsheet.
+</Tip>
+
+The **Insights** page turns your ATS activity into charts automatically. Every application, stage change, scorecard, and offer your team records feeds the dashboard, so there is nothing to configure before you can use it.
+
 <Note>
-This is a new article for the Equip Help Center. Sections below outline the planned content.
+If your team has no applications yet, the page shows "Post your first job to start seeing insights" along with a link to a sample demo dashboard, so you can explore what the charts look like with data in them.
 </Note>
+
+<!-- screenshot: Insights dashboard with the filter bar and Key Metrics KPI row -->
 
 ## The Five Sections
 
-Coming soon.
+The dashboard is organized into a **Key Metrics** KPI row followed by four named sections: **Pipeline & Funnel**, **Velocity**, **Team**, and **Quality & Source**.
+
+| Section | What it answers | Charts |
+|---|---|---|
+| **Key Metrics** | How is hiring going overall? | Active openings, Applications, In pipeline, Hires, Avg time to hire, Offer acceptance |
+| **Pipeline & Funnel** | Where are candidates, and where do they drop off? | Application funnel, Pipeline snapshot, Stage drop-off, Pipeline-stage funnel |
+| **Velocity** | How fast are we moving? | Time-to-hire trend, Avg time in stage, Time to offer, Offer turnaround |
+| **Team** | Who is doing what, and how do they rate candidates? | Team performance, Avg scorecard by recruiter |
+| **Quality & Source** | Are we attracting the right candidates? | Applications by source, Job-fit score distribution, Rejections by reason, Offer outcomes |
+
+A few charts deserve extra explanation:
+
+- The **Application funnel** tracks candidates through Applied, Shortlisted, Offered, and Hired. Click any funnel step to drill down into the candidates behind the number.
+- **In pipeline** counts candidates who are currently in a non-terminal stage. It reflects right now, so it ignores the selected date range.
+- **Offer outcomes** breaks offers down into Sent, Viewed, Signed, and Declined counts.
+- **Avg scorecard by recruiter** averages the [scorecards](/scorecards) each teammate has submitted, which helps you spot unusually harsh or lenient evaluators.
+
+<Note>
+Some KPIs need a minimum amount of data. **Avg time to hire** appears after your first hire ("Make your first hire to see this"), and **Offer acceptance** appears once at least 3 offers are resolved ("Resolve a few offers to see your acceptance rate"). Offer acceptance is calculated as signed offers divided by resolved offers.
+</Note>
+
+## Filters, Date Ranges, and Grouping
+
+The filter bar at the top of the page controls what every chart shows. You can combine a date range, a scope, and a job-opening filter, and the bar summarizes your selection, for example "Just you · {from} → {to}".
+
+| Control | Options |
+|---|---|
+| **Date range** | Last 7 days, Last 30 days, Last 90 days (default), Last 12 months, Custom range |
+| **Scope** | Solo or Squad (see below) |
+| **Job openings** | All openings, or only the specific openings you pick |
+
+Individual charts have their own display controls on top of the global filters:
+
+- **Group by**: break a chart down by Source, Job opening, Recruiter, Stage type, or Rejection reason.
+- **Trend granularity**: view trend charts Weekly or Monthly.
+- **Chart size**: resize any chart to Small, Medium, or Large to build the layout you want.
+
+<Tip>
+Grouping is the fastest way to compare. For example, group Applications by Source to see which channel fills your pipeline, or group by Recruiter to compare workloads across the team.
+</Tip>
 
 ## Solo vs Squad Scope
 
-Coming soon.
+The **Solo / Squad** toggle decides whose hiring activity the dashboard covers.
+
+| Scope | What it includes | Filter bar summary |
+|---|---|---|
+| **Solo** | Only your own job openings and activity | "Just you · ..." |
+| **Squad** | You plus your direct and indirect reports | "Squad of N · ..." |
+
+Squad scope relies on your team's **reporting structure**, the manager-and-reportee mapping defined in your organization settings. Until a reporting structure is set up, there is no squad to aggregate, so the toggle only becomes useful once managers and reportees are assigned.
+
+<Note>
+Squad scope is recursive: a manager sees their direct reports and everyone below them. This makes it easy for a hiring lead to review the whole team's funnel without switching accounts.
+</Note>
 
 ## Exporting Charts
 
-Coming soon.
+Every chart on the dashboard can be exported to **CSV**. The export respects your current filters, so set the date range, scope, and job openings first, then download exactly the slice you were looking at.
+
+<Steps>
+  <Step title="Set your filters">
+    Choose the date range, Solo or Squad scope, and any specific job openings.
+  </Step>
+  <Step title="Export the chart">
+    Use the export option on the chart you want, and it downloads as a CSV file.
+  </Step>
+  <Step title="Analyze or share">
+    Open the CSV in Excel or Google Sheets to build custom reports, or attach it to your hiring updates.
+  </Step>
+</Steps>
+
+<Tip>
+CSV exports are handy for leadership reviews: export the Application funnel and Time-to-hire trend at the end of each month to track quarter-over-quarter progress in your own format.
+</Tip>
+
+## Related Resources
+
+- [Candidate Pipeline](/candidate-pipeline) - The applications dashboard that generates the data behind these charts
+- [Pipeline Stages](/pipeline-stages) - How stages are structured, which drives funnel and drop-off metrics
+- [Scorecards](/scorecards) - Submitted scorecards feed the Avg scorecard by recruiter chart
+- [Job Fit Score](/job-fit-score) - The AI score behind the Job-fit score distribution chart

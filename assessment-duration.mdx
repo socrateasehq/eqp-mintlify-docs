@@ -1,20 +1,82 @@
 ---
 title: "Determining Assessment Duration"
-description: "How total duration is calculated and how to plan it."
+description: "How Equip estimates total assessment duration, and how to plan and adjust it."
 ---
 
-<Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/determining-assessment-duration-w7pubv/). Sections below outline the planned content.
-</Note>
+<Tip>
+An assessment's duration is the sum of the timers on its tests and questions. Equip calculates this for you and shows it as the **Estimated Assessment Duration** in the Test Order tab. There is no single time limit for the whole assessment.
+</Tip>
 
 ## How Duration Is Calculated
 
-Coming soon.
+Every question in **Equip's question bank** has a timer associated with it. When you build an assessment, Equip adds up these timers across all tests and displays the **Estimated Assessment Duration** in the **Test Order** tab of the assessment builder.
 
-## Recommended Durations
+<!-- screenshot: Estimated Assessment Duration shown in the Test Order tab -->
 
-Coming soon.
+Time limits are applied at the test or question level, depending on the test type:
+
+| Test type | Where the time limit applies |
+|---|---|
+| Quiz (one question at a time) | Per question |
+| Quiz (all questions at once) | Whole test |
+| Programming, SQL, CSS | Whole test |
+| English Communication (CEFR) | Per question |
+| Video Response | Per question |
+| Excel | Per question |
+| Psychometric | No time limit |
+
+<Note>
+There is no **assessment-level time limit**. Candidates attempt tests one by one and can take breaks between tests, so the exact end time of an assessment cannot be controlled. See [Time Limits](/time-limits) for details.
+</Note>
+
+<Warning>
+If you add a **Custom Test** to your assessment without setting a timer for every question, the Estimated Assessment Duration may not match how long candidates actually take.
+</Warning>
+
+## Planning Assessment Length
+
+Some tests have predictable durations, which helps you plan the overall length of your assessment:
+
+| Test | Typical duration |
+|---|---|
+| DISC Psychometric | 24 questions, about 12 minutes |
+| OCEAN (Big Five) Psychometric | 50 questions, about 25 minutes |
+| English Communication (CEFR) | Adaptive, typically 4 to 6 question sets |
+
+For quizzes, duration scales with the number of questions you configure per skill. An **Equip Content** quiz can hold up to 25 questions, and you can add multiple quizzes if you need more. See [Question Limits](/question-limits) for the caps per test type.
+
+<Note>
+Assessment duration is separate from the **start window**. The "Cannot Start Before" and "Cannot Start After" settings control when candidates may begin, not how long they get once they start. See [Assessment Settings](/assessment-settings).
+</Note>
 
 ## Changing Test Durations
 
-Coming soon.
+Timers on **Equip Content** are fixed and cannot be edited. Timers on **Custom Tests** are fully under your control: you set a time per question for one-by-one quizzes, or a time for the whole test for all-at-once quizzes.
+
+To adjust the overall duration of an assessment:
+
+<Steps>
+  <Step title="Open the assessment builder">
+    From the Recruiter Dashboard, open your assessment's settings. The builder shows the Tests, Test Order, and Settings tabs.
+  </Step>
+  <Step title="Add or remove content in the Tests tab">
+    With Equip Content, change the duration by adding or removing tests, or by adjusting the number of questions per skill. Fewer questions means a shorter assessment.
+  </Step>
+  <Step title="Edit timers on Custom Tests">
+    For a Custom Test, set or change the timer on each question (or on the whole test, for all-at-once quizzes). Saved changes apply immediately to candidates who attempt after the change.
+  </Step>
+  <Step title="Check the new estimate">
+    Open the **Test Order** tab to see the updated Estimated Assessment Duration.
+  </Step>
+</Steps>
+
+<Tip>
+You can freely mix Equip Content and Custom Tests in the same assessment. Use Equip's battle-tested questions with fixed timers, and add a Custom Test wherever you need full control over timing.
+</Tip>
+
+## Related Resources
+
+- [Time Limits](/time-limits) - Where time limits apply for each test type
+- [Custom Quiz Time Limits](/custom-quiz-time-limits) - Set per-question or whole-test timers on your own quizzes
+- [Create an Assessment](/create-assessment) - The full assessment builder walkthrough
+- [Assessment Settings](/assessment-settings) - Start windows, candidate login, and other options

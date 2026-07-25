@@ -1,20 +1,78 @@
 ---
 title: "AI Interview Reports"
-description: "The AI-generated evaluation, transcript, and session recording."
+description: "The AI-generated evaluation, transcript, and session recording for each candidate's AI interview."
 ---
 
-<Note>
-This is a new article for the Equip Help Center. Sections below outline the planned content.
-</Note>
+Every completed AI interview produces a detailed report for the candidate's attempt: an AI-generated evaluation, the full transcript, and a recording of the session. This page explains what each part of the report contains and how to work with it.
 
 ## The AI-Generated Report
 
-Coming soon.
+Open a candidate's report from the interview's results list. Depending on the settings you enabled, the report shows up to three tabs:
+
+| Tab | What it contains | When it appears |
+|---|---|---|
+| **Test Summary** | The AI evaluation of the candidate's answers | Always |
+| **Proctoring** | Proctoring evidence collected during the interview | Only if proctoring was enabled |
+| **Session Recording** | Playback of the candidate's screen and actions | Only if **Record User Session** was enabled |
+
+<!-- screenshot: candidate report showing the Test Summary tab with recommendation, strengths, and topic scores -->
+
+For a **conversational interview**, the default Test Summary includes:
+
+- **Recommendation**: the AI's overall hiring recommendation for the candidate.
+- **Strengths** and **Areas for Improvement**: concise lists drawn from the candidate's answers.
+- **Summary**: a narrative overview of how the interview went.
+- **Topic Performance**: one score card per topic, with a color-coded percentage score.
+
+For a **one-way interview**, the report shows each question alongside the candidate's answer and its AI grade. Scoring uses the points assigned per question, and conversational topics are weighted by difficulty: Medium questions carry 10 points, Hard 20, and Expert 30.
+
+<Note>
+Teams with **AI Interview Report Templates** enabled can replace the default summary with a custom, template-driven evaluation. If a template is attached to the interview, the report renders your custom layout instead. See [Custom Report Templates](/custom-report-templates).
+</Note>
+
+If you open a report too early, you may see one of two states instead of results. **"This interview has not been completed yet."** means the candidate has not submitted, and **"Results are being evaluated..."** means the AI is still processing a submitted attempt. Evaluation usually finishes shortly after submission.
+
+### Downloading a PDF
+
+Click **Download** on the report to export it as a PDF. A progress screen appears while the file is generated, and the export includes the evaluation so you can share it with hiring managers outside Equip.
 
 ## Transcript and Recording
 
-Coming soon.
+Each report includes a **recording player** with the full interview transcript beside it. Transcript entries are timestamped and labeled by speaker, so you can distinguish the AI interviewer's questions from the candidate's answers.
+
+<Tip>
+Click any line in the transcript to jump the recording to that exact moment. This makes it fast to verify a specific answer without replaying the whole interview.
+</Tip>
+
+If the **Workspace** was enabled for a conversational interview, written and coded answers appear in the report too:
+
+- Code is captured as **timestamped snapshots** plus the final version, with the programming language shown.
+- Snapshots are seekable against the recording, so you can watch how the candidate built their solution over time.
+
+<!-- screenshot: report transcript panel with a Workspace code snapshot open next to the recording player -->
+
+<Note>
+Interviews are recorded server-side and transcripts are retained, so the recording and transcript are available even if the candidate's browser closed unexpectedly during the session.
+</Note>
 
 ## Re-Evaluating an Interview
 
-Coming soon.
+If an evaluation looks off, or you have changed how you want answers judged, the interview can be processed again. Two maintenance actions are available on a report:
+
+| Action | What it does |
+|---|---|
+| **Re-evaluate** | Queues the attempt for a fresh AI evaluation. You will see the message "The interview is being re-evaluated. Results will appear shortly." |
+| **Re-transcribe Interview** | Regenerates the transcript from the interview recording |
+
+Re-evaluation runs in the background. Refresh the report after a short wait to see the updated results.
+
+<Note>
+These are maintenance actions and are not always visible on the report page. If you need an interview re-evaluated or re-transcribed and cannot find the option, [contact support](/contact-support) and we will run it for you.
+</Note>
+
+## Related Resources
+
+- [Custom Report Templates](/custom-report-templates) - Replace the default report with your own evaluation prompt and layout
+- [One-way vs Conversational Interviews](/one-way-vs-conversational) - How the two interview types differ, including how they are graded
+- [Interview Workspace](/interview-workspace) - Let candidates answer in code or written text during conversational interviews
+- [Session Recording](/session-recording) - How screen and action recording works during proctored sessions

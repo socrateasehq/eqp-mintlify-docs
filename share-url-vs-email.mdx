@@ -3,22 +3,88 @@ title: "Sharing via URL vs Email Invitations"
 description: "The two ways to get an assessment or interview in front of candidates."
 ---
 
-<Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/sharing-assessment-with-candidates-url-vs-emails-1suhjtv/). Sections below outline the planned content.
-</Note>
+<Tip>
+Use **email invitations** when you already have candidates' email IDs and want to control exactly who attempts. Use a **shared public link** when you are posting the assessment somewhere open, like a job description, and do not know the email IDs in advance.
+</Tip>
 
 ## The Two Link Modes
 
-Coming soon.
+After you create an assessment or AI interview, Equip gives you two ways to put it in front of candidates:
+
+1. **Email invitations**: You add candidates' email IDs on Equip, and Equip emails them on your behalf. Each candidate receives a **unique link** that works only once.
+2. **Shared public link**: A common URL that looks like `equip.co/assessments/abcdefg`. You can paste it anywhere: a job description, a sourcing site, WhatsApp, or your careers page.
+
+<Note>
+The difference only affects how candidates arrive and how you are charged. Once a candidate authenticates and the assessment begins, both modes behave identically.
+</Note>
+
+<!-- screenshot: assessment dashboard showing the Invite option and the shareable assessment URL -->
 
 ## Shared Public Links
 
-Coming soon.
+A shared link is open by design. Anyone who has the URL can attempt the assessment, and every candidate uses the same link.
+
+<Steps>
+  <Step title="Candidate opens the link">
+    The candidate clicks the shared URL from wherever you posted it.
+  </Step>
+  <Step title="Candidate enters their email ID">
+    Equip asks for an email ID and sends a one-time verification code to that address.
+  </Step>
+  <Step title="Candidate verifies and starts">
+    After entering the code, the candidate is authenticated and the assessment begins.
+  </Step>
+</Steps>
+
+With a shared link, **credits are deducted only when a candidate starts the first test**, not when you share the URL. Sharing the link itself costs nothing.
+
+<Warning>
+You cannot restrict who attempts through a shared link, and you cannot cap how many people attempt. If you need control over the candidate list, use email invitations instead.
+</Warning>
+
+Each candidate is identified by their email ID, so the same person cannot attempt the assessment twice through the shared link. See [Candidate Re-Attempts](/candidate-reattempts) if you need to allow a retake.
 
 ## Unique Email Links
 
-Coming soon.
+With email invitations, you provide the email IDs and Equip sends each candidate an invitation containing a **unique, single-use link**.
+
+<Steps>
+  <Step title="Invite candidates">
+    Open the assessment on your dashboard and click **Invite**. Type or paste email addresses, or upload a CSV, then send. You can invite up to 100 recipients per send.
+  </Step>
+  <Step title="Candidate clicks their unique link">
+    Equip sends a one-time verification code to the invited email ID. The code always goes to the address you invited, so a forwarded link is useless to anyone else.
+  </Step>
+  <Step title="Candidate verifies and starts">
+    After entering the code, the candidate is authenticated and the assessment begins.
+  </Step>
+</Steps>
+
+Because each link is tied to an email ID, you get **invitation tracking**: the **Track Invitations** tab shows whether each email was Sent, Delivered, Opened, Clicked, or Bounced. See [Email Delivery Status](/email-status) for what each status means.
+
+<Note>
+Email invitations deduct **1 credit per candidate at the time you invite them**. If a candidate never starts, you can reclaim that credit after 24 hours. See [Reclaiming Credits](/reclaim-credits).
+</Note>
+
+You can also set a **Link Expiry (days)** value between 1 and 365 when sending. By default, invitation links never expire.
 
 ## Which Should You Use
 
-Coming soon.
+| | Email Invitations | Shared Public Link |
+|---|---|---|
+| **Best for** | Candidates whose email IDs you already have | Job descriptions and sourcing sites where you do not know email IDs beforehand |
+| **Track invitation status** | Yes | No |
+| **Credit deduction** | When the candidate is invited (reclaimable if they never attempt) | When the candidate starts the first test |
+| **Control who attempts** | Yes, you provide the email ID | No, the candidate provides their own email ID |
+| **Control how many attempt** | Yes, only invited candidates can attempt | No, anyone with the link can attempt |
+
+<Tip>
+You can use both modes for the same assessment. For example, post the shared link in your job description for inbound applicants, and send email invitations to shortlisted candidates you sourced directly.
+</Tip>
+
+## Related Resources
+
+- [Email Invitations](/email-invitations) - How to send invitations, upload a CSV, and customize the email
+- [Invitation Links](/invitation-links) - How unique links, expiry, and revoking work
+- [Email Delivery Status](/email-status) - What Sent, Delivered, Opened, Clicked, and Bounced mean
+- [Reclaiming Credits](/reclaim-credits) - Get credits back for unattempted invitations

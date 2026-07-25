@@ -1,16 +1,82 @@
 ---
 title: "Question Limits per Test Type"
-description: "The maximum number of questions each test type supports."
+description: "The maximum number of questions each test type supports, and how to unlock more Equip quiz questions."
 ---
 
-<Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/question-limits-per-test-type-k7h2xq/). Sections below outline the planned content.
-</Note>
+<Tip>
+Every test type has a maximum question count, for example 25 for quizzes with Equip Content. Need more? Add a second test of the same type to your assessment: two quizzes can hold 25 questions each.
+</Tip>
 
 ## Limits by Test Type
 
-Coming soon.
+An Equip **assessment** is a set of tests, and each test contains one or more questions. Your assessment can contain any number of tests, but each individual test has a cap on questions.
+
+| Test Type | Max Questions per Test |
+|---|---|
+| Quiz (Equip Content) | 25 |
+| Quiz (Custom Content) | 100 |
+| Programming, SQL, CSS | 1 |
+| Excel | 6 |
+| Typing Test | 3 |
+| Video Response | 4 |
+| Psychometric | Not applicable (standardized) |
+| English Communication (CEFR) | Not applicable (standardized) |
+
+**Psychometric** and **English Communication** tests are standardized, so you cannot select or add questions to them at all.
+
+For **Programming** tests, you can pick one or more questions from Equip's library, but each question becomes its own test in the assessment. So evaluating a candidate on two coding questions means two tests, and you are charged per test.
+
+<Note>
+This one-question-per-coding-test model differs from some other platforms. Equip charges per test rather than bundling, and two coding questions genuinely tell you more about a candidate than one, which is why they are priced as two tests. See [How Credits Work](/how-credits-work) for the deduction details.
+</Note>
+
+### Need more quiz questions?
+
+If you want more than 25 Equip Content quiz questions, split them across multiple quizzes in the same assessment.
+
+<Steps>
+  <Step title="Open your assessment's Tests tab">
+    Go to the assessment settings and select the **Tests** tab.
+  </Step>
+  <Step title="Add a second quiz">
+    Click **Add Quiz** and choose Equip's Content. For 30 questions total, put 25 in the first quiz and 5 in the second.
+  </Step>
+</Steps>
+
+<!-- screenshot: Tests tab with two quizzes added to one assessment -->
+
+## Unlocking More Equip Quiz Questions
+
+On a new account, Equip Content quizzes have an extra cap: you can add at most **4 questions per skill per difficulty level**. For example, for the Python skill you could add 4 Medium, 4 Hard, and 4 Expert questions.
+
+To raise this cap, purchase **at least 25 credits in a single transaction**. This unlocks up to **10 questions per skill per difficulty level**. The credits you buy never expire and are used only for candidate assessments.
+
+<!-- screenshot: quiz builder showing the message when adding more than 4 questions on a locked account -->
+
+| Limit | Before Unlocking | After Unlocking |
+|---|---|---|
+| Questions per skill per difficulty level | 4 | 10 |
+| Skills per quiz | 6 | 6 |
+
+<Note>
+This cap applies only to **quiz questions from Equip's content**. There is no such restriction on other Equip test types like Programming, SQL, CSS, or Video Response, and none on questions in your own Custom Content.
+</Note>
+
+Even before unlocking, you can add more questions for the same skill at a **different difficulty level**, since the cap is counted per skill per difficulty.
 
 ## Why These Limits Exist
 
-Coming soon.
+The per-skill cap protects the **question bank**. Anyone can self-onboard on Equip, so without a limit, someone could create an account and browse through the entire database of questions for a skill. Gating higher question counts behind a credit purchase keeps the bank fair for every recruiter.
+
+This is also why recruiters cannot view individual Equip quiz questions during creation or in results. See [Why You Cannot See Quiz Questions](/cannot-see-quiz-questions) for the full reasoning.
+
+<Tip>
+If the built-in limits do not fit your use case, create a **Custom Test** with your own questions. Custom quizzes support up to 100 questions, full question visibility, and configurable timers and points. See [Custom Tests](/custom-tests).
+</Tip>
+
+## Related Resources
+
+- [Testing Multiple Skills at Once](/testing-multiple-skills) - Combine up to 6 skills in one quiz or add separate quizzes
+- [Question Difficulty Levels](/question-difficulty-levels) - How Medium, Hard, and Expert map to years of experience
+- [Same or Random Questions](/same-or-random-questions) - How Equip randomizes questions across candidates
+- [How Credits Work](/how-credits-work) - Credit pricing and when credits are deducted

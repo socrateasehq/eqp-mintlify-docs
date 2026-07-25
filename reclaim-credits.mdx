@@ -1,20 +1,74 @@
 ---
 title: "Reclaiming Credits from Unattempted Invitations"
-description: "Recover credits when invited candidates never start."
+description: "Recover credits when invited candidates never start their test or interview."
 ---
 
-<Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/email-invitations-credit-deductions-revoke-reclaim-1uwfg7d/). Sections below outline the planned content.
-</Note>
+Equip deducts **1 credit** the moment you invite a candidate, even if the email bounces or is never opened. If the candidate never starts, that credit is not lost: you can **reclaim** it after 24 hours. This page explains when reclaiming is possible, how to do it, and what happens to the candidate's link afterwards.
 
 ## When You Can Reclaim
 
-Coming soon.
+An invitation credit becomes reclaimable only when both conditions below are true:
+
+| Condition | Details |
+|---|---|
+| **Candidate has not started** | The candidate has not begun the first test of the assessment (or the AI interview). A test counts as started once its questions load for the candidate. |
+| **24 hours have passed** | The invitation was sent more than 24 hours ago. |
+
+Reclaiming applies to both **assessment** and **AI interview** invitations.
+
+<Note>
+If a candidate started the first test but abandoned it midway, the credit is not reclaimable. The net effect of Equip's policy is that you pay only for tests candidates actually start; see [Credit Deduction Policy](/credit-deduction-policy) for the full breakdown.
+</Note>
+
+For example, say you invite candidates A, B, and C to an assessment, so 3 credits are deducted. A never opens the link, B quits midway through the first test, and C finishes. After 24 hours, you can reclaim only A's credit.
 
 ## How to Reclaim
 
-Coming soon.
+<Steps>
+  <Step title="Open the Reclaim Credits page">
+    In your dashboard sidebar, go to **Account > Reclaim Credits**. The page lists every invitation that is currently eligible, with columns for **Email ID**, **Reason**, **Job Opening**, and **Sent**.
+    <!-- screenshot: Reclaim Credits page showing the table of eligible invitations -->
+  </Step>
+  <Step title="Select the invitations">
+    Use the checkboxes to select one or more invitations, or use the **Reclaim Credit** button on a single row. To reclaim in bulk, select multiple rows and click the bulk reclaim button.
+  </Step>
+  <Step title="Confirm the reclaim">
+    A **Confirm Reclaim** dialog warns that the candidate's invitation link will become invalid. Click **Yes, reclaim** to proceed, or **Cancel** to keep the invitation active.
+    <!-- screenshot: Confirm Reclaim dialog with Yes, reclaim and Cancel buttons -->
+  </Step>
+</Steps>
+
+Your balance increases immediately by the reclaimed amount. The transaction appears as a **Credit Reclaim** in your **Credit Usage** ledger (Account > Credit Usage).
+
+<Tip>
+If an invitation you expected to see is missing from the page, check whether 24 hours have passed since it was sent and whether the candidate has already started.
+</Tip>
 
 ## What Happens to the Link
 
-Coming soon.
+Reclaiming a credit **revokes the candidate's invitation link**. The link becomes invalid, so the candidate can no longer use it to attempt the test or interview.
+
+<Warning>
+Reclaiming also **deletes all test data** associated with that candidate's attempt, such as any points recorded. This cannot be undone. If you want the candidate to attempt later, you must send a fresh invitation, which deducts a new credit.
+</Warning>
+
+Only reclaim credits for candidates you no longer expect to attempt. If a candidate simply needs more time, leave the invitation active; the credit stays reclaimable for as long as they have not started.
+
+## Common Scenarios
+
+| Scenario | What to Do |
+|---|---|
+| **Email bounced or was not delivered** | The credit is still deducted at send time. Wait 24 hours, then reclaim it. |
+| **Invited the same candidate twice** | Equip warns you before a duplicate invite. If you proceed, 2 credits are deducted; reclaim the unused invitation's credit 24 hours after it was sent. |
+| **Balance ran low from unattempted invites** | You can invite up to your current credits plus 25 (the maximum negative balance). Reclaim unattempted invitations to restore your balance, or purchase credits. |
+
+<Note>
+With a negative balance you cannot see candidate results, and below the negative limit candidates can no longer attempt. Reclaiming eligible credits is often the fastest way to get back above zero.
+</Note>
+
+## Related Resources
+
+- [How Credits Work](/how-credits-work) - Credit pricing, balances, and purchasing
+- [Credit Deduction Policy](/credit-deduction-policy) - Exactly when each credit is deducted
+- [Email Invitations](/email-invitations) - How to invite candidates by email
+- [Email Status](/email-status) - Track whether invitations were delivered and opened

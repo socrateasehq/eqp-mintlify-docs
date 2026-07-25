@@ -1,20 +1,82 @@
 ---
 title: "Test Types in an Assessment"
-description: "All nine test types Equip supports."
+description: "The nine test types you can add to an Equip assessment, how each one is graded, and which ones work on mobile."
 ---
 
-<Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/test-types-in-an-assessment-iww934/). Sections below outline the planned content.
-</Note>
+An Equip **assessment** is a set of tests that candidates attempt one by one. When you build an assessment, you choose from nine **test types**, each designed for a different skill. This page describes every type so you can pick the right combination for your role.
 
 ## Available Test Types
 
-Coming soon.
+These are the test types you can add from the **Tests** tab when creating an assessment, listed in the order they appear in the builder.
+
+<!-- screenshot: test type list in the Tests tab of Create Assessment -->
+
+| Test Type | What It Tests | Works on Mobile? |
+|---|---|---|
+| **Quiz** | Multiple-choice questions (MCQs), multiple-correct-answer questions (MCAs), essay-type questions, and more. Covers aptitude, technical, and non-technical skills. | Yes |
+| **Programming Test** | Coding ability in languages like C, Python, and JavaScript. Candidates write code in a browser editor, and submissions are evaluated automatically. | No |
+| **English Communication (CEFR)** | English proficiency across Grammar, Vocabulary, Reading, Writing, Listening, and Speaking. The test adapts to the candidate's level and reports a CEFR grade from A1 to C2. | Yes |
+| **Psychometric** | Personality traits through standardized tests: DISC or Big Five (OCEAN). | Yes |
+| **Video Response** | Candidates record video answers to your questions, useful for screening communication and presentation. | Yes |
+| **Typing Test** | Typing speed and accuracy. | No |
+| **SQL Test** | SQL query writing, evaluated automatically. | No |
+| **Excel Test** | Spreadsheet formula skills in a simulated spreadsheet, evaluated automatically. | No |
+| **CSS Test** | Front-end styling: candidates write CSS to reproduce a target design, compared at desktop, tablet, and mobile breakpoints. | No |
+
+<Note>
+Desktop-only test types show a **Desktop Only** badge to candidates, so they know in advance to use a laptop or desktop computer.
+</Note>
+
+### Equip Content vs My Content
+
+Every test type offers two sources of questions: **Equip Content**, the pre-built question library, and **My Content**, custom tests you author yourself. You can mix both freely within one assessment.
+
+<Tip>
+Equip Content is the fastest way to launch: questions are battle-tested and matched to the candidate's experience level. Choose custom content when you need full control over questions, points, and timers. See [Equip Content vs Custom Content](/equip-vs-custom-content) for a full comparison.
+</Tip>
 
 ## Auto-Graded vs Manually Graded
 
-Coming soon.
+Most test types are scored automatically the moment a candidate submits. A few need a human reviewer.
+
+| Grading | Test Types |
+|---|---|
+| **Auto-graded** | Quiz (MCQ, MCA, and similar question types), Programming, SQL, English Communication (CEFR), Excel, Typing Test |
+| **Manually graded** | Video Response, CSS Test |
+| **Not scored** | Psychometric |
+
+**Psychometric tests** are subjective, so they carry no points and are excluded from the overall score. Results appear as a personality graph instead. The **Typing Test** also carries no weightage in the overall score.
+
+<Note>
+Within a custom quiz, a few question types such as short-text answers, single-line inputs, and voice inputs are graded manually even though the quiz itself is mostly auto-graded. A submission's overall score stays marked as ungraded until you grade every pending test. See [Grading Tests](/grading-tests) for the workflow.
+</Note>
 
 ## Choosing the Right Mix
 
-Coming soon.
+An assessment maps to a role, and the best assessments combine two or three complementary test types rather than relying on a single one.
+
+| Hiring For | A Common Combination |
+|---|---|
+| Software developers | Quiz (technical skills) + Programming Test |
+| Data or database roles | Quiz + SQL Test |
+| Front-end developers | Quiz + Programming or CSS Test |
+| Customer-facing roles | English Communication (CEFR) + Video Response |
+| Finance and operations | Quiz + Excel Test |
+| Data entry | Typing Test + Quiz |
+
+When you create an assessment, you can also enter the **role** and **years of experience**, and Equip suggests tests and skills at the appropriate difficulty automatically.
+
+<Tip>
+Keep the assessment as short as the role allows. Candidates attempt tests one at a time, and each test a candidate starts costs 1 credit, so a focused two-test or three-test assessment usually beats a long one. See [How Credits Work](/how-credits-work) for details.
+</Tip>
+
+<Note>
+Want to see a test type in action before adding it? Every type has an unproctored demo you can try yourself; real assessments are proctored. See [Demo Tests](/demo-tests).
+</Note>
+
+## Related Resources
+
+- [Create an Assessment](/create-assessment) - Add test types and build your first assessment
+- [Equip Content vs Custom Content](/equip-vs-custom-content) - What you can and cannot change in each
+- [Question Limits per Test Type](/question-limits) - How many questions each test type holds
+- [Grading Tests](/grading-tests) - How auto-grading and manual grading work

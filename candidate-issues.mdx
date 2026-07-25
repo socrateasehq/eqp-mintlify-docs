@@ -3,18 +3,102 @@ title: "A Candidate Faced (or Is Facing) Issues"
 description: "Troubleshooting guide for issues candidates hit during tests."
 ---
 
-<Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/candidate-faced-or-is-facing-issues-1ip8knq/). Sections below outline the planned content.
-</Note>
+<Tip>
+Where the issue occurred decides how to fix it. If the candidate never saw a single question, the cause is almost always their device or internet connection. If questions loaded, proctoring was already running, so the **Session Recording** shows you exactly what they saw.
+</Tip>
+
+Candidates sometimes run into trouble while attempting an assessment on Equip. In almost all cases, the problem is on the candidate's side: their browser, device, or network. That is not to say the platform never has issues; when something does break on Equip's end, we are notified automatically and usually fix it before anyone emails us.
 
 ## Common Issues
 
-Coming soon.
+Every candidate issue falls into one of two stages. Identify the stage first, because the troubleshooting path is completely different for each.
+
+| Stage | What the candidate reports | Most likely cause | Your best tool |
+|---|---|---|---|
+| **Cannot start the test** | The test was "setting up" and never loaded, or showed an error. They never saw a question. | The candidate's device, browser, or internet | A **Jam** recording from the candidate |
+| **Issue during the test** | A question would not display, an option could not be selected, something froze mid-test | Varies; verifiable on playback | The **Session Recording** |
+
+<Note>
+A candidate who has not yet seen any questions can click the same assessment link any number of times, as long as the link has not expired. Nothing is lost by retrying. See [Resume Your Attempt](/resume-your-attempt) for how resumption works once a test has started.
+</Note>
 
 ## What to Check First
 
-Coming soon.
+### If the candidate cannot start the test
+
+Before anything else, the candidate should confirm that proctoring works on their setup using Equip's [public proctoring demo](https://equip.co/demo/proctoring/). Attempting the **demo tests** shown before the assessment also automatically checks that their specific test type works on their device.
+
+If the test still will not load, ask the candidate to work through this ladder:
+
+<Steps>
+  <Step title="Check the webcam and microphone">
+    If proctoring is enabled, verify the [webcam](https://webcammictest.com/) and [microphone](https://webcammictest.com/check-mic.html) are working.
+  </Step>
+  <Step title="Try incognito mode">
+    Open the assessment link in an incognito or private window. This rules out interfering extensions and stale cache.
+  </Step>
+  <Step title="Try a different browser">
+    We recommend **Google Chrome**. If Chrome does not work, try Safari or Edge. Firefox should be the last resort.
+  </Step>
+  <Step title="Try a different device">
+    If nothing above helps, attempt the test on another computer.
+  </Step>
+</Steps>
+
+<Note>
+Some test types (Programming, SQL, CSS, Excel, Typing) require a desktop or laptop. If the candidate is on a phone or tablet, ask them to switch devices first. See [Device Compatibility](/device-compatibility).
+</Note>
+
+### If the issue happened during the test
+
+If the candidate was able to load questions, you are in luck: proctoring started successfully, so their **Session Recording** is available. It replays the test exactly as the candidate saw it, including mouse clicks and typing.
+
+Use the recording to verify the complaint. If a candidate says a question never displayed or an option could not be selected, the same problem will be visible on playback.
+
+<!-- screenshot: Session Recording player on the Proctoring tab of a candidate report -->
+
+<Tip>
+Open the candidate's report and go to the **Proctoring** tab to play the Session Recording. You can speed up playback and skip inactive sections. See [Session Recording](/session-recording) for details.
+</Tip>
 
 ## Contacting Support
 
-Coming soon.
+If the checks above do not resolve the issue, Equip needs diagnostic information to investigate. What to send depends on the stage.
+
+### Reporting a pre-start issue
+
+Since no recording exists yet, the candidate must capture one themselves using **Jam**, a free browser extension for Chrome and Edge.
+
+<Steps>
+  <Step title="Install Jam">
+    The candidate installs the [Jam extension](https://chromewebstore.google.com/detail/jam/iohjgamcilhbgmhbnllfolmkmmekfmci) from the Chrome Web Store.
+  </Step>
+  <Step title="Record the tab">
+    In a new tab, they open the extension and click **Record tab**.
+  </Step>
+  <Step title="Reproduce the error">
+    They paste the assessment link and follow the steps until the error appears, then click Stop recording.
+  </Step>
+  <Step title="Email the recording link">
+    Jam generates a URL starting with jam.dev. The candidate emails it to [hello@equip.co](mailto:hello@equip.co), copies you on the email, and mentions the page URL where the error occurred.
+  </Step>
+</Steps>
+
+The Jam link gives Equip a full recording of what the candidate saw, plus console logs and diagnostic data to pinpoint the failure.
+
+### Reporting a mid-test issue
+
+For issues during the test, you report the issue yourself using the Session Recording.
+
+Email [hello@equip.co](mailto:hello@equip.co) with two things: the **Session Recording URL** copied exactly as it appears in your browser, and the **time range** of the issue, for example "the issue lasts from 1:05 to 1:20".
+
+<Warning>
+Do not skip the time range. A recording can run for the full length of the test, and pointing us to the exact seconds where things went wrong speeds up the diagnosis significantly.
+</Warning>
+
+## Related Resources
+
+- [Candidate Says They Submitted](/candidate-says-submitted) - What to do when a candidate reports finishing but no result appears
+- [Session Recording](/session-recording) - How to enable and play back a candidate's screen recording
+- [Device Compatibility](/device-compatibility) - Supported devices and browsers per test type
+- [Resume Your Attempt](/resume-your-attempt) - How candidates continue after a refresh, crash, or device change

@@ -1,20 +1,74 @@
 ---
 title: "Question Types in Custom Quizzes"
-description: "All question formats available in custom quizzes."
+description: "All question formats available in custom quizzes, from multiple choice to voice recordings, documents, and question pools."
 ---
 
+Quizzes are not limited to multiple-choice questions. A **custom quiz** supports a wide range of question formats, so you can test how candidates think, write, speak, and organize information, not just what they can recognize in a list of options.
+
+For every question, you can set a **timer**, **points**, and **negative points** while creating the quiz. You can also choose whether candidates see questions one at a time or all at once; see [Quiz Display Modes](/quiz-display-modes) for the trade-offs.
+
 <Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/question-types-in-custom-quizzes-125r9ku/). Sections below outline the planned content.
+A custom quiz can hold up to **100 questions**. If you need more, add a second quiz to the same assessment. See [Question Limits per Test](/question-limits).
 </Note>
+
+<!-- screenshot: question type selector in the custom quiz builder -->
 
 ## Objective Formats
 
-Coming soon.
+Objective questions have defined correct answers, which makes them fast to grade and easy to compare across candidates.
+
+| Question Type | How It Works |
+|---|---|
+| **MCQ** | A question with exactly one correct answer. |
+| **MCA** | A question with multiple correct answers. Candidates must select all that apply. |
+| **Cloze** | Fill-in-the-blanks with drag and drop. Candidates see all the options, including wrong ones (distractors), and drag them into the blanks. |
+| **Match** | Two columns of related items. Candidates drag and drop to pair items across the columns. |
+| **Categorize** | A set of items that candidates must sort into the correct buckets. |
+
+<Tip>
+Negative marking is optional in custom quizzes. If you use the auto-calculate option, negative points equal the question's points divided by the number of options. Negative points are never auto-assigned to MCAs. See [Negative Marking](/negative-marking).
+</Tip>
 
 ## Text and Voice Formats
 
-Coming soon.
+These formats capture free-form responses, which are useful for judging written communication, reasoning, and spoken fluency.
+
+| Question Type | How It Works |
+|---|---|
+| **Short Text** | An essay-type question. You can set a minimum and maximum answer length. |
+| **Single-line Input** | Like Short Text but for small inputs. You can add validations so the field accepts only emails, numbers, or dates. |
+| **Autograded Text** | You provide the question and the expected answer. A candidate's submission is marked correct only if it matches the expected answer exactly. |
+| **Voice Input** | You provide a piece of text, and candidates record themselves speaking it aloud. |
+
+Custom quizzes also include **transcription** and **preference** question formats alongside the types above.
+
+<Note>
+**Autograded Text** and **transcription** questions are graded automatically. **Short Text**, **Single-line Input**, and **Voice Input** responses need a recruiter to review them and award points. See [Manual Grading](/manual-grading).
+</Note>
 
 ## Advanced Formats
 
-Coming soon.
+Advanced formats combine multiple elements, such as a passage with nested questions or a randomized pool, to build richer scenarios.
+
+| Question Type | How It Works |
+|---|---|
+| **Coding Editor** | Candidates write code in an editor with syntax highlighting and autocomplete. You choose the programming language. The code is not executed. |
+| **Comprehension** | Nest questions inside a parent. Write a passage of text and ask multiple questions based on it. |
+| **Document** | Upload a PDF and ask multiple sub-questions based on it. Ideal for case studies. See [Using Documents in Custom Tests](/documents-in-custom-tests). |
+| **Answer Any** | Create a set of questions, say 5, and let each candidate answer any 3 of them. |
+| **Question Pool** | Add several questions to a pool; each candidate is shown one question chosen at random from it. |
+
+<Warning>
+The **Coding Editor** question type does not run the candidate's code, so it is best for evaluating approach and style. If you want code that compiles and runs against test cases, create a [custom programming test](/custom-programming-test) instead.
+</Warning>
+
+<Tip>
+**Question Pool** is the simplest way to show different candidates different questions inside one quiz. For larger-scale randomization across many questions, use a [Question Bank Quiz](/question-bank-quiz).
+</Tip>
+
+## Related Resources
+
+- [Custom Tests](/custom-tests) - How to create a custom quiz and add it to an assessment
+- [Quiz Display Modes](/quiz-display-modes) - Screen-by-screen versus all-at-once quizzes
+- [Time Limits in Custom Quizzes](/custom-quiz-time-limits) - Where per-question and whole-test timers apply
+- [Import Questions from Excel](/import-questions-from-excel) - Bulk-add MCQ and MCA questions from a spreadsheet

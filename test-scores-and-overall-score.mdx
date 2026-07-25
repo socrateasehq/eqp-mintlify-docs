@@ -1,20 +1,82 @@
 ---
 title: "Test Scores and Overall Score: How Assessments Are Evaluated"
-description: "How per-test scores combine into the overall assessment score."
+description: "How each test in an assessment is scored, and how per-test scores combine into a single overall score using weightage."
 ---
 
-<Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/test-scores-and-overall-score-how-assessments-are-evaluated-1qrll7c/). Sections below outline the planned content.
-</Note>
+<Tip>
+Every test in an assessment gets its own **Individual Score**. Equip then combines them into one **Overall Score** using the weightage you assign to each test in the **Test Order** tab. Weightages always add up to 100.
+</Tip>
+
+An assessment on Equip can combine multiple tests. For example, a Software Developer assessment might contain a **Quiz** and a **Programming Challenge**, and the candidate attempts them one after another from a single link. In the results, you see each test's Individual Score plus a single Overall Score for the candidate.
 
 ## Per-Test Scores
 
-Coming soon.
+Individual Test Scores appear in the assessment's results on the Recruiter Dashboard. Click any test score to open the candidate's report for that test, with three tabs: **Test Summary**, **Proctoring**, and **Session Recording**.
+
+<!-- screenshot: assessment results page showing per-test scores and the overall score column -->
+
+How a test is scored depends on its type:
+
+| Grading | Test types |
+|---|---|
+| **Auto-graded** | Quiz (MCQ, MCA and similar question types), Programming, SQL, English Communication (CEFR), Excel, Typing Test |
+| **AI-graded** | Text, audio, and video answers evaluated by Equip AI, with manual overrides allowed |
+| **Manually graded** | Video Response, CSS Challenge |
+| **Not scored** | Psychometric (personality tests have no right answers) |
+
+If a test contains questions that need your attention, it is labelled **ungraded**, and the Overall Score stays ungraded until every test is graded. Use the **Show Ungraded** filter on the results dashboard to find affected submissions, and see [Grading Tests](/grading-tests) for the full workflow.
+
+<Note>
+You can edit an awarded score at any time using the pencil icon on a response. The test score and Overall Score recompute automatically.
+</Note>
 
 ## Weightage and the Overall Score
 
-Coming soon.
+**Weightage** tells Equip how important each test is. All tests get equal weightage by default, and the sum of all weightages is always 100. If Programming matters twice as much as the Quiz, give it 67 and the Quiz 33.
+
+The Overall Score is the weightage-weighted combination of each test's percentage score:
+
+| Test | Weightage | Candidate's score | Contribution |
+|---|---|---|---|
+| Test 1 | 70 | 40/50 (0.8) | 0.8 x 70 = 56 |
+| Test 2 | 30 | 10/20 (0.5) | 0.5 x 30 = 15 |
+| **Overall Score** | | | **71%** |
+
+To set or change weightage:
+
+<Steps>
+  <Step title="Open Assessment Settings">
+    From the Recruiter Dashboard, open the assessment's settings.
+  </Step>
+  <Step title="Go to the Test Order tab">
+    Here you can also drag tests to rearrange the order candidates attempt them in.
+  </Step>
+  <Step title="Assign weightage per test">
+    Enter a weightage for each test. Equip validates that the values add up to 100.
+  </Step>
+</Steps>
+
+<!-- screenshot: Test Order tab with weightage fields next to each test -->
+
+You can change weightage at any time. Equip recalculates the Overall Scores of previous submissions, so past and future candidates stay comparable.
+
+<Warning>
+A test with weightage 0 contributes nothing to the Overall Score. Equip warns you in the builder if any weighted test is set to 0. Separately, **Psychometric** and **Typing Test** are always weightless and are excluded from the Overall Score by design.
+</Warning>
 
 ## Cutoff Scores
 
-Coming soon.
+Equip does not define a universal passing score; what counts as good depends on your role and hiring bar. The results dashboard gives you **score and cutoff filters** so you can view only the candidates above your threshold.
+
+A reliable approach is relative shortlisting: sort candidates by Overall Score and take the top N into the next round. You can then update statuses (**Shortlisted**, **Rejected**, **Hired**) individually or in bulk. For guidance on choosing a threshold, see [What Is a Good Assessment Score?](/good-assessment-score).
+
+<Warning>
+Grade any ungraded questions before comparing Overall Scores or applying a cutoff. Otherwise you may shortlist against incomplete scores.
+</Warning>
+
+## Related Resources
+
+- [Grading Tests](/grading-tests) - Which test types are auto-graded and how to grade the rest
+- [What Is a Good Assessment Score?](/good-assessment-score) - How to interpret scores and set a sensible bar
+- [Negative Marking](/negative-marking) - How wrong MCQ answers affect test scores
+- [Download Reports](/download-reports) - Export per-candidate and full-assessment results

@@ -3,18 +3,112 @@ title: "Ensuring Candidates Don't Cheat: AI Proctoring"
 description: "How Equip's automated proctoring keeps evaluations honest."
 ---
 
-<Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/ensuring-candidates-dont-cheat-ai-proctoring-fxhwzp/). Sections below outline the planned content.
-</Note>
+<Tip>
+Equip's proctoring is fully automated and driven by AI. It monitors the candidate's camera, microphone, and screen during every test, then gives you a **Trust Score** and a timestamped list of violations with evidence. Most proctoring features are free and require no browser extension or installation.
+</Tip>
 
 ## How AI Proctoring Works
 
-Coming soon.
+When a candidate starts a test, Equip gains access to their **camera feed**, **microphone feed**, and **device screen**, depending on which measures you enabled. The AI monitors these feeds continuously for the entire test.
+
+Candidates always see exactly which proctoring measures are active before they begin. They must consent to the monitoring, and to the proctoring report being shared with you, before the test starts.
+
+When the test ends, Equip generates a proctoring report for the candidate. It includes a **Trust Score** and every detected violation with its timestamp and supporting evidence, such as a photo, screenshot, or audio recording.
+
+<!-- screenshot: candidate proctoring report with Trust Score and violations list -->
+
+<Note>
+Proctoring keeps working even if the candidate goes offline. Evidence is captured on the device and synced back to Equip when the connection returns, so a dropped internet connection does not create a blind spot.
+</Note>
 
 ## What Gets Tracked
 
-Coming soon.
+Equip offers proctoring measures across four areas. Most are configurable per test in [Proctoring Settings](/proctoring-settings); a few run on every attempt automatically.
+
+### Candidate activity
+
+| Measure | What it does |
+|---|---|
+| **Face detection** | Flags when no face, or more than one face, appears on camera, and captures a photo as evidence |
+| **Audio cues** | Detects background noise and records the audio |
+| **Tab or application switch** | Detects when the candidate switches away from the test, and can capture a screenshot of what they switched to |
+| **Auto-submit on tab switch** | Automatically submits the test if the candidate switches away more than a set number of times |
+| **External monitor detection** | Detects extra displays and blocks the test until they are disconnected |
+| **Random photos** | Captures photos of the candidate at irregular intervals throughout the test |
+
+### Test-taking environment
+
+| Measure | What it does |
+|---|---|
+| **Full-screen enforcement** | The test only runs in full-screen mode, so other tabs and applications stay out of view |
+| **Copy-paste disabled** | Candidates cannot copy questions out or paste text in from elsewhere |
+| **Auxiliary Device** | The candidate pairs their phone as a second camera for 360-degree proctoring of their hands, keyboard, and screen |
+| **Session Recording** | Records the candidate's screen and actions, including mouse clicks and typing, for playback |
+
+### Question rendering and selection
+
+These settings make it harder for candidates to share answers with each other. They are configured as [anti-cheating settings](/anti-cheating-settings) and quiz options rather than proctoring toggles.
+
+- **Shuffle question order**: the same question appears at a different position for each candidate.
+- **Randomize MCQ options**: answer choices appear in a different order for each candidate.
+- **Shuffle coding questions**: different candidates receive different programming questions.
+- **Question banks**: each candidate gets a random draw of questions matched by difficulty.
+- **Question display mode**: show questions one-by-one with per-question timers, or all at once.
+
+### Advanced AI proctoring
+
+| Measure | What it does |
+|---|---|
+| **ID Card Verification** | The candidate photographs a government or institution ID at the start; Equip matches the face and name against the test-taker |
+| **Impersonation Detection** | AI flags if a different person appears on camera partway through the test |
+| **Device fingerprinting** | Records the device and browser used for each session |
+| **IP and geotagging** | Records the IP address of each session and looks up its geolocation |
+| **Multi-session detection** | Flags the attempt if the test is resumed from a different tab, browser, device, or IP address |
+
+<Note>
+Device fingerprinting, IP recording, multi-session detection, and offline evidence capture run on every attempt. ID Card Verification and Impersonation Detection are paid add-ons; every other proctoring feature is free.
+</Note>
+
+## Preventing ChatGPT and AI Tool Usage
+
+The easiest way to cheat is to copy a question into a tool like ChatGPT. Equip's measures layer on top of each other to close that path.
+
+With **copy-paste disabled**, the candidate cannot move the question text out of the test. If they screenshot the question and open another tab instead, they break full-screen mode and trigger **tab-switch detection**, both of which are flagged with evidence.
+
+Some tools evade regular proctoring entirely: on-screen overlay assistants such as Cluely or InterviewCoder, or simply an AI app on a second phone while the candidate keeps looking at the computer. **Auxiliary Device** proctoring catches both. The paired phone camera watches the candidate's hands, keyboard, and computer screen, so any AI tool in use becomes visible.
+
+<Tip>
+Auxiliary Device proctoring is free but disabled by default because it can feel intrusive. If you suspect candidates are cheating with AI tools, enable it. In practice it is extremely effective. See [Detecting AI Usage](/ai-usage-detection) for the full setup.
+</Tip>
 
 ## Reviewing Evidence
 
-Coming soon.
+Every completed attempt gets a **Trust Score** from 0 to 100%, shown at the top of the candidate's report. The lower the score, the more likely Equip thinks the candidate cheated, so you can focus your review on low-scoring candidates instead of checking everyone.
+
+<Steps>
+  <Step title="Open the candidate's report">
+    From the results page, open the candidate. The report has three tabs: **Test Summary**, **Proctoring**, and **Session Recording**.
+  </Step>
+  <Step title="Check the Trust Score">
+    If the score is below about 80%, review the full proctoring report rather than relying on the number alone.
+  </Step>
+  <Step title="Review the violations">
+    The **Proctoring** tab lists each violation with its timestamp and evidence: photos, tab-switch screenshots, and audio recordings.
+  </Step>
+  <Step title="Watch the Session Recording">
+    If Session Recording was enabled, play back the candidate's screen activity to see exactly what happened. Playback supports faster speeds and skipping inactive sections.
+  </Step>
+</Steps>
+
+<!-- screenshot: Proctoring tab of a candidate report showing violations and evidence -->
+
+<Warning>
+The Trust Score is calculated by AI, and AI can make mistakes. Never disqualify a candidate on the Trust Score alone. Always review the underlying evidence before making a decision.
+</Warning>
+
+## Related Resources
+
+- [Proctoring Settings](/proctoring-settings) - Configure the per-test proctoring toggles and their defaults
+- [Understanding the Trust Score](/trust-score) - What the score means and how to use it in reviews
+- [Detecting AI Usage](/ai-usage-detection) - Set up Auxiliary Device proctoring to catch AI tools
+- [Session Recording](/session-recording) - Record and play back a candidate's full screen activity

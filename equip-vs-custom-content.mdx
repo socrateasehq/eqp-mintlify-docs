@@ -1,20 +1,86 @@
 ---
 title: "Equip Content vs Custom Content"
-description: "The difference between Equip's pre-built library and your own content."
+description: "The difference between Equip's pre-built question library and tests you create with your own questions."
 ---
 
-<Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/equip-content-vs-custom-content-1ct7g3d/). Sections below outline the planned content.
-</Note>
+<Tip>
+Use **Equip Content** when you want a ready-made, curated assessment in seconds. Use **My Content** (Custom Tests) when you need full control over questions, points, timers, and the candidate experience. You can mix both in the same assessment.
+</Tip>
+
+Every test type in the assessment builder offers two sources of questions: **Equip Content**, drawn from Equip's pre-built library, and **My Content**, which is any [Custom Test](/custom-tests) you create yourself.
 
 ## What Is Equip Content
 
-Coming soon.
+**Equip Content** is Equip's own library of curated questions, organized by skill and difficulty. You pick a skill and an experience level, and Equip assembles the test for you, so you can create a complete assessment in seconds without writing a single question.
+
+Equip Content is built for fairness and integrity:
+
+- Quiz questions are **randomized per candidate**: each candidate gets different questions from a large pool, in a shuffled order, with shuffled options. See [Same or Random Questions](/same-or-random-questions).
+- Quiz questions stay **hidden from recruiters**, both during creation and in results, so the question bank cannot leak. See [Why You Cannot See Quiz Questions](/cannot-see-quiz-questions).
+- **Proctoring settings, timers, points, and negative marking are fixed**. Equip has tuned them to identify the best candidates, and they cannot be changed.
+
+<Note>
+For non-quiz Equip Content, such as Programming and SQL challenges, you can select the exact question and see it in candidate results. The hidden-question policy applies only to Equip quizzes.
+</Note>
+
+<!-- screenshot: assessment builder Tests tab showing an Equip Content quiz with skill and difficulty selection -->
 
 ## What Is My Content
 
-Coming soon.
+**My Content** refers to Custom Tests: tests you build with your own questions. You create them from the **Custom Tests** section in the sidebar of the Assessments Dashboard, then add them to any assessment.
+
+<Steps>
+  <Step title="Create a Custom Test">
+    Open **Custom Tests** from the Assessments Dashboard sidebar, choose a test type, add your questions, and save.
+  </Step>
+  <Step title="Add it to an assessment">
+    In the assessment builder's **Tests** tab, pick the test type on the left, click **Add**, and choose **My Content** to select your test.
+  </Step>
+</Steps>
+
+Custom Tests give you control that Equip Content does not:
+
+- Write your own questions across 15 question types, from MCQs to Cloze, Comprehension, and Voice Input. See [Custom Quiz Question Types](/custom-quiz-question-types).
+- Set **points and optional negative marking** per question.
+- Set **time limits** per question or per test, and switch between one-by-one and all-at-once display modes.
+- Change **proctoring settings** for the test.
+- See every question and every response a candidate submitted.
+
+<Note>
+Custom Tests belong to your whole team. Teammates can view, edit, and reuse them across multiple assessments.
+</Note>
+
+<!-- screenshot: Add Quiz menu showing the Equip's Content and My Content options -->
 
 ## When to Use Each
 
-Coming soon.
+Here is how the two options compare, feature by feature.
+
+| Feature | Equip Content | Custom Content |
+|---|---|---|
+| **Change proctoring settings** | No | Yes |
+| **Select questions** | No for quizzes; yes for other test types | Yes for all test types |
+| **Set points and remove negative points for MCQs** | No | Yes |
+| **Show all quiz questions at once** | No, always one-by-one | Yes |
+| **See questions a candidate attempted** | No for quizzes; yes for other test types | Yes for all test types |
+| **Set time per question or test** | No | Yes |
+| **Set a time limit for the whole assessment** | No | No |
+
+Choose **Equip Content** when speed and reliability matter most: the questions are highly curated, battle-tested across thousands of candidates, and the fixed settings are designed to keep results fair and comparable.
+
+Choose **Custom Content** when the role demands questions specific to your company, or when you need control over points, timers, display modes, or full visibility into what each candidate answered.
+
+<Tip>
+You do not have to pick one. An assessment can freely combine Equip Content and Custom Tests, for example an Equip quiz for screening plus a custom Video Response test for role-specific questions.
+</Tip>
+
+<Warning>
+Custom coding challenges are easy to get wrong: a small mistake in test cases or boilerplate can mark every submission incorrect. For Programming and SQL, Equip strongly recommends its own battle-tested questions. See [Issues with Custom Coding Challenges](/custom-coding-challenge-issues).
+</Warning>
+
+## Related Resources
+
+- [Custom Tests](/custom-tests) - How to create and manage your own tests
+- [Create an Assessment](/create-assessment) - Add Equip Content and My Content in the assessment builder
+- [Same or Random Questions](/same-or-random-questions) - How question randomization works per test type
+- [Why You Cannot See Quiz Questions](/cannot-see-quiz-questions) - The reasoning behind hidden Equip quiz questions

@@ -3,18 +3,77 @@ title: "Bulk CV Import"
 description: "Upload up to 100 CVs at once and let AI parse them into applications."
 ---
 
-<Note>
-This is a new article for the Equip Help Center. Sections below outline the planned content.
-</Note>
+If you have a folder of CVs from a job board, an agency, or an old ATS, you do not need to add candidates one by one. **Bulk CV Import** lets you upload up to 100 CVs in a single batch. Equip parses each file and creates a job application automatically.
 
 ## Uploading CVs
 
-Coming soon.
+Each batch is uploaded into a specific job opening, so every parsed CV becomes an application in that job's pipeline.
+
+<Steps>
+  <Step title="Open the job opening">
+    Go to the job opening you want to add candidates to. All applications created by the import will appear in this job's candidate pipeline.
+  </Step>
+  <Step title="Select your PDF files">
+    Use the uploader labeled **Select PDF files to upload**. It accepts PDF files only, up to 100 files per batch, with a maximum size of 10 MB per file.
+    <!-- screenshot: bulk CV upload dialog showing "Select PDF files to upload" with the PDF-only and file limits hint -->
+  </Step>
+  <Step title="Start the import">
+    Confirm the upload. Equip checks your team's credit balance before starting, then processes the batch in the background. You can leave the page while it runs.
+  </Step>
+</Steps>
+
+Files that do not meet the requirements are flagged before the batch starts:
+
+| Requirement | Limit | Error shown |
+|---|---|---|
+| File format | PDF only | "Only PDF files are supported" |
+| File size | 10 MB per file | "File exceeds 10MB limit" |
+| Batch size | 1 to 100 files | "Maximum 100 files allowed" |
+
+<Tip>
+Have more than 100 CVs? Split them into multiple batches of up to 100 files each and upload them one after another.
+</Tip>
 
 ## Parsing and Costs
 
-Coming soon.
+Bulk CV Import costs **0.01 credits per CV**, so a full batch of 100 CVs costs just 1 credit. The cost is checked against your team's credit balance before the batch starts, and the ATS itself remains free.
+
+Each CV goes through the same **AI parsing** as a direct application: Equip extracts the candidate's name, contact details, work experience, education, and skills, then creates the application. See [CV Parsing](/cv-parsing) for the full list of extracted fields.
+
+### Tracking your batch
+
+A batch moves through four statuses:
+
+| Status | What it means |
+|---|---|
+| **Pending** | The batch is queued and has not started processing yet. |
+| **Processing** | CVs are being parsed. The page refreshes automatically every 10 seconds. |
+| **Completed** | The batch finished. Review the per-file results. |
+| **Failed** | The batch could not be processed. |
+
+The batch detail page shows total, processed, success, failed, and skipped counts, plus a per-file list grouped into success, failed, skipped, and processing. Every failed file shows a reason.
+
+<!-- screenshot: batch detail page with progress counts and per-file success/failed/skipped lists -->
+
+<Note>
+Common failure reasons are a missing email, a missing name, a duplicate application for the same job, or a CV the parser could not read. Fix the file or the duplicate, then re-upload just the affected CVs in a new batch.
+</Note>
 
 ## Unverified Candidates
 
-Coming soon.
+Candidates added through Bulk CV Import never confirmed their email address themselves, so Equip marks them as **unverified**. On the candidate profile, an amber icon next to the email shows "Email not verified".
+
+Unverified candidates receive **no stage-change emails**. You can move them through the pipeline freely, but invitation and rejection emails are held back until the email is verified. This protects you from emailing addresses that were parsed incorrectly.
+
+<Tip>
+To verify a candidate, open their profile and copy the **verification link** from the email popover, then share it with the candidate directly. Once they verify, stage-change emails work as usual.
+</Tip>
+
+Each imported application also records its **source** as "Bulk CV Upload", so you can filter the pipeline by source and compare imported candidates against direct applicants in your analytics.
+
+## Related Resources
+
+- [CV Parsing](/cv-parsing) - Which fields Equip extracts from every CV
+- [Candidates and CVs](/candidates-and-cvs) - Manage the applications your import creates
+- [Job Fit Score](/job-fit-score) - How imported candidates are ranked against your role
+- [How Credits Work](/how-credits-work) - Credit pricing and what consumes credits

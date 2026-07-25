@@ -1,20 +1,69 @@
 ---
 title: "Issues with Custom Coding Challenges"
-description: "Troubleshoot problems when creating custom programming questions."
+description: "Troubleshoot custom coding challenges: common setup mistakes, how to validate your test cases, and where to get help."
 ---
 
-<Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/issues-with-creating-custom-coding-challenges-gwqw44/). Sections below outline the planned content.
-</Note>
+Equip has a large library of coding questions, categorized by programming language and difficulty level. You can also build your own coding questions as [Custom Tests](/custom-programming-test). Because coding challenges are **graded automatically**, a small setup mistake can silently break grading for every candidate. This article covers the most common issues and how to catch them before candidates do.
 
 ## Common Problems
 
-Coming soon.
+A coding challenge is far more complex to set up than a quiz. Even experienced developers need to get the **boilerplate** (driver and starter code), input and output handling, and edge cases exactly right. Most reported issues trace back to one of these setup mistakes:
+
+| Problem | What goes wrong |
+|---|---|
+| **Input/output mismatch** | Even the slightest change in how input is read or output is printed can mark every candidate's submission as incorrect |
+| **Broken boilerplate** | The driver or starter code for one of the enabled languages does not compile or does not match the expected solution format |
+| **Missing edge cases** | Test cases pass for the happy path but fail on boundary values, so incorrect solutions score full marks |
+| **Unclear instructions** | Different platforms implement coding challenges differently; candidates used to another platform get stuck if your problem statement does not spell out the expected format |
+
+<Warning>
+Because grading is fully automatic, an input/output bug does not fail loudly. It quietly marks all submissions wrong, and you may only notice after candidates have completed the assessment.
+</Warning>
+
+This is why Equip recommends [using Equip's own coding content](/equip-vs-custom-content) where possible. Each question in Equip's library has been attempted by thousands of candidates, so it is proven to work. And unlike Equip quizzes, Equip's coding content lets you **select the specific question** while building the assessment and see it alongside the candidate's results.
 
 ## Validating Test Cases
 
-Coming soon.
+If you do build your own challenge, validate it thoroughly before inviting anyone. The goal is to confirm that a correct solution passes every test case in every enabled language.
+
+<Steps>
+  <Step title="Review the problem statement">
+    State the input format, the output format, and any constraints explicitly. Assume the candidate has never used Equip before.
+  </Step>
+  <Step title="Check the boilerplate for every language">
+    Each enabled language has its own driver and starter code. Verify each one, not just the language you wrote the question in.
+  </Step>
+  <Step title="Verify sample and real test cases">
+    Work through your **sample test cases** and **real test cases** by hand. Confirm the expected output matches exactly, including spacing and line breaks.
+  </Step>
+  <Step title="Attempt the challenge in Preview">
+    Add the test to an assessment and open it in [Preview](/preview-assessment). Submit a known-correct solution in each enabled language and confirm all test cases pass.
+  </Step>
+</Steps>
+
+<!-- screenshot: custom coding challenge builder showing boilerplate and test case fields -->
+
+<Tip>
+Previews are free and unlimited for your whole team, so you can test as many times as you need without spending credits.
+</Tip>
+
+<Note>
+If you [randomize coding questions](/randomize-coding-questions), validate every variant separately. Each variant must keep at least one enabled language, and the builder will block you otherwise.
+</Note>
 
 ## Getting Help
 
-Coming soon.
+If a custom coding question misbehaves, in almost all cases the question was not set up correctly. Working through the validation steps above resolves the vast majority of issues.
+
+Please note that Equip's support team **cannot triage custom coding questions** for you. Debugging one means bringing in developers, sometimes for languages our team is not familiar with, and as a small company running a self-serve platform we do not have the bandwidth for that.
+
+<Note>
+There is an alternative: if the skill you want to test would be broadly useful to other companies, Equip can create the test for you, usually free of charge. Reach out via live chat; turnaround is around 5 business days for most skills. See [Can't Find Your Role or Skill?](/cant-find-role-or-skill) for details.
+</Note>
+
+## Related Resources
+
+- [Creating a Custom Programming Test](/custom-programming-test) - Step-by-step setup for your own coding challenge
+- [Equip Content vs Custom Content](/equip-vs-custom-content) - When to use Equip's library instead of building your own
+- [Previewing an Assessment](/preview-assessment) - Test your assessment for free before inviting candidates
+- [Supported Programming Languages](/programming-languages) - Languages and versions available for coding tests

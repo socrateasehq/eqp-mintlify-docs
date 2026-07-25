@@ -3,26 +3,101 @@ title: "Candidates and CVs"
 description: "See every applicant, their details, and their resumes in one dashboard."
 ---
 
-<Note>
-This is a new article for the Equip Help Center. Sections below outline the planned content.
-</Note>
+Every job opening in Equip has an applications dashboard that lists all of its candidates. From this one screen you can review profiles, open CVs, filter and sort applicants, and act on many candidates at once.
 
 ## Table and Kanban Views
 
-Coming soon.
+The dashboard offers two views, and you can switch between them with the **view toggle** in the filter bar.
+
+| View | Best For | Details |
+|---|---|---|
+| **Table** | Scanning and comparing many candidates | One row per candidate with sortable columns. Defaults to the **Relevant** filter preset. |
+| **Kanban** | Visualizing your pipeline | One column per stage, one card per candidate. Cards and columns are collapsible. Defaults to the **All** filter preset. |
+
+Both views show each candidate's **Job Fit Score**, a 0 to 100 score with a one-line AI explanation of how well they match the role.
+
+<!-- screenshot: applications dashboard with the Table/Kanban view toggle highlighted -->
+
+<Tip>
+Use Kanban when you want a quick sense of where candidates are stuck, and Table when you are shortlisting and need to compare fields side by side.
+</Tip>
 
 ## Filter Presets
 
-Coming soon.
+**Filter presets** are one-click filters in the filter bar that narrow the list to the candidates you care about right now.
+
+| Preset | Shows |
+|---|---|
+| **All** | Every candidate in the pipeline |
+| **Relevant** | Everyone except candidates in Hired, Rejected, or Withdrawn stages |
+| **Mine** | Candidates assigned to you |
+| **Unassigned** | Candidates with no assignee yet |
+| **Starred** | Candidates you or your team have starred |
+| **Recent** | Candidates who applied in the last 7 days |
+
+Beyond presets, you can sort the list by **Fit Score**, **Max Salary**, **Min Salary**, **Notice Period**, **Experience**, or **Applied Date**.
+
+<Note>
+Each candidate also shows an **Action pending on** marker: Team, Candidate, or Both. It tells you at a glance whether the next move is yours or theirs.
+</Note>
 
 ## Columns
 
-Coming soon.
+Table columns cover the details recruiters compare most often: the candidate (with a LinkedIn link where available), pipeline stage, fit score, experience, industries, current role, education, expected salary, notice period, languages, and applied date.
+
+Two more attributes appear alongside the stage:
+
+| Attribute | Values | What It Means |
+|---|---|---|
+| **Candidate status** | Applied, Maybe, Shortlisted, Rejected, Withdrawn | Your verdict on the candidate, independent of which pipeline stage they are in |
+| **Source** | Direct Application, Bulk CV Upload, Equip Sourcing Platform, Recruitment Agency, ATS Import | How the candidate entered your pipeline |
+
+You can also **star** any candidate from their row to bookmark them for the Starred preset.
+
+<!-- screenshot: table view showing stage, status, fit score, and star columns -->
 
 ## Viewing CVs
 
-Coming soon.
+Every candidate's CV lives on their profile, alongside the structured details Equip parsed from it.
+
+<Steps>
+  <Step title="Open the candidate">
+    Click a candidate in the table or on a Kanban card to open their detail panel.
+  </Step>
+  <Step title="Go to Candidate Details">
+    The **Candidate Details** tab shows parsed information such as Preferences, Experience, and Education.
+  </Step>
+  <Step title="Open the Attachments section">
+    Find the CV under **Attachments**. Candidates can have up to 3 attachments of 10 MB each, uploaded by either the recruiter or the candidate.
+  </Step>
+</Steps>
+
+If a candidate sends you an updated resume, you can replace the one on file. Replacements must be **PDF, DOC, or DOCX** files of at most 10 MB, and the re-upload is logged in the candidate's journey.
+
+<Note>
+Exporting the dashboard to CSV or Excel includes a resume URL column, so your export always links back to each candidate's CV.
+</Note>
 
 ## Bulk Actions
 
-Coming soon.
+Select multiple candidates in either view to act on all of them at once.
+
+| Action | What It Does |
+|---|---|
+| **Change stage** | Moves the selected candidates to another pipeline stage, with a contextual dialog for invitations or rejections |
+| **Move to Job** | Transfers the applications to another job post; they land in the first stage of that pipeline and keep their fit score |
+| **Star / Unstar** | Bookmarks or unbookmarks all selected candidates |
+| **Delete** | Removes the selected candidates |
+
+You can also export the full list to **CSV or Excel**. The export includes contact details, stage, fit score with its AI reason, salary expectations, resume URL, recruiter notes, and starred status, plus one column per custom field and screening question.
+
+<Warning>
+Deleting candidates removes their applications from the job opening. If you only want them out of your active view, move them to a terminal stage like Rejected instead; the Relevant preset then hides them automatically.
+</Warning>
+
+## Related Resources
+
+- [Candidate Profile](/candidate-profile) - Everything in the detail panel, including the Candidate Journey timeline
+- [Changing Stages](/changing-stages) - What happens when you move candidates, and the emails involved
+- [Job Fit Score](/job-fit-score) - How the AI ranks candidates against your role
+- [Bulk CV Import](/bulk-cv-import) - Add up to 100 CVs at once and turn each into an application

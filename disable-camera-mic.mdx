@@ -1,20 +1,76 @@
 ---
 title: "Disabling Camera and Mic Tracking"
-description: "Turn off camera and microphone proctoring when you don't need it."
+description: "Turn off camera and microphone proctoring on custom tests when you don't need it."
 ---
 
-<Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/disabling-camera-and-mic-tracking-2ijj3y/). Sections below outline the planned content.
-</Note>
+<Tip>
+tl;dr: Camera and mic tracking can be turned off only on **custom tests**. Tests built from Equip's content library ship with fixed proctoring settings that cannot be modified.
+</Tip>
 
 ## When to Disable
 
-Coming soon.
+All assessments on Equip are proctored by **AI Proctoring** to ensure candidates do not cheat. Depending on your settings, proctoring can track the camera, microphone, and screen, disable copy-paste, and enforce full-screen mode.
+
+Camera and mic tracking is not always necessary. Common reasons to switch it off:
+
+- **Low-stakes screens**: an early-funnel quiz where you care more about completion rates than cheating.
+- **Personality-style tests**: there is no "correct" answer to protect. Equip's **Psychometric** tests already keep most camera and mic tracking off by default.
+- **Video response tests**: you see and hear the candidate in their answers anyway, so separate camera tracking adds little. These tests also default most camera options off.
+- **Candidate comfort or privacy**: some candidates are uneasy granting camera access, and some organizations prefer to minimize data collection.
+
+Whether you can act on this depends on the test's content type:
+
+| Content Type | Can proctoring be modified? |
+|---|---|
+| **Equip's content** | No, defaults are fixed |
+| **Custom content** | Yes, fully configurable |
+
+<Note>
+If a test uses Equip's content and you want lighter proctoring, recreate it as a [custom test](/custom-tests). Custom tests give you full control over every proctoring toggle.
+</Note>
 
 ## How to Disable
 
-Coming soon.
+Four proctoring settings involve the camera or microphone: **Detect Audio**, **Detect Face**, **Take Random Photos**, and **Capture Photo Before Start Test**. Turn these off on a custom test to stop camera and mic tracking.
+
+<Steps>
+  <Step title="Open the assessment's settings">
+    From your dashboard, open the assessment and go to its settings, then select the **Test Order** tab.
+  </Step>
+  <Step title="Edit the test's proctoring settings">
+    Click **Edit Settings** on the custom test you want to change. The panel lists all proctoring toggles, with **Enable All** and **Disable All** shortcuts.
+    <!-- screenshot: proctoring settings panel with camera and mic toggles highlighted -->
+  </Step>
+  <Step title="Turn off the camera and mic toggles">
+    Switch off **Detect Audio**, **Detect Face**, **Take Random Photos**, and **Capture Photo Before Start Test**.
+  </Step>
+  <Step title="Save and update">
+    Click **Save Settings**, then **Update** to apply the changes to the assessment.
+  </Step>
+</Steps>
+
+<Warning>
+These settings apply per test, not per assessment. If your assessment has multiple tests, repeat the steps for each custom test where you want camera and mic tracking off.
+</Warning>
 
 ## Impact on the Proctoring Report
 
-Coming soon.
+Candidates always see exactly which proctoring measures are active before they start, and they consent to the report being shared with you. With camera and mic tracking off, the permission prompts for those devices disappear from their flow.
+
+Your side of the report changes too. The **Proctoring** tab of the candidate report will not contain face-detection photos, random photos, a pre-test photo, or audio recordings for that test, because that evidence is never captured.
+
+Everything else you left enabled keeps working:
+
+- Screen-based measures such as **Detect Switched Tab**, **Enforce Full Screen**, and **Record User Session** still capture evidence as configured.
+- Always-on measures still run on every attempt: device fingerprinting, IP recording with location lookup, and multi-session detection.
+
+<Note>
+The report still shows a **Trust Score** for the attempt. With fewer signals being tracked, review the score together with the remaining evidence rather than in isolation.
+</Note>
+
+## Related Resources
+
+- [Proctoring Settings](/proctoring-settings) - Every proctoring toggle explained, with defaults per test type
+- [Custom Tests](/custom-tests) - Create tests with your own content and full proctoring control
+- [AI Proctoring](/ai-proctoring) - How Equip's automated proctoring works end to end
+- [Trust Score](/trust-score) - How to read the trust score on a candidate report

@@ -1,20 +1,98 @@
 ---
 title: "Scorecards"
-description: "Score candidates on criteria you define at any stage."
+description: "Score candidates consistently on criteria you define, at phone screening, video interview, and custom stages."
 ---
 
-<Note>
-This is a new article for the Equip Help Center. Sections below outline the planned content.
-</Note>
+**Scorecards** are structured questionnaires your team fills in after evaluating a candidate. Instead of free-form impressions, every interviewer rates the same criteria, so candidates are compared fairly and hiring decisions are backed by data.
 
 ## Creating Scorecards
 
-Coming soon.
+Scorecards are managed as reusable **templates**. Create a template once, then attach it to as many pipeline stages as you like.
+
+<Steps>
+  <Step title="Open the Scorecards templates page">
+    Go to **Account → Templates → Scorecards**.
+  </Step>
+  <Step title="Create a new template">
+    Give the template a name, for example "Technical Interview Scorecard". Names can be up to 100 characters.
+  </Step>
+  <Step title="Define the criteria">
+    New templates start with four default criteria. Add your own, remove ones you do not need, and drag to reorder them. At least one criterion must remain.
+  </Step>
+  <Step title="Save the template">
+    The template is now available in the scorecard dropdown when you configure supported pipeline stages.
+  </Step>
+</Steps>
+
+<!-- screenshot: scorecard template editor with criteria list -->
+
+The default criteria give you a sensible starting point:
+
+| Criterion | What it measures |
+|---|---|
+| **Communication** | Clarity and articulation |
+| **Technical Skills** | Domain expertise and knowledge |
+| **Problem Solving** | Analytical and critical thinking |
+| **Cultural Fit** | Alignment with team values |
+
+<Tip>
+Create separate templates for different rounds, such as a phone-screen template with broad criteria and a technical-round template with deeper ones. Interviewers then rate only what their round is designed to assess.
+</Tip>
 
 ## Attaching Scorecards to Stages
 
-Coming soon.
+Scorecards attach to the pipeline stages where a human evaluates the candidate. Assessments and AI interviews are scored automatically, so they do not use scorecards.
+
+| Stage type | Scorecard support |
+|---|---|
+| **Phone Screening** | Yes |
+| **Video Interview** | Yes |
+| **Custom** | Yes |
+| Assessment, AI Interviews | No, these stages are auto-scored |
+| Applied, Offered, terminal stages | No |
+
+To attach a template, open the job's **Candidate Pipeline** settings, select a supported stage, and pick the template from the scorecard dropdown. See [Pipeline Stages](/pipeline-stages) for the full stage configuration options.
+
+<!-- screenshot: pipeline stage settings with scorecard dropdown -->
+
+<Note>
+The same template can be attached to stages across multiple job openings. Alongside the scorecard, each stage can also have its own email templates and an assignee.
+</Note>
+
+## Filling In a Scorecard
+
+When a candidate reaches a stage with a scorecard attached, evaluators fill it in from the candidate's profile.
+
+<Steps>
+  <Step title="Open the candidate">
+    From the applications dashboard, open the candidate's detail panel.
+  </Step>
+  <Step title="Rate each criterion">
+    Give a star rating for every criterion on the scorecard. Equip computes an overall score from your ratings.
+  </Step>
+  <Step title="Submit">
+    The submission is logged in the candidate's **Candidate Journey** timeline as a "submitted scorecard" event, attributed to the team member who filled it in.
+  </Step>
+</Steps>
+
+<Warning>
+Opening an existing scorecard and submitting it again always creates a new scorecard event. It does not overwrite the earlier submission, so treat each submission as a fresh evaluation.
+</Warning>
 
 ## Scores in Analytics
 
-Coming soon.
+Scorecard results do not stay siloed on individual profiles. They roll up in two places:
+
+- **Candidate profile**: submitted scorecards appear on the **Candidate Details** tab alongside test scores, fit score, and other evaluation data, and every submission is logged in the Candidate Journey.
+- **ATS Insights**: the **Avg scorecard by recruiter** chart in the Team section averages scorecard results per recruiter, so you can spot evaluators who rate consistently harsher or more leniently than the rest of the team.
+
+<Tip>
+Reviewing average scores by recruiter is a quick calibration check. If one interviewer's averages drift far from the team's, align on what each star rating should mean before your next round of interviews.
+</Tip>
+
+## Related Resources
+
+- [Pipeline Stages](/pipeline-stages) - Configure the stages where scorecards can be attached
+- [Candidate Profile](/candidate-profile) - Where submitted scorecards and the Candidate Journey live
+- [ATS Insights](/ats-insights) - Team analytics, including the average scorecard by recruiter chart
+- [Email Templates](/email-templates) - The other reusable templates you can attach to pipeline stages

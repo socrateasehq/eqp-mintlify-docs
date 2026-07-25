@@ -1,20 +1,112 @@
 ---
 title: "Adding and Removing Team Members and Admins"
-description: "Invite unlimited teammates and manage the admin role."
+description: "Invite unlimited teammates for free, remove members who leave, and transfer the Team Admin role."
 ---
 
-<Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/adding-removing-team-members-admins-1t2dtln/). Sections below outline the planned content.
-</Note>
+A team on Equip is the set of people from the same organization who share one workspace. Everyone on the team sees the same job openings, candidates, results, and credit balance.
+
+You can add **unlimited members at no cost**. Equip has no seat fees, so bring in every hiring manager and interviewer who needs access.
 
 ## Inviting Members
 
-Coming soon.
+Any team member can invite new teammates from the **Team** page.
+
+<Steps>
+  <Step title="Open the Team page">
+    In your Recruiter Dashboard, go to **Account > Team** in the left sidebar.
+  </Step>
+  <Step title="Click Invite members">
+    In the **Members** section, click the **Invite members** button.
+  </Step>
+  <Step title="Enter email addresses">
+    Type the email IDs of the people you want to invite, separated by commas. Each invitee receives an email with a link to join your team.
+  </Step>
+  <Step title="Or share the link yourself">
+    Prefer to send the invitation over your own channels? Click **Copy Link** and share the join link directly.
+  </Step>
+</Steps>
+
+<!-- screenshot: Team page Members section with the Invite members button and email entry dialog -->
+
+<Note>
+Invitations are restricted to your team's **email domain**, and Equip allows one team per domain. If a colleague tries to sign up separately with the same domain, Equip tells them a team already exists and who the admin is, so they can request an invite instead.
+</Note>
+
+### Pending Invites
+
+Invitations that have not been accepted yet appear in the **Pending Invites** section of the Team page. If you invited the wrong address or the person no longer needs access, use **Remove invite** and confirm to cancel it.
+
+<Tip>
+New members do not need to set a password. Equip login is passwordless: members sign in with a **6-digit code** sent to their email, valid for 30 minutes.
+</Tip>
 
 ## Removing Members
 
-Coming soon.
+Only the **Team Admin** can remove a member. Regular members do not see this option.
+
+<Steps>
+  <Step title="Find the member">
+    On the **Team** page, locate the member in the Members list.
+  </Step>
+  <Step title="Open the actions menu">
+    Click the **three dots** next to their name and choose **Remove**.
+  </Step>
+  <Step title="Confirm">
+    Confirm in the **Remove Team Member** dialog. You will see a success message once they are removed.
+  </Step>
+</Steps>
+
+<!-- screenshot: three-dots menu next to a team member showing the Remove option -->
+
+<Warning>
+The Team Admin cannot be removed from the team. To remove the person who is currently the admin, transfer the admin role to someone else first, then have the new admin remove them.
+</Warning>
+
+For example, say you want to remove Alice from the team:
+
+- **Alice is the admin and Bob is a regular member**: Alice makes Bob the admin. Bob then logs in and removes Alice.
+- **Alice is the only member** (and therefore the admin): Alice invites Bob to the team. Once Bob joins, Alice makes Bob the admin, and Bob removes Alice.
 
 ## The Team Admin Role
 
-Coming soon.
+Every team has exactly **one Team Admin**. The person who creates the team becomes the admin by default, and a **Team Admin** badge appears next to their name in the Members list.
+
+All members see the same data and can do the same day-to-day work. The admin role only adds a few responsibilities:
+
+| Action | Member | Team Admin |
+|---|---|---|
+| Create job openings, assessments, and AI interviews | Yes | Yes |
+| Invite candidates and view results | Yes | Yes |
+| Invite new team members | Yes | Yes |
+| Remove team members | No | Yes |
+| Transfer the admin role | No | Yes |
+| Receive invoices and low-balance email alerts | No | Yes |
+
+### Changing the Team Admin
+
+Only the current admin can hand over the role.
+
+<Steps>
+  <Step title="Open the Team page">
+    Go to **Account > Team** in the sidebar.
+  </Step>
+  <Step title="Pick the new admin">
+    Click the **three dots** next to the member who should become the admin and select **Make Admin**.
+  </Step>
+  <Step title="Confirm the change">
+    Equip shows an **Admin Changed!** confirmation. The badge moves to the new admin, and you become a regular member.
+  </Step>
+</Steps>
+
+<!-- screenshot: three-dots menu showing the Make Admin option -->
+
+<Note>
+The Team page also supports an optional reporting structure. A member can be assigned a **manager**, shown as "Manager: name" in the list, which Equip's analytics use to group activity.
+</Note>
+
+## Related Resources
+
+- [Organization Settings](/organization-settings) - Update your brand name, legal entity name, timezone, and logo on the same Team page
+- [How Credits Work](/how-credits-work) - Understand the shared credit balance your whole team draws from
+- [Invoices](/invoices) - Where invoices go after purchase and how any member can download them
+- [Security and Privacy](/security-privacy) - Passwordless login and how Equip protects your account

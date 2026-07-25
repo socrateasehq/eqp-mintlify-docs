@@ -3,18 +3,71 @@ title: "Candidate Session Recording"
 description: "Record and replay the candidate's screen and interactions."
 ---
 
-<Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/candidate-session-recording-151ri06/). Sections below outline the planned content.
-</Note>
+**Session Recording** is one of Equip's [anti-cheating measures](/ai-proctoring). It captures the candidate's screen and interactions while they attempt a test, so you can later replay the attempt exactly as the candidate experienced it.
 
 ## What Gets Recorded
 
-Coming soon.
+When the **Record User Session** proctoring setting is on, Equip records the candidate's screen and actions throughout the test. Playback shows the session from the candidate's point of view.
+
+| Captured | Examples |
+|---|---|
+| **Screen activity** | Every screen the candidate saw during the test |
+| **Mouse activity** | Cursor movements and clicks |
+| **Keyboard activity** | What the candidate typed |
+| **Equip notifications** | In-test prompts and warnings the candidate received |
+
+<Note>
+Candidates see exactly which proctoring measures are active before they start, and they consent to the proctoring report, including the session recording, being shared with you.
+</Note>
+
+## Turn On Session Recording
+
+Session Recording is controlled per test through the **Record User Session** toggle in [Proctoring Settings](/proctoring-settings).
+
+<Steps>
+  <Step title="Open the Test Order tab">
+    In your assessment's settings, go to the **Test Order** tab.
+  </Step>
+  <Step title="Edit the test's settings">
+    Click **Edit Settings** on the test you want to change.
+  </Step>
+  <Step title="Toggle Record User Session">
+    Turn the **Record User Session** option on or off, then click **Save Settings**.
+  </Step>
+  <Step title="Update the assessment">
+    Click **Update** to apply your changes.
+  </Step>
+</Steps>
+
+<Note>
+Session Recording is on by default for most test types. It is off by default for Excel tests and for video-based test types, where the candidate is already on camera. Proctoring defaults on tests built from Equip's content cannot be modified; tests with your own custom content are fully configurable.
+</Note>
 
 ## Playback
 
-Coming soon.
+To watch a recording, click a candidate's score on the Results page to open their report, then open the **Session Recording** tab and press **Play**.
+
+<!-- screenshot: candidate report with the Session Recording tab open and the playback player visible -->
+
+The player includes controls to speed up playback and to skip sections where there is no activity, so reviewing a long attempt takes only a few minutes.
+
+<Tip>
+Use Session Recording together with the [Trust Score](/trust-score). If a candidate's score looks suspicious, watch their recording to see exactly what they did during the test before making a decision.
+</Tip>
+
+Playback is also the fastest way to verify a candidate's report of a technical issue, such as a question that did not load. If you need Equip's help, email hello@equip.co with the Session Recording URL and the time range where the issue appears, for example "1:05 to 1:20".
 
 ## Privacy Masking
 
-Coming soon.
+Session recordings mask question content in playback. You still see the candidate's full activity: their navigation, clicks, typing, and any notifications they received.
+
+<Note>
+This is consistent with how Equip protects its question bank elsewhere: recruiters never see the actual questions from Equip's quiz library, only representative samples. See [Why can I not see Quiz questions?](/cannot-see-quiz-questions) for the full explanation.
+</Note>
+
+## Related Resources
+
+- [AI Proctoring](/ai-proctoring) - Overview of all the anti-cheating measures that run alongside Session Recording
+- [Proctoring Settings](/proctoring-settings) - Every proctoring toggle, including Record User Session, and their defaults
+- [Trust Score](/trust-score) - How to interpret the score that tells you when a recording is worth reviewing
+- [Candidate Issues](/candidate-issues) - Using recordings to troubleshoot problems candidates report mid-test

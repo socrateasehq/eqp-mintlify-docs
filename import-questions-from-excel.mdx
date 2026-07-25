@@ -1,24 +1,108 @@
 ---
 title: "Import Questions Using Excel"
-description: "Bulk-import quiz questions from an Excel template."
+description: "Bulk-import quiz questions from an Excel template into a custom test on Equip."
 ---
 
-<Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/import-questions-using-excel-1v2d78t/). Sections below outline the planned content.
-</Note>
+When you are creating a **Custom Quiz** on Equip, you do not have to type questions in one at a time. You can fill an Excel file with all your questions and import them in a single upload. Imported questions are **appended** to the quiz, so you can import into a brand-new quiz or add to one that already has questions.
+
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/TIgl5Yv8jWw?rel=0"
+  title="Import Questions from Excel"
+  frameborder="0"
+  allowfullscreen
+  style={{width: "100%", maxWidth: "560px", borderRadius: "0.75rem"}}
+></iframe>
 
 ## Downloading the Template
 
-Coming soon.
+The import always starts from a quiz inside **Custom Tests**. From there, grab the template, fill it in, and upload it back.
+
+<Steps>
+  <Step title="Open Custom Tests">
+    From your **Assessments Dashboard**, select **Custom Tests** in the left sidebar. Click **New** to create a quiz, or open the existing quiz you want to add questions to.
+  </Step>
+  <Step title="Open the import dialog">
+    Click the **Import** button at the top right of the quiz screen.
+    <!-- screenshot: custom quiz editor with the Import button highlighted at top right -->
+  </Step>
+  <Step title="Download the template">
+    Click **Download Template**. Alternatively, open the [Google Sheets template](https://docs.google.com/spreadsheets/d/1_QgE_eX2Rb4mKcNtpnc8ojhi7wAQGRrys3Gte7hWcS0/edit?usp=sharing) and download it as an Excel file via **File > Download**.
+  </Step>
+  <Step title="Fill in your questions">
+    Add one question per row, following the column rules in the next section. Save the file when you are done.
+  </Step>
+  <Step title="Upload the file">
+    Back in your quiz, click the **Import from Excel** icon and select your file. Optionally enable **Autocalculate Negative Points** before uploading.
+  </Step>
+</Steps>
+
+<Warning>
+Do not remove any columns from the template. Your file must contain **only one sheet** and **no empty rows**, or the import will fail.
+</Warning>
 
 ## Formatting Questions
 
-Coming soon.
+Each row in the template is one question. Columns marked with an asterisk in the template cannot be left empty.
+
+| Column | Required | What to Enter |
+|---|---|---|
+| **Question Type** | Yes | `MCQ` (single correct answer) or `MCA` (multiple correct answers) |
+| **Question** | Yes | The text of the question |
+| **Opt1 to Opt5** | At least 2 | The answer choices. With three choices, fill Opt1 to Opt3 and leave the rest blank |
+| **CorrectAnsInd** | Yes | For an MCQ, the number of the correct option (e.g. `2`). For an MCA, comma-separated numbers with no spaces (e.g. `2,3`) |
+| **Markdown** | No | Enter `1` to render the question and options as Markdown |
+| **Points** | No | Points awarded for a correct answer |
+| **Time** | No | Time limit for the question, in seconds |
+| **Image** | No | A direct image URL ending in `.jpg`, `.png`, etc. |
+| **Tags** | No | One or more tags, separated by commas |
+
+<Note>
+The Excel import supports MCQ and MCA questions. Your quiz itself is fully editable after the import, so you can add other [question types](/custom-quiz-question-types), reassign points, or tweak any imported question afterwards.
+</Note>
+
+### Autocalculate Negative Points
+
+If you are uploading many questions and want negative marking, enable **Autocalculate Negative Points** during the import. Every MCQ is then assigned negative points automatically:
+
+```
+Negative Points = Points Assigned / Number of Options
+```
+
+For example, an MCQ worth 2 points with 4 options gets 0.5 negative points. MCAs are never auto-assigned negative points.
 
 ## Markdown and LaTeX Support
 
-Coming soon.
+Use the **Markdown** column to control formatting: enter `1` in that column and the question text and options render as Markdown. Leave it blank for plain text.
+
+For mathematical equations, write them in **LaTeX** inside your Excel file, then enable LaTeX in the quiz's **Advanced Settings** so they render correctly for candidates.
+
+<!-- screenshot: quiz Advanced Settings panel with the LaTeX toggle enabled -->
+
+<Tip>
+Combine the Markdown column with the **Image** column to build rich questions: formatted text, code snippets, and a supporting image, all from a single spreadsheet row.
+</Tip>
 
 ## Troubleshooting Imports
 
-Coming soon.
+Most failed or messy imports come down to a formatting issue in the file. Check these first:
+
+| Symptom | Likely Cause | Fix |
+|---|---|---|
+| Upload rejected | Columns were removed, the file has multiple sheets, or there are empty rows | Restore the original template columns, keep a single sheet, and delete blank rows |
+| Wrong answers marked correct | **CorrectAnsInd** formatted incorrectly | Use a single number for MCQs; for MCAs, separate numbers with a comma and no space (`2,3`) |
+| A question has too few choices | Fewer than two options filled in | Every question needs at least **Opt1** and **Opt2** |
+| Images not showing | The Image URL is not a direct link | Use a URL ending in `.jpg`, `.png`, etc. Google Drive links and links to pages containing an image do not work |
+| Equations show as raw text | LaTeX not enabled on the quiz | Turn on LaTeX in the quiz's **Advanced Settings** |
+
+<Note>
+Duplicate uploads create duplicate questions, because imported questions are appended rather than merged. If you import the same file twice, remove the extra questions in the quiz editor.
+</Note>
+
+## Related Resources
+
+- [Custom Tests](/custom-tests) - How to create custom tests and add them to assessments
+- [Custom Quiz Question Types](/custom-quiz-question-types) - All 15 question types you can add after importing
+- [Negative Marking](/negative-marking) - How negative points work across Equip and custom content
+- [Question Bank Quiz](/question-bank-quiz) - Draw randomized questions from large pools of your own questions

@@ -3,18 +3,78 @@ title: "What is the Job Fit Score?"
 description: "How every applicant gets a 0-100 fit score, and how to tune the ranking."
 ---
 
-<Note>
-This is a new article for the Equip Help Center. Sections below outline the planned content.
-</Note>
+<Tip>
+Every applicant to a job opening automatically gets a **Job Fit Score** from 0 to 100, along with a one-line AI explanation of why they scored that way. You can tune the score by choosing up to 3 ranking criteria, and re-rank existing candidates whenever you change them.
+</Tip>
+
+The Job Fit Score is part of Equip's free ATS. It turns a pile of resumes into a ranked list, so you review the most promising applicants first instead of reading applications in the order they arrived.
 
 ## How Scoring Works
 
-Coming soon.
+When a candidate applies, Equip's AI reads their parsed application (skills, work experience, education, and more) against your job description and produces a **fit score** between 0 and 100, shown with one decimal place. Each score comes with a short **AI explanation** summarizing the reasoning.
+
+The score appears next to every candidate in the applications table and on **Kanban** cards, and you can sort the table by **Fit Score** to see your strongest applicants at the top.
+
+<!-- screenshot: applications table sorted by Fit Score, with the score and AI explanation visible -->
+
+Scoring is **relative, not absolute**. Instead of grading each resume in isolation, the AI compares every new applicant against benchmark candidates from the same job's applicant pool. The very first applicants are evaluated individually; as the pool grows, new candidates are placed against those benchmarks, and Equip periodically recalibrates so rankings stay consistent even at high application volumes.
+
+<Note>
+A score of 75 means the candidate ranks well **within this job's applicant pool**. Scores are not comparable across different job openings, and the same resume can score differently for different roles.
+</Note>
+
+If a candidate does not have a score yet, for example one added through [bulk CV import](/bulk-cv-import), their row shows a **Calculate** button so you can score them on demand.
 
 ## Ranking Criteria
 
-Coming soon.
+By default, the AI uses its own judgment about what makes a candidate a good fit for your job description. To steer it, select up to **3 ranking criteria** from these six options:
+
+| Criterion | What the AI weighs | Requires this application form field |
+|---|---|---|
+| **Skills** | How relevant the candidate's skills are to the job description | Skills |
+| **Experience** | Higher weightage for more years of experience | Work Experience |
+| **Education** | Degrees and institutions | Educational Background |
+| **Previous Companies** | Pedigree of employment history | Work Experience |
+| **Seniority** | More managerial positions get higher weightage | Always available |
+| **Industry** | Relevance of the candidate's industry experience to the role | Industries |
+
+Drag your selected criteria to prioritize them: the criterion at the top carries the most weight. A criterion is only available if your [application form](/application-form) collects the field it depends on, so enable the relevant field first if an option is missing.
+
+<!-- screenshot: ranking criteria picker with three criteria selected and drag handles visible -->
+
+You can also add **additional criteria** as free text, up to 200 characters. Use this for role-specific signals the six standard criteria do not cover, such as "Prefer candidates with AWS experience".
+
+<Tip>
+If you select no criteria at all, scoring still works: the AI simply applies its default judgment. Add criteria only when you want to emphasize something specific.
+</Tip>
 
 ## Re-Ranking Candidates
 
-Coming soon.
+Changing your ranking criteria affects **future applications only**. Candidates who already applied keep the scores they were given under the old criteria until you re-rank them.
+
+<Steps>
+  <Step title="Update your ranking criteria">
+    Adjust the selected criteria, their priority order, or the additional free-text criteria for the job opening.
+  </Step>
+  <Step title="Re-rank existing candidates">
+    Run the re-rank action to re-score the job's active candidates against the updated criteria.
+  </Step>
+  <Step title="Review the new order">
+    Sort the applications table by **Fit Score** again. Each candidate's AI explanation updates to reflect the new criteria.
+  </Step>
+</Steps>
+
+<Warning>
+Re-ranking costs **0.5 credits per candidate** re-scored. Initial scoring of new applicants is free; only the re-rank action consumes credits.
+</Warning>
+
+<Note>
+Moving a candidate to a different job post does not trigger re-scoring: the application keeps its existing fit score. See [Changing Stages](/changing-stages) for how moves between jobs work.
+</Note>
+
+## Related Resources
+
+- [CV Parsing](/cv-parsing) - How Equip extracts the structured data the fit score is built on
+- [Application Form](/application-form) - Enable the fields your ranking criteria depend on
+- [Candidate Pipeline](/candidate-pipeline) - Sort, filter, and act on candidates by fit score
+- [How Credits Work](/how-credits-work) - What re-ranking and other actions cost

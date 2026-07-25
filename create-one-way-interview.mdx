@@ -3,18 +3,91 @@ title: "Creating a One-Way AI Interview"
 description: "Fixed questions, recorded answers, built from reusable templates."
 ---
 
-<Note>
-This is a new article for the Equip Help Center. Sections below outline the planned content.
-</Note>
+A **One-Way AI Interview** asks every candidate the same fixed set of questions. Candidates answer with video, audio, or text at a time that suits them, and Equip's AI grades each response. Each candidate submission costs **1 credit**.
 
 ## Building from Templates
 
-Coming soon.
+One-way interviews are built from **reusable templates**. A template holds your questions, answer formats, and grading rules, so you can attach the same question set to multiple job openings without rebuilding it.
+
+<Note>
+You need at least one one-way template before you can create an interview. If your team has none, Equip redirects you to the templates page with the message "You must create an AI Interview template before creating an AI Interview."
+</Note>
+
+<Steps>
+  <Step title="Open the AI Interviews dashboard">
+    In your Equip dashboard, go to **AI Interviews** and click **Add AI Interview**. You are offered two choices: **Conversational Interview** and **One-Way Interview**. Pick **One-Way Interview**.
+    <!-- screenshot: AI Interviews dashboard with the Add AI Interview button and the two interview type choices -->
+  </Step>
+  <Step title="Select a template">
+    On the **Create AI Interview** page, choose one of your one-way templates from the **Select Template** dropdown.
+  </Step>
+  <Step title="Attach a job opening">
+    Under **Job Opening**, either pick **Use existing job opening** and select it from the dropdown, or choose **Create new job opening** and enter a **Job Opening Title** (for example, "Senior Software Engineer").
+  </Step>
+  <Step title="Create the interview">
+    Click **Create Interview**. Equip creates the interview and takes you straight to its Settings page, where you can configure instructions, timing, and proctoring before inviting candidates.
+  </Step>
+</Steps>
+
+<Tip>
+Templates can be **cloned**, so a fast way to spin up a variant for a new role is to clone an existing template and edit only the questions that differ. A template that is linked to a live interview cannot be deleted.
+</Tip>
 
 ## Question Setup
 
-Coming soon.
+Questions live in the template editor. Give the template a title (up to 50 characters), then add questions with **Add Question**. Each interview supports up to **20 questions**, needs at least 1, and questions can be reordered with the move up and down controls. You can also **import questions from Excel** in bulk.
+
+<!-- screenshot: one-way template editor showing a question with answer format, points, and evaluation prompt fields -->
+
+For each question, choose an **Answer Format**: Text, Audio, or Video (Text is the default). The format determines which response controls apply:
+
+| Setting | Applies to | Range | Default |
+|---|---|---|---|
+| **Points** | All formats | Per question | 10 |
+| **Min / Max Words** | Text | 0 to 1,000 words | 50 / 250 |
+| **Min / Max Seconds** | Audio, Video | 5 to 180 seconds | 30 / 180 |
+| **Max Retakes** | Audio, Video | Up to 5 | 5 |
+
+Beyond the basics, each question also offers:
+
+- **Evaluation Prompt**: optional factors the AI must weigh when grading the answer, up to 100 words. Leave it blank to use the AI's default judgment.
+- **Restrict media playback count**: limits how many times candidates can replay the question's media (default 5).
+- **Auto-start recording**: begins recording automatically, with an optional start delay in seconds.
+- **Response languages**: the languages candidates may answer in. English is the default.
+
+<Warning>
+You cannot add more than 20 questions to an AI Interview, and the last remaining question cannot be deleted. Plan your question list before building it out.
+</Warning>
+
+## Configure Interview Settings
+
+After creation, the interview's stage settings page controls what candidates see and when they can start:
+
+| Setting | What it does |
+|---|---|
+| **Job Title** | The role title shown for this interview (up to 100 characters). |
+| **Linked Template** | The one-way template attached to this stage. Required; the interview cannot run without one. |
+| **Additional Instructions** | Notes shown to candidates before they start (up to 1,000 characters). |
+| **Timer Settings** | Optional **Cannot Start Before** and **Cannot Start After** date and time limits. |
+| **Proctoring Settings** | The same anti-cheating options as assessments, such as face detection and tab-switch detection. |
+
+See [Interview Settings](/interview-settings) for the full breakdown of every option, including all proctoring toggles.
 
 ## Candidate Responses
 
-Coming soon.
+Candidates see **all questions at once** and can answer them in any order, but the interview happens in a **single session**. They respond in whichever format each question requires: typed text, recorded audio, or recorded video.
+
+Because the questions are fixed and grading is automatic, one-way interviews scale well for **high-volume screening**, typically when you have 30 or more candidates to evaluate for a role.
+
+Once a candidate submits, the AI grades every answer against the question's points and your evaluation prompt, and the results appear in the candidate's report with per-question answers and AI grades.
+
+<Note>
+Credits are deducted per candidate submission. If an invited candidate never starts the interview, you can **reclaim the credits**.
+</Note>
+
+## Related Resources
+
+- [One-Way vs Conversational Interviews](/one-way-vs-conversational) - Choose the right interview format for your role
+- [Interview Settings](/interview-settings) - Every setting available on an AI interview, including proctoring
+- [Interview Reports](/interview-reports) - How to read AI-graded results after candidates submit
+- [Email Invitations](/email-invitations) - Invite candidates to take the interview

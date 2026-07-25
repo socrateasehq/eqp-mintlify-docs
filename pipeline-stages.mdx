@@ -3,22 +3,84 @@ title: "Pipeline Stages"
 description: "The full reference: all stage types and their configuration."
 ---
 
-<Note>
-This is a new article for the Equip Help Center. Sections below outline the planned content.
-</Note>
+Every job opening in Equip has its own **candidate pipeline**, built from stages you choose and order. You set up the pipeline in step 3 of the job creation wizard, labelled **Candidate Pipeline**, and you can edit it later from the same tab in the job's Settings.
+
+<Tip>
+There are **11 stage types**. Applied always comes first, Offered and the terminal stages (Hired, Rejected, Withdrawn) are managed by Equip, and the rest are yours to add, rename, and reorder by dragging.
+</Tip>
 
 ## The 11 Stage Types
 
-Coming soon.
+<!-- screenshot: pipeline builder showing the add-stage cards with all stage types -->
+
+| Stage | Kind | What it is for |
+|---|---|---|
+| **Applied** | System | Every candidate starts here when they apply. Always the first stage. |
+| **Phone Screening** | Configurable | Call candidates, then rank and review them. |
+| **Assessment** | Configurable | Invite candidates to a skill test: quiz, coding, communication, and more. |
+| **One-Way AI Interview** | Configurable | Fixed questions. Candidates record subjective responses via text, audio, or video. |
+| **Conversational AI Interview** | Configurable | An AI interviewer auto-generates questions and engages in back-and-forth. |
+| **Video Interview** | Configurable | Run live interviews on your own videoconferencing tool, then rank and review. |
+| **Custom** | Configurable | Any step that does not fit the above, with optional ranking. |
+| **Offered** | System | Supports sending an offer email and an offer letter. |
+| **Hired** | Terminal | The candidate accepted and joined. |
+| **Rejected** | Terminal | You turned the candidate down. |
+| **Withdrawn** | Terminal | The candidate dropped out of the process. |
+
+**Terminal stages** (Hired, Rejected, Withdrawn) mark the end of a candidate's journey and cannot be deleted. Candidates in terminal stages are excluded from the dashboard's default **Relevant** filter, so your working view stays focused on active candidates.
+
+<Note>
+When you add a **One-Way AI Interview** or **Conversational AI Interview** stage, Equip automatically creates the underlying interview for you. You can then review and adjust its content.
+</Note>
 
 ## Per-Stage Configuration
 
-Coming soon.
+Each stage carries two names. The **internal name** (up to 200 characters) is what your team sees in dashboards, so make it specific, for example "Tech Round 2 with Hiring Manager". The **candidate-facing stage name** (up to 20 characters) is the short label candidates may see, so keep it simple.
+
+Beyond naming, what you can attach to a stage depends on its type:
+
+| Capability | Available on |
+|---|---|
+| **Scorecard** | Phone Screening, Video Interview, Custom |
+| **Invitation email template** | Assessment, One-Way AI Interview, Conversational AI Interview, Video Interview, Custom |
+| **Rejection email template** | Every non-terminal stage except Offered |
+| **Assignee** | Every stage except Hired, Rejected, Withdrawn |
+
+An **assignee** is the team member responsible for candidates in that stage. Attached email templates pre-fill the invitation or rejection dialog when you move a candidate, but nothing is ever sent automatically; a recruiter always confirms each email.
+
+<Tip>
+Attach a **scorecard** to interview-style stages so every reviewer rates candidates on the same criteria. See [Scorecards](/scorecards) for how templates work.
+</Tip>
 
 ## Status vs Stage
 
-Coming soon.
+Alongside its pipeline stage, every application also carries a **candidate status**. The two are independent, and mixing them up is a common source of confusion.
+
+| | Pipeline stage | Candidate status |
+|---|---|---|
+| **Answers** | Where is the candidate in the process? | What is your current verdict? |
+| **Values** | The stages you configured for this job | Applied, Maybe, Shortlisted, Rejected, Withdrawn |
+| **Defined by** | You, per job opening | Fixed list, same for every job |
+
+For example, a candidate can sit in the Assessment stage with a status of **Shortlisted**, or in Phone Screening with a status of **Maybe** while you decide. Use stages to drive the process and statuses to record your read on each candidate.
 
 ## Archiving Stages
 
-Coming soon.
+You can delete a stage from the pipeline builder, but Equip protects your data. A stage is either **Active** or **Archived**, and deletion behaves accordingly.
+
+<Warning>
+If you delete a stage that still holds candidates, Equip archives it instead of deleting it. You will see the message "Stage has candidates and was archived instead of deleted".
+</Warning>
+
+Archived stages keep their candidates and history intact. When you need one back, restore it and Equip confirms with "Stage has been restored successfully".
+
+<Note>
+Terminal stages (Hired, Rejected, Withdrawn) cannot be deleted. Every pipeline keeps them so candidate journeys always have a clear end point.
+</Note>
+
+## Related Resources
+
+- [Candidate Pipeline](/candidate-pipeline) - Work the pipeline day to day in Table and Kanban views
+- [Changing Stages](/changing-stages) - What happens when you move candidates between stages
+- [Scorecards](/scorecards) - Build rating templates for screening and interview stages
+- [Email Templates](/email-templates) - Set up the invitation and rejection emails stages use

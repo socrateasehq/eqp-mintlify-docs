@@ -1,16 +1,68 @@
 ---
 title: "Using Documents in Custom Tests"
-description: "Attach reference documents for candidates to use during a test."
+description: "Attach a reference PDF to a custom quiz and ask multiple questions based on it."
 ---
 
-<Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/using-document-in-custom-tests-4z1kzz/). Sections below outline the planned content.
-</Note>
+The **Document** question type lets you upload a single reference PDF and ask several questions based on it. You upload the document once, in a parent question, and candidates refer to the same document while answering every sub-question.
+
+This is ideal for case studies: add instructions to read the document, then follow up with MCQ, MCA, Short Text, or other question types that test how well the candidate understood it.
 
 ## Attaching Documents
 
-Coming soon.
+You add a Document question while building a [Custom Test](/custom-tests). The PDF lives inside the parent question, and the sub-questions sit underneath it.
+
+<Steps>
+  <Step title="Create or open a custom quiz">
+    From the Assessments Dashboard, open **Custom Tests** and create a new quiz, or open an existing one.
+  </Step>
+  <Step title="Select the Document question type">
+    Choose **Document** from the question type drop-down menu.
+  </Step>
+  <Step title="Add instructions (optional)">
+    Enter any instructions for candidates in the **Description Text** field, for example "Read the case study below before answering."
+  </Step>
+  <Step title="Upload the PDF">
+    Attach the reference document to the parent question.
+  </Step>
+  <Step title="Add sub-questions">
+    Create the questions that reference the document, and set **points** for each sub-question if required.
+  </Step>
+</Steps>
+
+<!-- screenshot: custom quiz builder with the Document question type selected and a PDF uploaded -->
+
+<Note>
+Timers work differently here: a **time limit** can be set only on the parent Document question, not on individual sub-questions. Points, however, are set per sub-question.
+</Note>
+
+### Document vs Comprehension
+
+Document is closely related to the **Comprehension** question type. Both nest sub-questions under shared reference material; the difference is the format of that material.
+
+| Question type | Reference material | Best for |
+|---|---|---|
+| **Comprehension** | Long text or images entered directly in the question | Reading passages, short briefs |
+| **Document** | An uploaded PDF file | Case studies, reports, multi-page material |
+
+<Tip>
+If your reference material already exists as a PDF, use Document and upload it as-is. There is no need to copy the content into a text field.
+</Tip>
 
 ## How Candidates See Them
 
-Coming soon.
+Candidates see the PDF at the top, with all sub-questions displayed at once underneath it. They can scroll through the document and answer the sub-questions in any order.
+
+Because everything is on one screen, candidates can move back and forth between the document and the questions freely until the parent question's time limit (if you set one) runs out.
+
+<!-- screenshot: candidate view showing the PDF with sub-questions listed below it -->
+
+<Note>
+Each sub-question is graded by the rules of its own question type. MCQ and MCA sub-questions are auto-graded, while Short Text answers need [manual grading](/manual-grading).
+</Note>
+
+## Related Resources
+
+- [Custom Tests](/custom-tests) - How to create custom tests and add them to assessments
+- [Custom Quiz Question Types](/custom-quiz-question-types) - All question types available in custom quizzes, including Comprehension
+- [Time Limits in Custom Quizzes](/custom-quiz-time-limits) - How timers work across quiz display modes
+- [Manual Grading](/manual-grading) - Grading sub-questions that are not auto-evaluated

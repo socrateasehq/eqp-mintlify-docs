@@ -1,20 +1,108 @@
 ---
 title: "How to Manually Grade Tests"
-description: "Review and score video responses and CSS challenges."
+description: "Review and score video responses, CSS challenges, and open-ended quiz answers."
 ---
 
-<Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/how-to-manually-grade-tests-xdniq9/). Sections below outline the planned content.
-</Note>
+Most tests on Equip are graded automatically the moment a candidate submits. A few test and question types need a human (or a human confirming the AI), and this article shows you how to grade them from the assessment results page.
 
 ## Which Tests Need Manual Grading
 
-Coming soon.
+Equip auto-grades everything it can evaluate objectively. Manual grading applies only where judgment is required, such as watching a video answer or comparing a design.
+
+| Grading | Test types |
+|---|---|
+| **Auto-graded** | Quizzes, Programming, SQL, English Communication (CEFR), Excel, Attention to Detail |
+| **Manually graded** | Video Response (Video Interview), CSS Challenge |
+| **Unscored** | Psychometric tests carry no points, so there is nothing to grade |
+
+Within custom quizzes, the split works the same way at the question level. **MCQ**, **MCA**, **Categorize**, **Transcription**, and **Autograded Text** questions are scored automatically, while **Short Text**, **Single-line Input**, and **Voice Input** answers wait for you to award points.
+
+<Note>
+Until every test in a submission is graded, the test shows an **ungraded** label and the candidate's **Overall Score** also stays ungraded. Use the **Show Ungraded** filter on the results dashboard to find submissions that still need your attention.
+</Note>
+
+<Tip>
+Answers to **AI-graded questions** (text, audio, or video) are evaluated by Equip's AI using your evaluation prompts, so they do not pile up in a grading queue. You can still override any AI-awarded score manually.
+</Tip>
 
 ## Grading a Submission
 
-Coming soon.
+All grading happens inside the assessment results. Open the assessment from your **Recruiter Dashboard**, then click a candidate's score for the test you want to grade.
+
+### Video Response
+
+<Steps>
+  <Step title="Open the assessment results">
+    Click the assessment title on your Recruiter Dashboard.
+  </Step>
+  <Step title="Open the test">
+    Click the score corresponding to the Video Interview test. Ungraded questions are highlighted with a yellow outline and marked **Not Yet Graded**.
+  </Step>
+  <Step title="Watch and score">
+    Play the candidate's video, then click the **pencil icon** in the top right corner to award points.
+  </Step>
+  <Step title="Repeat for every question">
+    Continue until no questions remain ungraded. The test score updates as you go.
+  </Step>
+</Steps>
+
+<!-- screenshot: video response question with yellow "Not Yet Graded" outline and pencil icon -->
+
+<Tip>
+Use the **Filters** dropdown to jump straight to what matters: **Not Yet Graded**, **Correctly Answered**, **Wrongly Answered**, or **Unattempted**.
+</Tip>
+
+### CSS Challenge
+
+<Steps>
+  <Step title="Open the assessment results">
+    Click the assessment title on your Recruiter Dashboard.
+  </Step>
+  <Step title="Open the test">
+    Click the score corresponding to the CSS test.
+  </Step>
+  <Step title="Compare the designs">
+    Match the **Target Design** on the right against the candidate's **Code Preview** on the left. Use the mobile, tablet, and desktop icons to check that the design is responsive at each breakpoint.
+  </Step>
+  <Step title="Inspect the code">
+    Click **Submitted Code** to read the CSS the candidate wrote.
+  </Step>
+  <Step title="Award points">
+    Click the **pencil icon** in the top right corner to award points.
+  </Step>
+</Steps>
+
+<!-- screenshot: CSS grading view with Code Preview on the left and Target Design on the right -->
+
+### Open-Ended Quiz Questions
+
+Short Text, Single-line Input, and Voice Input answers in custom quizzes follow the same flow.
+
+<Steps>
+  <Step title="Open the ungraded test">
+    From the assessment results, click the score of the test marked ungraded.
+  </Step>
+  <Step title="Find the pending questions">
+    Ungraded questions are highlighted with a yellow outline and marked **Not Yet Graded**.
+  </Step>
+  <Step title="Score each answer">
+    Read or listen to the response, click the **pencil icon**, and award points. Repeat until all questions are graded.
+  </Step>
+</Steps>
 
 ## Overriding Scores
 
-Coming soon.
+Grading is never final on Equip. The **pencil icon** stays available on every question, so you can revise points at any time, even after a test has been fully graded.
+
+When you change a question's points, the test score and the candidate's **Overall Score** recompute automatically. This also applies to AI-graded responses: if you disagree with the AI's evaluation, edit the score and your value wins.
+
+<Warning>
+Score changes affect how candidates rank against each other. If you regrade one candidate's answer, review whether the same standard should apply to other submissions so comparisons stay fair.
+</Warning>
+
+## Related Resources
+
+- [How Tests Are Graded](/grading-tests) - Which test types are auto-graded and how
+- [Test Scores and Overall Score](/test-scores-and-overall-score) - How weightages turn test scores into an overall score
+- [Video Response Questions](/video-response-questions) - Create the questions you will grade here
+- [AI-Graded Questions](/ai-graded-questions) - Let AI evaluate text, audio, and video answers

@@ -3,18 +3,80 @@ title: "How Invitation Links Work"
 description: "Unique links, expiry, and what candidates see when a link is invalid."
 ---
 
-<Note>
-This article is being migrated from the [existing helpdesk article](https://help.equip.co/en/article/how-assessment-urls-in-email-invitations-work-32pz3f/). Sections below outline the planned content.
-</Note>
+<Tip>
+Every email invitation carries a **unique, one-time assessment link** tied to the invited email address. Only someone with access to that inbox can use it, links never expire unless you set an expiry, and re-clicking a link safely resumes an unfinished attempt.
+</Tip>
 
 ## Unique Links per Candidate
 
-Coming soon.
+When you send [email invitations](/email-invitations), every recipient gets the same email body. The only difference between the emails is the **assessment link**: each candidate receives a unique URL that can be used by them alone.
+
+Here is what happens when a candidate clicks their link.
+
+<Steps>
+  <Step title="Candidate opens the link">
+    The link identifies which email address it was sent to. It works on any device and any supported browser.
+  </Step>
+  <Step title="Equip sends a verification code">
+    A one-time code goes to the **invited email address**, not to whoever opened the link. The candidate can also verify with a magic link in the same email, or use **Sign In with Google**.
+  </Step>
+  <Step title="Candidate verifies and starts">
+    After entering the code, the candidate is taken straight to the assessment. No password or account setup is needed.
+  </Step>
+</Steps>
+
+<Note>
+Because the verification code always goes to the original invitee's inbox, **forwarding a link does not transfer the invitation**. If Candidate 1 shares their link with Candidate 2, the code still lands in Candidate 1's inbox, so Candidate 2 cannot proceed.
+</Note>
+
+The verification code is 6 digits, and both the code and the magic link expire **30 minutes** after they are sent. The candidate can simply request a new one from the same page if theirs expires.
+
+### Switching devices
+
+The link and the email address are bound together, so Equip recognizes the same candidate even on a different device. Clicking the link again resumes the attempt with the remaining time intact: a candidate who left a test with 10 minutes remaining continues with 10 minutes on the new device.
+
+This also means a fresh invitation cannot grant a second attempt. If a candidate has an unfinished attempt, any new link you send them resumes that same attempt. See [Candidate Re-attempts](/candidate-reattempts) for how to allow a genuine retake.
 
 ## Link Expiry
 
-Coming soon.
+By default, invitation links **never expire**. You control expiry per batch of invitations with the **Link Expiry (days)** field on the **Send Invitations** tab.
+
+<!-- screenshot: Send Invitations tab with the Link Expiry (days) field highlighted -->
+
+| Link Expiry (days) value | Behavior |
+|---|---|
+| Empty (default) | Links never expire |
+| 1 to 365 | Links stop working that many days after sending |
+
+<Tip>
+Setting an expiry is a simple way to keep your pipeline moving: candidates see a real deadline, and stale invitations stop being usable on their own. If you instead need to control the exact start window, use the **Cannot Start Before** and **Cannot Start After** assessment settings.
+</Tip>
 
 ## Invalid and Already-Used Links
 
-Coming soon.
+A link can stop working for a few different reasons. In each case the candidate sees a specific explanatory page rather than a generic error, so they know what happened and what to do next.
+
+| Situation | What the candidate sees |
+|---|---|
+| Link expired | An error page explaining the link is no longer valid |
+| Invitation revoked or credit reclaimed | The link is invalidated and no longer opens the assessment |
+| Attempt deleted by the recruiter | An error page; the candidate needs a fresh invitation |
+| Assessment already completed | The completion screen, not the tests again |
+| Someone else opens the link | The verification code still goes to the invited email, so they cannot proceed |
+
+A few details worth knowing:
+
+- **Clicking a link multiple times is safe.** A candidate who has not started can open their link any number of times until it expires. A candidate mid-attempt resumes where the rules allow. A finished candidate just sees the completion screen.
+- **Revoking an invitation** is done from the **Track Invitations** tab after sending. [Reclaiming the credit](/reclaim-credits) also invalidates the candidate's link and deletes any test data tied to it.
+- **Re-inviting is safe too.** If a candidate says they never received or lost their link, check its [email status](/email-status) first, then re-invite if needed. The unused link's credit is reclaimable after 24 hours as long as the candidate never started.
+
+<Warning>
+Reclaiming a credit is destructive: it revokes the candidate's link and permanently deletes their test data, including any points earned. Only reclaim when you are sure the candidate should not, or will not, attempt the assessment.
+</Warning>
+
+## Related Resources
+
+- [Email Invitations](/email-invitations) - How to send invitations, upload recipients, and set link expiry
+- [Share URL vs Email Invitations](/share-url-vs-email) - When to use unique links versus a public assessment URL
+- [Candidate Re-attempts](/candidate-reattempts) - Why new links resume old attempts and how to allow retakes
+- [Email Status](/email-status) - Track whether invitations were delivered, opened, and clicked
