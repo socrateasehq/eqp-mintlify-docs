@@ -1,3 +1,20 @@
+/* Widen the article column. Mintlify caps #content-area at max-w-xl (36rem), which
+   wastes most of a laptop screen and makes tables wrap. container-type also lets
+   images size in cqi units relative to this column during the later media pass. */
+#content-area {
+  max-width: 60rem;
+  container-type: inline-size;
+}
+
+/* Reclaim the outer container's generous side padding on large screens
+   (defaults: lg:pl-16 = 4rem, lg:pr-10 = 2.5rem). */
+@media (min-width: 1024px) {
+  .lg\:ml-\[19rem\] {
+    padding-left: 3rem !important;
+    padding-right: 2rem !important;
+  }
+}
+
 /* Hide the empty bar pinned to the sidebar bottom. It hosts navbar links, which we
    do not use, so it renders as dead space. The :has() guard means it reappears
    automatically if navbar links are ever configured again. */
