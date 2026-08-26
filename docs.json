@@ -221,8 +221,7 @@
               "disable-camera-mic",
               "session-recording",
               "ai-usage-detection",
-              "trust-score",
-              "id-verification"
+              "trust-score"
             ]
           },
           {
@@ -245,7 +244,6 @@
               "how-credits-work",
               "credit-deduction-policy",
               "reclaim-credits",
-              "first-purchase-discount",
               "tds-for-purchases",
               "invoices",
               "change-billing-information",
@@ -263,7 +261,6 @@
             "group": "Integrations & API",
             "pages": [
               "api-integrations",
-              "lever-integration",
               "webhooks"
             ]
           },
@@ -406,7 +403,7 @@
     },
     {
       "source": "/en/article/first-purchase-discount-8o5k3s",
-      "destination": "/first-purchase-discount"
+      "destination": "/how-credits-work"
     },
     {
       "source": "/en/article/getting-started-on-equip-k70o7k",

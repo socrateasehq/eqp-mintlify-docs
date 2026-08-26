@@ -18,7 +18,7 @@ Here is what happens when a candidate clicks their link.
     The link identifies which email address it was sent to. It works on any device and any supported browser.
   </Step>
   <Step title="Equip sends a verification code">
-    A one-time code goes to the **invited email address**, not to whoever opened the link. The candidate can also verify with a magic link in the same email, or use **Sign In with Google**. See [Candidate Login Methods](/candidate-login-methods) for the full sign-in flow.
+    A one-time code goes to the **invited email address**, not to whoever opened the link. See [Candidate Login Methods](/candidate-login-methods) for the full sign-in flow.
   </Step>
   <Step title="Candidate verifies and starts">
     After entering the code, the candidate is taken straight to the assessment. No password or account setup is needed.
@@ -31,7 +31,7 @@ Here is what happens when a candidate clicks their link.
 Because the verification code always goes to the original invitee's inbox, **forwarding a link does not transfer the invitation**. If Candidate 1 shares their link with Candidate 2, the code still lands in Candidate 1's inbox, so Candidate 2 cannot proceed.
 </Note>
 
-The verification code is 6 digits, and both the code and the magic link expire **30 minutes** after they are sent. If theirs expires, the candidate can simply request a new one from the same page.
+The verification code is 6 digits and expires **30 minutes** after it is sent. If theirs expires, the candidate can simply request a new one from the same page.
 
 ### Switching devices
 
@@ -61,7 +61,7 @@ A link can stop working for a few different reasons. In each case the candidate 
 | Situation | What the candidate sees |
 |---|---|
 | Link expired | An error page explaining the link is no longer valid |
-| Invitation revoked or credit reclaimed | The link is invalidated and no longer opens the assessment |
+| Credit reclaimed | The link is invalidated and no longer opens the assessment |
 | Attempt deleted by the recruiter | An error page; the candidate needs a fresh invitation |
 | Assessment already completed | The completion screen, not the tests again |
 | Someone else opens the link | The verification code still goes to the invited email, so they cannot proceed |
@@ -69,7 +69,7 @@ A link can stop working for a few different reasons. In each case the candidate 
 A few details worth knowing:
 
 - **Clicking a link multiple times is safe.** A candidate who has not started can open their link any number of times until it expires. A candidate mid-attempt resumes where the rules allow. A finished candidate just sees the completion screen.
-- **Revoking an invitation** is done from the **Track Invitations** tab after sending. [Reclaiming the credit](/reclaim-credits) also invalidates the candidate's link and deletes any test data tied to it.
+- **Revoking an invitation** only happens as a side effect of [reclaiming the credit](/reclaim-credits). Reclaiming invalidates the candidate's link and deletes any test data tied to it.
 - **Re-inviting is safe too.** If a candidate says they never received or lost their link, check its [email status](/email-status) first, then re-invite if needed. The unused link's credit is reclaimable after 24 hours as long as the candidate never started.
 
 <Warning>

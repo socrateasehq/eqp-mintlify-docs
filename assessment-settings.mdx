@@ -16,16 +16,14 @@ The Settings tab covers the assessment as a whole. The main options are:
 | Setting | What It Does |
 |---|---|
 | **Assessment Title** | The name candidates see. Maximum 100 characters. Required. |
-| **Login Providers** | Choose **Google**, **LinkedIn**, or both for candidate login. At least one must be enabled. |
+| **Cannot Start Before / Cannot Start After** | Restricts when candidates can begin the assessment. See [Start Window](#start-window). |
+| **Gather Additional Details** | Collects extra candidate fields beyond name, email, and photo. See [Candidate Details to Collect](#candidate-details-to-collect). |
+| **Email Notifications** | Choose which team emails are notified on assessment creation and first candidate submission. |
 | **Write results to Google Sheets** | Streams results to a spreadsheet in real time. Grant **hello@equip.co** Editor access to your sheet first. |
+| **On Assessment Completion, redirect candidate** | Sends candidates to a page of your choice after they complete the assessment, instead of the default completion screen. |
 | **Custom Instructions** | Rich-text instructions shown before the assessment. Adding your own replaces Equip's default instructions. |
-| **Redirect URL** | Sends candidates to a page of your choice after they complete the assessment. |
 
 Equip's default instructions already explain points, negative marking, duration, proctoring, and demo tests. They are enough for any candidate to proceed on their own, so customize them only if you genuinely need to: your text **replaces the defaults entirely**.
-
-<Tip>
-If you share a public assessment link rather than unique per-candidate links, enable **LinkedIn login only**. Creating a fake LinkedIn account is much harder than creating a fake Google account, which deters people from previewing your questions.
-</Tip>
 
 ## Start Window
 
@@ -48,9 +46,9 @@ The start window controls when candidates can **begin**, not when they must fini
 
 ## Candidate Details to Collect
 
-Equip automatically captures each candidate's **name, email address, and profile picture** when they log in with Google or LinkedIn. You do not need to configure anything for these.
+Equip automatically captures each candidate's **first name, last name, email address, and profile picture** during login. You do not need to configure anything for these.
 
-To collect more, use **Gather Additional Details** and select **Yes** for each field you want candidates to fill in manually:
+To collect more, set **Gather Additional Details** to **Yes**, then open **See Details** and choose which fields candidates should fill in manually:
 
 - Phone Number
 - LinkedIn URL

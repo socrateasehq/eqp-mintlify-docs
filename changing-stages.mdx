@@ -36,7 +36,7 @@ What happens next depends on the target stage:
 | **Assessment**, **One-Way AI Interview**, **Conversational AI Interview** | Invitation dialog with email preview and a credit notice |
 | **Video Interview**, **Custom** | Invitation dialog with email preview, no credits involved |
 
-Assessment and AI interview invitations consume **credits**. The dialog states the cost up front, for example "We'll deduct N credit(s) now." along with "Reclaimable if not attempted." As a baseline, an assessment or one-way AI interview costs 1 credit per candidate, and a conversational AI interview costs 2 credits (Quick) or 3 credits (Comprehensive).
+Assessment and AI interview invitations consume **credits**. The dialog states the cost up front, for example "We'll deduct N credit(s) now." along with "Reclaimable if not attempted." As a baseline, an assessment costs 1 credit per candidate, a one-way AI interview costs 1 or 2 credits depending on question count, and a conversational AI interview costs 2 credits (Quick) or 3 credits (Comprehensive).
 
 <Note>
 Assessments with more than 2 tests can carry an extra per-test deduction, for example "We'll deduct 0.5 credits per candidate when they start the third test." The invitation dialog always spells out the exact policy before you send.
@@ -84,12 +84,12 @@ Invitation and rejection dialogs render the email from your **email templates**,
 To change the wording, edit the template rather than the individual email. Templates support variables like the candidate's name, the job title, and the test link; see [Email Templates](/email-templates).
 
 <Warning>
-Candidates with an **unverified email** trigger a warning in the invite dialog and receive no stage-change emails until their address is verified. This applies to bulk-imported candidates in particular; you can copy a verification link from their profile to share with them.
+Candidates with an **unverified email** trigger a warning in the invite dialog and receive no stage-change emails until their email address is verified. This applies to bulk-imported candidates in particular; you can copy a verification link from their profile to share with them.
 </Warning>
 
 Every action is logged. The **Candidate Journey** tab records the stage change itself plus events like "sent/scheduled assessment invite", "sent/scheduled AI interview invite", and "sent/scheduled rejection email", so your team can always see who sent what and when.
 
-## Scheduling and Reply-To
+## Reply-To and Scheduling
 
 Before sending, the dialog gives you two controls over delivery.
 
@@ -103,7 +103,7 @@ Before sending, the dialog gives you two controls over delivery.
 | Hours | 1 to 168 |
 | Days | 1 to 7 |
 
-All three units cap out at the same point: emails can be scheduled at most **7 days** ahead.
+All three units cap out at the same point: emails can be scheduled up to **7 days** in advance.
 
 {/* screenshot: schedule send and reply-to options in the invitation dialog */}
 

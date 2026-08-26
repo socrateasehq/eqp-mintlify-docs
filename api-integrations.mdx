@@ -22,12 +22,7 @@ The API does not expose Equip's question bank. If your assessment uses Equip con
 
 ## Costs
 
-There is no recurring platform fee for the integration itself. Enabling it has two components:
-
-1. A one-time setup fee of **\$500**, which converts to 500 credits in your balance.
-2. A minimum monthly purchase of **500 credits**.
-
-These are normal Equip **credits**: they never expire, and you spend them on your regular usage exactly as described on the [Pricing Page](https://equip.co/pricing/). So the money you pay for the integration is consumed by the hiring you were already doing.
+API access is included with the **Premium** and **Elite** plans, no separate setup fee or minimum purchase required. Teams on **Standard** need to upgrade to Premium or above to use the API.
 
 <Note>
 Credits work the same way for API-driven invitations as for dashboard invitations. See [How Credits Work](/how-credits-work) for deduction and reclaim rules.
@@ -44,14 +39,11 @@ Every team has its own **API Key**, issued by the Equip team on request. There i
   <Step title="Trial Equip with free credits">
     Use your free signup credits to confirm the product works for your use case before committing to the integration.
   </Step>
-  <Step title="Purchase \$500 worth of credits">
-    This means \$500 actually paid, not necessarily 500 credits. For example, with a 25% [first purchase discount](/first-purchase-discount), 500 credits would cost you \$375, so you would need to buy 667 credits to reach \$500 paid.
+  <Step title="Subscribe to Premium or Elite">
+    API access requires at least a **Premium** plan. See [How Credits Work](/how-credits-work) for how to subscribe.
   </Step>
   <Step title="Request your API Key">
     Email hello@equip.co or use the in-product chat, and the Equip team issues your team's API Key.
-  </Step>
-  <Step title="Keep purchasing 500 credits per month">
-    Continue buying at least 500 credits each month to retain API access.
   </Step>
 </Steps>
 
@@ -66,12 +58,11 @@ A public [Postman collection](https://www.postman.com/solar-comet-241985-1/equip
 For a walkthrough of wiring the pieces together, follow this [integration guide](https://gist.github.com/siddharth-soc/255c00f83c35a9a40355189346c6fb19).
 
 <Tip>
-You do not always need the full API. If you only want results pushed to you when candidates finish, [webhooks](/webhooks) are simpler. If you use Lever, the native [Lever integration](/lever-integration) needs no code at all.
+You do not always need the full API. If you only want results pushed to you when candidates finish, [webhooks](/webhooks) are simpler.
 </Tip>
 
 ## Related Resources
 
 - [Webhooks](/webhooks) - Get completed assessment and interview results pushed to your endpoint
-- [Lever Integration](/lever-integration) - Trigger Equip assessments from Lever stages, no code required
 - [How Credits Work](/how-credits-work) - Purchasing, pricing, and how credits are deducted
 - [Write Results to Google Sheets](/write-results-to-google-sheets) - A no-code way to export results automatically
