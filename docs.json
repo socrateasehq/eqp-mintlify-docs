@@ -116,6 +116,7 @@
                   "question-bank-quiz",
                   "import-questions-from-excel",
                   "custom-programming-test",
+                  "custom-sql-test",
                   "randomize-coding-questions",
                   "custom-quiz-time-limits",
                   "documents-in-custom-tests",
