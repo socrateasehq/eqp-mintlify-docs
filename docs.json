@@ -403,10 +403,6 @@
       "destination": "/equip-vs-custom-content"
     },
     {
-      "source": "/en/article/first-purchase-discount-8o5k3s",
-      "destination": "/how-credits-work"
-    },
-    {
       "source": "/en/article/getting-started-on-equip-k70o7k",
       "destination": "/what-is-equip"
     },
@@ -547,10 +543,6 @@
       "destination": "/documents-in-custom-tests"
     },
     {
-      "source": "/en/article/using-equip-assessments-with-lever-integration-10h0ree",
-      "destination": "/lever-integration"
-    },
-    {
       "source": "/en/article/viewing-and-downloading-invoices-1f6r64i",
       "destination": "/invoices"
     },
@@ -609,6 +601,14 @@
     {
       "source": "/en",
       "destination": "/"
+    },
+    {
+      "source": "/en/article/proctoring-settings-for-tests-on-equip-1r09s6c",
+      "destination": "/proctoring-settings"
+    },
+    {
+      "source": "/en/article/unique-url-for-every-candidate-1suhjtv",
+      "destination": "/share-url-vs-email"
     }
   ],
   "fonts": {
