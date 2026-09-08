@@ -82,3 +82,21 @@ ul.sidebar-group a {
 #pagination {
   display: none !important;
 }
+
+/* ---- Frame background sizing ----
+   Mintlify's <Frame> wrapper always stretches to the full content-column
+   width, so a small cropped screenshot (a button, a menu) ends up with a
+   grey background many times wider than the image itself. Shrink the
+   frame to fit its image instead, capped so large screenshots still use
+   the full column. */
+.frame {
+  width: fit-content;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.frame img {
+  max-width: 100%;
+  height: auto;
+}
