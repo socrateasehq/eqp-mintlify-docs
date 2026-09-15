@@ -30,7 +30,7 @@ Equip offers 11 stage types:
 | **Withdrawn** | Terminal stage for candidates who drop out. |
 
 <Note>
-When you add a **One-Way AI Interview** or **Conversational AI Interview** stage, Equip automatically creates the interview for that stage. You can review and adjust it before inviting candidates.
+When you add an **Assessment**, **One-Way AI Interview**, or **Conversational AI Interview** stage, Equip automatically creates the underlying assessment or interview for that stage. You can review and adjust it before inviting candidates.
 </Note>
 
 The three terminal stages (**Hired**, **Rejected**, **Withdrawn**) cannot be deleted. Together with Applied and Offered, they are the fixed endpoints every pipeline is built around.
@@ -43,10 +43,10 @@ Each stage carries two names:
 
 | Name | Who sees it | Limit |
 |---|---|---|
-| **Candidate-facing stage name** | Candidates, in emails and updates about their application | Up to 20 characters |
-| **Internal name** | Your team, in dashboards and reports | Up to 200 characters |
+| **Candidate-facing stage name** | Shown in filters and stage-change dropdowns internally; candidates only see it in Video Interview and Custom invitation emails | Up to 40 characters |
+| **Internal name** | Your team, in dashboards and reports | Up to 30 characters |
 
-This lets you keep candidate-facing labels short and friendly (for example, "Interview") while your team sees something more specific (for example, "Round 2: System Design with Hiring Manager").
+Use the Stage Name for filters and stage-change menus (for example, "Interview 2") and the Internal Name as a short dashboard label (for example, "July Hiring"). Candidates see only the job title, except that Video Interview and Custom invitation emails can include the stage name.
 
 <Warning>
 If you delete a stage that already holds candidates, Equip archives it instead of deleting it. You will see the message "Stage has candidates and was archived instead of deleted". Archived stages can be restored at any time, so no candidate data is lost.
@@ -64,6 +64,8 @@ Each stage can carry its own automations: email templates, a scorecard, and an a
 | **Rejection email template** | All non-terminal stages except Offered |
 | **Scorecard** | Phone Screening, Video Interview, Custom |
 | **Assignee** | All stages except Hired, Rejected, and Withdrawn |
+
+These automations are visible only after the job opening is saved; you will not find them while still creating it.
 
 To configure a stage:
 

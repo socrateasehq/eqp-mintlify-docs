@@ -26,6 +26,10 @@ Email invitations are the most controlled way to share an assessment or AI inter
 
 You can send to a maximum of **100 recipients per send**. For larger batches, send in multiple rounds.
 
+<Note>
+If the assessment or interview is linked to a particular job opening, the **Invite** button is disabled here instead. Go to that job opening and change the candidate's stage; the invitation email goes out automatically when they move into the linked stage. See [Changing Stages](/changing-stages).
+</Note>
+
 <Tip>
 Equip flags common typos before you send, such as misspelled domains like `gamil.com` or invalid endings like `.comm`. Fixing these upfront avoids bounced emails and wasted credits.
 </Tip>
@@ -42,7 +46,7 @@ The **Send Invitations** tab includes these fields:
 |---|---|
 | **Sender** | Dropdown of your team members' emails. The chosen member's email becomes the reply-to address. |
 | **Link Expiry (days)** | How long invitation links stay valid, from 1 to 365 days. Leave it empty and links never expire. |
-| **Email Subject** | Defaults to "Invitation to Assessment" or "Invitation to AI Interview". Fully editable. |
+| **Email Subject** | Defaults to "Invitation to (assessment/AI interview name)". Fully editable. |
 | **Email Template** | Rich-text email body, saved per assessment so your edits persist for future sends. |
 
 {/* screenshot: Send Invitations tab showing the Sender, Link Expiry, Email Subject, and Email Template fields */}
@@ -50,10 +54,10 @@ The **Send Invitations** tab includes these fields:
 Every recipient gets the same email body; only the assessment link inside it is unique to them. You can write the email in **any language** your candidates prefer.
 
 <Warning>
-The email body must contain the assessment link, and you should not edit the link itself while customizing the text around it. If you delete it, Equip blocks sending with a **No Link Found** dialog and asks you to restore the link using the **Reset** button.
+The email body must contain the assessment link, and you should not edit the link itself while customizing the text around it. If you delete it, Equip blocks sending with a **No Link Found** dialog and asks you to restore the link using the **Reset to default** button under the email template. Your current edits to the body are lost.
 </Warning>
 
-Emails are always sent from **hello@equip.co**; this address cannot be changed. The sender name is the inviting recruiter's first and last name, and replies go to the recruiter's email. See [Custom Sender Email](/custom-sender-email) for details.
+Emails are always sent from **no-reply@equip.co**; this address cannot be changed. The sender name is the inviting recruiter's first and last name, and replies go to the recruiter's email. See [Custom Sender Email](/custom-sender-email) for details.
 
 <Note>
 When a candidate opens their unique link, a verification code is sent to the invited email address. Forwarding the link to someone else does not work, because the code still goes to the original invitee. See [Invitation Links](/invitation-links).

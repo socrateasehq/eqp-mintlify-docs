@@ -37,11 +37,16 @@ Templates can be **cloned**, so the fastest way to spin up a variant for a new r
 
 Questions live in the **template editor**. Give the template a title (up to 50 characters), then add questions with **Add Question**. Each interview supports up to **40 questions**, needs at least 1, and questions can be reordered with the move up and down controls.
 
+A one-way interview supports two question types:
+
+1. **AI-graded**: you set the question and the answer format (text, audio, or video), and Equip's AI evaluates the candidate's answer.
+2. **MCQ**: you set the question and the options, and the candidate selects the correct answer.
+
 If you already have questions written elsewhere, you can [import questions from Excel](/import-questions-from-excel) instead of typing them one by one. The editor also has **Preview** and **Settings** buttons so you can check the candidate view as you build.
 
 {/* screenshot: one-way template editor showing a question with answer format, points, and evaluation prompt fields */}
 
-For each question, choose an **Answer Format**: Text, Audio, or Video (Text is the default). The format determines which response controls apply:
+For **AI-graded** questions, choose an **Answer Format**: Text, Audio, or Video (Text is the default). The format determines which response controls apply:
 
 | Setting | Applies to | Range | Default |
 |---|---|---|---|
@@ -53,8 +58,6 @@ For each question, choose an **Answer Format**: Text, Audio, or Video (Text is t
 Beyond the basics, each question also offers:
 
 - **Evaluation Prompt**: optional factors the AI must weigh when grading the answer, up to 100 words. Leave it blank to use the AI's default judgment.
-- **Restrict media playback count**: limits how many times candidates can replay the question's media (default 5).
-- **Auto-start recording**: begins recording automatically, with an optional start delay in seconds.
 - **Response languages**: the languages candidates may answer in. English is the default.
 
 <Warning>
@@ -86,7 +89,7 @@ Because the questions are fixed and grading is automatic, one-way interviews sca
 Once a candidate submits, the AI grades every answer against the question's points and your evaluation prompt. The results appear in the candidate's report with per-question answers and AI grades.
 
 <Note>
-Credits are deducted per candidate submission. If an invited candidate never starts the interview, you can [reclaim the credits](/reclaim-credits).
+Credits are deducted per candidate. If an invited candidate never starts the interview, you can [reclaim the credits](/reclaim-credits).
 </Note>
 
 ## Related Resources

@@ -1,6 +1,6 @@
 ---
 title: "Interview Languages"
-description: "Conduct AI interviews in 15 languages and regional variants, from English and Hindi to Spanish and German."
+description: "Conduct conversational AI interviews in 15 languages, and one-way interviews in around 100 languages, from English and Hindi to Spanish and German."
 ---
 
 Equip's AI interviews are not limited to English. A **conversational interview** can run entirely in the language you choose: the AI interviewer speaks, listens, and asks follow-ups in that language. **One-way interviews** work differently: you control which languages candidates may use in their responses, question by question.
@@ -20,7 +20,7 @@ Where a language has regional variants, pick the one closest to your candidate p
 </Tip>
 
 <Note>
-The interview language is a recruiter setting. Candidates do not pick a language themselves in a conversational interview; the AI conducts the session in the language you chose.
+The interview language is a recruiter setting. Candidates do not pick a language themselves in an interview; the AI conducts the session in the language you chose.
 </Note>
 
 ## Choosing a Language
@@ -29,7 +29,7 @@ The interview language is a recruiter setting. Candidates do not pick a language
 
 <Steps>
   <Step title="Open the interview's settings">
-    Go to **AI Interviews** in your dashboard and click **Settings** on the conversational interview you want to configure.
+    Go to **AI Interviews** dashboard from the sidebar and click **Settings** on the conversational interview you want to configure.
   </Step>
   <Step title="Find the Interview Language dropdown">
     On the settings page, locate the **Interview Language** dropdown.
@@ -47,20 +47,63 @@ If no language is selected, the interview runs in **English (US)** by default.
 
 ### One-way interviews
 
-One-way interviews use pre-set questions with recorded answers, so there is no live AI voice to configure. Instead, each question in the **template editor** has its own **response languages** selector.
+One-way interviews use pre-set questions with recorded answers, so there is no live AI voice to configure. Instead, language works at two separate levels: the language your **questions** are written in, and the language candidates may **respond** in.
 
-Use the **Search languages** field on a question to add one or more languages candidates may answer in. The default response language is **English**.
+#### Question Language (Multilingual Questions)
 
-{/* screenshot: per-question response languages selector in the one-way template editor */}
+By default, a one-way template's questions are written in a single language. To offer the same question in multiple languages, enable **Multilingual Questions** on the template.
 
-### How the two settings compare
+<Steps>
+  <Step title="Open the template's settings">
+    Go to **AI Interviews** in the sidebar, open **One-Way Templates**, and click **Settings** on the template you want to configure.
+  </Step>
+  <Step title="Scroll to Alternative Languages">
+    Scroll down to the **Alternative Languages** section and turn on **Enable Multilingual Questions**.
+  </Step>
+  <Step title="Set the default and additional languages">
+    Choose a **Default Language**, then add one or more **Additional Languages**.
+  </Step>
+</Steps>
 
-| | Conversational | One-way |
-|---|---|---|
-| **What it controls** | The language the AI interviewer speaks and understands | The languages candidates may use in their answers |
-| **Where you set it** | Interview Language dropdown on the interview's settings page | Response languages selector on each question in the template editor |
-| **Scope** | One language for the entire interview | Per question, with multiple languages allowed |
-| **Default** | English (US) | English |
+{/* screenshot: Alternative Languages section with Enable Multilingual Questions toggle, Default Language, and Additional Languages fields */}
+
+<Warning>
+Enabling an additional language does not translate your questions automatically. You must write the question text in every language you enable, or candidates who pick that language see a blank or incomplete question.
+</Warning>
+
+#### Response Language
+
+Separate from the question's language, each question also has its own **Response Language** selector, offering around 100 languages, which controls the language candidates may answer in.
+
+<Steps>
+  <Step title="Open the AI Interviews section">
+    Go to **AI Interviews** in the sidebar.
+  </Step>
+  <Step title="Open One-Way Templates">
+    Open **One-Way Templates**.
+  </Step>
+  <Step title="Open the template itself">
+    Click the one-way interview template, not its Settings, to open the **template editor**.
+  </Step>
+  <Step title="Set the Response Language per question">
+    On each question, use the **Response Language** field (Max 3) to add one or more languages candidates may answer in. The default is **English**.
+  </Step>
+</Steps>
+
+{/* screenshot: per-question Response Language selector in the one-way template editor */}
+
+<Note>
+The candidate's transcription is always in whichever language they spoke, but the AI evaluates their answer based on the response language you selected for that question.
+</Note>
+
+### How the settings compare
+
+| | Conversational | One-way: Question Language | One-way: Response Language |
+|---|---|---|---|
+| **What it controls** | The language the AI interviewer speaks and understands | The language(s) your questions are written in | The language(s) candidates may use in their answers |
+| **Where you set it** | Interview Language dropdown on the interview's settings page | Alternative Languages section in the template's settings | Response Language selector on each question in the template editor |
+| **Scope** | One language for the entire interview | Per template, multiple languages allowed | Per question, up to 3 languages allowed |
+| **Default** | English (US) | English | English |
 
 <Warning>
 Set the language before inviting candidates, and keep your topics and questions written in that same language. A mismatch between the interview language and the language of your questions can confuse both candidates and the AI.

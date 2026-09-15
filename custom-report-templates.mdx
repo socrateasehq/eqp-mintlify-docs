@@ -4,7 +4,7 @@ description: "Define your own evaluation prompt, output schema, and report layou
 ---
 
 <Tip>
-**Custom report templates** replace the default conversational interview report with a holistic evaluation you design yourself. You write the instructions the AI follows, define the exact fields it must return, and build the HTML layout the report renders in.
+**Custom report templates** replace the default interview report with a holistic evaluation you design yourself. You write the instructions the AI follows, define the exact fields it must return, and build the HTML layout the report renders in. The same templates work for both **one-way** and **conversational** interviews.
 </Tip>
 
 <Note>
@@ -17,7 +17,7 @@ Templates live in their own library, separate from any single interview, so one 
 
 <Steps>
   <Step title="Open the templates page">
-    Go to **Templates** and open **AI Interview Reports**. The list shows each template's Name, Description, Status badge (**Active** or **Archived**), and Created date.
+    Go to **Templates**, under **Account** in the sidebar, and open **AI Interview Reports**. The list shows each template's Name, Description, Status badge (**Active** or **Archived**), and Created date.
   </Step>
   <Step title="Name the new template">
     Enter a **Template Name** (up to 100 characters, for example "Technical Interview Evaluation") and a short **Description** (up to 255 characters) so teammates know when to use it.
@@ -29,13 +29,13 @@ Templates live in their own library, separate from any single interview, so one 
 
 {/* screenshot: AI Interview Reports template list showing name, status, and created date */}
 
-Only **Active** templates can be attached to an interview. Archive a template to retire it from the dropdown without deleting it.
+Only **Active** templates can be attached to an interview. Archive a template to retire it from the dropdown without deleting it. Deleting a template that is currently in use archives it instead, retiring it from the dropdown rather than deleting it outright.
 
 ## Evaluation Prompts
 
 The **LLM Prompt** tab holds the instructions the AI follows when it evaluates candidate responses. When a template is attached to an interview, this prompt-driven evaluation runs instead of the default evaluator, so the prompt is where you set the bar.
 
-Write the prompt the way you would brief a human interviewer. State the competencies to assess, how to weigh them, and what separates a strong answer from a weak one.
+Write the prompt the way you would brief a human interviewer. State the competencies to assess, how to weigh them, and what separates a strong answer from a weak one. At the end of your prompt, point to `{{response_schema}}` so the AI has the schema as context when it writes its evaluation.
 
 <Tip>
 Be explicit about every field you expect the AI to fill in. If your schema has a `communication_score`, tell the prompt what a high or low communication score should mean.
@@ -57,7 +57,9 @@ Every field you define here becomes a variable you can place in the report layou
 }
 ```
 
-&lt;Note&gt; The schema is what makes reports comparable across candidates. Because every evaluation returns the same fields, you can scan a pipeline of reports and compare using the same criteria. &lt;/Note&gt;
+<Note>
+The schema is what makes reports comparable across candidates. Because every evaluation returns the same fields, you can scan a pipeline of reports and compare using the same criteria.
+</Note>
 
 ## Report Layout and Preview
 
@@ -77,7 +79,7 @@ Keep the field names in your Jinja layout identical to the field names in your R
 
 ## Attach a Template to an Interview
 
-Templates are attached per interview. On the conversational interview's settings page, pick a template from the **Report Template** dropdown in the Settings section. Only **Active** templates appear in the list.
+Templates are attached per interview. For conversational interviews, pick a template from the **Report Template** dropdown in the Settings section of the interview's settings page. For one-way interviews, the template is attached under the template's own settings instead. Only **Active** templates appear in the list.
 
 | | Default report | Custom template report |
 |---|---|---|
