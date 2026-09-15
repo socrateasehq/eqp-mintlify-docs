@@ -1,5 +1,6 @@
 # Scratch/reference folder (not part of docs)
 _scratch/
+scratch/
 
 # Python artifacts
 __pycache__/
