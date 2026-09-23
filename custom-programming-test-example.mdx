@@ -1,0 +1,140 @@
+---
+title: "Writing a Boilerplate and Test Cases"
+description: "A full walkthrough of writing a boilerplate and test cases for a custom programming test, from a simple single-line problem to one with multi-line input."
+---
+
+A boilerplate and its test cases are easiest to understand from real examples. Below are two: a simple single-line problem, and one that needs multi-line input. See [Creating a Custom Programming Test](/custom-programming-test) to set up a custom test and find where each field lives in the builder.
+
+{/* video: recording of creating a custom programming test end to end, from problem statement through boilerplate and test cases, in Equip's Custom Tests builder */}
+
+## What the Boilerplate Actually Does
+
+A candidate never sees a blank file. They see your **boilerplate**: starter code that already reads their input and prints their output, with a single function left for them to fill in. Their job is to write only the logic inside that function; your boilerplate handles everything around it.
+
+<Warning>
+Your test cases run against the *whole* boilerplate, not just the candidate's function. If the input-reading or output-printing part of your boilerplate has a bug, every candidate's submission fails, even correct ones.
+</Warning>
+
+## Example 1: Single-Line Input
+
+**Problem statement:** Given a string, return its first character. Submitting `equip` should return `e`.
+
+A **test case** for this problem is just that pair:
+
+| Field | Value |
+|---|---|
+| Input | `equip` |
+| Expected output | `e` |
+
+The boilerplate reads one line, calls the candidate's function, and prints the result:
+
+<CodeGroup>
+
+```python Python
+# Candidate writes this
+def extract_first_char(word):
+    # candidate's logic here
+    pass
+
+# Boilerplate: reads input, prints output
+inp = input()
+print(extract_first_char(inp))
+```
+
+```javascript JavaScript
+// Candidate writes this
+function extractFirstChar(word) {
+  // candidate's logic here
+}
+
+// Boilerplate: reads input, prints output
+const readline = require('readline').createInterface({ input: process.stdin });
+readline.on('line', (word) => {
+  console.log(extractFirstChar(word));
+  readline.close();
+});
+```
+
+```java Java
+import java.util.Scanner;
+
+// Candidate writes this
+class Solution {
+    public char firstChar(String input) {
+        // candidate's logic here
+        return ' ';
+    }
+}
+
+// Boilerplate: reads input, prints output
+class Driver {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String word = sc.next();
+        System.out.print(new Solution().firstChar(word));
+    }
+}
+```
+
+</CodeGroup>
+
+## Example 2: Multi-Line Input
+
+More complex problems need several pieces of input. For example: Given an array and an index, return the value at that index. The input arrives as three lines:
+
+```
+4
+5 6 3 2
+2
+```
+
+The first line is the array's length, the second is the array itself, and the third is the index to look up. For this input, the expected output is `3`.
+
+The boilerplate now has to read three lines and assemble them into structured data before calling the candidate's function:
+
+<CodeGroup>
+
+```python Python
+# Candidate writes this
+def get_value_at_index(index, arr):
+    # candidate's logic here
+    pass
+
+# Boilerplate: reads 3 lines, builds structured data, prints output
+length = int(input())
+arr = list(map(int, input().split()))
+index = int(input())
+print(get_value_at_index(index, arr))
+```
+
+```javascript JavaScript
+// Candidate writes this
+function getValueAtIndex(index, arr) {
+  // candidate's logic here
+}
+
+// Boilerplate: reads 3 lines, builds structured data, prints output
+const lines = [];
+const readline = require('readline').createInterface({ input: process.stdin });
+readline.on('line', (line) => {
+  lines.push(line);
+  if (lines.length === 3) {
+    const arr = lines[1].split(' ').map(Number);
+    const index = Number(lines[2]);
+    console.log(getValueAtIndex(index, arr));
+    readline.close();
+  }
+});
+```
+
+</CodeGroup>
+
+<Tip>
+The candidate's function never sees raw input lines, only the clean, typed values your boilerplate extracts from them. The more parsing you do in the boilerplate, the less room candidates have to get tripped up by formatting instead of the actual problem.
+</Tip>
+
+## Related Resources
+
+- [Creating a Custom Programming Test](/custom-programming-test) - Where these fields live in the builder, and how test cases and languages work
+- [Supported Programming Languages](/programming-languages) - Every language available for a custom programming test
+- [Issues with Custom Coding Challenges](/custom-coding-challenge-issues) - Common setup mistakes, including boilerplate and formatting errors
