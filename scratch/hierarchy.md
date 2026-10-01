@@ -176,7 +176,7 @@
 - Credit Deduction Policy
 - Reclaiming Credits from Unattempted Invitations
 - First Purchase Discount
-- TDS for Purchases
+- TDS for Purchases (hidden from the sidebar; linked from Invoices > GST Details)
 - Viewing and Downloading Invoices
 - Changing Business Information After an Invoice
 - Demo and Trial Accounts
