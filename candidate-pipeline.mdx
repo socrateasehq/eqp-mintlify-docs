@@ -22,9 +22,9 @@ Equip offers 11 stage types:
 | **Assessment** | Quiz, coding, communication, and other skill tests. |
 | **One-Way AI Interview** | Fixed questions. Evaluate subjective responses via text, audio, or video. |
 | **Conversational AI Interview** | An AI bot auto-generates questions and engages in a back-and-forth conversation. |
-| **Video Interview** | Use your own videoconferencing tool. Rank and review candidates. |
+| **Live Interview** | Video, phone, or in-person round. Schedule, score, and review candidates. |
 | **Custom** | A custom stage with optional ranking. |
-| **Offered** | System stage for candidates you extend an offer to. Supports an offer email and offer letter. |
+| **Offered** | System stage for candidates you extend an offer to. Supports an offer email and documents to sign. |
 | **Hired** | Terminal stage for successful candidates. |
 | **Rejected** | Terminal stage for candidates you turn down. |
 | **Withdrawn** | Terminal stage for candidates who drop out. |
@@ -43,10 +43,10 @@ Each stage carries two names:
 
 | Name | Who sees it | Limit |
 |---|---|---|
-| **Candidate-facing stage name** | Shown in filters and stage-change dropdowns internally; candidates only see it in Video Interview and Custom invitation emails | Up to 40 characters |
+| **Candidate-facing stage name** | Shown in filters and stage-change dropdowns internally; candidates only see it in Live Interview and Custom invitation emails | Up to 40 characters |
 | **Internal name** | Your team, in dashboards and reports | Up to 30 characters |
 
-Use the Stage Name for filters and stage-change menus (for example, "Interview 2") and the Internal Name as a short dashboard label (for example, "July Hiring"). Candidates see only the job title, except that Video Interview and Custom invitation emails can include the stage name.
+Use the Stage Name for filters and stage-change menus (for example, "Interview 2") and the Internal Name as a short dashboard label (for example, "July Hiring"). Candidates see only the job title, except that Live Interview and Custom invitation emails can include the stage name.
 
 <Warning>
 If you delete a stage that already holds candidates, Equip archives it instead of deleting it. You will see the message "Stage has candidates and was archived instead of deleted". Archived stages can be restored at any time, so no candidate data is lost.
@@ -60,9 +60,9 @@ Each stage can carry its own automations: email templates, a scorecard, and an a
 
 | Attachment | Available on |
 |---|---|
-| **Invitation email template** | Assessment, One-Way AI Interview, Conversational AI Interview, Video Interview, Custom |
+| **Invitation email template** | Assessment, One-Way AI Interview, Conversational AI Interview, Live Interview, Custom |
 | **Rejection email template** | All non-terminal stages except Offered |
-| **Scorecard** | Phone Screening, Video Interview, Custom |
+| **Scorecard** | Phone Screening, Live Interview, Custom |
 | **Assignee** | All stages except Hired, Rejected, and Withdrawn |
 
 These automations are visible only after the job opening is saved; you will not find them while still creating it.
@@ -77,7 +77,7 @@ To configure a stage:
     Pick an **invitation email template** for stages where candidates receive an invite, and a **rejection email template** so rejections from this stage use consistent wording. Defaults are provided, and you can manage your own under Templates.
   </Step>
   <Step title="Attach a scorecard">
-    For Phone Screening, Video Interview, and Custom stages, select a **scorecard** so interviewers rate every candidate against the same criteria.
+    For Phone Screening, Live Interview, and Custom stages, select a **scorecard** so interviewers rate every candidate against the same criteria.
   </Step>
   <Step title="Set an assignee">
     Choose a team member responsible for candidates in this stage. Click the circular icon on the top right of the stage card and pick a team member from the list. Assignees power the "Mine" filter on the applications dashboard, so everyone knows what is on their plate.
@@ -85,7 +85,7 @@ To configure a stage:
 </Steps>
 
 <Note>
-Attaching an email template does not mean emails go out automatically. Emails on Equip are always recruiter-triggered: when you move a candidate to a stage, you choose whether to send the email, and you can preview it first.
+Attaching an email template does not mean emails go out automatically. When you move a candidate to a stage, you choose whether to send the email, and you can preview it first. To have Equip move candidates or send emails for you, set up [Stage Automation](/stage-automation).
 </Note>
 
 {/* screenshot: stage configuration panel with template and assignee dropdowns */}

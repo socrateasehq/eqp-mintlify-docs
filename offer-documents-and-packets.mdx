@@ -1,0 +1,122 @@
+---
+title: "Offer Documents and Packets"
+description: "Build reusable offer letters and signing packets, then attach them to the Offered stage."
+---
+
+An offer on Equip is built from two reusable pieces. A **document** is a single letter or PDF, and a **packet** is the email plus the documents a candidate signs in one session. Once a packet is attached to a job's **Offered** stage, sending an offer takes a few clicks.
+
+## Create a Document
+
+Documents live in your template library, so one offer letter can be reused across many packets and job openings.
+
+<Steps>
+  <Step title="Open the Documents tab">
+    Go to **Account → Templates**, open the **Documents** card, switch to the **Documents** tab, and click **Create document**.
+  </Step>
+  <Step title="Name it and pick a type">
+    Enter a **Document name** (up to 100 characters), choose **Personalized** or **Fixed**, and click **Create and start writing**.
+  </Step>
+  <Step title="Add the content">
+    For a personalized document, write the letter in the editor or import an existing PDF (up to 10 MB and 50 pages) to start from. For a fixed document, upload the final PDF and click its pages to place **Signature**, **Date**, and **Text** fields.
+  </Step>
+  <Step title="Check the preview">
+    Fill in the **Sample values**, then click **Refresh preview** to see the finished PDF. Changes save automatically.
+  </Step>
+</Steps>
+
+{/* screenshot: personalized document editor with letterhead, letter body, and preview panel */}
+
+The two document types suit different jobs:
+
+| | Personalized | Fixed |
+|---|---|---|
+| **Best for** | Offer letters | Contracts, NDAs, policies |
+| **Content** | Written in Equip, or imported from a PDF | Your uploaded PDF, sent exactly as it is |
+| **Variables** | Yes, filled in per candidate | No |
+| **Where it is signed** | Where `{{candidate_signature}}` sits in the letter | Fields you place on the pages |
+| **Extras** | Letterhead, A4 or Letter page size | Fields for the candidate or the counter-signer |
+
+A personalized document's **letterhead** uses your team's logo and name by default. You can position it, add a company address, or override the logo and name for a document that goes out under another brand.
+
+<Note>
+A document is either signed or read-only, and you never set this with a switch. A personalized document is signed when its body contains `{{candidate_signature}}`; a fixed PDF is signed when it has at least one candidate field.
+</Note>
+
+## Variables and Placeholders
+
+**Variables** are placeholders that Equip replaces with real values when the offer is sent. Equip fills these in for you:
+
+| Variable | What it fills in |
+|---|---|
+| `{{candidate_name}}` | Candidate's full name |
+| `{{candidate_first_name}}` | Candidate's first name |
+| `{{candidate_email}}` | Candidate's email address |
+| `{{job_title}}` | Job title of the opening |
+| `{{company_name}}` | Your company name |
+| `{{sender_name}}` | The recruiter who sends the offer |
+| `{{today}}` | The date the offer is sent |
+| `{{offer_expiry_date}}` | The date the offer expires |
+
+For anything else, type your own variable straight into the letter, for example `{{salary}}` or `{{start_date}}`. There is no fixed list: any name made of letters, digits, and underscores becomes a field you fill in when you send an offer.
+
+Three placeholders control signing inside a personalized document:
+
+| Placeholder | What it does |
+|---|---|
+| `{{candidate_signature}}` | Marks where the candidate signs, with an optional date line |
+| `{{recruiter_signature}}` | Prints an uploaded image of your signature (PNG or JPEG, up to 1 MB) |
+| `{{candidate_input:Label}}` | Adds a box the candidate types into while signing, such as `{{candidate_input:Preferred joining date}}` |
+
+<Tip>
+Fill in **Sample values** for details that rarely change, such as notice period or work location. They pre-fill the offer form, so you only type them once.
+</Tip>
+
+## Build a Packet
+
+A packet is what actually gets sent. It bundles one email with an ordered set of documents.
+
+<Steps>
+  <Step title="Create the packet">
+    On the **Packets** tab, click **Create packet** and enter a **Packet name** (up to 100 characters).
+  </Step>
+  <Step title="Edit the email">
+    Adjust the **Subject** and body of the covering email. Equip adds a **Review & sign** button to the end automatically, so you do not need to add a link yourself.
+  </Step>
+  <Step title="Add documents">
+    Pick documents from **Add a document** and drag them into order. Each row shows **Candidate signs** or **Read-only**.
+  </Step>
+  <Step title="Set the validity period">
+    Under **How long an offer stands**, enter a number of days from 1 to 365. The default is 30.
+  </Step>
+  <Step title="Label your variables">
+    Under **Per-candidate variables**, adjust the **Field label** recruiters see for each variable when they send an offer.
+  </Step>
+</Steps>
+
+{/* screenshot: packet editor showing the Email, Documents, and Who signs cards */}
+
+When a packet contains a signed document, a **Who signs** card appears. The choice applies to the whole packet:
+
+| Option | What happens |
+|---|---|
+| **Candidate Only** | Only the candidate signs. This is the default. |
+| **Candidate and Recruiter** | A **Counter-signer** from your team signs too, either after the candidate or before the offer reaches them |
+
+<Warning>
+A document in use by a packet, or a packet in use by a job opening, is archived instead of deleted. Offers already sent are never affected by later edits, because each offer keeps its own copy of the documents.
+</Warning>
+
+## Attach a Packet to the Offered Stage
+
+Each job opening chooses its own packet. Open the job's **Settings**, go to the **Candidate Pipeline** tab, and pick a packet from the **Offer** dropdown on the **Offered** stage card.
+
+{/* screenshot: Offered stage card with the Offer dropdown open */}
+
+The dropdown appears once the job opening is saved, and your choice saves automatically. A packet with no documents is just an email, which is useful when you send the paperwork separately.
+
+## Related Resources
+
+- [Sending and Tracking Offers](/sending-offers) - Send a packet to a candidate and follow it through to signature
+- [Signing Your Offer](/signing-an-offer) - What the candidate sees when they review and sign
+- [Pipeline Stages](/pipeline-stages) - Where the Offered stage sits in your pipeline
+- [Email Templates](/email-templates) - The other reusable templates your pipeline sends
