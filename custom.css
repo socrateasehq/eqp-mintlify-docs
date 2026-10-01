@@ -100,3 +100,23 @@ ul.sidebar-group a {
   max-width: 100%;
   height: auto;
 }
+
+/* ---- Article links ----
+   Mintlify colours in-article links with the near-black body text and marks them
+   only with an underline, which readers do not always recognise as clickable.
+   Use a conventional link blue instead. Links inside callouts keep the callout's
+   own colour. Bold text inside a link follows the link colour. */
+#content a.link,
+#content a.link strong {
+  color: #2563eb;
+}
+
+#content a.link {
+  border-bottom-color: #2563eb;
+  text-decoration-color: #2563eb;
+}
+
+#content a.link:hover,
+#content a.link:hover strong {
+  color: #1d4ed8;
+}
