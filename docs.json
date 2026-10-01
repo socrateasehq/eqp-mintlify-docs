@@ -262,6 +262,7 @@
           {
             "group": "Integrations & API",
             "pages": [
+              "ashby-integration",
               "api-integrations",
               "webhooks"
             ]
