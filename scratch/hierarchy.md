@@ -27,6 +27,24 @@
 - Scorecards
 - Email Templates
 
+## Live Interviews
+
+- Scheduling Live Interviews
+- Interview Panels and Locations
+- Interview Feedback and Results
+
+## Offers
+
+- Offer Documents and Packets
+- Sending and Tracking Offers
+- (Candidate Experience > Taking Tests & Interviews) Signing Your Offer
+
+## Automation
+
+- Stage Automation
+- Automation Triggers, Conditions, and Actions
+- Automation Webhooks and External Updates
+
 ## Insights & Rediscovery
 
 - ATS Insights: Hiring Analytics
