@@ -3,18 +3,16 @@ title: "AI Interview Reports"
 description: "The AI-generated evaluation, transcript, and session recording for each candidate's AI interview."
 ---
 
-Every completed AI interview produces a detailed report for the candidate's attempt: an **AI-generated evaluation**, the full transcript, and a recording of the session. This page explains what each part of the report contains and how to work with it.
+Every completed AI interview produces a report for the candidate's attempt: an **AI-generated evaluation**, the full transcript, and a recording of the session.
 
 ## The AI-Generated Report
 
-To open a report:
-
 <Steps>
   <Step title="Open the interview's results">
-    From the [**AI Interviews** dashboard](https://equip.co/recruiter/ai-interviews/dashboard/), click the AI interview to go to its results list.
+    From the [**AI Interviews** dashboard](https://equip.co/recruiter/ai-interviews/dashboard/), click the AI interview.
   </Step>
   <Step title="Select a candidate">
-    Click the candidate whose attempt you want to review. Their report opens with the evaluation front and center.
+    Click the candidate whose attempt you want to review.
   </Step>
 </Steps>
 
@@ -28,42 +26,34 @@ Depending on the settings you enabled, the report shows up to three tabs:
 
 {/* screenshot: candidate report showing the Test Summary tab with recommendation, strengths, and topic scores */}
 
-For a **conversational interview**, the default Test Summary includes:
+For a **conversational interview**, the default Test Summary gives a Recommendation, Strengths, Areas for Improvement, a Summary, and a Topic Performance score per topic. Topic scores are [weighted by difficulty](/interview-content-types).
 
-- **Recommendation**: the AI's overall hiring recommendation for the candidate.
-- **Strengths** and **Areas for Improvement**: concise lists drawn from the candidate's answers.
-- **Summary**: a narrative overview of how the interview went.
-- **Topic Performance**: one score card per topic, with a color-coded percentage score. Topic scores are weighted by difficulty: Medium items carry 10 points, Hard 20, and Expert 30.
-
-For a **one-way interview**, the report shows each question alongside the candidate's answer and its AI grade. Points are configurable per question when building the template; for a conversational interview, you configure the difficulty level, and the topic's weighting follows from that.
+For a **one-way interview**, the report shows each question alongside the candidate's answer and its AI grade.
 
 <Note>
-Teams with **AI Interview Report Templates** enabled can replace the default summary with a custom, template-driven evaluation. If a template is attached to the interview, the report renders your custom layout instead. See [Custom Report Templates](/custom-report-templates).
+Teams with **AI Interview Report Templates** enabled can replace the default summary with a custom evaluation. See [Custom Report Templates](/custom-report-templates).
 </Note>
 
-If you open a report too early, you may see **"Processing..."** instead of results, meaning the AI is still processing a submitted attempt. Evaluation usually finishes shortly after submission.
+If the report shows **"Processing..."**, the AI is still evaluating the attempt. Evaluation usually finishes shortly after submission.
 
 ### Downloading a PDF
 
-Click **Download Report** on the report to export it as a PDF. A progress screen appears while the file is generated, and the export includes the evaluation so you can share it with hiring managers outside Equip.
+Click **Download Report** to export the evaluation as a PDF you can share with hiring managers outside Equip.
 
 ## Transcript and Recording
 
-In a **one-way** interview report, the transcript is available with each question and appears beside the recording player. In a **conversational** interview report, the full interview transcript is available with entries labeled **Interviewer** or **Candidate**, timestamped to the moment they were said, so you can distinguish the AI interviewer's questions from the candidate's answers. It appears below the rest of the report.
+In a **one-way** interview report, the transcript is available with each question. In a **conversational** interview report, the full transcript appears below the rest of the report, with each entry timestamped and labeled Interviewer or Candidate.
 
 <Tip>
-For conversational interviews, click any line in the transcript to jump the recording to that exact moment. This makes it fast to verify a specific answer without replaying the whole interview.
+For conversational interviews, click any line in the transcript to jump the recording to that exact moment.
 </Tip>
 
-If the **Workspace** was enabled for a conversational interview, written and coded answers appear in the report too:
-
-- Code is captured as **timestamped snapshots** plus the final version, with the programming language shown.
-- Snapshots are seekable against the recording, so you can watch how the candidate built their solution over time.
+If the **Workspace** was enabled for a conversational interview, written and coded answers appear in the report too. Code is captured as timestamped snapshots that are seekable against the recording, plus the final version.
 
 {/* screenshot: report transcript panel with a Workspace code snapshot open next to the recording player */}
 
 <Note>
-Interviews are recorded server-side and transcripts are retained, so the recording and transcript are available even if the candidate's browser closed unexpectedly during the session.
+Interviews are recorded server-side, so the recording and transcript are available even if the candidate's browser closed unexpectedly.
 </Note>
 
 ## Related Resources

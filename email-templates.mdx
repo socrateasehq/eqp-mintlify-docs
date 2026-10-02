@@ -7,7 +7,7 @@ Equip includes **email templates** for every message your pipeline sends: invita
 
 ## Template Types
 
-There are five template types. Each maps to a specific moment in your [candidate pipeline](/candidate-pipeline):
+Each of the five template types maps to a moment in your [candidate pipeline](/candidate-pipeline):
 
 | Template Type | When It Is Used |
 |---|---|
@@ -17,17 +17,13 @@ There are five template types. Each maps to a specific moment in your [candidate
 | **Custom Stage Invitation** | Inviting a candidate to a Custom stage |
 | **Rejection Email** | Optionally notifying a candidate when you reject them from any non-terminal stage |
 
-Templates are managed in the [**Templates**](https://equip.co/recruiter/account/templates/) section of your account, and each pipeline stage can have its own template attached. In the pipeline builder, you can attach an invitation template to Assessment, AI Interview, Live Interview, and Custom stages, and a rejection template to any non-terminal stage.
+Manage templates in the [**Templates**](https://equip.co/recruiter/account/templates/) section of your account, and attach one to each stage in the pipeline builder.
 
 {/* screenshot: email templates list in the Templates section */}
 
-<Note>
-Templates are rich text, so you can format the message and place the test link wherever you like in the body.
-</Note>
-
 ## Template Variables
 
-Variables are placeholders that Equip replaces with real values when the email is sent. In the template editor, each variable is **click-to-copy** and shows an example value, so you can paste it straight into your message.
+Variables are placeholders that Equip replaces with real values when the email is sent. Each one is **click-to-copy** in the template editor.
 
 These variables work in every template type:
 
@@ -81,27 +77,14 @@ The offer email is not a template type. It is written on the offer packet, along
 </Note>
 
 <Tip>
-Include the timezone-aware start-window variables in invitation emails. Candidates see the deadline in their own timezone, which cuts down on missed attempts and support questions.
+Include the timezone-aware start-window variables in invitation emails so candidates see the deadline in their own timezone.
 </Tip>
 
 ## Stage-Transition Emails
 
-When you move a candidate yourself, emails are **recruiter-triggered**. Moving a candidate to a new stage opens a contextual dialog, and you decide whether an email goes out. Templates can also be sent by [Stage Automation](/stage-automation) rules.
+Moving a candidate to a stage that sends email opens a dialog with a preview of the message, built from that stage's template, and you decide whether it goes out. [Stage Automation](/stage-automation) rules can also send templates.
 
-<Steps>
-  <Step title="Move the candidate">
-    Change the candidate's stage from the applications dashboard or their profile. If the target stage sends email, a dialog opens with a preview of the message built from that stage's template.
-  </Step>
-  <Step title="Review the email">
-    Check the preview with the variables filled in for this candidate. For rejections, the **Send rejection email to candidates** checkbox is off by default, so no rejection email is sent unless you tick it.
-  </Step>
-  <Step title="Choose sending options">
-    Optionally set a **Reply-To** team member so candidate replies reach a real inbox instead of the default no-reply@equip.co address. You can also use **Schedule Send** to delay delivery by minutes, hours, or days, up to 7 days ahead.
-  </Step>
-  <Step title="Send">
-    Confirm to send or schedule. The action is logged in the candidate's journey, for example "sent assessment invite" or "scheduled rejection email".
-  </Step>
-</Steps>
+In the dialog, you can set a **Reply-To** team member or use Schedule Send to delay delivery. For rejections, the **Send rejection email to candidates** checkbox is off by default, so nothing is sent unless you tick it. See [Changing Stages](/changing-stages) for the full flow.
 
 {/* screenshot: stage-change invitation dialog with email preview and schedule send */}
 

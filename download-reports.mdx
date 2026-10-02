@@ -12,84 +12,50 @@ Every assessment offers two downloadable reports: a spreadsheet-style export of 
 
 ## Export Results for All Candidates
 
-Use this export when you want every candidate's scores in one file, for example to sort, filter, or share a shortlist.
-
 <Steps>
   <Step title="Open the assessment results">
-    From your **Recruiter Dashboard**, click the assessment title. The results page for that assessment loads.
+    From your **Recruiter Dashboard**, click the assessment title.
   </Step>
   <Step title="Click Export Results">
-    The **Export Results** button is at the top right of the results page.
+    The button is at the top right of the results page. Pick **Export to Excel** or **Export to PDF**; both contain the same data.
     {/* screenshot: Export Results button on the assessment results page */}
-  </Step>
-  <Step title="Choose a format">
-    Pick **Export to Excel** or **Export to PDF**. Both formats contain exactly the same data, so choose whichever is easier to work with.
   </Step>
 </Steps>
 
 <Tip>
-A sample export with dummy data is available in [this spreadsheet](https://docs.google.com/spreadsheets/d/10d-b3PVxmKxa-W9OqG0gjVTE-8tPGIUUe9FygeeIGbI/edit#gid=0), so you can see the exact layout before exporting.
+See the exact layout in [this sample export](https://docs.google.com/spreadsheets/d/10d-b3PVxmKxa-W9OqG0gjVTE-8tPGIUUe9FygeeIGbI/edit#gid=0) with dummy data.
 </Tip>
 
 ### What the export contains
 
-The export includes one row per candidate with these fields:
-
-| Field | What it contains |
-|---|---|
-| **Name** | The candidate's name |
-| **Email** | The candidate's email ID |
-| **Start Date** | Date the candidate started the assessment |
-| **Start Time (In UTC)** | Time they started, in UTC/GMT |
-| **End Date** | Date they finished. Empty if the assessment is unfinished |
-| **End Time (In UTC)** | Time they finished, in UTC/GMT |
-| **Points Scored for Test 1** | Points the candidate scored on the first test |
-| **Points Available for Test 1** | Maximum points available on the first test |
-| **Trust Score Percentage for Test 1** | Proctoring [Trust Score](/trust-score) for the first test |
-| **Plagiarism Score for Test 1** | Always empty; kept for legacy reasons |
-| **Test Taker Photo for Test 1** | URL to the candidate's photo captured before the first test |
-| **Additional details** | Any fields you enabled under Gather Additional Details, such as College Name or LinkedIn URL |
-| **Overall Percentage** | The candidate's overall score for the assessment |
+The export has one row per candidate: name, email, start and end dates, start and end times in UTC, any Gather Additional Details fields you enabled, and the overall percentage. For every test in the assessment, it adds points scored, points available, the [Trust Score](/trust-score) percentage, and a URL to the candidate's photo.
 
 <Note>
-The per-test columns (Points Scored, Points Available, Trust Score Percentage, Plagiarism Score, Test Taker Photo) repeat for every test in the assessment: Test 2, Test 3, and so on.
+The **Plagiarism Score** column is always empty. It is kept for legacy reasons.
 </Note>
 
 ## Download a Single Candidate's Report
 
-When you want to review or share one candidate's complete submission, download their individual **PDF report**.
-
 <Steps>
   <Step title="Open the candidate's submission">
-    On the assessment results page, click the candidate's test score (the orange link). Their submission page opens.
-  </Step>
-  <Step title="Locate the test dropdown">
-    In the second section of the page, a dropdown on the left lists the tests in the assessment. Switching tests loads the corresponding submission.
+    On the assessment results page, click the candidate's test score (the orange link).
   </Step>
   <Step title="Click download PDF">
-    The **download PDF** button sits on the far right of that section. Clicking it downloads the candidate's entire submission, across all tests, as a single PDF file.
+    The **download PDF** button is on the far right of the second section of the page, across from the test dropdown. It downloads the candidate's entire submission, across all tests, as a single PDF file.
     {/* screenshot: download PDF button on the candidate submission page */}
   </Step>
 </Steps>
 
-The PDF report contains:
-
-- The **test score and Trust Score** for each test
-- The candidate's **answers and submissions**, depending on the test type
-- **Links to the full report** on Equip
-
 <Note>
-The PDF is prepared asynchronously, so it may take a moment to generate before the download begins. A sample candidate report is available at [this link](https://drive.google.com/file/d/147C0J28M_E9hPzQXK51F-yr6mj31W_ut/view?usp=sharing).
+The PDF may take a moment to generate before the download begins. See a sample candidate report at [this link](https://drive.google.com/file/d/147C0J28M_E9hPzQXK51F-yr6mj31W_ut/view?usp=sharing).
 </Note>
 
 ## Sharing Report Links
 
-Each candidate's report page has a **copyable report link**. Copy it to share a specific candidate's results with hiring managers or teammates without exporting a file.
-
-This is often faster than downloading and attaching a PDF, especially while scores are still being finalized through [manual grading](/manual-grading).
+Each candidate's report page has a **copyable report link**. Copy it to share that candidate's results with hiring managers or teammates without exporting a file, which is often faster while scores are still being finalized through [manual grading](/manual-grading).
 
 <Tip>
-If you want results to flow into a spreadsheet automatically as candidates finish, connect the assessment to Google Sheets instead of exporting repeatedly. See [Write Results to Google Sheets](/write-results-to-google-sheets).
+To have results flow into a spreadsheet automatically as candidates finish, see [Write Results to Google Sheets](/write-results-to-google-sheets).
 </Tip>
 
 ## Related Resources

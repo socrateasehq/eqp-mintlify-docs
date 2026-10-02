@@ -7,59 +7,40 @@ Equip lets you run the same test in more than one language. You write each quest
 
 ## Enabling Multiple Languages
 
-**Multilingual questions** are a feature of tests you author yourself, such as custom tests and AI-graded tests. You enable the languages you want to offer on the test, and candidates pick one before they start.
+**Multilingual questions** are a feature of tests you author yourself, such as custom tests and AI-graded tests. Equip's own question library is **English only**, so build the test with your own content to assess candidates in another language.
 
-Equip's own question library is different: it is written and maintained in **English only**. If you need to assess candidates in another language, build the test with your own content.
-
-| Element | Language support |
-|---|---|
-| Equip library questions | English only |
-| Custom and AI-graded test questions | Any language, with per-language text when multiple languages are enabled |
-| Candidate responses | Any language |
-| Emails to candidates | Any language |
-| Platform interface (buttons, navigation) | English; browser auto-translate works for candidates who need it |
+[Language Support](/language-support) lists what else works in any language, such as emails to candidates.
 
 <Note>
-AI Interviews handle languages separately: you choose the interview language when creating the interview, from options such as English, Hindi, Spanish, French, German, and more. See [Interview Languages](/interview-languages).
+AI Interviews handle languages separately: you choose the language when creating the interview. See [Interview Languages](/interview-languages).
 </Note>
 
 ## Per-Language Question Text
 
-When a test has multiple languages enabled, each question carries **per-language question text**. You provide a version of the question for every enabled language, so you stay in full control of terminology and phrasing instead of relying on machine translation.
-
-Only the text varies between languages. Points, timers, and grading settings belong to the question itself, so a candidate's score is comparable no matter which language they picked.
+When a test has multiple languages enabled, each question carries **per-language question text**. You provide a version for every enabled language instead of relying on machine translation.
 
 <Steps>
   <Step title="Open your test in the builder">
-    Go to the settings of any custom or AI-graded test you want to make multilingual.
+    Go to the settings of any custom or AI-graded test.
   </Step>
   <Step title="Enable additional languages">
-    Go to **Alternative Languages**, turn on **Enable Multilingual Questions**, and select the **additional languages** you want to offer.
+    Go to **Alternative Languages**, turn on **Enable Multilingual Questions**, and select the languages you want to offer.
   </Step>
   <Step title="Add question text for each language">
-    For every question, fill in the text in each enabled language. Review each version carefully, since candidates only see the version for their chosen language.
-  </Step>
-  <Step title="Save the test">
-    Once saved, candidates who open the test are asked to choose a language before starting.
+    Fill in every question in each enabled language, then save the test. Keep the difficulty identical across languages, or scores stop being comparable between language groups.
   </Step>
 </Steps>
 
 {/* screenshot: test builder with multiple languages enabled and per-language question text fields */}
 
-<Tip>
-Keep the difficulty and precision identical across languages. If one translation gives extra hints or is ambiguous, scores stop being comparable between language groups.
-</Tip>
-
 ## The Candidate's Language Choice
 
-Before the test begins, candidates see a **language selector** listing every language you enabled. They pick one, and all questions render in that language for the rest of the test.
-
-Candidates can also respond in any language. This applies to typed answers as well as audio and video responses in AI-graded tests.
+Before the test begins, candidates pick from a **language selector** listing every language you enabled. They can respond in any language, in typed answers as well as audio and video responses in AI-graded tests.
 
 {/* screenshot: candidate-facing language selector shown before the test starts */}
 
 <Note>
-The **English Communication (CEFR)** test measures English proficiency, so it is always delivered in English regardless of other language settings. See [Communication Test](/communication-test).
+The **English Communication (CEFR)** test is always delivered in English, regardless of other language settings. See [Communication Test](/communication-test).
 </Note>
 
 <Warning>

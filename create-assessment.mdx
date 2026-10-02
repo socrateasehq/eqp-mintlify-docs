@@ -3,83 +3,60 @@ title: "How to Create an Assessment"
 description: "Build an assessment with the three-step builder: add tests, order them and set weightage, then configure settings."
 ---
 
-An **assessment** is a collection of tests that candidates attempt one by one. The **Create Assessment** builder walks you through three tabs in order: **Tests**, **Test Order**, and **Settings**. This page covers what to do in each tab, plus how Equip can suggest tests based on the role you are hiring for.
+An **assessment** is a collection of tests that candidates attempt one by one. The **Create Assessment** builder has three tabs: Tests, Test Order, and Settings.
 
 <Tip>
-You can edit everything later. Open the assessment from your dashboard at any time to change tests, weightage, or settings, and use **Preview** to try the assessment yourself for free before inviting anyone.
+You can edit everything later, and **Preview** lets you try the assessment yourself for free before inviting anyone.
 </Tip>
 
 ## Starting a New Assessment
-
-Every assessment starts from your dashboard, with Equip suggesting a first draft based on the role you are hiring for.
 
 <Steps>
   <Step title="Click Add Assessment">
     From the [Assessments Dashboard](https://equip.co/recruiter/assessments/dashboard/), click **Add Assessment** in the sidebar.
   </Step>
   <Step title="Enter the role and experience">
-    Type the role you are hiring for, for example "Python Developer," and select the **Years of Experience**. Both fields are required.
-  </Step>
-  <Step title="Click Continue">
-    Equip suggests tests and skills at a difficulty level matched to the experience you selected, then takes you to the three-tab builder: **Tests**, **Test Order**, and **Settings**, covered below. Adjust, add, or remove tests before saving.
+    Type the role, for example "Python Developer," select the **Years of Experience**, and click Continue. Equip suggests tests and skills at a [difficulty level](/question-difficulty-levels) matched to the experience. Adjust, add, or remove tests before saving.
   </Step>
 </Steps>
 
 {/* screenshot: Create Assessment From Role modal with Role and Years of Experience fields */}
 
-Experience maps to [question difficulty](/question-difficulty-levels) like this:
-
-| Years of experience | Difficulty |
-|---|---|
-| 0-2 years | Medium |
-| 3-4 years | Hard |
-| 5+ years | Expert |
-
 <Note>
-If you cannot find the role or skill you need, Equip can build the test for you, or you can create a [custom test](/custom-tests). See [Can't Find a Role or Skill](/cant-find-role-or-skill) for both options.
+If you cannot find the role or skill you need, Equip can build the test for you, or you can create a [custom test](/custom-tests). See [Can't Find a Role or Skill](/cant-find-role-or-skill).
 </Note>
 
 ## Step 1: Add Tests
 
-The **Tests** tab is where you choose what skills candidates will be tested on. Pick a test type on the left, then add one or more tests of that type.
+On the **Tests** tab, pick a test type on the left, then add one or more tests of that type.
 
 {/* screenshot: Tests tab of the Create Assessment builder with test types listed on the left */}
 
-Available test types include **Quiz**, **Programming**, **English Communication (CEFR)**, **Psychometric**, **Video Response**, **Typing Test**, **SQL**, **Excel**, and **CSS**. See [Test Types](/test-types) for what each one measures.
+Test types include Quiz, Programming, English Communication (CEFR), Psychometric, Video Response, Typing Test, SQL, Excel, and CSS. See [Test Types](/test-types) for what each one measures.
 
-For every test type you can choose between two content sources:
+Every test type can use **Equip Content**, pre-built tests from Equip's library, or **My Content**, custom tests you or your teammates created. You can mix both in one assessment.
 
-| Content source | What it is |
-|---|---|
-| **Equip Content** | Pre-built tests from Equip's library. Questions are battle-tested, randomized per candidate, and come with fixed timers. |
-| **My Content** | Custom tests you or your teammates created. You control the questions, points, and time limits. |
-
-You can mix both freely in one assessment. For quizzes, use **Add Skill** to test up to 6 skills inside a single quiz, or **Add Quiz** to add another quiz as a separate test. See [Testing Multiple Skills](/testing-multiple-skills) for when to use which.
+For quizzes, use **Add Skill** to test up to 6 skills inside a single quiz, or Add Quiz to add another quiz as a separate test. See [Testing Multiple Skills](/testing-multiple-skills) for when to use which.
 
 <Note>
-The builder enforces a few rules before you can proceed: every assessment needs at least 1 test, every Equip-content quiz needs at least 1 skill with question counts set, an Equip quiz holds at most 25 questions in total, an Excel test needs at least 1 question, and a programming test needs at least 1 language enabled.
+The builder will not let you proceed with an empty assessment, an Equip quiz or Excel test with no questions, or a programming test with no language enabled. An Equip quiz holds at most 25 questions in total.
 </Note>
 
 ## Step 2: Order Tests and Set Weightage
-
-The **Test Order** tab controls the sequence in which candidates see the tests and how much each test counts toward the **Overall Score**.
 
 {/* screenshot: Test Order tab showing drag handles, weightage inputs, and estimated duration */}
 
 <Steps>
   <Step title="Arrange the tests">
-    Drag tests into the order you want candidates to attempt them. Candidates take tests one by one, in this sequence.
+    On the **Test Order** tab, drag tests into the order you want candidates to attempt them. Equip computes the Estimated Assessment Duration from the timers on every question and test.
   </Step>
   <Step title="Set weightage per test">
-    Assign each test a **weightage**. The weightages must add up to exactly 100; the Overall Score is the weighted average of test percentages. Weightage is split equally by default. See [Test Scores and Overall Score](/test-scores-and-overall-score) for a worked example.
-  </Step>
-  <Step title="Review the estimated duration">
-    Equip computes the **Estimated Assessment Duration** automatically from the timers on every question and test.
+    Assign each test a **weightage**. Weightage is split equally by default, and the weightages must add up to exactly 100. See [Test Scores and Overall Score](/test-scores-and-overall-score) for a worked example.
   </Step>
 </Steps>
 
 <Warning>
-If any weighted test is left at weightage 0, Equip warns you that the test will not contribute to the Overall Score. Psychometric and Typing tests are always weightless by design and are excluded from the Overall Score.
+A weighted test left at weightage 0 does not contribute to the Overall Score. Psychometric and Typing tests are always weightless by design and are excluded from the Overall Score.
 </Warning>
 
 Two more things live on this tab:
@@ -89,17 +66,17 @@ Two more things live on this tab:
 
 ## Step 3: Configure Settings
 
-The **Settings** tab holds assessment-wide options. The **Assessment Title** is required, is shown to candidates, and can be up to 100 characters.
+On the **Settings** tab, the Assessment Title is required and is shown to candidates.
 
 {/* screenshot: Settings tab with Title, Timer, and Gather Additional Details sections */}
 
 | Section | What you configure |
 |---|---|
-| **Timer** | Optional **Cannot Start Before** and **Cannot Start After** date-times, in [your local time zone](/assessment-settings#start-window). |
-| **Gather Additional Details** | Extra fields collected before the first test: Phone Number, LinkedIn URL, Student ID, College Name, Graduation Year, Department, Work Experience. Name, email, and photo come from login automatically. |
-| **Miscellaneous** | Write results to Google Sheets, custom instructions shown to candidates, completion-notification emails, and a redirect URL after completion. |
+| **Timer** | An optional [start window](/assessment-settings#start-window): Cannot Start Before and Cannot Start After. |
+| **Gather Additional Details** | Extra fields collected before the first test, such as Phone Number or LinkedIn URL. |
+| **Miscellaneous** | Write results to Google Sheets, custom instructions, completion-notification emails, and a redirect URL after completion. |
 
-Once you save, the assessment's Settings page shows **View Candidates** and **Preview** buttons at the top, and you can start [inviting candidates](/email-invitations).
+Save, then start [inviting candidates](/email-invitations).
 
 ## Related Resources
 
