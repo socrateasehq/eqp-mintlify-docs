@@ -3,10 +3,10 @@ title: "Changing Stages"
 description: "Move candidates through your pipeline, and control the emails that go out."
 ---
 
-Moving a candidate to a new stage is the most common action in the Equip ATS. Depending on the stage you pick, Equip shows a contextual dialog: a simple move, a rejection flow, or an invitation flow with a full email preview.
+Depending on the stage you pick, Equip shows a simple move, a rejection flow, or an invitation flow with an email preview.
 
 <Note>
-When you move a candidate yourself, no email goes out without your say. You always see exactly what will be sent before it goes out. Emails are sent on their own only if you set up [Stage Automation](/stage-automation) rules.
+When you move a candidate yourself, no email goes out without your say. Emails are sent on their own only if you set up [Stage Automation](/stage-automation) rules.
 </Note>
 
 ## Moving Candidates Between Stages
@@ -15,10 +15,10 @@ You can change stages from the applications dashboard in both **Table** and **Ka
 
 <Steps>
   <Step title="Select the candidates">
-    Open a candidate, or select multiple candidates in the table to use the bulk **change stage** action.
+    Open a candidate, or select several in the table to use the bulk **change stage** action.
   </Step>
   <Step title="Pick the target stage">
-    Choose the destination stage from the stage dropdown. The dialog that opens depends on the type of stage you are moving to.
+    Choose it from the stage dropdown.
   </Step>
   <Step title="Review and confirm">
     For invitation stages, review the email preview, set an optional Reply-To and schedule, then send. For a simple move, just confirm.
@@ -27,21 +27,21 @@ You can change stages from the applications dashboard in both **Table** and **Ka
 
 {/* screenshot: change-stage dropdown open on the applications dashboard */}
 
-What happens next depends on the target stage:
+The dialog depends on the target stage:
 
 | Target stage | Dialog you see |
 |---|---|
-| **Phone Screening**, **Hired**, **Withdrawn**, other stages without an email step | Simple move, no email involved |
-| **Rejected** | Rejection dialog with a reason dropdown and optional rejection email |
-| **Assessment**, **One-Way AI Interview**, **Conversational AI Interview** | Invitation dialog with email preview and a credit notice |
-| **Live Interview** | Schedule dialog for the interview slot and panel, no credits involved. See [Scheduling Live Interviews](/scheduling-live-interviews). |
-| **Custom** | Invitation dialog with email preview, no credits involved |
-| **Offered** | Offer flow when the stage has an offer packet, otherwise a simple move. See [Sending and Tracking Offers](/sending-offers). |
+| Phone Screening, Hired, Withdrawn, other stages without an email step | Simple move, no email |
+| Rejected | Rejection reason and optional rejection email |
+| Assessment, One-Way AI Interview, Conversational AI Interview | Invitation with email preview and a credit notice |
+| Live Interview | Interview slot and panel, no credits. See [Scheduling Live Interviews](/scheduling-live-interviews). |
+| Custom | Invitation with email preview, no credits |
+| Offered | Offer flow when the stage has an offer packet, otherwise a simple move. See [Sending and Tracking Offers](/sending-offers). |
 
-Assessment and AI interview invitations consume **credits**. The dialog states the cost up front, for example "We'll deduct N credit(s) now." along with "Reclaimable if not attempted." As a baseline, an assessment costs 1 credit per candidate per test, a one-way AI interview costs 1 or 2 credits depending on question count, and a conversational AI interview costs 2 credits (Quick) or 3 credits (Comprehensive).
+Assessment and AI interview invitations consume **credits**. The dialog states the cost up front, and credits are reclaimable if the invitation is not attempted. See [How Credits Work](/how-credits-work) for prices.
 
 <Note>
-Assessments with more than 2 tests can carry an extra per-test deduction, for example "We'll deduct 0.5 credits per candidate when they start the third test." The invitation dialog always spells out the exact policy before you send.
+Assessments with more than 2 tests can carry an extra per-test deduction. The invitation dialog spells out the exact policy before you send.
 </Note>
 
 <Warning>
@@ -50,67 +50,38 @@ If your team's balance cannot cover the invitations, the move is blocked with "I
 
 ## Rejections and Statuses
 
-Moving candidates to the **Rejected** stage opens the **Reject candidate(s)** dialog. Pick a rejection reason from the dropdown; these reasons power the "Rejections by reason" chart in [ATS Insights](/ats-insights), so consistent tagging pays off later.
-
-The 10 rejection reasons are: **Not enough experience**, **Skills mismatch**, **Overqualified**, **Salary expectations too high**, **Location/relocation concerns**, **Culture fit**, **Position filled**, **Incomplete application**, **No response from candidate**, and **Other**.
+Moving candidates to the **Rejected** stage opens the **Reject candidate(s)** dialog. Pick a rejection reason from the dropdown; these reasons power the "Rejections by reason" chart in [ATS Insights](/ats-insights).
 
 {/* screenshot: Reject candidate(s) dialog with reason dropdown and email checkbox */}
 
-The dialog also has a **Send rejection email to candidates** checkbox. It is off by default, so rejecting a candidate silently is a single click; tick the box only when you want the rejection email to go out.
-
-Separately from the pipeline stage, every candidate carries a **status**. Stage and status answer different questions:
-
-| | Pipeline stage | Candidate status |
-|---|---|---|
-| Answers | Where is the candidate in the process? | What is your verdict so far? |
-| Values | Your configured stages (Applied through Hired) | Applied, Maybe, Shortlisted, Rejected, Withdrawn |
-| Changes when | You move the candidate | You update it independently, at any stage |
+The **Send rejection email to candidates** checkbox is off by default. Tick it only when you want the rejection email to go out.
 
 <Tip>
-Use status as a lightweight triage layer. You can mark a candidate **Shortlisted** or **Maybe** while they are still sitting in an early stage, without touching the pipeline.
+Use **status** as a lightweight triage layer: mark a candidate Shortlisted or Maybe at any stage, without touching the pipeline. See [Pipeline Stages](/pipeline-stages) for how stage and status differ.
 </Tip>
 
 ## The Email That Gets Sent
 
 Invitation and rejection dialogs render the email from your **email templates**, filled in with the candidate's details, and show a preview before anything is sent. Each stage can have its own template attached in the pipeline builder.
 
-| Stage type | Template used |
-|---|---|
-| Assessment, One-Way AI Interview, Conversational AI Interview | Assessment/AI Interview Invitation |
-| Live Interview | Live Interview Invitation |
-| Custom | Custom Stage Invitation |
-| Rejected (checkbox ticked) | Rejection Email |
+{/* screenshot: invitation dialog showing the rendered email preview, Reply-To and Schedule Send */}
 
-{/* screenshot: invitation dialog showing the rendered email preview */}
-
-To change the wording, edit the template rather than the individual email. Templates support variables like the candidate's name, the job title, and the test link; see [Email Templates](/email-templates).
+To change the wording, edit the template rather than the individual email. See [Email Templates](/email-templates).
 
 <Warning>
 Candidates with an **unverified email** trigger a warning in the invite dialog and receive no stage-change emails until their email address is verified. This applies to bulk-imported candidates in particular; you can copy a verification link from their profile to share with them.
 </Warning>
 
-Every action is logged. The **Candidate Journey** tab records the stage change itself plus events like "sent/scheduled assessment invite", "sent/scheduled AI interview invite", and "sent/scheduled rejection email", so your team can always see who sent what and when.
+Every stage change and email is logged in the **Candidate Journey** tab.
 
 ## Reply-To and Scheduling
 
-Before sending, the dialog gives you two controls over delivery.
+**Reply-To** sets who receives candidate replies, and defaults to you. If no Reply-To is set, the email is sent from **no-reply@equip.co** and replies go nowhere.
 
-**Reply-To** sets who receives candidate replies. Pick any team member; it defaults to you. If no Reply-To is set, the email is sent from **no-reply@equip.co** and replies go nowhere.
-
-**Schedule Send** delays delivery instead of sending immediately:
-
-| Unit | Range |
-|---|---|
-| Minutes | 1 to 10,080 |
-| Hours | 1 to 168 |
-| Days | 1 to 7 |
-
-All three units cap out at the same point: emails can be scheduled up to **7 days** in advance.
-
-{/* screenshot: schedule send and reply-to options in the invitation dialog */}
+**Schedule Send** delays delivery by minutes, hours or days, up to **7 days** in advance.
 
 <Tip>
-Rejecting candidates late at night? Schedule the rejection emails for the next morning so they arrive during business hours.
+Schedule late-night rejection emails for the next morning so they arrive during business hours.
 </Tip>
 
 ## Related Resources

@@ -7,23 +7,23 @@ description: "How every applicant gets a 0-100 fit score, and how to tune the ra
 Every applicant to a job opening automatically gets a **Job Fit Score** from 0 to 100, along with a one-line AI explanation of why they scored that way. You can steer the score by choosing up to 3 ranking criteria, and re-rank existing candidates whenever you change them.
 </Tip>
 
-The **Job Fit Score** is part of Equip's free ATS. It turns a pile of resumes into a ranked list, so you review the most promising applicants first instead of reading applications in the order they arrived.
+The **Job Fit Score** is part of Equip's free ATS. It ranks your applicants so you review the most promising ones first.
 
 ## How Scoring Works
 
-When a candidate applies, Equip's AI reads their parsed application (skills, work experience, education, and more) against your job description and produces a **fit score** between 0 and 100. Each score comes with a short **AI explanation** summarizing the reasoning.
+When a candidate applies, Equip's AI reads their parsed application against your job description and produces the score and its explanation.
 
-The score appears next to every candidate in the applications table and on **Kanban** cards, and you can sort the table by **Fit Score** to bring your strongest applicants to the top. The score and its explanation are also included when you export applications to CSV.
+The score appears next to every candidate in the applications table, and you can sort the table by **Fit Score**.
 
 {/* screenshot: applications table sorted by Fit Score, with the score and AI explanation visible */}
 
-Scoring is **relative, not absolute**. Instead of grading each resume in isolation, the AI compares every new applicant against benchmark candidates from the same job's applicant pool. The very first applicants are evaluated individually; as the pool grows, new candidates are placed against those benchmarks, and Equip periodically recalibrates so rankings stay consistent even at high application volumes.
+Scoring is **relative, not absolute**: the AI compares each new applicant against benchmark candidates from the same job's applicant pool.
 
 <Note>
-A score of 75 means the candidate ranks well **within this job's applicant pool**. Scores are not comparable across different job openings, and the same resume can score differently for different roles.
+A score of 75 means the candidate ranks well **within this job's applicant pool**. Scores are not comparable across different job openings.
 </Note>
 
-If a candidate does not have a score yet, for example one added through [bulk CV import](/bulk-cv-import), their row shows a **Calculate** button so you can score them on demand.
+If a candidate does not have a score yet, for example one added through [bulk CV import](/bulk-cv-import), their row shows a **Calculate** button.
 
 ## Ranking Criteria
 
@@ -38,39 +38,27 @@ By default, the AI uses its own judgment about what makes a candidate a good fit
 | **Seniority** | More managerial positions get higher weightage | Always available |
 | **Industry** | Relevance of the candidate's industry experience to the role | Industries |
 
-Drag your selected criteria to prioritize them: the criterion at the top carries the most weight. A criterion is only available if your [application form](/application-form) collects the field it depends on, so enable the relevant field first if an option appears disabled.
+Drag your selected criteria to prioritize them: the one at the top carries the most weight. If an option appears disabled, enable the field it depends on in your [application form](/application-form) first.
 
 {/* screenshot: ranking criteria picker with three criteria selected and drag handles visible */}
 
-You can also add **additional criteria** as free text, up to 200 characters. Use this for role-specific signals the six standard criteria do not cover, such as "Prefer candidates with AWS experience".
-
-<Tip>
-If you select no criteria at all, scoring still works: the AI simply applies its default judgment. Add criteria only when you want to emphasize something specific.
-</Tip>
+You can also add **additional criteria** as free text, up to 200 characters, such as "Prefer candidates with AWS experience".
 
 <Note>
-Changing your ranking criteria affects **future applications only**. Candidates who already applied keep the scores they were given under the old criteria.
-</Note>
-
-<Note>
-Moving a candidate to a different job post does not trigger re-scoring: the application keeps its existing fit score. See [Changing Stages](/changing-stages) for how candidate moves work.
+Changing your ranking criteria affects **future applications only**. Candidates who already applied keep their scores, and [moving a candidate](/changing-stages) to a different job post does not re-score them either.
 </Note>
 
 ## Using the Score in Your Workflow
 
-The fit score is a prioritization signal, not a verdict. Use it to decide **who to review first**, then confirm your read with the candidate's full profile, [scorecards](/scorecards), and assessment results before rejecting anyone.
+The fit score is a prioritization signal, not a verdict. Confirm your read with the candidate's full profile, [scorecards](/scorecards), and assessment results before rejecting anyone.
 
-A few places the score shows up beyond the applications table:
+The score also shows up beyond the applications table:
 
 | Where | What you see |
 |---|---|
-| **Kanban cards** | The fit score on each candidate card, so you can scan a stage at a glance |
-| **CSV export** | The score and its AI explanation as columns in exported application data |
-| **Insights** | A job-fit score distribution chart, so you can gauge the overall quality of a job's applicant pool |
-
-<Tip>
-Sort by **Fit Score**, review the top of the list first, and use candidate **status** (Shortlisted, Maybe, Rejected) to record your own judgment as you go. See [ATS Insights](/ats-insights) for the distribution chart and other pipeline analytics.
-</Tip>
+| **Kanban cards** | The fit score on each candidate card |
+| **CSV export** | The score and its AI explanation as columns |
+| [**Insights**](/ats-insights) | A job-fit score distribution chart for the job's applicant pool |
 
 ## Related Resources
 

@@ -9,8 +9,6 @@ A **screen-by-screen** quiz (also called one-by-one) shows questions one at a ti
 
 ## The Two Display Modes
 
-Every quiz on Equip uses one of two display modes. The mode decides what the candidate sees on screen, how timers work, and whether candidates can revisit questions.
-
 | Feature | Screen-by-screen | All-at-once |
 |---|---|---|
 | **Question visibility** | One question at a time | All questions on one page |
@@ -22,58 +20,43 @@ Every quiz on Equip uses one of two display modes. The mode decides what the can
 
 ### Screen-by-screen quizzes
 
-In a **screen-by-screen** quiz, the candidate can see and attempt only one question at a time. Each screen shows a progress bar indicating how many questions are left, a timer for the current question, and a **Skip** button.
-
-The candidate never sees the other questions in the quiz. The timer applies at the question level only; there is no timer for the overall quiz.
+The candidate sees only one question at a time, with a progress bar, a timer for that question, and a **Skip** button.
 
 {/* screenshot: candidate view of a screen-by-screen quiz question with progress bar, per-question timer, and Skip button */}
 
-<Note>
-Quizzes built from **Equip's question library** are always shown screen-by-screen. This cannot be changed. The display mode is only configurable for custom quizzes.
-</Note>
-
 ### All-at-once quizzes
 
-In an **all-at-once** quiz, the candidate sees every question at the same time. Equip quizzes have no concept of sections, so enabling this mode shows all questions in the quiz on one page.
-
-All-at-once quizzes use a single timer for the whole test; you cannot set a timer per question. Candidates can **bookmark** questions to review before submitting and **filter** questions by their status.
+Equip quizzes have no concept of sections, so this mode shows every question in the quiz on one page.
 
 {/* screenshot: candidate view of an all-at-once quiz with overall timer, bookmarks, and status filters */}
 
 ## Back Navigation
 
-The biggest practical difference between the modes is whether candidates can go back.
-
-In a screen-by-screen quiz, movement is one-way. Once a candidate answers or skips a question, they cannot return to it later, and they cannot preview upcoming questions.
+In a screen-by-screen quiz, candidates cannot return to a question once they answer or skip it, and they cannot preview upcoming questions. In an all-at-once quiz, they move freely between questions until they submit.
 
 <Warning>
 Skipping is final in screen-by-screen quizzes. If a candidate clicks **Skip**, that question cannot be revisited, even if time remains.
 </Warning>
 
-In an all-at-once quiz, candidates move freely between questions until they submit. They can leave a question blank, bookmark it, and come back to it at any point before submission.
-
 ## Choosing a Mode
 
 Equip recommends **screen-by-screen** quizzes for hiring. Candidates get much less time per question, which makes it far harder to look up answers or share questions with others.
 
-**All-at-once** works better when you want candidates to manage their own time across the quiz, review their answers, and decide the order in which they attempt questions.
+**All-at-once** works better when you want candidates to manage their own time, review their answers, and decide the order in which they attempt questions.
 
 For a **custom quiz**, you can switch the display mode at any time.
 
 <Steps>
   <Step title="Open your custom quiz">
-    Go to the [Assessments Dashboard](https://equip.co/recruiter/assessments/dashboard/), open [**Custom Tests**](https://equip.co/recruiter/assessments/cms/home/) from the sidebar, and select the quiz you want to change.
+    From the [Assessments Dashboard](https://equip.co/recruiter/assessments/dashboard/), open [**Custom Tests**](https://equip.co/recruiter/assessments/cms/home/) and select the quiz.
   </Step>
   <Step title="Change the display mode">
-    Update the setting that controls whether questions are shown one by one or all at once.
-  </Step>
-  <Step title="Save the quiz">
-    Save your changes. The new mode takes effect immediately for candidates who start the quiz after you save.
+    Update the setting that controls whether questions are shown one by one or all at once, then save. The new mode applies to candidates who start the quiz after you save.
   </Step>
 </Steps>
 
 <Tip>
-Switching modes also changes how timing works. A screen-by-screen custom quiz uses per-question timers, while an all-at-once custom quiz uses one timer for the whole test. Review your time limits after switching.
+Switching modes also changes the timers: per question in screen-by-screen, one for the whole test in all-at-once. Review your time limits after switching.
 </Tip>
 
 ## Related Resources

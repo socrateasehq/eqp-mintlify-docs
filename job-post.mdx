@@ -3,15 +3,15 @@ title: "The Job Post"
 description: "Step 1 of creating a job opening: the details candidates see."
 ---
 
-When you create a job opening on Equip, a three-step wizard walks you through **Job Post** (details candidates see), **Application Form** (fields candidates fill out), and **Candidate Pipeline** (stages and automations). This article covers the first step: the job post itself.
+When you create a job opening on Equip, a three-step wizard walks you through **Job Post** (details candidates see), **Application Form** (fields candidates fill out), and **Candidate Pipeline** (stages and automations).
 
 <Tip>
-The fastest way to fill in a job post is to upload an existing job description PDF. Equip's AI parses it and pre-fills every field, usually in 30-45 seconds. See [AI Job-Description Import](#ai-job-description-import) below.
+Have a job description PDF? Upload it and Equip's AI pre-fills every field. See [AI Job-Description Import](#ai-job-description-import) below.
 </Tip>
 
 ## Job Post Details
 
-The job post details capture the facts about the role: structured fields that Equip uses to power filters on your [careers page](/careers-page) and the [Job Fit Score](/job-fit-score), and free-text boxes for describing the role in your own words. The wizard groups all of these into four sections.
+The structured fields power the filters on your [careers page](/careers-page) and the [Job Fit Score](/job-fit-score). The free-text boxes describe the role in your own words.
 
 {/* screenshot: job creation wizard, step 1 (Job Post) with the job details form */}
 
@@ -24,9 +24,9 @@ The job post details capture the facts about the role: structured fields that Eq
 ### Job Details
 
 - **Salary range** with currency and frequency
-- **Work arrangement** (on-site, remote, or hybrid), with **locations**, location restrictions, and an optional timezone restriction
+- **Work arrangement**, with **locations**, location restrictions, and an optional timezone restriction
 - A **hybrid policy** description for hybrid roles
-- **Job Summary**, **Responsibilities**, and **Perks & Benefits** helps you explain the role in your own words; see [Rich-Text Sections](#rich-text-sections) below for what to put in each
+- **Job Summary**, **Responsibilities**, and **Perks & Benefits**, see [Rich-Text Sections](#rich-text-sections) below
 
 ### Candidate Requirements
 
@@ -40,47 +40,34 @@ The job post details capture the facts about the role: structured fields that Eq
 - A **key callout**, a short highlight line that stands out on the post
 - An optional **Google Maps URL** for the office location
 
-The dropdown fields offer these options:
-
-| Field | Options |
-|---|---|
-| **Employment type** | Full-time, Part-time, Contract, Internship, Other |
-| **Seniority level** | Intern, Entry-level, Junior, Mid-level, Senior, Lead, Manager, Director |
-| **Work arrangement** | On-site, Remote, Hybrid |
-| **Salary frequency** | Yearly, Monthly, Weekly, Hourly, Fixed, Other |
-| **Minimum education** | High School, Diploma, Bachelor's, Master's, PhD |
-
 <Note>
-You can edit any of these details after the job opening is created. The opening's Settings page has the same three tabs as the creation wizard: Job Post, Application Form, and Candidate Pipeline.
+You can edit any of these details later from the opening's Settings page.
 </Note>
 
 ## AI Job-Description Import
 
-If you already have a job description, you do not need to retype it. Upload it and let Equip's AI fill in the form.
+Upload an existing job description and let Equip's AI fill in the form.
 
 <Steps>
   <Step title="Upload your JD">
-    From the **Job Opening Dashboard**, click **+ Job Opening**. This opens the upload screen, a separate full-page view shown before the three-step wizard; the Job Post step only renders after the upload completes. Use **Upload Job Description PDF** to drag and drop a PDF or click **Choose PDF File** to browse. PDF is the only supported file format, with a 10 MB size limit.
-  </Step>
-  <Step title="Wait for parsing">
-    Equip shows "Uploading file..." and then "Processing your PDF...". Parsing usually takes 30-45 seconds.
+    From the **Job Opening Dashboard**, click **+ Job Opening** and upload your PDF. PDF is the only supported file format, with a 10 MB size limit. Parsing usually takes 30-45 seconds.
   </Step>
   <Step title="Review the pre-filled fields">
-    The AI pre-fills all job fields, including the rich-text sections. Review each field, correct anything the parser missed, and continue to the next step.
+    Correct anything the parser missed, then continue to the next step.
   </Step>
 </Steps>
 
 <Note>
-If parsing does not complete within about a minute, Equip shows "Unable to Parse PDF" and switches to manual entry. Nothing is lost; you simply fill in the fields yourself.
+If parsing does not complete within about a minute, Equip shows "Unable to Parse PDF" and switches to manual entry.
 </Note>
 
 <Tip>
-Starting from scratch? Equip provides a **sample job description** for a Data Analyst role that you can load as a starting point and adapt.
+Starting from scratch? Load the **sample job description** for a Data Analyst role and adapt it.
 </Tip>
 
 ## Rich-Text Sections
 
-Beyond the structured fields, the job post has four **rich-text sections** where you describe the role in your own words:
+The job post has four **rich-text sections**. Use them for context rather than repeating the structured fields.
 
 | Section | What to put in it |
 |---|---|
@@ -89,13 +76,11 @@ Beyond the structured fields, the job post has four **rich-text sections** where
 | **Perks** | Benefits, culture, and anything that makes the role attractive |
 | **Additional Requirements** | Anything not covered by the structured fields, such as certifications or travel expectations |
 
-Keep these sections candidate-focused and scannable. The structured job details already cover experience, skills, salary, and location, so use the rich-text sections for context rather than repeating those facts.
-
 {/* screenshot: rich-text editor showing the Job Summary section */}
 
 ## Field Limits
 
-Equip validates the job post before it can be published. These are the limits to keep in mind:
+Equip validates the job post against these limits before it can be published.
 
 | Field | Limit |
 |---|---|
@@ -109,27 +94,17 @@ Equip validates the job post before it can be published. These are the limits to
 | **Application deadline** | A date more than 6 months out shows a warning, but is still allowed |
 | **Key callout** | Maximum 200 characters |
 
-<Note>
-The application deadline can be set beyond 6 months, but Equip shows a warning to reconsider a closer date. This is a soft nudge, not a hard limit.
-</Note>
-
 ## Job Post Status
 
-Every job post has a **status** that controls whether candidates can see it and apply. You change it from a dropdown on the [Job Openings dashboard](https://equip.co/recruiter/job-openings/dashboard/).
+Every job post has a **status** (Published, Hidden, or Archived) that controls whether candidates can see it and apply. Change it from the dropdown on the [Job Openings dashboard](https://equip.co/recruiter/job-openings/dashboard/). See [Sharing Job Posts](/sharing-job-posts) for what candidates see in each status.
 
 {/* screenshot: Job Openings dashboard row with the status dropdown open */}
-
-| Status | What it means |
-|---|---|
-| **Published** | Visible to candidates and accepting applications |
-| **Hidden** | Not visible to candidates; the public link returns a 404 page |
-| **Archived** | No longer accepting applications; the public link shows a "Position Closed" page instead of the post. Your team can still open it from the dashboard for reference. |
 
 <Note>
 Only **Published** job posts appear on your [careers page](/careers-page). Hiding or archiving a post removes it from the public listing without deleting any of its applications.
 </Note>
 
-Once the job post is complete, continue to the [Application Form](/application-form) step to choose which fields candidates fill out.
+Next, continue to the [Application Form](/application-form) step.
 
 ## Related Resources
 

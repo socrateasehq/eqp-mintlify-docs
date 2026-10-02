@@ -39,7 +39,7 @@ The AutoProctor help center at `/Users/jayanth/projects/autoproctor-mintlify-doc
 ## Product Context
 
 - Equip is a self-serve hiring platform with three pillars: a free AI-native **ATS**, **Assessments** (skill tests with AI proctoring), and **AI Interviews** (one-way and conversational). Resume Screening (CV parsing, Job Fit Score) is part of the ATS.
-- Pay-per-use **credits** (1 credit = $1); the ATS is free; assessments cost 1 credit per candidate per test; no subscriptions or seat fees.
+- Pricing is by **subscription plan** (Standard, Premium, Elite). Each plan has a monthly credit allowance and a recruiter-seat limit; only Elite has no seat limit. 1 credit = $1, teams can top up beyond the allowance, the ATS is free on every plan, and assessments cost 1 credit per candidate per test.
 - Audiences: recruiters (primary), candidates (Candidate Experience category), admins (Account & Billing).
 - Proctoring is powered by AutoProctor. Candidates see active proctoring measures and consent before starting.
 

@@ -5,54 +5,32 @@ description: "Step 3 of creating a job opening: define your hiring stages and th
 
 The **Candidate Pipeline** is the third and final step of the job creation wizard, after Job Post and Application Form. Here you define the stages candidates move through, from application to hire, along with the automations attached to each stage.
 
-Nothing you set up here is locked in. After the job is live, open the job's Settings page and switch to the **Candidate Pipeline** tab to edit stages at any time.
+After the job is live, you can edit stages at any time from the **Candidate Pipeline** tab of the job's Settings page.
 
 {/* screenshot: pipeline builder in step 3 of the job creation wizard, showing stage cards */}
 
 ## Choosing Stages
 
-Every pipeline starts with the **Applied** stage. It is a system stage, always comes first, and is where every new application lands. From there, add the stages that match your hiring process.
-
-Equip offers 11 stage types:
-
-| Stage type | What it is for |
-|---|---|
-| **Applied** | Candidates apply for the position. Always the first stage. |
-| **Phone Screening** | Call candidates. Rank and review them. |
-| **Assessment** | Quiz, coding, communication, and other skill tests. |
-| **One-Way AI Interview** | Fixed questions. Evaluate subjective responses via text, audio, or video. |
-| **Conversational AI Interview** | An AI bot auto-generates questions and engages in a back-and-forth conversation. |
-| **Live Interview** | Video, phone, or in-person round. Schedule, score, and review candidates. |
-| **Custom** | A custom stage with optional ranking. |
-| **Offered** | System stage for candidates you extend an offer to. Supports an offer email and documents to sign. |
-| **Hired** | Terminal stage for successful candidates. |
-| **Rejected** | Terminal stage for candidates you turn down. |
-| **Withdrawn** | Terminal stage for candidates who drop out. |
+Every pipeline starts with the **Applied** stage, where every new application lands. From there, add the stages that match your hiring process: Phone Screening, Assessment, One-Way AI Interview, Conversational AI Interview, Live Interview, or Custom. [Pipeline Stages](/pipeline-stages) explains what each one is for.
 
 <Note>
-When you add an **Assessment**, **One-Way AI Interview**, or **Conversational AI Interview** stage, Equip automatically creates the underlying assessment or interview for that stage. You can review and adjust it before inviting candidates.
+When you add an Assessment, One-Way AI Interview, or Conversational AI Interview stage, Equip automatically creates the underlying assessment or interview for that stage. You can review and adjust it before inviting candidates.
 </Note>
 
-The three terminal stages (**Hired**, **Rejected**, **Withdrawn**) cannot be deleted. Together with Applied and Offered, they are the fixed endpoints every pipeline is built around.
+The three **terminal stages** (Hired, Rejected, Withdrawn) cannot be deleted. Together with Applied and Offered, they are the fixed endpoints of every pipeline.
 
 ## Reordering and Naming
 
-The pipeline builder is **drag-to-reorder**: pick up any stage card and drop it where it belongs in your process.
+Drag any stage card to **reorder** the pipeline. Each stage carries two names:
 
-Each stage carries two names:
-
-| Name | Who sees it | Limit |
-|---|---|---|
-| **Candidate-facing stage name** | Shown in filters and stage-change dropdowns internally; candidates only see it in Live Interview and Custom invitation emails | Up to 40 characters |
-| **Internal name** | Your team, in dashboards and reports | Up to 30 characters |
-
-Use the Stage Name for filters and stage-change menus (for example, "Interview 2") and the Internal Name as a short dashboard label (for example, "July Hiring"). Candidates see only the job title, except that Live Interview and Custom invitation emails can include the stage name.
+| Name | Who sees it |
+|---|---|
+| **Candidate-facing stage name** | Shown in filters and stage-change dropdowns internally; candidates only see it in Live Interview and Custom invitation emails |
+| **Internal name** | Your team, in dashboards and reports |
 
 <Warning>
 If you delete a stage that already holds candidates, Equip archives it instead of deleting it. You will see the message "Stage has candidates and was archived instead of deleted". Archived stages can be restored at any time, so no candidate data is lost.
 </Warning>
-
-{/* screenshot: dragging a stage card to reorder the pipeline */}
 
 ## Attaching Templates and Assignees
 
@@ -71,21 +49,18 @@ To configure a stage:
 
 <Steps>
   <Step title="Open the stage">
-    Click the stage card in the pipeline builder to open its configuration.
+    Click the stage card in the pipeline builder.
   </Step>
-  <Step title="Attach templates">
-    Pick an **invitation email template** for stages where candidates receive an invite, and a **rejection email template** so rejections from this stage use consistent wording. Defaults are provided, and you can manage your own under Templates.
-  </Step>
-  <Step title="Attach a scorecard">
-    For Phone Screening, Live Interview, and Custom stages, select a **scorecard** so interviewers rate every candidate against the same criteria.
+  <Step title="Attach templates and a scorecard">
+    Pick an **invitation email template** and a **rejection email template**. Defaults are provided, and you can manage your own under Templates. On stages that support one, select a **scorecard**.
   </Step>
   <Step title="Set an assignee">
-    Choose a team member responsible for candidates in this stage. Click the circular icon on the top right of the stage card and pick a team member from the list. Assignees power the "Mine" filter on the applications dashboard, so everyone knows what is on their plate.
+    Click the circular icon on the top right of the stage card and pick a team member. Assignees power the "Mine" filter on the applications dashboard.
   </Step>
 </Steps>
 
 <Note>
-Attaching an email template does not mean emails go out automatically. When you move a candidate to a stage, you choose whether to send the email, and you can preview it first. To have Equip move candidates or send emails for you, set up [Stage Automation](/stage-automation).
+Attaching an email template does not mean emails go out automatically. When you move a candidate to a stage, you choose whether to send the email. To have Equip move candidates or send emails for you, set up [Stage Automation](/stage-automation).
 </Note>
 
 {/* screenshot: stage configuration panel with template and assignee dropdowns */}

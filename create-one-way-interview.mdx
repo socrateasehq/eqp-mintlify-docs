@@ -7,46 +7,38 @@ A **One-Way AI Interview** asks every candidate the same fixed set of questions.
 
 ## Building from Templates
 
-One-way interviews are built from **reusable templates**. A template holds your questions, answer formats, and grading rules, so you can attach the same question set to multiple job openings without rebuilding it.
+One-way interviews are built from **reusable templates**. A template holds your questions, answer formats, and grading rules, so you can attach the same question set to multiple job openings.
 
 <Note>
-You need at least one one-way template before you can create an interview. If your team has none, Equip redirects you to the templates page with the message "You must create an AI Interview template before creating an AI Interview."
+You need at least one one-way template before you can create an interview. If your team has none, Equip sends you to the templates page to create one first.
 </Note>
 
 <Steps>
   <Step title="Open the AI Interviews dashboard">
-    In your Equip dashboard, go to [**AI Interviews**](https://equip.co/recruiter/ai-interviews/dashboard/) and click **Add AI Interview**. You are offered two choices: **Conversational Interview** and **One-Way Interview**. Pick **One-Way Interview**.
+    Go to [**AI Interviews**](https://equip.co/recruiter/ai-interviews/dashboard/), click **Add AI Interview**, and pick **One-Way Interview**.
     {/* screenshot: AI Interviews dashboard with the Add AI Interview button and the two interview type choices */}
   </Step>
-  <Step title="Select a template">
-    On the **Create AI Interview** page, choose one of your one-way templates from the **Select Template** dropdown.
-  </Step>
-  <Step title="Attach a job opening">
-    Under **Job Opening**, either pick **Use existing job opening** and select it from the dropdown, or choose **Create new job opening** and enter a **Job Opening Title** (for example, "Senior Software Engineer").
-  </Step>
-  <Step title="Create the interview">
-    Click **Create Interview**. Equip creates the interview and takes you straight to its Settings page, where you can configure instructions, timing, and proctoring before inviting candidates.
+  <Step title="Select a template and a job opening">
+    Choose a one-way template, pick an existing job opening or create a new one, and click **Create Interview**.
   </Step>
 </Steps>
 
 <Tip>
-Templates can be **cloned**, so the fastest way to spin up a variant for a new role is to clone an existing template and edit only the questions that differ. A template linked to a live interview cannot be deleted.
+Templates can be **cloned**, so the fastest way to build a variant for a new role is to clone a template and edit only the questions that differ.
 </Tip>
 
 ## Question Setup
 
-Questions live in the **template editor**. Give the template a title (up to 50 characters), then add questions with **Add Question**. Each interview supports up to **40 questions**, needs at least 1, and questions can be reordered with the move up and down controls.
+Questions live in the **template editor**. Click **Add Question** to add one, or [import questions from Excel](/import-questions-from-excel) if you already have them written elsewhere.
 
 A one-way interview supports two question types:
 
-1. **AI-graded**: you set the question and the answer format (text, audio, or video), and Equip's AI evaluates the candidate's answer.
-2. **MCQ**: you set the question and the options, and the candidate selects the correct answer.
-
-If you already have questions written elsewhere, you can [import questions from Excel](/import-questions-from-excel) instead of typing them one by one. The editor also has **Preview** and **Settings** buttons so you can check the candidate view as you build.
+1. **AI-graded**: the candidate answers in text, audio, or video, and Equip's AI evaluates the answer.
+2. **MCQ**: the candidate selects the correct answer from your options.
 
 {/* screenshot: one-way template editor showing a question with answer format, points, and evaluation prompt fields */}
 
-For **AI-graded** questions, choose an **Answer Format**: Text, Audio, or Video (Text is the default). The format determines which response controls apply:
+For AI-graded questions, the **Answer Format** determines which response controls apply:
 
 | Setting | Applies to | Range | Default |
 |---|---|---|---|
@@ -55,38 +47,29 @@ For **AI-graded** questions, choose an **Answer Format**: Text, Audio, or Video 
 | **Min / Max Seconds** | Audio, Video | 5 to 180 seconds | 30 / 180 |
 | **Max Retakes** | Audio, Video | Up to 5 | 5 |
 
-Beyond the basics, each question also offers:
-
-- **Evaluation Prompt**: optional factors the AI must weigh when grading the answer, up to 100 words. Leave it blank to use the AI's default judgment.
-- **Response languages**: the languages candidates may answer in. English is the default.
+Each question also offers an optional **Evaluation Prompt** (up to 100 words) that tells the AI what to weigh when grading, and a choice of **response languages** candidates may answer in.
 
 <Warning>
-You cannot add more than 40 questions to an AI Interview, and the last remaining question cannot be deleted. Plan your question list before building it out.
+You cannot add more than 40 questions to an AI Interview, and the last remaining question cannot be deleted.
 </Warning>
 
 ## Configure Interview Settings
 
-After creation, the interview's settings page controls what candidates see and when they can start:
+After creation, Equip opens the interview's **Settings** page. Add candidate instructions, set a start window, and configure proctoring there before you invite candidates.
 
-| Setting | What it does |
-|---|---|
-| **Job Title** | The role title shown for this interview (up to 100 characters). |
-| **Linked Template** | The one-way template attached to this interview. Required; the interview cannot run without one. |
-| **Additional Instructions** | Notes shown to candidates before they start (up to 1,000 characters). |
-| **Timer Settings** | Optional **Cannot Start Before** and **Cannot Start After** date and time limits. |
-| **Proctoring Settings** | The same anti-cheating options as assessments, such as face detection and tab-switch detection. |
+<Note>
+The **Linked Template** is required. The interview cannot run without one.
+</Note>
 
 {/* screenshot: one-way interview settings page with job title, linked template, instructions, timer, and proctoring sections */}
 
-See [Interview Settings](/interview-settings) for the full breakdown of every option, including all proctoring toggles.
+See [Interview Settings](/interview-settings) for every option, including all proctoring toggles.
 
 ## Candidate Responses
 
-Candidates see **all questions at once** and can answer them in any order, but the interview happens in a **single session**. They respond in whichever format each question requires: typed text, recorded audio, or recorded video.
+Candidates see **all questions at once** and can answer them in any order, but the interview happens in a **single session**.
 
-Because the questions are fixed and grading is automatic, one-way interviews scale well for **high-volume screening**, typically when you have 30 or more candidates to evaluate for a role.
-
-Once a candidate submits, the AI grades every answer against the question's points and your evaluation prompt. The results appear in the candidate's report with per-question answers and AI grades.
+Once a candidate submits, the AI grades every answer, and the results appear in the candidate's [report](/interview-reports).
 
 <Note>
 Credits are deducted per candidate. If an invited candidate never starts the interview, you can [reclaim the credits](/reclaim-credits).
