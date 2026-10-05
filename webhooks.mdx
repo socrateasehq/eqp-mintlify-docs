@@ -107,7 +107,7 @@ The `data` object contains:
 
 ## Delivery Behavior
 
-Deliveries are **fire-and-forget**: Equip sends each event once, in the background, and does not retry.
+Deliveries are **fire-and-forget**: Equip sends each event once.
 
 <Warning>
 If your endpoint is down or takes longer than 10 seconds to respond, the event is **not retried** and is lost. If you miss an event, the results are still safe on Equip: open the candidate's report on your dashboard, or pull results through the [API](/api-integrations).

@@ -15,14 +15,7 @@ Every completed proctored **assessment** attempt and **AI interview** (one-way o
 
 Equip's proctoring is powered by **AutoProctor**, and the Trust Score is computed automatically from the events recorded during the attempt. Violations detected by the active proctoring measures lower the score; a clean session keeps it high.
 
-The signals that can generate violations depend on which [proctoring settings](/proctoring-settings) are enabled for each test. AI interviews have their own Proctoring Settings, in the interview's [settings](/interview-settings). Typical examples include:
-
-| Signal | Evidence captured |
-|---|---|
-| **Switched tabs or applications** | Event log, and a screenshot on supported browsers |
-| **No face or multiple faces on camera** | Photos from the webcam |
-| **Background noise or voices** | Audio recordings |
-| **Leaving full screen** | Event log with timestamps |
+The signals that can generate violations depend on which [proctoring settings](/proctoring-settings) are enabled for each test. AI interviews have their own Proctoring Settings, in the interview's [settings](/interview-settings).
 
 | Product | Scores per attempt | When it appears |
 |---|---|---|
@@ -57,15 +50,12 @@ A low score is a signal, not proof of cheating. Harmless events, such as backgro
     {/* screenshot: Proctoring tab showing a violations list with timestamps and evidence thumbnails */}
   </Step>
   <Step title="Watch the Session Recording">
-    If [session recording](/session-recording) was enabled, play back the candidate's screen and actions to see exactly what happened.
-  </Step>
-  <Step title="Decide with full context">
-    Weigh the evidence against the candidate's test performance.
+    If [session recording](/session-recording) was enabled, play it back. Then weigh the evidence against the candidate's performance.
   </Step>
 </Steps>
 
 <Tip>
-If many candidates score low on the same assessment, revisit its proctoring setup. For example, **Detect Audio** in a noisy environment or strict full-screen enforcement can produce frequent but harmless violations.
+If many candidates score low on the same assessment, revisit its proctoring setup: **Detect Audio** in a noisy room, for example, can produce frequent but harmless violations.
 </Tip>
 
 ## Related Resources
