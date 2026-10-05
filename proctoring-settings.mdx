@@ -3,7 +3,7 @@ title: "Proctoring Settings and How to Change Them"
 description: "Every proctoring option, its default, and how to configure it per test."
 ---
 
-Every test in an assessment carries its own **proctoring settings**. Each test starts with defaults for its test type, and you can change them per test from the assessment's settings.
+Every test in an assessment and every AI interview carries its own **proctoring settings**. Each starts with defaults for its type, and you can change them per test or per interview. The ATS (job openings, live interviews, offers) has no proctoring settings.
 
 ## Available Settings
 
@@ -52,30 +52,50 @@ New tests start with most settings **on**. The exceptions depend on the test typ
 | **AI Interview (Conversational)** | Detect Audio, Detect Face, Take Random Photos, Enforce Desktop |
 
 <Note>
-A few toggles are locked, not just defaulted. Camera-related options stay locked off for custom video response tests. Psychometric tests keep tab-switch detection locked off.
+A few toggles are locked, not just defaulted. Camera-related options stay locked off for custom video response tests. Psychometric tests keep tab-switch detection locked off. AI interviews have their own locks, listed under [For AI Interviews](#for-ai-interviews).
 </Note>
 
 ## Changing Settings
 
+### For Assessments
+
 <Steps>
   <Step title="Open the assessment's Settings">
-    Create the assessment first, then open its settings from your assessment dashboard.
+    Open it from your assessment dashboard.
   </Step>
   <Step title="Go to the Test Order tab">
     Find the test you want to modify and click **Edit Settings**.
   </Step>
   <Step title="Toggle the settings you need">
-    Click **Save Settings**. Then click **Update**, and your changes apply to future attempts of that test.
+    Click **Save Settings**, then **Update**. Changes apply to future attempts of that test.
   </Step>
 </Steps>
 
-<Frame caption="Edit Settings link for each test in the Test Order tab">
-  <img src="/images/proctoring-settings-edit-settings-link.png" alt="Test Order tab with an Edit Settings link under the Proctoring column for each test" />
+<Frame>
+  <img src="/images/proctoring-settings-edit-settings-link.png" alt="Test Order tab with Edit Settings links" />
 </Frame>
 
-<Tip>
-The panel includes **Enable All** and **Disable All** links to flip every toggle at once.
-</Tip>
+### For AI Interviews
+
+<Steps>
+  <Step title="Open the interview's Settings page">
+    From the [**AI Interviews** dashboard](https://equip.co/recruiter/ai-interviews/dashboard/), click **Settings** on the interview. See [Interview Settings](/interview-settings) for the rest of that page.
+  </Step>
+  <Step title="Expand Proctoring Settings and toggle what you need">
+    On one-way interviews it sits below **Main Settings** and **Timer Settings**. On conversational interviews it is under section 5, **Proctoring**. The locks below still apply.
+  </Step>
+</Steps>
+
+| Lock | Applies To |
+|---|---|
+| **Detect Audio** always off | Conversational interviews |
+| **Detect Audio** off when the template has audio or video questions | One-way interviews |
+| No **Show Webcam Preview** toggle (the interview has its own preview) | Conversational interviews |
+| **Detect Switched Tab** stays on while **Switched Tab Screenshot** is on | Both |
+
+<Note>
+In the guided setup flow you pick a proctoring level instead: **None**, **Basic** (tab and app switches), **Standard** (tab switch, camera, mic, full screen) or **Enhanced** (Standard plus auxiliary device).
+</Note>
 
 ## Related Resources
 

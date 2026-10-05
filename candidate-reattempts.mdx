@@ -4,12 +4,12 @@ description: "Attempt limits, how to allow a candidate to try again, and what a 
 ---
 
 <Tip>
-tl;dr: A candidate can attempt an assessment only once. To let them try again, delete their existing attempt from the Results page and re-invite them. Every invitation deducts a credit, so a full re-attempt costs one extra credit.
+tl;dr: A candidate can attempt an assessment only once. To let them try again, delete their existing attempt from the Results page and re-invite them; a full re-attempt costs one extra credit. AI interviews use their own settings instead: see [Re-Attempting an AI Interview](#re-attempting-an-ai-interview).
 </Tip>
 
 ## One Attempt Per Candidate
 
-Every candidate can attempt an assessment **only once**, and no setting raises this limit.
+Every candidate can attempt an assessment **only once**, and no setting raises this limit. AI interviews work differently; see [Re-Attempting an AI Interview](#re-attempting-an-ai-interview).
 
 An unfinished assessment is **always resumed** for the same email ID. Even a fresh invitation with a brand-new link continues the original attempt from where the candidate left off.
 
@@ -59,9 +59,25 @@ Equip **always deducts a credit on each invitation**, including re-invitations. 
 A credit is reclaimable only when the invitation was sent more than 24 hours ago and the candidate has not started the first test. Reclaiming a credit also revokes the candidate's link and deletes any test data tied to it. See [Reclaim Credits](/reclaim-credits).
 </Note>
 
+## Re-Attempting an AI Interview
+
+For **AI interviews**, re-attempts depend on a setting that differs by interview type:
+
+| | Conversational interview | One-way interview |
+|---|---|---|
+| Setting | **Allow resuming unfinished attempt**, in the interview's Settings (section 4), off by default | **Max Retakes** per question, default 5, max 5 |
+| What it allows | Restart the whole interview from scratch if the candidate leaves before submitting; only the submitted attempt is graded | Re-record an answer, not retake the whole interview |
+| After a reload | Without the toggle, the candidate sees "Conversational AI interviews cannot be resumed once started" | Used retakes are remembered |
+
+Open the conversational interview's Settings from the [**AI Interviews** dashboard](https://equip.co/recruiter/ai-interviews/dashboard/).
+
+<Note>
+If a candidate's connection drops during a conversational interview and cannot reconnect, they see "Your interview has ended" and are told to contact their recruiter to retake it.
+</Note>
+
 ## Related Resources
 
 - [Resume Your Attempt](/resume-your-attempt) - What candidates should do after a refresh, crash, or device change
 - [Reclaim Credits](/reclaim-credits) - Conditions for getting credits back on unused invitations
 - [Email Invitations](/email-invitations) - Sending and tracking assessment invitations
-- [Email Status](/email-status) - What Sent, Delivered, Opened, Clicked, and Bounced mean
+- [Interview Settings](/interview-settings) - Settings for conversational and one-way AI interviews

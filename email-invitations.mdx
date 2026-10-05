@@ -9,14 +9,14 @@ Email invitations are the most controlled way to share an assessment or AI inter
 
 <Steps>
   <Step title="Open the invitation page">
-    On your dashboard, click **Invite** under the assessment.
+    On your dashboard, click **Invite** under the assessment. AI interviews have the same **Invite** link on the AI Interviews dashboard.
     {/* screenshot: Invite button under an assessment on the recruiter dashboard */}
   </Step>
   <Step title="Add recipients">
-    Type or paste email addresses separated by commas or new lines. For longer lists, click **Upload CSV** and use the **Download sample CSV** template to format your file.
+    Paste email addresses, or click **Upload CSV** for longer lists.
   </Step>
   <Step title="Review and send">
-    Check the sender, subject, and email body, and set a link expiry if you want one. Then click send and confirm in the **Invite Candidates** dialog.
+    Check the email, then click send and confirm in the **Invite Candidates** dialog.
     {/* screenshot: Send Invitations tab with recipients filled in and the confirmation dialog */}
   </Step>
 </Steps>
@@ -24,29 +24,20 @@ Email invitations are the most controlled way to share an assessment or AI inter
 You can send to a maximum of **100 recipients per send**.
 
 <Note>
-If the assessment or interview is linked to a particular job opening, the **Invite** button is disabled here instead. Go to that job opening and change the candidate's stage; the invitation email goes out automatically when they move into the linked stage. See [Changing Stages](/changing-stages).
+If the assessment or interview is linked to a job opening, the **Invite** button is disabled. Move the candidate into the linked stage instead and the invitation goes out automatically. See [Changing Stages](/changing-stages).
 </Note>
 
-After sending, follow each email in the **Track Invitations** tab. See [Email Status](/email-status) for what each status means.
+Follow each email in the **Track Invitations** tab. See [Email Status](/email-status) for what each status means.
 
 ## Invitation Templates
 
-The **Send Invitations** tab includes these fields:
-
-| Field | What it controls |
-|---|---|
-| **Sender** | Dropdown of your team members' emails. The chosen member's email becomes the reply-to address. |
-| **Link Expiry (days)** | How long invitation links stay valid, from 1 to 365 days. Leave it empty and links never expire. |
-| **Email Subject** | The subject line. Fully editable. |
-| **Email Template** | Rich-text email body, saved per assessment so your edits persist for future sends. |
-
-You can write the email in **any language** your candidates prefer.
+You can choose the **Sender**, whose email becomes the reply-to address, and edit the subject and body in any language. Body edits are saved per assessment or AI interview. Set **Link Expiry (days)** if links should expire; leave it empty and they never do.
 
 <Warning>
-The email body must contain the assessment link, and you should not edit the link itself while customizing the text around it. If you delete it, Equip blocks sending with a **No Link Found** dialog and asks you to restore the link using the **Reset to default** button under the email template. Your current edits to the body are lost.
+Do not delete the assessment link from the email body. If you do, Equip blocks sending with a **No Link Found** dialog, and restoring it with **Reset to default** loses your current edits to the body.
 </Warning>
 
-Emails are always sent from **no-reply@equip.co**; this address cannot be changed. See [Custom Sender Email](/custom-sender-email) for details.
+Emails are always sent from **no-reply@equip.co**. See [Custom Sender Email](/custom-sender-email).
 
 <Note>
 Forwarding a link to someone else does not work, because the verification code still goes to the invited email address. See [Invitation Links](/invitation-links).
@@ -54,7 +45,9 @@ Forwarding a link to someone else does not work, because the verification code s
 
 ## Credit Costs
 
-Email invitations deduct credits at send time, not when the candidate starts:
+Email invitations deduct credits at send time, not when the candidate starts.
+
+### Assessments
 
 | Event | Credits |
 |---|---|
@@ -62,11 +55,21 @@ Email invitations deduct credits at send time, not when the candidate starts:
 | Candidate takes each test in an assessment | 1 credit per test, with the invitation credit covering the first test |
 | Re-inviting the same candidate | Another 1 credit, reclaimable after 24 hours if the extra link goes unused |
 
+### AI interviews
+
+Each invited candidate costs the interview's rate below, with no extra charge when they start.
+
+| Interview type | Credits per candidate |
+|---|---|
+| **One-way Interview** | 1 credit per 20 questions, rounded up (maximum 40 questions, so 1 or 2 credits) |
+| **Quick Interview** | 2 credits |
+| **Comprehensive Interview** | 3 credits |
+
 <Note>
-If a candidate never starts, you can reclaim the credit once the invitation is more than 24 hours old. Reclaiming also revokes their link and deletes any test data. See [Reclaim Credits](/reclaim-credits).
+For both products, if a candidate never starts, you can reclaim the credits once the invitation is more than 24 hours old. Reclaiming also revokes their link and deletes any test data. See [Reclaim Credits](/reclaim-credits).
 </Note>
 
-Your account can go up to 25 credits negative, so the number of open invitations is capped at your balance plus 25.
+Sending is blocked with an **Insufficient Credits** dialog unless your balance covers every invitation.
 
 <Warning>
 With a negative balance, results are hidden until you top up, and below minus 25 credits candidates cannot start their attempts. Keep enough balance for everyone you invite.

@@ -3,7 +3,7 @@ title: "Email Status: Delivered, Opened, Clicked"
 description: "What each invitation email status means, and what to do when an email bounces or a candidate says they never received it."
 ---
 
-When you invite candidates by email, Equip tracks each invitation: whether it reached the candidate's inbox, whether they opened it, and whether they clicked the assessment link.
+When you invite candidates by email, Equip tracks each invitation: whether it reached the candidate's inbox, whether they opened it, and whether they clicked the **assessment** or **AI interview** link.
 
 <Note>
 Status tracking is only available for **email invitations**. Candidates who join through a shared public URL are not tracked this way. See [Share URL vs Email Invitations](/share-url-vs-email) for the full comparison.
@@ -13,14 +13,22 @@ Status tracking is only available for **email invitations**. Candidates who join
 
 <Steps>
   <Step title="Open the invite page">
-    From your dashboard, click **Invite** under the assessment whose invitations you want to check.
+    On the [Assessments dashboard](https://equip.co/recruiter/assessments/dashboard/) or [AI Interviews dashboard](https://equip.co/recruiter/ai-interviews/dashboard/), click **Invite** under the assessment or AI interview.
   </Step>
   <Step title="Switch to Track Invitations">
-    Click the **Track Invitations** tab and check the **Status** column for each candidate.
+    Click the **Track Invitations** tab and check the **Email Status** column. Use **Copy Link** to get a candidate's invitation link.
   </Step>
 </Steps>
 
-{/* screenshot: Track Invitations tab showing the invitations table with the Status column */}
+{/* screenshot: Track Invitations tab showing the invitations table with the Email Status column */}
+
+### Job Opening Stages
+
+When an assessment or AI interview is a **stage of a job opening**, you invite candidates by [moving them to that stage](/changing-stages) in the Job Applications Dashboard. Those invitations are tracked on the stage's **Track Invitations** tab, and **Invite** opens that tab directly.
+
+<Note>
+Only assessment and AI interview invitations are tracked. Other pipeline emails, such as rejections, stage changes and offers, have no email status.
+</Note>
 
 ## What Each Status Means
 
@@ -39,16 +47,16 @@ Some email clients, especially mobile apps, block open tracking. A candidate may
 </Note>
 
 <Tip>
-The default invitation template contains exactly one link, so **Clicked** means the candidate clicked the assessment link. If you add extra links while customizing the [email template](/email-invitations), Equip cannot tell which link was clicked.
+The default invitation template contains exactly one link, so **Clicked** means the candidate clicked the invitation link. If you add extra links while customizing the [email template](/email-invitations), Equip cannot tell which link was clicked.
 </Tip>
 
 ## When Emails Bounce
 
-A **Bounced** invitation never reached the candidate. Here is how to recover:
+A **Bounced** invitation never reached the candidate.
 
 <Steps>
   <Step title="Re-invite with the correct address">
-    Check the address for typos, then send a fresh invitation from the **Send Invitations** tab.
+    Check the address for typos, then send a fresh invitation from the **Send Invitations** tab. For a job opening stage, re-invite the candidate from the job's applications on the [Job Openings dashboard](https://equip.co/recruiter/job-openings/dashboard/).
   </Step>
   <Step title="Reclaim the unused credit">
     The bounced invitation was never used, so you can [reclaim its credit](/reclaim-credits).
