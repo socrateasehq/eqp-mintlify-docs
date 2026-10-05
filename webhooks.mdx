@@ -1,9 +1,9 @@
 ---
 title: "Webhooks"
-description: "Receive JSON notifications in your own systems when candidates complete assessments and AI interviews on Equip."
+description: "Receive JSON notifications in your own systems when candidates complete assessments and AI interviews, or job applications are created or change stage, on Equip."
 ---
 
-**Webhooks** let Equip push results into your own systems the moment they are ready. When a candidate's attempt is fully graded, Equip sends an HTTP POST request with a JSON payload to a URL you provide, so your ATS, CRM, or internal tools stay in sync without polling.
+**Webhooks** let Equip push updates into your own systems the moment they happen. When a candidate's assessment or AI interview attempt is fully graded, or a job application is created or changes stage in the ATS, Equip sends an HTTP POST request with a JSON payload to a URL you provide, so your CRM or internal tools stay in sync without polling.
 
 <Tip>
 If you only want results in a spreadsheet, use the no-code [Write Results to Google Sheets](/write-results-to-google-sheets) option instead.
@@ -11,31 +11,40 @@ If you only want results in a spreadsheet, use the no-code [Write Results to Goo
 
 ## Setting Up a Webhook
 
-Webhooks are configured at the **team level**. Your team has a single webhook URL, and every completion event is sent to it.
+Webhooks are configured at the **team level**. Your team has a single webhook URL, and every event you turn on is sent to it.
 
 <Steps>
   <Step title="Prepare your endpoint">
     Set up an endpoint that accepts HTTP POST requests with a JSON body and responds within **10 seconds**. Do any heavy processing asynchronously.
   </Step>
-  <Step title="Share your URL with Equip">
-    There is no self-serve settings page for webhooks yet. Send your endpoint URL to the Equip team over the in-product live chat or at [hello@equip.co](mailto:hello@equip.co). Use the same channels to change or remove it later.
+  <Step title="Add your URL">
+    Enter your endpoint URL on the [Developers page](https://equip.co/recruiter/account/developers/) and save it.
+  </Step>
+  <Step title="Choose your events">
+    Under **Events**, switch each event on or off. Saving a new URL turns on only `assessment.completed` and `ai_interview.completed`.
   </Step>
   <Step title="Verify with a real completion">
-    Have a candidate complete an assessment or AI interview and confirm your endpoint receives the event.
+    Have a candidate complete an assessment or AI interview, or move an application to another stage, and confirm your endpoint receives the event.
   </Step>
 </Steps>
 
 ## Events
 
-Equip sends two event types. Both fire **once per candidate attempt**, after grading is complete, so the scores in the payload are final.
+The two completion events fire **once per candidate attempt**, after grading is complete, so the scores in the payload are final. The two **job application** events come from the ATS.
 
-| Event | When it fires |
-|---|---|
-| `assessment.completed` | Every test in a candidate's assessment attempt has been graded. |
-| `ai_interview.completed` | A candidate's AI interview attempt is fully graded. |
+| Event | When it fires | On by default |
+|---|---|---|
+| `assessment.completed` | Every test in a candidate's assessment attempt has been graded. | Yes |
+| `ai_interview.completed` | A candidate's AI interview attempt is fully graded. | Yes |
+| `job_application.created` | A new application was created on a job opening. | No |
+| `job_application.stage_changed` | An application moved to a different stage. Fires only when the stage actually changes. | No |
 
 <Note>
 An attempt that needs [manual grading](/manual-grading) triggers its webhook only after you finalize the grade, not at submission time.
+</Note>
+
+<Note>
+To call a URL from a pipeline stage's automation rule, use the **Notify an external system (webhook)** automation action instead. It is set per stage and supports GET, POST, PUT and PATCH. See [Automation Webhooks and External Updates](/automation-webhooks).
 </Note>
 
 ## Payloads
@@ -77,6 +86,25 @@ The `data` object has the same fields as `assessment.completed`, with two differ
 - `ai_interview_label` and `ai_interview_report_url` replace `assessment_label` and `assessment_report_url`.
 - There is no `hiring_status` or `tests` field.
 
+### job_application.created and job_application.stage_changed
+
+The `data` object contains:
+
+| Field | Description |
+|---|---|
+| `job_application_id` | Identifier of the application. |
+| `candidate_name` | The candidate's name. |
+| `candidate_email` | The candidate's email address. |
+| `job_opening_label` | Identifier of the job opening. |
+| `job_title` | Title of the job opening. |
+| `stage` | The application's stage at the moment of the event: the starting stage for `job_application.created`, the new stage for `job_application.stage_changed`. |
+| `application_source` | Where the application came from. |
+| `applied_at` | When the application was created. |
+| `actor_user_id` | The user who made the change. |
+| `actor_name` | Full name of that user, or `null` when no user is recorded. |
+
+`job_application.stage_changed` also includes `old_stage` and `new_stage`.
+
 ## Delivery Behavior
 
 Deliveries are **fire-and-forget**: Equip sends each event once, in the background, and does not retry.
@@ -89,4 +117,5 @@ If your endpoint is down or takes longer than 10 seconds to respond, the event i
 
 - [API Integrations](/api-integrations) - Pull results and invite candidates programmatically
 - [Write Results to Google Sheets](/write-results-to-google-sheets) - No-code alternative for exporting results
+- [Automation Webhooks and External Updates](/automation-webhooks) - Per-stage webhooks from pipeline automation
 - [Test Scores and Overall Score](/test-scores-and-overall-score) - How the scores in webhook payloads are calculated

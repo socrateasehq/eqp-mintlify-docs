@@ -4,10 +4,10 @@ description: "Exactly when credits are deducted for assessments and interviews."
 ---
 
 <Tip>
-Equip deducts **1 credit per test in the assessment, per candidate**. The first credit is deducted when you send the invitation; each remaining credit is deducted only when the candidate starts that test. If a candidate never starts, you can reclaim the invitation credit.
+An **assessment** costs 1 credit per test, per candidate: the first on invite, the rest as the candidate starts each test. An **AI interview** costs its full per-candidate price on invite. The **ATS** is free; only Bulk CV Import uses credits. Invitation credits for a candidate who never starts can be reclaimed.
 </Tip>
 
-## When Credits Are Deducted
+## When Credits Are Deducted for Assessments
 
 An Equip assessment is made up of [one or more **tests**](/assessment-hierarchy). For example, an assessment with 1 Quiz and 1 Programming Test contains 2 tests, so each candidate who completes it costs 2 credits.
 
@@ -57,17 +57,36 @@ If you try to invite the same candidate to the same assessment twice, Equip warn
 Credits are deducted on invite rather than on start to stop spam invitations.
 </Note>
 
-## Costs by Product
-
-AI interview invitations follow the same reclaim rule as assessments: if the candidate never starts, you can [reclaim the credits](/reclaim-credits) 24 hours after the invitation was sent. For the full cost breakdown by action, and what happens if your balance goes negative, see [How Credits Work](/how-credits-work).
-
 <Note>
 You cannot merge tests to reduce the per-test cost, because each test type caps its questions. See [Question Limits](/question-limits).
 </Note>
+
+## When Credits Are Deducted for AI Interviews
+
+An AI interview has no per-test staging. The candidate's full cost is deducted in one go:
+
+| Event | Credits deducted |
+|---|---|
+| You invite a candidate | Full cost, on send: One-way 1 (up to 20 questions) or 2 (21 to 40); Conversational Quick 2, Comprehensive 3 |
+| A candidate opens a shared link and starts | Full cost, at start |
+| An invited candidate starts | Nothing more |
+
+Sending is refused with **Insufficient credits** unless your balance covers every invite. Once the candidate starts, the invitation credits can no longer be reclaimed; before that, you can [reclaim them](/reclaim-credits) 24 hours after the invitation was sent.
+
+## When Credits Are Deducted in the ATS
+
+The ATS itself is free. Only one action uses credits:
+
+| Action | Credits |
+|---|---|
+| [Bulk CV Import](/bulk-cv-import) | 0.01 per CV, charged for the whole batch (up to 100 CVs). The import does not start if your balance cannot cover it. |
+| Live Interview and Custom stage invitations | None |
+
+For the full cost breakdown and what happens if your balance goes negative, see [How Credits Work](/how-credits-work).
 
 ## Related Resources
 
 - [How Credits Work](/how-credits-work) - Pricing, free trial credits, and how to purchase more
 - [Reclaim Credits](/reclaim-credits) - Get credits back for invitations that were never used
-- [Assessment Hierarchy](/assessment-hierarchy) - How assessments, tests, and questions fit together
+- [Creating a One-Way AI Interview](/create-one-way-interview) - Set up an AI interview and its question count
 - [Email Invitations](/email-invitations) - How to invite candidates to an assessment

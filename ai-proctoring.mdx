@@ -4,12 +4,12 @@ description: "How Equip's automated AI proctoring monitors candidates, flags vio
 ---
 
 <Tip>
-Equip's proctoring is fully automated and driven by AI. It monitors the candidate's camera, microphone, and screen during every test, then gives you a **Trust Score** and a timestamped list of violations with evidence. Most proctoring features are free and require no browser extension or installation.
+Equip's proctoring is fully automated and driven by AI. It monitors the candidate's camera, microphone, and screen during every test or AI interview, then gives you a **Trust Score** and a timestamped list of violations with evidence. Most proctoring features are free and require no browser extension or installation.
 </Tip>
 
 ## How AI Proctoring Works
 
-Candidates see which proctoring measures are active before they begin. They must consent to the monitoring, and to the proctoring report being shared with you, before the test starts.
+Candidates see which proctoring measures are active before they begin. They must consent to the monitoring, and to the proctoring report being shared with you, before the test or interview starts.
 
 Try most of the measures yourself in Equip's [self-serve proctoring demo](https://equip.co/demo/proctoring/). No login is needed.
 
@@ -19,7 +19,7 @@ Try most of the measures yourself in Equip's [self-serve proctoring demo](https:
 
 ## What Gets Tracked
 
-Equip offers proctoring measures across three areas, all configurable per test in [Proctoring Settings](/proctoring-settings).
+Equip offers proctoring measures across three areas, all configurable per test in [Proctoring Settings](/proctoring-settings) or per AI interview in its settings.
 
 | Area | Measures |
 |---|---|
@@ -28,6 +28,13 @@ Equip offers proctoring measures across three areas, all configurable per test i
 | **Question rendering and selection** | Shuffle question order, randomize MCQ options, shuffle coding questions, question banks, question display mode |
 
 The question rendering and selection options are configured as [anti-cheating settings](/anti-cheating-settings) and quiz options rather than proctoring toggles.
+
+**AI interviews** use the same proctoring toggles, under **Proctoring Settings** in the interview's [settings](/interview-settings). The ATS has no proctoring.
+
+| Interview type | Where | Differences from tests |
+|---|---|---|
+| **One-way** | Collapsible **Proctoring Settings** section | **Detect Audio** is off and locked when the interview has audio or video questions |
+| **Conversational** | Section 5, **Proctoring** | Audio detection is always off; no **Show Webcam Preview** toggle, since the interview has its own |
 
 ## Preventing ChatGPT and AI Tool Usage
 
@@ -54,6 +61,8 @@ Every completed attempt gets a **Trust Score** from 0 to 100%. The lower the sco
     If Session Recording was enabled, play back the candidate's screen activity.
   </Step>
 </Steps>
+
+[AI interview reports](/interview-reports) have the same **Proctoring** and **Session Recording** tabs, shown when those measures were on.
 
 <Frame>
   <img src="/images/ai-proctoring-violations.png" alt="Proctoring tab listing violations" />

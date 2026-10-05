@@ -3,7 +3,7 @@ title: "Anti-Cheating Settings"
 description: "Randomize question order, shuffle choices, disable copy/paste, and auto-submit on tab switches to keep assessments fair."
 ---
 
-Apart from [AI proctoring](/ai-proctoring), Equip has four **anti-cheating settings** that make it harder for candidates to share answers or use outside help. They are set per test, separately from the [proctoring settings](/proctoring-settings) panel.
+Apart from [AI proctoring](/ai-proctoring), Equip has four **anti-cheating settings** that make it harder for candidates to share answers or use outside help. In assessments they are set per test, separately from the [proctoring settings](/proctoring-settings) panel. One-way AI interviews support only answer-choice shuffling.
 
 ## What Each Setting Does
 
@@ -44,6 +44,21 @@ If a test uses your own content, all four settings are configurable **per test**
     Turn the settings on or off, and set the tab-switch limit for **Auto-submit on Tab-switch**. Then save the test and update the assessment.
   </Step>
 </Steps>
+
+## In One-way AI Interviews
+
+Only **answer-choice shuffling** is available in a [one-way AI interview](/create-one-way-interview), and it is set **per question**, not per interview.
+
+| Setting | One-way AI Interview |
+|---|---|
+| **Shuffle choices** | **Randomize Options** checkbox on each MCQ question, on by default. Each candidate sees the choices in a different random order. |
+| **Randomize question order** | Not available |
+| **Disable Copy & Paste** | Not available |
+| **Auto-submit on Tab-switch** | Not available. The interview [settings](/interview-settings) offer proctoring toggles such as **Detect Switched Tab** instead. |
+
+<Note>
+Conversational interviews are built from topics, not MCQs, so none of these settings apply. The ATS has no tests.
+</Note>
 
 ## How These Settings Work with Proctoring
 

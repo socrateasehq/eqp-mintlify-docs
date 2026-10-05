@@ -3,18 +3,27 @@ title: "API Integrations"
 description: "Use Equip's REST APIs to invite candidates and pull results from your own ATS or internal systems."
 ---
 
-Equip's **REST APIs** let you run assessments from inside your own ATS or internal tools. You invite candidates and fetch their results programmatically, so you never have to manage the pipeline in the Equip dashboard.
+Equip's **REST APIs** let you run assessments and AI interviews from inside your own ATS or internal tools. You invite candidates, fetch their results and manage job openings programmatically, without working in the Equip dashboard.
 
 ## What the API Offers
 
-| You can | You cannot |
-|---|---|
-| Invite candidates to an assessment programmatically | Fetch question content directly (for example, "give me 100 Python MCQs") |
-| Pull candidates' results into your own system | Have candidates attempt tests outside of Equip |
+| Product | You can | You cannot |
+|---|---|---|
+| **Assessments** | Invite candidates to an assessment | Fetch question content directly (for example, "give me 100 Python MCQs") |
+| **AI interviews** | Invite candidates to an AI interview | Have candidates attempt tests or interviews outside of Equip |
+| **Both** | Pull candidates' attempts and results from one test-attempts endpoint; each attempt shows the AI interview it belongs to | |
+| **ATS** | Create, read and update job openings, their pipeline stages and the stage order | Create or move job applications (read-only) |
+| **ATS** | Read job posts, job applications, users and ATS insights | Change job posts, applications or users |
+
+When you invite candidates, each gets a unique link, and you choose whether Equip sends the invitation email (it does by default) and how many days the link stays valid. The email uses the stage's linked template, then the copy saved on the assessment's or interview's **Invite** tab, then the default email.
+
+<Note>
+Every API request acts as your team's **admin recruiter**. A write on a read-only endpoint returns "API key authentication is read-only for this endpoint"; any endpoint outside the allowed list returns "API key authentication is not allowed for this endpoint".
+</Note>
 
 ## Costs
 
-API access is included with the **Premium** and **Elite** plans, no separate setup fee or minimum purchase required.
+API access is part of the **Integrations & Webhooks** feature on the **Elite** plan, with no separate setup fee or minimum purchase.
 
 <Note>
 Credits work the same way for API-driven invitations as for dashboard invitations. See [How Credits Work](/how-credits-work) for deduction and reclaim rules.
@@ -22,22 +31,22 @@ Credits work the same way for API-driven invitations as for dashboard invitation
 
 ## Getting Access
 
-Every team has its own **API Key**, issued by the Equip team on request. There is no self-serve page to generate one.
+Every team has one **API Key**. The team admin generates it on the [**Account → Developers**](https://equip.co/recruiter/account/developers/) page.
 
 <Steps>
   <Step title="Create a team and trial Equip">
     Sign up for a recruiter account at [equip.co](https://equip.co/account/recruiter-onboarding/) with your work email. Use your free signup credits to confirm the product works for your use case.
   </Step>
-  <Step title="Subscribe to Premium or Elite">
+  <Step title="Subscribe to Elite">
     See [How Credits Work](/how-credits-work) for how to subscribe.
   </Step>
-  <Step title="Request your API Key">
-    Email hello@equip.co or use the in-product chat, and the Equip team issues your team's API Key.
+  <Step title="Generate your API Key">
+    On [**Account → Developers**](https://equip.co/recruiter/account/developers/), click **Generate API Key** and copy the key from the dialog. It is shown only once; if you lose it, click **Rotate API Key** to get a new one.
   </Step>
 </Steps>
 
 <Warning>
-Treat your API Key like a password. Anyone who has it can invite candidates and read results on your team's behalf, spending your team's credits.
+Treat your API Key like a password. Anyone who has it can invite candidates, read results and edit job openings on your team's behalf, spending your team's credits.
 </Warning>
 
 ## Explore the APIs
@@ -55,3 +64,4 @@ You do not always need the full API. If you only want results pushed to you when
 - [Webhooks](/webhooks) - Get completed assessment and interview results pushed to your endpoint
 - [How Credits Work](/how-credits-work) - Purchasing, pricing, and how credits are deducted
 - [Write Results to Google Sheets](/write-results-to-google-sheets) - A no-code way to export results automatically
+- [AI Interview Reports](/interview-reports) - What an AI interview result contains

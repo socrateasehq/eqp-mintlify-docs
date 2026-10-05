@@ -1,10 +1,10 @@
 ---
 title: "Candidate Says They Submitted, But I Can't See It"
-description: "Steps to diagnose an assessment submission that isn't showing up in your results."
+description: "Steps to diagnose an assessment or AI interview submission that isn't showing up in your results."
 ---
 
 <Tip>
-tl;dr: The candidate most likely finished only the **demo test**, or did not finish **all the tests** in the assessment. Ask them to click their assessment link again: if they truly finished, they will see an "Assessment Completed" screen; if not, the assessment resumes and they can complete it.
+tl;dr: For an assessment, the candidate most likely finished only the **demo test**, or did not finish **all the tests**. Ask them to click their assessment link again: if they truly finished, they see an "Assessment Completed" screen; if not, the assessment resumes and they can complete it. For an AI interview, check the results page, where unsubmitted attempts are listed as **Unsubmitted**.
 </Tip>
 
 ## What to Check First
@@ -34,9 +34,25 @@ A candidate who skims the instructions may complete a **demo test** and assume t
 
 If your assessment contains multiple tests, the candidate may have completed only some of them, so their attempt sits in the **Unfinished** state.
 
+Demo tests and multiple tests apply only to assessments, not AI interviews.
+
 <Note>
 Since 2022, this has never been an issue on Equip's side. If the results system failed, it would fail for every candidate, not selectively.
 </Note>
+
+## If It Was an AI Interview
+
+Ask the candidate to open their **AI interview link** again, and check the interview's **AI Interview Results** page from the [**AI Interviews** dashboard](https://equip.co/recruiter/ai-interviews/dashboard/). The results page lists every candidate who started, with a **Status** filter for Finished and Not Finished.
+
+| Where | What you see | What it means |
+|---|---|---|
+| Candidate's link | **AI Interview Completed** with "You may contact your recruiter for the results." | They finished the interview |
+| Results page, score column | **Unsubmitted** (Candidate hasn't finished) | They started but did not submit |
+| Results page, score column | **Submitted** (Processing not complete) | They submitted; grading is still running |
+
+<Warning>
+A **conversational interview** that was started but not submitted cannot be resumed by default. Reopening the link shows the same **AI Interview Completed** page, with "Conversational AI interviews cannot be resumed once started." Turn on **Allow resuming unfinished attempt** in the interview's settings to let candidates restart from scratch until they submit.
+</Warning>
 
 ## Re-inviting the Candidate
 
