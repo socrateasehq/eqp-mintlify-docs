@@ -1,0 +1,105 @@
+---
+title: "Automation Webhooks and External Updates"
+description: "Notify your own systems from an automation rule, and let them send a result back to Equip."
+---
+
+Automation rules can talk to systems outside Equip. The **Notify an external system (webhook)** action sends candidate details to a URL you choose, and the **An external system sends an update** trigger lets that system report back, for example when a background check clears.
+
+<Tip>
+These webhooks are set per rule, on a pipeline stage. For team-wide notifications when a candidate completes an assessment or AI interview, see [Webhooks](/webhooks) instead.
+</Tip>
+
+## Add a Webhook Action
+
+<Steps>
+  <Step title="Open the rule">
+    In the job's **Settings**, under **Candidate Pipeline**, open the stage's **Automation** dialog and create or expand a rule.
+  </Step>
+  <Step title="Add the action">
+    Click **Add action** and choose **Notify an external system (webhook)**.
+  </Step>
+  <Step title="Enter the method, URL, and headers">
+    Pick the method and enter your endpoint, which must start with `https://`. Expand **Headers** to add any your endpoint needs, such as an `Authorization` header, then click **Save**.
+  </Step>
+</Steps>
+
+{/* screenshot: webhook action row with method, URL, and the Headers section expanded */}
+
+<Warning>
+Header values are stored with the rule and are visible to every recruiter on your team who opens it. Use a token that is scoped to this integration only.
+</Warning>
+
+## The Payload
+
+Every webhook sends the same JSON structure. There is no payload editor; if your system needs more detail, it can fetch it with the [Equip API](/api-integrations).
+
+```json
+{
+  "event": "stage_automation.rule_fired",
+  "rule": { "id": "…", "name": "Send for background check" },
+  "team_id": 135,
+  "job_opening": { "id": 9875, "label": "CT1YNM", "title": "Product Designer" },
+  "stage": { "config_id": 9990, "type": "ASSESSMENT", "name": "Assessment 1", "status": "GRADED" },
+  "subject": { "type": "job_application", "id": 12345, "uuid": "…", "label": null },
+  "candidate": { "first_name": "…", "last_name": "…", "email": "…" },
+  "stage_progress_id": 777,
+  "signals": { "overall": { "value": 84, "label": "Strong" } },
+  "links": { "api": "…" },
+  "callback_url": "…",
+  "sent_at": "2026-09-09T10:00:00Z"
+}
+```
+
+| Field | Description |
+|---|---|
+| `event` | Always `stage_automation.rule_fired`. |
+| `stage` | The stage's type, name, and the candidate's current status in it. |
+| `signals` | The stage's scores, such as the overall score for an assessment. |
+| `links.api` | The API address of the candidate's application. |
+| `callback_url` | The address your system uses to send an update back. |
+| `sent_at` | When the webhook was sent, in UTC. |
+
+## Send an Update Back
+
+To report a result to Equip, your system sends a **POST** request to the `callback_url` it received in the webhook.
+
+```json
+{
+  "status": "BACKGROUND_CHECK_CLEARED",
+  "data": { "reference": "BC-20417" }
+}
+```
+
+| Field | What Equip does with it |
+|---|---|
+| `status` | Sets the candidate's status in the stage. Use a status ID that exists on the stage. |
+| `data` | Stored with the candidate's progress in the stage, replacing any earlier update. |
+
+Two kinds of rule can react to the update. A rule with the **An external system sends an update** trigger runs when the update arrives, and a rule with **Status changes to** runs when the status becomes the one you picked.
+
+<Note>
+The external update trigger can only be used on a stage where some rule fires a webhook. The webhook is how the external system receives its callback address.
+</Note>
+
+<Warning>
+The callback address needs no other login, expires, and can be used once. Treat it as a secret, and send text or references in `data`, not files or media.
+</Warning>
+
+## Example: A Background Check Stage
+
+A **Custom** stage with its own statuses can run a full hand-off without anyone clicking a button.
+
+| Rule | Trigger | Action |
+|---|---|---|
+| **Request the check** | Candidate enters this stage | Notify an external system (webhook) |
+| **Move cleared candidates on** | Status changes to Background check cleared | Move candidate to Next Stage |
+| **Flag problems** | Status changes to Background check failed | Reassign to a team member |
+
+The background check provider receives the webhook, runs the check, and posts the matching status to the callback address. To set up the statuses, see [Automation Triggers, Conditions, and Actions](/automation-rule-reference).
+
+## Related Resources
+
+- [Stage Automation](/stage-automation) - Create and manage automation rules
+- [Automation Triggers, Conditions, and Actions](/automation-rule-reference) - Every trigger, condition, and action, plus custom statuses
+- [Webhooks](/webhooks) - Team-level notifications for completed assessments and interviews
+- [API Integrations](/api-integrations) - Fetch more detail about a candidate from your own systems

@@ -63,6 +63,29 @@
             ]
           },
           {
+            "group": "Live Interviews",
+            "pages": [
+              "scheduling-live-interviews",
+              "interview-panels",
+              "interview-feedback-and-results"
+            ]
+          },
+          {
+            "group": "Offers",
+            "pages": [
+              "offer-documents-and-packets",
+              "sending-offers"
+            ]
+          },
+          {
+            "group": "Automation",
+            "pages": [
+              "stage-automation",
+              "automation-rule-reference",
+              "automation-webhooks"
+            ]
+          },
+          {
             "group": "Insights & Rediscovery",
             "pages": [
               "ats-insights",
@@ -207,6 +230,7 @@
             "pages": [
               "taking-an-assessment",
               "taking-an-ai-interview",
+              "signing-an-offer",
               "candidate-login-methods",
               "device-compatibility",
               "language-support",
@@ -246,7 +270,6 @@
               "how-credits-work",
               "credit-deduction-policy",
               "reclaim-credits",
-              "tds-for-purchases",
               "invoices",
               "change-billing-information",
               "demo-or-trial-account"
@@ -262,6 +285,7 @@
           {
             "group": "Integrations & API",
             "pages": [
+              "ashby-integration",
               "api-integrations",
               "webhooks"
             ]

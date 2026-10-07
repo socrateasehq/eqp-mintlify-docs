@@ -1,77 +1,76 @@
 ---
 title: "Candidate Says They Submitted, But I Can't See It"
-description: "Steps to diagnose an assessment submission that isn't showing up in your results."
+description: "Steps to diagnose an assessment or AI interview submission that isn't showing up in your results."
 ---
 
 <Tip>
-tl;dr: The candidate most likely finished only the **demo test**, or did not finish **all the tests** in the assessment. Ask them to click their assessment link again: if they truly finished, they will see an "Assessment Completed" screen; if not, the assessment resumes and they can complete it.
+tl;dr: For an assessment, the candidate most likely finished only the **demo test**, or did not finish **all the tests**. Ask them to click their assessment link again: if they truly finished, they see an "Assessment Completed" screen; if not, the assessment resumes and they can complete it. For an AI interview, check the results page, where unsubmitted attempts are listed as **Unsubmitted**.
 </Tip>
 
 ## What to Check First
 
-Ask the candidate to click their **assessment link** again and record a short video of what they see. There are only two possible outcomes:
+Ask the candidate to click their **assessment link** again and record a short video of what they see.
 
 | What the candidate sees | What it means | What to do |
 |---|---|---|
 | **Assessment Completed** screen | They genuinely finished the assessment | Share the video, their email ID, and the assessment number with Equip support |
 | The assessment resumes | They had not finished it | Ask them to complete the remaining tests now |
 
-<Note>
-When a candidate finishes an assessment, the final screen clearly tells them they may close the tab. A screenshot or video of that screen is proof of completion.
-</Note>
-
-While the candidate does this, check your own dashboard. If your assessment has multiple tests, the **Results page** shows a callout when there are **Unfinished attempts**: change the filters to include unfinished attempts and look for the candidate there.
+Meanwhile, if your assessment has multiple tests, change the **Results page** filters to include **Unfinished attempts** and look for the candidate there.
 
 {/* screenshot: Results page with the Unfinished attempts callout and filter */}
 
 ## Why the Submission Is Missing
 
-Assuming the candidate is telling the truth, there are two common explanations.
-
 ### They only finished the demo test
 
-Before the actual assessment, Equip encourages candidates to attempt short **demo tests** to get familiar with the interface and confirm proctoring works on their device. A candidate who skims the instructions may complete a demo test and assume they finished the real assessment, even though the demo page carries a "Not Actual Assessment - Just Demo Tests" banner.
+A candidate who skims the instructions may complete a **demo test** and assume they finished the real assessment, despite the "Not Actual Assessment - Just Demo Tests" banner.
 
 {/* screenshot: candidate demo tests page with the "Not Actual Assessment - Just Demo Tests" banner */}
 
 ### They did not finish every test
 
-If your assessment contains multiple tests, the candidate may have completed some but not all of them. Their attempt then sits in the **Unfinished** state instead of appearing alongside your completed results.
+In a multi-test assessment, a candidate who completed only some tests sits in the **Unfinished** state.
 
 <Note>
-Could something be wrong at Equip's end? In principle yes, but this question comes up a few times a month, and since 2022 it has never been an issue on Equip's side. If the results system failed, it would fail for every candidate, not selectively.
+Demo tests and multiple tests apply only to assessments, not AI interviews.
 </Note>
+
+## If It Was an AI Interview
+
+Ask the candidate to open their **AI interview link** again, and check the interview's **AI Interview Results** page from the [**AI Interviews** dashboard](https://equip.co/recruiter/ai-interviews/dashboard/). Its **Status** filter separates Finished from Not Finished.
+
+| Where | What you see | What it means |
+|---|---|---|
+| Candidate's link | **AI Interview Completed** with "You may contact your recruiter for the results." | They finished the interview |
+| Results page, score column | **Unsubmitted** (Candidate hasn't finished) | They started but did not submit |
+| Results page, score column | **Submitted** (Processing not complete) | They submitted; grading is still running |
+
+<Warning>
+A **conversational interview** that was started but not submitted cannot be resumed by default. Reopening the link shows the same **AI Interview Completed** page, with "Conversational AI interviews cannot be resumed once started." Turn on **Allow resuming unfinished attempt** in the interview's settings to let candidates restart from scratch until they submit.
+</Warning>
 
 ## Re-inviting the Candidate
 
-It is always safe to invite the candidate again, whatever their actual state.
+It is always safe to invite the candidate again: an attempt is tied to their email ID, so a fresh invitation never creates a duplicate submission.
 
 <Steps>
   <Step title="Send a fresh invitation">
     Invite the candidate from the assessment as usual. One credit is deducted for the new invitation.
-  </Step>
-  <Step title="Let the candidate click through">
-    If they had finished, they simply see the completed screen. If they had not, clicking any of their links resumes the original attempt.
+
+    If they had finished, they see the completed screen. If they had not, any of their links resumes the original attempt.
   </Step>
   <Step title="Reclaim the unused credit">
-    Because the new link never gets used, you can reclaim its credit once 24 hours have passed since the invitation. Verify the deduction on your **Credit Usage** page.
+    The new link goes unused, so you can reclaim its credit 24 hours after the invitation. Verify the deduction on your [**Credit Usage**](https://equip.co/recruiter/account/credit-usage/) page.
   </Step>
 </Steps>
 
-<Tip>
-An attempt is always tied to the candidate's email ID, so a fresh invitation never risks a duplicate submission: any of their links resumes the same original attempt.
-</Tip>
-
 ## Contacting Support
 
-If none of the above resolves it, escalate to Equip via chat or **hello@equip.co**. Include all three of the following, since support cannot investigate without them:
-
-- The candidate's **email ID**
-- The **assessment number**
-- The candidate's **video or screenshot** of the "Assessment Completed" screen
+If none of the above resolves it, escalate to Equip via chat or **hello@equip.co**.
 
 <Warning>
-Without the video or screenshot, the candidate's email ID, and the assessment number, there is nothing support can verify. Collect these from the candidate before reaching out.
+Support cannot verify anything without the candidate's **email ID**, the **assessment number**, and the candidate's **video or screenshot** of the "Assessment Completed" screen. Collect these before reaching out.
 </Warning>
 
 ## Related Resources

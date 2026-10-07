@@ -27,6 +27,24 @@
 - Scorecards
 - Email Templates
 
+## Live Interviews
+
+- Scheduling Live Interviews
+- Interview Panels and Locations
+- Interview Feedback and Results
+
+## Offers
+
+- Offer Documents and Packets
+- Sending and Tracking Offers
+- (Candidate Experience > Taking Tests & Interviews) Signing Your Offer
+
+## Automation
+
+- Stage Automation
+- Automation Triggers, Conditions, and Actions
+- Automation Webhooks and External Updates
+
 ## Insights & Rediscovery
 
 - ATS Insights: Hiring Analytics
@@ -158,7 +176,7 @@
 - Credit Deduction Policy
 - Reclaiming Credits from Unattempted Invitations
 - First Purchase Discount
-- TDS for Purchases
+- TDS for Purchases (hidden from the sidebar; linked from Invoices > GST Details)
 - Viewing and Downloading Invoices
 - Changing Business Information After an Invoice
 - Demo and Trial Accounts

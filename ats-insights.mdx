@@ -3,21 +3,11 @@ title: "ATS Insights: Hiring Analytics"
 description: "The analytics dashboard: funnel, velocity, team, and quality metrics."
 ---
 
-<Tip>
-**Insights** is Equip's built-in hiring analytics dashboard. It packs 20 charts into five sections, so you can answer questions like "Where do candidates drop off?", "How long does hiring take?", and "Which source sends the best applicants?" without exporting anything to a spreadsheet.
-</Tip>
-
-The **Insights** page turns your ATS activity into charts automatically. Every application, stage change, scorecard, and offer your team records feeds the dashboard, so there is nothing to configure before you can use it.
-
-<Note>
-If your team has no applications yet, the page shows "Post your first job to start seeing insights" along with a link to a sample demo dashboard, so you can explore what the charts look like with data in them.
-</Note>
+The [**Insights** page](https://equip.co/recruiter/job-openings/insights/) turns your ATS activity into charts automatically. Every application, stage change, scorecard, and offer your team records feeds the dashboard, so there is nothing to configure.
 
 {/* screenshot: Insights dashboard with the filter bar and Key Metrics KPI row */}
 
 ## The Five Sections
-
-The dashboard is organized into a **Key Metrics** KPI row followed by four named sections: **Pipeline & Funnel**, **Velocity**, **Team**, and **Quality & Source**.
 
 | Section | What it answers | Charts |
 |---|---|---|
@@ -27,21 +17,19 @@ The dashboard is organized into a **Key Metrics** KPI row followed by four named
 | **Team** | Who is doing what, and how do they rate candidates? | Team performance, Avg scorecard by recruiter |
 | **Quality & Source** | Are we attracting the right candidates? | Applications by source, Job-fit score distribution, Rejections by reason, Offer outcomes |
 
-A few charts deserve extra explanation:
+A few charts behave in ways worth knowing:
 
-- The **Application funnel** tracks candidates through Applied, Shortlisted, Offered, and Hired. Click any funnel step to drill down into the candidates behind the number.
-- **In pipeline** counts candidates who are currently in a non-terminal stage. It reflects right now, so it ignores the selected date range.
-- **Avg time to hire** is the average number of days from application to hire.
-- **Offer outcomes** breaks offers down into Sent, Viewed, Signed, and Declined counts.
+- Click any step of the **Application funnel** to drill down into the candidates behind the number.
+- **In pipeline** reflects right now, so it ignores the selected date range.
 - **Avg scorecard by recruiter** averages the [scorecards](/scorecards) each teammate has submitted, which helps you spot unusually harsh or lenient evaluators.
 
 <Note>
-Some KPIs need a minimum amount of data. **Avg time to hire** appears after your first hire ("Make your first hire to see this"), and **Offer acceptance** appears once at least 3 offers are resolved ("Resolve a few offers to see your acceptance rate"). Offer acceptance is calculated as signed offers divided by resolved offers.
+Some KPIs need a minimum amount of data. Avg time to hire appears after your first hire, and Offer acceptance (signed offers divided by resolved offers) appears once at least 3 offers are resolved.
 </Note>
 
 ## Filters, Date Ranges, and Grouping
 
-The filter bar at the top of the page controls what every chart shows. You can combine a date range, a scope, and a job-opening filter, and the bar summarizes your current selection, for example "Just you" followed by the selected dates.
+The filter bar at the top of the page controls what every chart shows.
 
 | Control | Options |
 |---|---|
@@ -51,29 +39,21 @@ The filter bar at the top of the page controls what every chart shows. You can c
 
 Individual charts have their own display controls on top of the global filters:
 
-- **Group by**: break a chart down by Source, Job opening, Recruiter, Stage type, or Rejection reason.
+- **Group by**: break a chart down by Source, Job opening, Recruiter, Stage type, or Rejection reason. For example, group Applications by Source to see which channel fills your pipeline.
 - **Trend granularity**: view trend charts Weekly or Monthly.
 
 {/* screenshot: a chart with its Group by control open */}
-
-<Tip>
-Grouping is the fastest way to compare. For example, group Applications by Source to see which channel fills your pipeline, or group by Recruiter to compare workloads across the team.
-</Tip>
 
 ## Solo vs Squad Scope
 
 The **Solo / Squad** toggle decides whose hiring activity the dashboard covers.
 
-| Scope | What it includes | Filter bar summary |
-|---|---|---|
-| **Solo** | Only your own job openings and activity | "Just you" |
-| **Squad** | You plus your direct and indirect reports | "Squad of N" |
+| Scope | What it includes |
+|---|---|
+| **Solo** | Only your own job openings and activity |
+| **Squad** | You plus your direct and indirect reports |
 
-Squad scope relies on your team's **reporting structure**, the manager-and-reportee mapping defined in your [organization settings](/organization-settings). Until a reporting structure is set up, there is no squad to aggregate, so the toggle only becomes useful once managers and reportees are assigned.
-
-<Note>
-Squad scope is recursive: a manager sees their direct reports and everyone below them. This makes it easy for a hiring lead to review the whole team's funnel without switching accounts.
-</Note>
+Squad scope relies on your team's **reporting structure**, the manager-and-reportee mapping defined in your [organization settings](/organization-settings). Until managers and reportees are assigned, there is no squad to aggregate.
 
 ## Related Resources
 

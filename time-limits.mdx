@@ -9,21 +9,10 @@ You cannot set a time limit for an entire assessment. Time limits apply at the *
 
 ## How Time Limits Work
 
-An Equip **assessment** (for example, *Python Developer*) is a set of tests, and each test contains one or more **questions**. A quiz may have many MCQs, while a programming challenge has a single problem. See [Assessments, Tests, Questions: The Hierarchy](/assessment-hierarchy) for a refresher.
-
-Time limits are never set on the assessment itself. Depending on the test type, the timer lives either on each question or on the test as a whole.
-
-Here is an example assessment with two tests:
-
-| Test | Test Type | Questions | Time per Question | Test Time Limit |
-|---|---|---|---|---|
-| 1 | One-by-one quiz | 5 MCQs | 2 min each | Not settable |
-| 2 | Programming | 1 problem | Not settable | 30 min |
-
-In Test 1, each MCQ has its own timer and there is no whole-test timer. In Test 2, the single programming problem is governed by one test-level timer.
+An Equip **assessment** is a set of tests, and each test contains one or more **questions**. See [Assessments, Tests, Questions: The Hierarchy](/assessment-hierarchy) for a refresher.
 
 <Note>
-Because every Equip question carries a timer, the builder shows an **Estimated Assessment Duration** in the Test Order tab. See [Assessment Duration](/assessment-duration) for how that estimate is calculated.
+The builder shows an **Estimated Assessment Duration** in the Test Order tab. See [Assessment Duration](/assessment-duration) for how that estimate is calculated.
 </Note>
 
 ### Time Limits by Test Type
@@ -40,32 +29,32 @@ Because every Equip question carries a timer, the builder shows an **Estimated A
 
 ## Equip Library vs Custom Tests
 
-If a test uses **Equip Content**, its time limits are fixed. You cannot lengthen or shorten Equip's timers, even if they feel too generous or too tight for your role.
-
-To control timers yourself, create a **Custom Test** and select **My Content** when adding a test. Custom tests let you set the timer on each question or on the whole test, depending on the display mode.
+If a test uses **Equip Content**, its time limits are fixed. To control timers yourself, create a **Custom Test** and select **My Content** when adding a test.
 
 | Capability | Equip Content | Custom Content |
 |---|---|---|
 | Set time per question or test | No | Yes |
 | Set time for the whole assessment | No | No |
 
-For custom quizzes specifically, the display mode decides where the timer goes: one-by-one quizzes use per-question timers only, and all-at-once quizzes use a single whole-test timer. See [Time Limits on Custom Quizzes](/custom-quiz-time-limits) for details.
+For custom quizzes, the display mode decides where the timer goes. See [Time Limits on Custom Quizzes](/custom-quiz-time-limits) for details.
 
 ## Setting a Start Time Window
 
-While you cannot cap when an assessment must end, you can control when candidates are allowed to **start** it, using the **Cannot Start Before** and **Cannot Start After** settings. For example, you can require candidates to start between 11:00 AM and 11:15 AM on a given day. Once a candidate starts, the time they actually have depends on the question and test timers inside the assessment.
+You can control when candidates are allowed to **start** an assessment, using the **Cannot Start Before** and **Cannot Start After** settings. See [Assessment Settings](/assessment-settings#start-window) for how to set the window and how time zones are handled.
 
-See [Assessment Settings](/assessment-settings#start-window) for how to set the window and how time zones are handled.
+<Note>
+For example, you can require candidates to start between 11:00 AM and 11:15 AM on a given day.
+</Note>
 
 ## What Happens When Time Runs Out
 
-Candidates see a persistent time-remaining display while taking a test, so the countdown is always visible. In one-by-one quizzes, candidates cannot return to earlier questions, so time spent on a question is final.
+Candidates see a persistent time-remaining display while taking a test. In one-by-one quizzes, candidates cannot return to earlier questions, so time spent on a question is final.
 
 <Warning>
 You cannot control the time by which an assessment must end. Candidates may take a break between tests, so only the start window is enforceable. If you need a hard overall cap, such as 45 minutes, use a single test with a 45-minute duration; with two or more tests, the end time cannot be pinned down.
 </Warning>
 
-If a candidate faces a system or internet issue mid-test, how the timer is affected depends on the test type. See [Resume Your Attempt](/resume-your-attempt) for how interrupted attempts are handled.
+If a candidate faces a system or internet issue mid-test, see [Resume Your Attempt](/resume-your-attempt) for how interrupted attempts are handled.
 
 ## Related Resources
 

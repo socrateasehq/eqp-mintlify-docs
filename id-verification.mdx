@@ -3,37 +3,30 @@ title: "ID Verification and Impersonation Detection"
 description: "Verify who is really taking the test with two paid add-ons: ID Card Verification and Impersonation Detection."
 ---
 
-Standard [AI proctoring](/ai-proctoring) tells you how a candidate behaved during a test. These two add-ons answer a more fundamental question: is the person on camera actually the candidate you invited?
-
-Both **ID Card Verification** and **Impersonation Detection** are paid add-ons that extend Equip's built-in proctoring.
+Standard [AI proctoring](/ai-proctoring) tells you how a candidate behaved during a test. **ID Card Verification** and **Impersonation Detection** are paid add-ons that check whether the person on camera is the candidate you invited.
 
 ## ID Card Verification
 
-**ID Card Verification** confirms the test-taker's identity before any questions appear. The candidate photographs an official ID, and Equip matches it against the person taking the test.
+**ID Card Verification** confirms the test-taker's identity before any questions appear.
 
 <Steps>
   <Step title="Candidate photographs their ID">
-    At the start of the test, the candidate holds up a government-issued or institution-issued ID card to the camera and captures a photo of it.
+    At the start of the test, the candidate holds a government-issued or institution-issued ID card up to the camera.
   </Step>
-  <Step title="Equip matches the face">
-    The photo on the ID card is compared with the face of the person on camera.
-  </Step>
-  <Step title="Equip matches the name">
-    The name printed on the ID is checked against the candidate taking the test.
+  <Step title="Equip matches the face and the name">
+    The photo on the ID is compared with the face on camera, and the printed name is checked against the candidate.
   </Step>
 </Steps>
 
 {/* screenshot: candidate holding an ID card up to the camera during the verification step */}
 
 <Note>
-Even without this add-on, the **Capture Photo Before Start Test** proctoring setting takes a photo of the candidate's face before every test. ID Card Verification goes further by checking that face and name against an official document.
+Without this add-on, the **Capture Photo Before Start Test** proctoring setting still takes a photo of the candidate's face before every test.
 </Note>
 
 ## Impersonation Detection
 
-A check at the start cannot catch someone who swaps in after the test begins. **Impersonation Detection** uses AI to watch the camera feed across the entire session and raises a flag when the person on camera does not match, for example when a different person takes over partway through the attempt.
-
-The two add-ons cover different moments of the attempt:
+**Impersonation Detection** uses AI to watch the camera feed across the entire session and raises a flag when the person on camera does not match.
 
 | Add-on | When it runs | What it catches |
 |---|---|---|
@@ -41,28 +34,19 @@ The two add-ons cover different moments of the attempt:
 | **Impersonation Detection** | Continuously, throughout the session | A different person appearing on camera after the test has started |
 
 <Tip>
-Treat these flags like any other proctoring signal. If an attempt is flagged, open the **Proctoring** tab of the candidate's report to review the photo evidence alongside the [Trust Score](/trust-score) before making a decision.
+If an attempt is flagged, open the **Proctoring** tab of the candidate's report to review the photo evidence alongside the [Trust Score](/trust-score).
 </Tip>
 
 ## Enabling These Add-Ons
 
-Both features are paid add-ons and are switched off by default. They are not part of the standard per-test proctoring toggles that you configure yourself.
+Both add-ons are switched off by default, and they are not among the per-test proctoring toggles you configure yourself.
 
-To add them to your assessments, reach out to the Equip team through the in-app chat or write to hello@equip.co. The team will confirm pricing and enable the checks for you.
+To add them, reach out to the Equip team through the in-app chat or write to hello@equip.co. The team will confirm pricing and enable the checks for you.
 
-For context, here is how they sit alongside the identity measures Equip already runs at no extra cost:
-
-| Identity measure | Cost | When it applies |
-|---|---|---|
-| Device fingerprinting | Included | Every attempt, always on |
-| IP recording with geolocation | Included | Every attempt, always on |
-| Multi-session detection | Included | Every attempt, always on |
-| Capture Photo Before Start Test | Included | Optional per-test proctoring toggle |
-| ID Card Verification | Paid add-on | Enabled on request |
-| Impersonation Detection | Paid add-on | Enabled on request |
+At no extra cost, Equip already runs device fingerprinting, IP recording with geolocation, and multi-session detection on every attempt. See [Proctoring Settings](/proctoring-settings).
 
 <Note>
-Want to see these checks in action first? Equip has a self-serve public demo of ID verification and impersonation detection that runs without logging in. Ask the team for the demo link when you get in touch.
+Equip has a self-serve public demo of ID verification and impersonation detection that runs without logging in. Ask the team for the demo link when you get in touch.
 </Note>
 
 ## Related Resources

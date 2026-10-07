@@ -5,50 +5,39 @@ description: "Start windows, candidate login, details to collect, custom instruc
 
 Every assessment has a **Settings** tab where you define how candidates interact with it: when they can start, how they log in, what details they must provide, and what happens after they finish. You can edit these settings anytime from your Recruiter Dashboard, even after inviting candidates.
 
-The assessment builder has three tabs: **Tests**, **Test Order**, and **Settings**. This article covers the Settings tab, plus the per-test options that live in Test Order.
-
 {/* screenshot: Settings tab of the Assessment Settings page */}
 
 ## General Settings
 
-The Settings tab covers the assessment as a whole. The main options are:
-
 | Setting | What It Does |
 |---|---|
-| **Assessment Title** | The name candidates see. Maximum 100 characters. Required. |
-| **Cannot Start Before / Cannot Start After** | Restricts when candidates can begin the assessment. See [Start Window](#start-window). |
-| **Gather Additional Details** | Collects extra candidate fields beyond name, email, and photo. See [Candidate Details to Collect](#candidate-details-to-collect). |
+| **Assessment Title** | The name candidates see. |
+| **Cannot Start Before / Cannot Start After** | Restricts when candidates can begin. See [Start Window](#start-window). |
+| **Gather Additional Details** | Collects extra candidate fields. See [Candidate Details to Collect](#candidate-details-to-collect). |
 | **Email Notifications** | Choose which team emails are notified on assessment creation and first candidate submission. |
 | **Write results to Google Sheets** | Streams results to a spreadsheet in real time. Grant **hello@equip.co** Editor access to your sheet first. |
-| **On Assessment Completion, redirect candidate** | Sends candidates to a page of your choice after they complete the assessment, instead of the default completion screen. |
-| **Custom Instructions** | Rich-text instructions shown before the assessment. Adding your own replaces Equip's default instructions. |
+| **On Assessment Completion, redirect candidate** | Sends candidates to a page of your choice instead of the default completion screen. |
+| **Custom Instructions** | Rich-text instructions shown before the assessment. |
 
-Equip's default instructions already explain points, negative marking, duration, proctoring, and demo tests. They are enough for any candidate to proceed on their own, so customize them only if you genuinely need to: your text **replaces the defaults entirely**.
+Equip's default instructions already explain points, negative marking, duration, proctoring, and demo tests. Adding your own **replaces the defaults entirely**.
 
 ## Start Window
 
-Use the **Timer** section to restrict when candidates can begin the assessment. You can set either condition, or both:
-
-| Setting | Effect |
-|---|---|
-| **Cannot Start Before** | Candidates cannot begin until this date and time. |
-| **Cannot Start After** | Candidates cannot begin after this date and time. |
-
-Whichever option you enable, you must specify both a date and a time for it.
+In the **Timer** section, set Cannot Start Before, Cannot Start After, or both.
 
 <Warning>
-The times you pick are in **your local time zone**. If your candidates are in other time zones, convert carefully before you set the window, or some candidates may find the assessment locked when they expect it to be open.
+The times you pick are in **your local time zone**. If your candidates are in other time zones, convert before you set the window, or some may find the assessment locked.
 </Warning>
 
 <Note>
-The start window controls when candidates can **begin**, not when they must finish. There is no assessment-level time limit; timers apply at the test or question level. See [Time Limits](/time-limits) for details.
+The start window controls when candidates can **begin**, not when they must finish. There is no assessment-level time limit; see [Time Limits](/time-limits).
 </Note>
 
 ## Candidate Details to Collect
 
-Equip automatically captures each candidate's **first name, last name, email address, and a live photo** during login. You do not need to configure anything for these.
+Equip automatically captures each candidate's **first name, last name, email address, and a live photo** during login.
 
-To collect more, set **Gather Additional Details** to **Yes**, then open **See Details** and choose which fields candidates should fill in manually:
+To collect more, set **Gather Additional Details** to Yes and choose fields under See Details:
 
 - Phone Number
 - LinkedIn URL
@@ -58,23 +47,23 @@ To collect more, set **Gather Additional Details** to **Yes**, then open **See D
 - Department
 - Work Experience (in years)
 
-Candidates provide these details right after opening the assessment, **before starting the first test**, so you never receive a submission without them. The values also appear in your exported results.
+Candidates fill these in **before starting the first test**, and the values appear in your exported results.
 
 {/* screenshot: Gather Additional Details toggles in the Settings tab */}
 
 ## Per-Test Settings
 
-Some settings apply to individual tests rather than the whole assessment. These live in the **Test Order** tab, not the Settings tab:
+Settings for individual tests live in the **Test Order** tab, not the Settings tab:
 
 <Steps>
   <Step title="Open the Test Order tab">
-    From the Assessment Settings page, switch from the Settings tab to **Test Order**. You will also see the estimated total assessment duration here.
+    Switch from the Settings tab to Test Order.
   </Step>
   <Step title="Reorder tests and set weightage">
-    Drag tests to change their order and assign a **weightage** to each. Weightages must add up to 100 and determine each test's contribution to the overall score.
+    Drag tests to change their order and assign a **weightage** to each. Weightages must add up to 100.
   </Step>
   <Step title="Adjust proctoring per test">
-    Click into each test's proctoring options to control camera, microphone, and other monitoring settings for that test.
+    Open each test's proctoring options. See [Proctoring Settings](/proctoring-settings).
   </Step>
   <Step title="Randomize coding questions (optional)">
     For Programming and SQL tests, click the **Randomize** icon to attach multiple questions so each candidate receives one at random.

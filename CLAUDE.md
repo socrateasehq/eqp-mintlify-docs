@@ -26,7 +26,8 @@
 
 - **No em-dashes or double hyphens.** Never use `—` or `--` in prose. Use commas, periods, colons, semicolons, or conjunctions instead. A single `-` is fine in Related Resources list items.
 - Internal links are root-relative: `/slug` (files are flat at repo root).
-- English only. USD and INR both exist; state currency-specific facts carefully.
+- **Link app pages.** Whenever an article names a page in the Equip app that has a fixed address (Team, Billing, Templates, Job Openings dashboard, and so on), make it a hyperlink to `https://equip.co/recruiter/...` so readers can open it directly. Skip step titles, headings, and screenshot comments.
+- English only. **USD only.** Never mention rupees, ₹, or INR prices; the help center must read as a USD site to every visitor. The single exception is `tds-for-purchases.mdx`, which covers Indian tax thresholds; it is kept out of the sidebar and reached from the GST section of `invoices.mdx`.
 - Do not invent facts. Every claim must come from the codebase, equip.co/llms.txt, or the original Crisp article. If a detail is unknown, write around it rather than guessing numbers or limits.
 - Frontmatter: keep the existing `title` and `description`; remove the migration `<Note>` stub when writing real content.
 - **Escape dollar amounts** as `\$10`. A bare `$` starts LaTeX math mode in Mintlify and can break the page.
@@ -38,7 +39,7 @@ The AutoProctor help center at `/Users/jayanth/projects/autoproctor-mintlify-doc
 ## Product Context
 
 - Equip is a self-serve hiring platform with three pillars: a free AI-native **ATS**, **Assessments** (skill tests with AI proctoring), and **AI Interviews** (one-way and conversational). Resume Screening (CV parsing, Job Fit Score) is part of the ATS.
-- Pay-per-use **credits** (1 credit = $1 / ₹90); the ATS is free; assessments cost 1 credit per candidate per test; no subscriptions or seat fees.
+- Pricing is by **subscription plan** (Standard, Premium, Elite). Each plan has a monthly credit allowance and a recruiter-seat limit; only Elite has no seat limit. 1 credit = $1, teams can top up beyond the allowance, the ATS is free on every plan, and assessments cost 1 credit per candidate per test.
 - Audiences: recruiters (primary), candidates (Candidate Experience category), admins (Account & Billing).
 - Proctoring is powered by AutoProctor. Candidates see active proctoring measures and consent before starting.
 

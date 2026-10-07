@@ -7,11 +7,11 @@ description: "Which test types are auto-graded, which use AI grading, and which 
 Most tests on Equip are graded automatically the moment a candidate submits. A few question and test types, such as video responses and CSS challenges, wait for you: they show an **ungraded** label until you award points, and the candidate's overall score stays ungraded until every test is graded.
 </Tip>
 
-Equip offers a variety of [test types](/test-types), and each test type can contain multiple question types. How a test is graded depends on both: some are scored instantly by Equip, some are evaluated by AI, and some need a recruiter to assign points.
+How a test is graded depends on its [test type](/test-types) and the question types inside it.
 
 ## Auto-Graded Tests
 
-**Auto-graded tests** are scored by Equip as soon as the candidate submits. You do not need to do anything; points appear in the results immediately.
+**Auto-graded tests** are scored by Equip as soon as the candidate submits.
 
 | Test type | Graded automatically? |
 |---|---|
@@ -21,15 +21,13 @@ Equip offers a variety of [test types](/test-types), and each test type can cont
 | English Communication (CEFR) | Yes |
 | Attention to Detail | Yes |
 | Excel Test | Yes |
-| Typing Test | Yes, but excluded from the overall score |
+| Typing Test | Yes, for speed and accuracy, but excluded from the overall score |
 | Psychometric | Not scored (see note below) |
 | Video Response | No, graded manually |
 | CSS Challenge | No, graded manually |
 
 <Note>
-**Psychometric tests** are subjective, so they carry no points and no weightage. Candidates get a personality graph instead of a score, and the test is excluded from the overall score. See [Psychometric Scores](/psychometric-scores) for how to read the results.
-
-**Typing Tests** are scored automatically for speed and accuracy, but like psychometric tests they carry no weightage in the overall score.
+**Psychometric tests** carry no points and are excluded from the overall score. Candidates get a personality graph instead; see [Psychometric Scores](/psychometric-scores).
 </Note>
 
 ### Grading by quiz question type
@@ -49,25 +47,17 @@ These quiz question types are graded manually by the recruiter:
 - **Single-line Input**
 
 <Tip>
-MCQs in Equip's own quiz content always carry **negative marking**, and it cannot be turned off. For custom quizzes, negative points are optional. See [Negative Marking](/negative-marking) for the details.
+MCQs in Equip's own quiz content always carry **negative marking**, and it cannot be turned off. For custom quizzes, it is optional. See [Negative Marking](/negative-marking).
 </Tip>
 
 ## AI-Graded Answers
 
-**AI-graded questions** sit between the two: Equip's AI evaluates the response and assigns points, and you can override the result whenever you disagree.
+For **AI-graded questions**, Equip's AI evaluates the response and assigns points. This applies to open-ended text, audio, and video answers in AI-graded tests and AI interviews.
 
-AI grading applies to open-ended answers in AI-graded tests and AI interviews, across three answer formats:
-
-| Answer format | What the AI evaluates |
-|---|---|
-| **Text** | The written answer, within the word limits you set |
-| **Audio** | The candidate's recorded spoken response |
-| **Video** | The candidate's recorded video response |
-
-You can steer the evaluation with an optional **per-question AI evaluation prompt**, and provide test-level evaluation context that applies to the whole test. The AI grades each response against your criteria.
+You can steer the evaluation with an optional **per-question AI evaluation prompt**, and with test-level evaluation context that applies to the whole test.
 
 <Note>
-AI scores are not final. Open any response and adjust the awarded points manually; the test score and overall score recalculate automatically. See [AI-Graded Questions](/ai-graded-questions) for setup details.
+AI scores are not final. Open any response and adjust the awarded points manually. See [AI-Graded Questions](/ai-graded-questions) for setup details.
 </Note>
 
 ## Manually Graded Tests
@@ -78,29 +68,27 @@ Two test types always need a recruiter to grade them: **Video Response** tests a
 
 <Steps>
   <Step title="Open the assessment results">
-    Tests that still need grading are labeled **ungraded** on the results page. A candidate's overall score also shows as ungraded until every one of their tests is graded.
+    Tests that still need grading are labeled **ungraded**.
   </Step>
   <Step title="Filter with Show Ungraded">
-    Use the **Show Ungraded** filter on the Dashboard to list every submission in the assessment that still needs grading.
+    Use the **Show Ungraded** filter on the Dashboard to list every submission that still needs grading.
   </Step>
   <Step title="Grade each pending question">
-    Inside a test, ungraded questions are clearly labeled. Review the candidate's response, then click the **pencil icon** to assign points.
+    Review the candidate's response, then click the **pencil icon** to assign points.
   </Step>
 </Steps>
 
 {/* screenshot: assessment results page showing the ungraded label and Show Ungraded filter */}
 
-Once you grade a test, its ungraded label disappears for that candidate. When all of their tests are graded, the ungraded label clears from the overall score too.
-
 ### Editing points after grading
 
-Grading is never locked in. Wherever you see the **pencil icon**, you can change the points for a question, even if it was already graded automatically or manually.
+Wherever you see the **pencil icon**, you can change the points for a question, even if it was already graded automatically or manually.
 
 <Note>
 When you change a question's points, Equip recalculates the test score and the candidate's overall score automatically. Weightages you set in the Test Order tab still apply; see [Test Scores and Overall Score](/test-scores-and-overall-score) for how the overall score is computed.
 </Note>
 
-For step-by-step walkthroughs of grading video responses and CSS challenges, including the question filters that speed up bulk grading, see [Manual Grading](/manual-grading).
+For step-by-step walkthroughs of grading video responses and CSS challenges, see [Manual Grading](/manual-grading).
 
 ## Related Resources
 
