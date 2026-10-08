@@ -1,18 +1,18 @@
 ---
 title: "Changing the Sender Name and Email"
-description: "Customize who invitation emails appear to come from."
+description: "Customize who assessment, AI interview and hiring pipeline emails appear to come from."
 ---
 
-You can control the **sender name** candidates see on invitation emails and the **reply-to address** their responses go to, but not the "from" address itself.
+You can control the **sender name** candidates see on assessment and AI interview invitations, and on emails from your hiring pipeline, plus the **reply-to address** their responses go to. The "from" address itself is fixed.
 
 ## The Default Sender
 
-Every invitation email has three sender-related parts, and each behaves differently:
+Every email sent from the **Invite** page of an assessment or AI interview has three sender-related parts:
 
 | Part | Default value | Can you change it? |
 |---|---|---|
 | **From address** | no-reply@equip.co | No, it is fixed for all accounts |
-| **Sender name** | Your first and last name | Yes, via your [Profile page](https://equip.co/recruiter/account/profile/) |
+| **Sender name** | The selected sender's first and last name | Yes, via your [Profile page](https://equip.co/recruiter/account/profile/) |
 | **Reply-to address** | Your email address | Yes, via the Sender dropdown |
 
 ## Customizing the Sender
@@ -26,6 +26,10 @@ Every invitation email has three sender-related parts, and each behaves differen
   </Step>
 </Steps>
 
+<Warning>
+If the name is empty or contains punctuation or a double space, emails go out under the name **Team Equip** instead.
+</Warning>
+
 {/* screenshot: Profile page with first and last name fields highlighted */}
 
 <Frame caption="First Name and Last Name on your profile make up the sender name">
@@ -34,9 +38,9 @@ Every invitation email has three sender-related parts, and each behaves differen
 
 ## Reply-To Addresses
 
-The **reply-to address** is the email ID of the team member who sends the invitation. When a candidate hits Reply, their message lands in that person's inbox.
+The **reply-to address** is the email of the team member who sends the invitation, so candidate replies land in their inbox.
 
-Your login email cannot be changed, so to use a different reply-to address, send as a teammate. Open the Invite link under your assessment and pick them in the **Sender** dropdown on the Send Invitations tab.
+Your login email cannot be changed, so to use a different reply-to address, send as a teammate. Open the Invite link under your assessment or AI interview and pick them in the **Sender** dropdown on the Send Invitations tab.
 
 {/* screenshot: Send Invitations tab with the Sender dropdown expanded */}
 
@@ -47,6 +51,18 @@ Your login email cannot be changed, so to use a different reply-to address, send
 <Tip>
 The **Sender** dropdown only shows people already on your Equip team. If the address you need is missing, invite that person first. See [Manage Team Members](/manage-team-members).
 </Tip>
+
+## Emails Sent from the Hiring Pipeline
+
+When you [move candidates between stages](/changing-stages) in a job opening, the email dialog (assessment or AI interview invite, live interview, custom stage, offer, rejection) sets the sender differently:
+
+| Part | Invite page emails | Pipeline stage-change emails |
+|---|---|---|
+| **Sender name** | Selected sender's full name | Your team's **Brand name** |
+| **Reply-to address** | Selected sender's email | no-reply@equip.co, unless set per send |
+| **Where to change** | Profile page and Sender dropdown | **Brand name** on the [Organization tab](https://equip.co/recruiter/account/team/organization/); **Set email receiving replies** in the dialog |
+
+Check **Set email receiving replies** in the dialog to pick the team member whose email receives replies.
 
 ## Related Resources
 

@@ -1,6 +1,6 @@
 ---
 title: "Disabling Camera and Mic Tracking"
-description: "Turn off camera and microphone proctoring on any test when you don't need it."
+description: "Turn off camera and microphone proctoring on assessment tests and AI interviews when you don't need it."
 ---
 
 ## When to Disable
@@ -13,7 +13,9 @@ Equip's **Psychometric** tests already keep camera and mic tracking off by defau
 
 ## How to Disable
 
-Camera and mic tracking can be turned off on **any test**, whether it uses Equip's content or your own.
+Camera and mic tracking can be turned off on **any test**, whether it uses Equip's content or your own, and on **AI interviews**. The ATS has no camera or mic proctoring.
+
+### For assessments
 
 <Steps>
   <Step title="Open the assessment's settings">
@@ -36,9 +38,24 @@ Camera and mic tracking can be turned off on **any test**, whether it uses Equip
 These settings apply per test, not per assessment. If your assessment has multiple tests, repeat the steps for each test where you want camera and mic tracking off.
 </Warning>
 
+### For AI interviews
+
+Open the interview's [settings](/interview-settings) from [**AI Interviews**](https://equip.co/recruiter/ai-interviews/dashboard/). The same proctoring toggles sit in a collapsible **Proctoring Settings** section, closed by default.
+
+| Interview type | Where | Camera and mic notes |
+|---|---|---|
+| One-way | **Proctoring Settings** | **Detect Audio** is locked off when the template has audio or video questions. Video-answer questions still need the camera. |
+| Conversational | **5 · Proctoring** > **Proctoring Settings** | **Detect Audio** is always off, because the interview is spoken. Turn off **Require camera** under **4 · Settings** (on by default) to make the interview audio-only. |
+
+<Warning>
+With **Require camera** off, candidates are still asked for camera access while **Detect Face**, **Take Random Photos** or **Capture Photo Before Start Test** is on. Turn those off too to skip the camera entirely.
+</Warning>
+
 ## Impact on the Proctoring Report
 
-The **Proctoring** tab of the candidate report will not contain face-detection photos, random photos, a pre-test photo, or audio recordings for that test, because that evidence is never captured. Everything else you left enabled keeps working.
+The **Proctoring** tab of the candidate report will not contain face-detection photos, random photos, a pre-test photo, or audio recordings for that test, because that evidence is never captured.
+
+A conversational interview with **Require camera** off is audio-only and records no video.
 
 <Note>
 The report still shows a **Trust Score** for the attempt. With fewer signals being tracked, review the score together with the remaining evidence rather than in isolation.

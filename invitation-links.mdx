@@ -3,20 +3,16 @@ title: "How Invitation Links Work"
 description: "Unique links, expiry, and what candidates see when a link is invalid."
 ---
 
-<Tip>
-Every email invitation carries a **unique, one-time assessment link** tied to the invited email address. Only someone with access to that inbox can use it, links never expire unless you set an expiry, and re-clicking a link safely resumes an unfinished attempt.
-</Tip>
-
 ## Unique Links per Candidate
 
-When you send [email invitations](/email-invitations), each candidate receives a unique **assessment link** that only they can use.
+When you send [email invitations](/email-invitations), each candidate receives a unique **assessment or AI interview link** that only they can use. AI interview invitations go out from the same email invitations dashboard as assessment invitations.
 
 <Steps>
   <Step title="Candidate opens the link and gets a verification code">
-    The link works on any device and any supported browser. The sign-in page opens with the invited email address prefilled and locked, and Equip sends a verification code to that address when they click **Sign In with Email**. See [Candidate Login Methods](/candidate-login-methods) for the full sign-in flow.
+    Equip sends a verification code to the invited email address. See [Candidate Login Methods](/candidate-login-methods) for the sign-in flow.
   </Step>
   <Step title="Candidate verifies and starts">
-    After entering the code, the candidate is taken straight to the assessment. No password or account setup is needed.
+    The code takes them straight to the assessment or AI interview. No password or account is needed.
   </Step>
 </Steps>
 
@@ -32,13 +28,13 @@ Because the verification code always goes to the original invitee's inbox, **for
 
 ### Switching devices
 
-The link and the email address are bound together, so clicking the link again on a different device resumes the attempt with the remaining time intact.
+Clicking the link again on a different device resumes the attempt with the remaining time intact.
 
-This also means a fresh invitation cannot grant a second attempt: any new link you send resumes the unfinished attempt. See [Candidate Re-Attempts](/candidate-reattempts) for how to allow a genuine retake.
+A fresh invitation therefore cannot grant a second attempt: any new link resumes the unfinished attempt. See [Candidate Re-Attempts](/candidate-reattempts) to allow a genuine retake.
 
 ## Link Expiry
 
-By default, invitation links **never expire**. You control expiry per batch of invitations with the **Link Expiry (days)** field on the **Send Invitations** tab.
+By default, invitation links **never expire**. To set an expiry, enter 1 to 365 in the **Link Expiry (days)** field on the **Send Invitations** tab, and links stop working that many days after sending. The field works the same way for AI interview invitations.
 
 {/* screenshot: Send Invitations tab with the Link Expiry (days) field highlighted */}
 
@@ -46,29 +42,23 @@ By default, invitation links **never expire**. You control expiry per batch of i
   <img src="/images/invitation-links/link-expiry-field.png" width="480" alt="Send Invitations form showing the Sender dropdown and, below it, the Link Expiry (days) field focused with 7 typed in and the hint Links will expire after these many days" />
 </Frame>
 
-| Link Expiry (days) value | Behavior |
-|---|---|
-| Empty (default) | Links never expire |
-| 1 to 365 | Links stop working that many days after sending |
-
 <Tip>
 To control the exact start window instead, use the **Cannot Start Before** and **Cannot Start After** [assessment settings](/assessment-settings).
 </Tip>
 
 ## Invalid and Already-Used Links
 
-A link can stop working for a few reasons, and in each case the candidate sees a page that explains why.
+When a link stops working, the candidate sees a page that explains why. For AI interviews, an expired or invalid link shows a **Link Expired** or **Link Invalid** page asking them to contact whoever shared it.
 
 | Situation | What the candidate sees |
 |---|---|
 | Link expired | An error page explaining the link is no longer valid |
-| Credit reclaimed | The link is invalidated and no longer opens the assessment |
+| Credit reclaimed | The link no longer opens the assessment or AI interview |
 | Attempt deleted by the recruiter | An error page; the candidate needs a fresh invitation |
 | Assessment already completed | The completion screen, not the tests again |
-| Someone else opens the link | The verification code still goes to the invited email, so they cannot proceed |
+| Someone else opens the link | The code still goes to the invited email, so they cannot proceed |
 
-- **Clicking a link multiple times is safe.** A candidate who has not started can open their link any number of times until it expires.
-- **Re-inviting is safe too.** If a candidate says they never received or lost their link, check its [email status](/email-status) first, then re-invite if needed. The unused link's credit is reclaimable after 24 hours as long as the candidate never started.
+If a candidate says they never received or lost their link, check its [email status](/email-status) first, then re-invite. The unused link's credit is reclaimable after 24 hours as long as the candidate never started.
 
 <Warning>
 An invitation is revoked only by [reclaiming the credit](/reclaim-credits), which is destructive: it invalidates the candidate's link and deletes any test data tied to it. Only reclaim when you are sure the candidate should not, or will not, attempt the assessment.
@@ -79,4 +69,4 @@ An invitation is revoked only by [reclaiming the credit](/reclaim-credits), whic
 - [Email Invitations](/email-invitations) - How to send invitations, upload recipients, and set link expiry
 - [Share URL vs Email Invitations](/share-url-vs-email) - When to use unique links versus a public assessment URL
 - [Candidate Re-Attempts](/candidate-reattempts) - Why new links resume old attempts and how to allow retakes
-- [Email Status](/email-status) - Track whether invitations were delivered, opened, and clicked
+- [Taking an AI Interview](/taking-an-ai-interview) - What candidates see after opening an AI interview link
