@@ -9,34 +9,28 @@ Only multiple-choice questions (MCQs) in Equip's own library quizzes carry negat
 
 ## Equip Library Quizzes
 
-Equip supports many [test types](/test-types), such as Quizzes, Programming Tests, and Video Response. **Negative points** apply in exactly one place: MCQs inside Equip-content quizzes. Other test types, and non-MCQ question types, carry no negative points.
+**Negative points** apply in exactly one place: MCQs inside Equip-content quizzes. Other [test types](/test-types) and non-MCQ question types carry none.
 
-Candidates always see the deduction upfront. The negative points for each question are displayed on the question itself, so nobody is penalized by surprise.
+Candidates see the negative points for each question on the question itself.
 
 {/* screenshot: negative points shown on an Equip quiz MCQ during an attempt */}
 
-You cannot disable negative marking on Equip's library quizzes. Candidates can get lucky when guessing MCQs, and a small penalty makes them think twice before picking an option at random. This keeps scores comparable and meaningful.
+You cannot disable negative marking on Equip's library quizzes. A small penalty makes candidates think twice before picking an option at random.
 
 <Note>
-Because of negative marking, scores on Equip-content quizzes can look lower than you expect. That is by design: use them for relative shortlisting rather than absolute judgments. See [What Is a Good Assessment Score?](/good-assessment-score) for guidance.
+Because of negative marking, scores on Equip-content quizzes can look lower than you expect. Use them for relative shortlisting rather than absolute judgments. See [What Is a Good Assessment Score?](/good-assessment-score) for guidance.
 </Note>
 
 ## Custom Content
 
-If you would rather test without negative marking, create your own questions with [Custom Tests](/custom-tests). Negative points are fully under your control there.
-
-| | Equip Content | Custom Content |
-|---|---|---|
-| **Negative points on MCQs** | Always on | Optional, per question |
-| **Can you change or remove them?** | No | Yes |
-| **Who sets the value** | Equip, automatically | You |
+If you would rather test without negative marking, create your own questions with [Custom Tests](/custom-tests). Negative points are optional per question there, and you set the value.
 
 <Steps>
   <Step title="Open Custom Tests">
     From the sidebar of the [Assessments Dashboard](https://equip.co/recruiter/assessments/dashboard/), click [**Custom Tests**](https://equip.co/recruiter/assessments/cms/home/) and create or edit a quiz.
   </Step>
   <Step title="Set points per question">
-    While adding each question, set its points, timer, and negative points. Skip negative points on any question where you do not want deductions.
+    Set negative points on each question, or skip them where you do not want deductions.
     {/* screenshot: custom quiz question editor showing points, timer, and negative points fields */}
   </Step>
   <Step title="Add the quiz to an assessment">
@@ -45,7 +39,7 @@ If you would rather test without negative marking, create your own questions wit
 </Steps>
 
 <Tip>
-Importing questions from Excel? The importer offers an **Autocalculate Negative Points** option that fills in deductions for MCQs automatically. See [Import Questions from Excel](/import-questions-from-excel).
+Importing questions from Excel? The importer's **Autocalculate Negative Points** option fills in deductions for MCQs automatically. See [Import Questions from Excel](/import-questions-from-excel).
 </Tip>
 
 ## How Deductions Are Calculated
@@ -56,13 +50,13 @@ When negative points are assigned automatically, the formula is:
 negative points = question points / number of options
 ```
 
-For example, a **2-point MCQ with 4 options** deducts **0.5 points** for a wrong answer. Equip's library quizzes use this calculation, and the Excel importer's Autocalculate option applies the same formula to your custom MCQs.
+For example, a 2-point MCQ with 4 options deducts **0.5 points** for a wrong answer. Equip's library quizzes use this calculation, and the Excel importer's Autocalculate option applies the same formula to your custom MCQs.
 
 <Note>
-Multiple-answer questions (MCAs) are never auto-assigned negative points. Automatic deductions apply to single-answer MCQs only.
+Multiple-answer questions (MCAs) are never auto-assigned negative points.
 </Note>
 
-A candidate's test score is simply the sum of points earned minus any deductions. That test score then feeds into the overall assessment score through test weightages.
+A candidate's test score is the sum of points earned minus any deductions. See [Test Scores and Overall Score](/test-scores-and-overall-score) for how it feeds into the overall assessment score.
 
 ## Related Resources
 

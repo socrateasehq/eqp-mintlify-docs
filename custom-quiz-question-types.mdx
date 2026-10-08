@@ -3,9 +3,9 @@ title: "Question Types in Custom Quizzes"
 description: "All question formats available in custom quizzes, from multiple choice to voice recordings, documents, and question pools."
 ---
 
-Quizzes are not limited to multiple-choice questions. A **custom quiz** supports a wide range of question formats, so you can test how candidates think, write, speak, and organize information, not just what they can recognize in a list of options.
+A **custom quiz** supports a wide range of question formats, not just multiple choice.
 
-While [creating a custom quiz](/custom-tests), you can set **points** and optional **negative points** for each question. Timers are set per question or for the whole test, depending on whether the quiz shows questions one at a time or all at once; see [Quiz Display Modes](/quiz-display-modes) and [Time Limits in Custom Quizzes](/custom-quiz-time-limits).
+While [creating a custom quiz](/custom-tests), you can set **points** and optional **negative points** for each question. For timers, see [Quiz Display Modes](/quiz-display-modes) and [Time Limits in Custom Quizzes](/custom-quiz-time-limits).
 
 <Note>
 A custom quiz can hold up to **100 questions**. If you need more, add a second quiz to the same assessment. See [Question Limits per Test](/question-limits).
@@ -15,7 +15,7 @@ A custom quiz can hold up to **100 questions**. If you need more, add a second q
 
 ## Objective Formats
 
-Objective questions have defined correct answers, which makes them fast to grade and easy to compare across candidates.
+Objective questions have defined correct answers.
 
 | Question Type | How It Works |
 |---|---|
@@ -26,12 +26,10 @@ Objective questions have defined correct answers, which makes them fast to grade
 | **Categorize** | A set of items that candidates must sort into the correct buckets. |
 
 <Tip>
-Negative marking is optional in custom quizzes. If you use the auto-calculate option, negative points equal the question's points divided by the number of options. Negative points are never auto-assigned to MCAs; see [Negative Marking](/negative-marking) for details.
+Negative marking is optional in custom quizzes. See [Negative Marking](/negative-marking) for details.
 </Tip>
 
 ## Text and Voice Formats
-
-These formats capture free-form responses, which are useful for judging written communication, reasoning, and spoken fluency.
 
 | Question Type | How It Works |
 |---|---|
@@ -48,8 +46,6 @@ Custom quizzes also include **transcription** and **preference** question format
 
 ## Advanced Formats
 
-Advanced formats combine multiple elements, such as a passage with nested questions or a randomized pool, to build richer scenarios.
-
 | Question Type | How It Works |
 |---|---|
 | **Coding Editor** | Candidates write code in an editor with syntax highlighting and autocomplete. You choose the programming language. The code is not executed. |
@@ -65,20 +61,20 @@ The **Coding Editor** question type does not run the candidate's code, so it is 
 </Warning>
 
 <Tip>
-**Question Pool** is the simplest way to show different candidates different questions inside one quiz. For larger-scale randomization across many questions, use a [Question Bank Quiz](/question-bank-quiz).
+For larger-scale randomization across many questions, use a [Question Bank Quiz](/question-bank-quiz).
 </Tip>
 
 ## Reusing a Question Across Quizzes
 
-Every question in a custom quiz has its own **Question ID**. Use it to copy a question from one custom quiz into another instead of recreating it from scratch.
+Every question in a custom quiz has its own **Question ID**. Use it to copy a question from one custom quiz into another.
 
 <Steps>
   <Step title="Export the question">
-    On the question you want to reuse, hover the icon in the top-right of its card. On a question that already has content, it shows **Export Question using Question ID**; click it to copy that question's ID to your clipboard.
+    On the question you want to reuse, click the icon in the top-right of its card, **Export Question using Question ID**. This copies the ID to your clipboard.
     {/* screenshot: question card with the Export Question using Question ID tooltip visible */}
   </Step>
   <Step title="Import it into another quiz">
-    Add a new, empty question to the quiz where you want to reuse it. The same icon now shows **Import** instead of Export, since the question is empty. Click it and paste the copied Question ID to load that question's content in.
+    Add a new, empty question to the other quiz. On an empty question the same icon shows **Import**. Click it and paste the Question ID.
   </Step>
 </Steps>
 

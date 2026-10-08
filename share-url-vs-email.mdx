@@ -22,21 +22,19 @@ The difference only affects how candidates arrive and when credits are deducted.
 
 ## Common URL
 
-A Common URL is open by design. Every candidate uses the same URL, and anyone who has it can attempt the assessment.
-
 <Steps>
   <Step title="Candidate opens the link">
     The candidate clicks the shared URL from wherever you posted it.
   </Step>
   <Step title="Candidate enters their email ID">
-    Equip asks for an email ID and sends a one-time verification code to that address.
+    Equip sends a one-time verification code to that address.
   </Step>
   <Step title="Candidate verifies and starts">
     After entering the code, the candidate is authenticated and the assessment begins.
   </Step>
 </Steps>
 
-With a Common URL, **credits are deducted only when a candidate starts the first test**, not when you share the URL. Sharing the link itself costs nothing.
+**Credits are deducted only when a candidate starts the first test**, not when you share the URL.
 
 <Warning>
 You cannot restrict who attempts through a Common URL, and you cannot cap how many people attempt. If you need control over the candidate list, use a Unique URL instead.
@@ -46,21 +44,16 @@ Each candidate is identified by their email ID, so the same person cannot attemp
 
 ## Unique URL
 
-With a Unique URL, you provide the email IDs and Equip sends each candidate an invitation containing a **unique, single-use link**.
-
 <Steps>
   <Step title="Invite candidates">
-    Open the assessment on your dashboard and click **Invite**. Type or paste email addresses, or upload a CSV, then send. You can invite up to 100 recipients per send.
-  </Step>
-  <Step title="Candidate clicks their unique link">
-    Equip sends a one-time verification code to the invited email ID. The code always goes to the address you invited, so a forwarded link is useless to anyone else.
+    Open the assessment and click **Invite**. Add email addresses or upload a CSV, then send.
   </Step>
   <Step title="Candidate verifies and starts">
-    After entering the code, the candidate is authenticated and the assessment begins.
+    The one-time verification code always goes to the address you invited, so a forwarded link is useless to anyone else.
   </Step>
 </Steps>
 
-Because each link is tied to an email ID, you get **invitation tracking**: the **Track Invitations** tab shows whether each email was Sent, Delivered, Opened, Clicked, or Bounced. See [Email Status](/email-status) for what each status means.
+The **Track Invitations** tab shows the delivery status of each invitation. See [Email Status](/email-status).
 
 {/* screenshot: Track Invitations tab showing per-candidate delivery statuses */}
 
@@ -68,7 +61,7 @@ Because each link is tied to an email ID, you get **invitation tracking**: the *
 A Unique URL deducts **1 credit per candidate**, charged at the moment you send the invitation. If a candidate never starts, you can reclaim that credit after 24 hours. See [Reclaim Credits](/reclaim-credits).
 </Note>
 
-You can also set a **Link Expiry (days)** value between 1 and 365 when sending. By default, invitation links never expire.
+Invitation links never expire unless you set a **Link Expiry (days)** value when sending.
 
 ## Which Should You Use
 

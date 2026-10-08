@@ -3,7 +3,7 @@ title: "Writing a Boilerplate and Test Cases"
 description: "A full walkthrough of writing a boilerplate and test cases for a custom programming test, from a simple single-line problem to one with multi-line input."
 ---
 
-A boilerplate and its test cases are easiest to understand from real examples. Below are two: a simple single-line problem, and one that needs multi-line input. See [Creating a Custom Programming Test](/custom-programming-test) to set up a custom test and find where each field lives in the builder.
+Below are two examples: a simple single-line problem, and one that needs multi-line input. See [Creating a Custom Programming Test](/custom-programming-test) to set up a custom test and find where each field lives in the builder.
 
 {/* video: recording of creating a custom programming test end to end, from problem statement through boilerplate and test cases, in Equip's Custom Tests builder */}
 
@@ -130,7 +130,7 @@ readline.on('line', (line) => {
 </CodeGroup>
 
 <Tip>
-The candidate's function never sees raw input lines, only the clean, typed values your boilerplate extracts from them. The more parsing you do in the boilerplate, the less room candidates have to get tripped up by formatting instead of the actual problem.
+Do the parsing in the boilerplate, so the candidate's function gets clean, typed values and candidates are not tripped up by formatting instead of the actual problem.
 </Tip>
 
 ## Related Resources

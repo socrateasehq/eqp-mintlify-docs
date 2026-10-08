@@ -18,14 +18,8 @@ These webhooks are set per rule, on a pipeline stage. For team-wide notification
   <Step title="Add the action">
     Click **Add action** and choose **Notify an external system (webhook)**.
   </Step>
-  <Step title="Enter the method and URL">
-    Pick **GET**, **POST**, **PUT**, or **PATCH** (POST is the default) and enter your endpoint. The URL must start with `https://`.
-  </Step>
-  <Step title="Add headers">
-    Expand **Headers** to add any your endpoint needs, such as an `Authorization` header. A `Content-Type: application/json` header is included to start with.
-  </Step>
-  <Step title="Save">
-    Click **Save** in the dialog.
+  <Step title="Enter the method, URL, and headers">
+    Pick the method and enter your endpoint, which must start with `https://`. Expand **Headers** to add any your endpoint needs, such as an `Authorization` header, then click **Save**.
   </Step>
 </Steps>
 
@@ -59,10 +53,7 @@ Every webhook sends the same JSON structure. There is no payload editor; if your
 | Field | Description |
 |---|---|
 | `event` | Always `stage_automation.rule_fired`. |
-| `rule` | The ID and name of the rule that ran. |
-| `job_opening` | The job opening's ID, label, and title. |
 | `stage` | The stage's type, name, and the candidate's current status in it. |
-| `candidate` | The candidate's first name, last name, and email. |
 | `signals` | The stage's scores, such as the overall score for an assessment. |
 | `links.api` | The API address of the candidate's application. |
 | `callback_url` | The address your system uses to send an update back. |

@@ -3,7 +3,7 @@ title: "Automation Triggers, Conditions, and Actions"
 description: "The full reference for building automation rules: every trigger, stage status, condition field, and action."
 ---
 
-Every automation rule is built from a **trigger**, optional **conditions**, and one or more **actions**. This page lists every option the Automation dialog offers. To set up your first rule, start with [Stage Automation](/stage-automation).
+Every automation rule is built from a **trigger**, optional **conditions**, and one or more **actions**. To set up your first rule, start with [Stage Automation](/stage-automation).
 
 ## Triggers
 
@@ -16,7 +16,7 @@ A rule has exactly one trigger.
 | **Status changes to** | Each time the candidate's status inside the stage becomes the one you pick |
 | **An external system sends an update** | When a system you notified with a webhook from this stage sends its result back |
 
-All four triggers are available on every stage that supports automation, except that **Applied** has no "Candidate leaves this stage" trigger.
+**Applied** has no "Candidate leaves this stage" trigger.
 
 <Note>
 Use **Status changes to** for Equip's own events, such as an assessment being graded. The external update trigger is only for integrations; see [Automation Webhooks and External Updates](/automation-webhooks).
@@ -40,7 +40,7 @@ Inside a stage, each candidate carries a **stage status** that tracks their prog
 
 A **Custom** stage can define its own statuses, for steps like a background check or a reference call. Open the stage's Automation dialog and click **Add status** under **Statuses in this stage**.
 
-Each status has a **Name** (up to 40 characters) and an **ID**, which Equip fills in from the name. The first status in the list is set automatically when a candidate arrives.
+Equip fills in each status's **ID** from its name. The first status in the list is set automatically when a candidate arrives.
 
 <Warning>
 A status ID cannot be changed once saved, so that existing candidates keep their status. You can still rename the status at any time.
@@ -50,7 +50,7 @@ A status ID cannot be changed once saved, so that existing candidates keep their
 
 Conditions narrow a rule to the candidates it should apply to. When a rule has several, **all of them must match**.
 
-Number and date fields accept all six operators: **is**, **is not**, **is more than**, **is less than**, **is at least**, and **is at most**. Text and yes/no fields accept **is** and **is not**.
+Text and yes/no fields accept only **is** and **is not**. Number and date fields can also be compared, with operators such as **is at least**.
 
 | Group | Fields |
 |---|---|
@@ -88,11 +88,11 @@ If the candidate is still on the page when the rule runs, for example right afte
 
 ### Rejecting on screen
 
-In the same situation, **Reject Candidate** offers a **Tell the candidate on screen** checkbox. Tick it to show a short message (up to 400 characters) on the page the candidate just submitted from. A default message is provided, and you can edit it.
+In the same situation, **Reject Candidate** offers a **Tell the candidate on screen** checkbox. Tick it to show a short message on the page the candidate just submitted from.
 
 ### Delayed emails
 
-**Send an email** goes to the candidate, using any of your active email templates. Set a **Delay** in minutes, hours, or days, up to **30 days**, or leave it at zero to send immediately.
+**Send an email** goes to the candidate, using any of your active email templates. Set a **Delay** in minutes, hours, or days, up to **30 days**.
 
 <Warning>
 A delayed email is sent even if the candidate has moved to another stage in the meantime. Keep delays short for messages that only make sense while the candidate is in the stage.
@@ -100,7 +100,7 @@ A delayed email is sent even if the candidate has moved to another stage in the 
 
 ### Slack notifications
 
-**Notify on Slack** posts a one-line update to the channel you pick. The message names the candidate, the job, the stage, and the status, along with the stage's scores and a link to the candidate in Equip.
+**Notify on Slack** posts a one-line update to the channel you pick, with the candidate's stage, status, and scores, and a link to the candidate in Equip.
 
 ## Related Resources
 

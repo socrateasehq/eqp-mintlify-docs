@@ -9,46 +9,32 @@ A **Live Interview** stage is a video, phone, or in-person round that you hold o
 
 <Steps>
   <Step title="Move the candidate into the stage">
-    Move one candidate into a Live Interview stage, and the schedule dialog opens. For a candidate already in the stage, click **Schedule** on the **To schedule** view or in the candidate's details.
+    Move one candidate into a Live Interview stage, and the schedule dialog opens. For a candidate already in the stage, click **Schedule** in the candidate's details.
   </Step>
-  <Step title="Set the slot">
-    Pick the **Date**, **Time**, **Duration (min)**, and **Timezone**. The start time must be in the future, and the duration can be 5 to 480 minutes.
-  </Step>
-  <Step title="Choose the mode">
-    Select **Video**, **Phone**, or **In-person**, then fill in where the interview happens.
-  </Step>
-  <Step title="Pick an interview panel">
-    Choose the panel who will interview and score the candidate. A panel is required.
+  <Step title="Set the slot, mode, and panel">
+    Pick the date and time, then choose **Video**, **Phone**, or **In-person** and say where the interview happens: a meeting link, a phone number, or an address, typed or picked from a saved location. A panel is required.
   </Step>
   <Step title="Choose the emails and schedule">
-    Tick **To the candidate** and **To the panel** as needed, then click **Schedule**. You can set a Reply-To team member and use **Schedule send** to delay the emails.
+    Choose who gets an email, then click **Schedule**. You can set a Reply-To team member and use **Schedule send** to delay the emails.
   </Step>
 </Steps>
 
 {/* screenshot: schedule live interview dialog showing slot, mode tiles, panel, and email options */}
 
-Each mode asks for different details:
-
-| Mode | What you enter |
-|---|---|
-| **Video** | A **Meeting link** from Google Meet, Zoom, Teams, or another tool |
-| **Phone** | The number the panel will call, or a bridge number and access code |
-| **In-person** | An **Address** (typed or picked from a saved location) and an optional reception note. You can also add a video link for panellists joining remotely. |
-
 <Note>
 Equip does not create the meeting for you; paste a link from your own video tool. Both emails include **Add to calendar** links for Google Calendar and Outlook.
 </Note>
 
-Candidates move into a Live Interview stage one at a time, so each gets their own slot. To move someone now and book later, click **Move without scheduling**; they wait under **To schedule**.
+Candidates move into a Live Interview stage one at a time, so each gets their own slot. To move someone now and book later, click **Move without scheduling**; they wait under **To schedule** on the [**Live Interviews** page](https://equip.co/recruiter/live-interviews/).
 
 ## Set Up the Stage
 
-Each Live Interview stage carries defaults that pre-fill the schedule dialog. Set them on the stage card in the job's **Settings**, under the **Candidate Pipeline** tab.
+Each Live Interview stage carries defaults that pre-fill the schedule dialog, and you can change them per interview. Set them on the stage card in the job's **Settings**, under the **Candidate Pipeline** tab.
 
 | Setting | What it controls |
 |---|---|
-| **Mode** | The default mode: Video, Phone, or In-person. New stages start on Video. |
-| **Minutes** | The default interview length. New stages start at 45 minutes. |
+| **Mode** | The default mode: Video, Phone, or In-person |
+| **Minutes** | The default interview length |
 | **Suggested Qs** | Questions and topics panellists see while they interview |
 | **Panel** | The interview panel picked by default |
 | **Scorecard** | The scorecard panellists fill in |
@@ -56,18 +42,14 @@ Each Live Interview stage carries defaults that pre-fill the schedule dialog. Se
 
 {/* screenshot: Live Interview stage card showing Mode, Minutes, Suggested Qs, Panel, and Scorecard */}
 
-All of these can be changed per interview when you schedule, without affecting the stage defaults.
-
 ## The Emails That Go Out
 
-Scheduling can send two emails, each controlled by its own checkbox:
+Scheduling can send two emails. Edit both in [Email Templates](/email-templates).
 
 | Email | Goes to | Based on |
 |---|---|---|
 | **Candidate invite** | The candidate | The stage's **Live Interview Invitation** template |
 | **Panel brief** | Every panel member | Your team's **Live Interview Panel Brief** template, with a link to the candidate's CV and interview details |
-
-Both templates support interview variables such as the date and time, duration, mode, and meeting link. See [Email Templates](/email-templates).
 
 <Warning>
 A candidate with an **unverified email** is still scheduled, and the panel is still briefed, but the candidate receives no invite. Share their verification link first.
@@ -79,10 +61,10 @@ You can change a booked interview from the [**Live Interviews** page](https://eq
 
 | Action | What happens |
 |---|---|
-| **Reschedule** | Opens the same dialog with the current details. You can change the slot, the mode, or the panel, and add an optional reason. |
+| **Reschedule** | Change the slot, the mode, or the panel |
 | **Cancel** | Cancels the interview and returns the candidate to **To schedule**. The panel loses access to the candidate through that interview. |
 
-Both actions have a checkbox to notify the candidate and the panel, and the reason you enter is included in the email.
+Both actions can notify the candidate and the panel, and the reason you enter is included in the email.
 
 <Warning>
 Moving or rejecting a candidate does not cancel their interview. Equip warns you that it stays scheduled; cancel it from the candidate's details if it is no longer needed.
@@ -90,7 +72,7 @@ Moving or rejecting a candidate does not cancel their interview. Equip warns you
 
 ## The Live Interviews Page
 
-[**Live Interviews**](https://equip.co/recruiter/live-interviews/), under **ATS** in the sidebar, lists interviews across all your job openings. Use the view pills to switch between **All**, **Upcoming**, **Awaiting feedback**, **Completed**, **Cancelled**, and **To schedule**.
+[**Live Interviews**](https://equip.co/recruiter/live-interviews/), under **ATS** in the sidebar, lists interviews across all your job openings.
 
 | Status | Meaning |
 |---|---|
@@ -100,8 +82,6 @@ Moving or rejecting a candidate does not cancel their interview. Equip warns you
 | **Cancelled** | The interview was cancelled, or the candidate did not attend |
 
 {/* screenshot: Live Interviews page with view pills and the interviews table */}
-
-You can filter the table by job opening, scheduled time, interview type, panel, panel member, and panel score. Each row has **Join**, **Score**, or **Result** actions, depending on where the interview stands.
 
 ## Related Resources
 

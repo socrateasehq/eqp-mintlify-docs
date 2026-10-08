@@ -5,24 +5,16 @@ description: "Use Equip's REST APIs to invite candidates and pull results from y
 
 Equip's **REST APIs** let you run assessments from inside your own ATS or internal tools. You invite candidates and fetch their results programmatically, so you never have to manage the pipeline in the Equip dashboard.
 
-Candidates still attempt the assessment on the Equip website. The API only replaces the recruiter side of the workflow: sending invitations and collecting scores.
-
 ## What the API Offers
-
-The API automates both ends of the assessment workflow. Your system triggers the invitation, Equip runs the test, and your system pulls the result back.
 
 | You can | You cannot |
 |---|---|
 | Invite candidates to an assessment programmatically | Fetch question content directly (for example, "give me 100 Python MCQs") |
 | Pull candidates' results into your own system | Have candidates attempt tests outside of Equip |
 
-<Note>
-The API does not expose Equip's question bank. If your assessment uses Equip content, questions are still picked automatically from the **Question Bank** and shown only to the candidate during their attempt.
-</Note>
-
 ## Costs
 
-API access is included with the **Premium** and **Elite** plans, no separate setup fee or minimum purchase required. Teams on **Standard** need to upgrade to Premium or above to use the API.
+API access is included with the **Premium** and **Elite** plans, no separate setup fee or minimum purchase required.
 
 <Note>
 Credits work the same way for API-driven invitations as for dashboard invitations. See [How Credits Work](/how-credits-work) for deduction and reclaim rules.
@@ -33,14 +25,11 @@ Credits work the same way for API-driven invitations as for dashboard invitation
 Every team has its own **API Key**, issued by the Equip team on request. There is no self-serve page to generate one.
 
 <Steps>
-  <Step title="Create a team">
-    Sign up for a recruiter account at [equip.co](https://equip.co/account/recruiter-onboarding/) with your work email.
-  </Step>
-  <Step title="Trial Equip with free credits">
-    Use your free signup credits to confirm the product works for your use case before committing to the integration.
+  <Step title="Create a team and trial Equip">
+    Sign up for a recruiter account at [equip.co](https://equip.co/account/recruiter-onboarding/) with your work email. Use your free signup credits to confirm the product works for your use case.
   </Step>
   <Step title="Subscribe to Premium or Elite">
-    API access requires at least a **Premium** plan. See [How Credits Work](/how-credits-work) for how to subscribe.
+    See [How Credits Work](/how-credits-work) for how to subscribe.
   </Step>
   <Step title="Request your API Key">
     Email hello@equip.co or use the in-product chat, and the Equip team issues your team's API Key.

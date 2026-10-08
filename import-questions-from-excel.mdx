@@ -3,7 +3,7 @@ title: "Import Questions Using Excel"
 description: "Bulk-import quiz questions from an Excel template into a custom test on Equip."
 ---
 
-When you are creating a **Custom Quiz** on Equip, you do not have to type questions in one at a time. You can fill an Excel file with all your questions and import them in a single upload. Imported questions are **appended** to the quiz, so you can import into a brand-new quiz or add to one that already has questions.
+Instead of typing questions into a **Custom Quiz** one at a time, fill an Excel file and import them in a single upload. Imported questions are **appended**, so you can also add to a quiz that already has questions.
 
 <iframe
   width="560"
@@ -17,21 +17,16 @@ When you are creating a **Custom Quiz** on Equip, you do not have to type questi
 
 ## Downloading the Template
 
-The import always starts from a quiz inside **Custom Tests**. From there, grab the template, fill it in, and upload it back.
-
 <Steps>
   <Step title="Open Custom Tests">
-    From your [**Assessments Dashboard**](https://equip.co/recruiter/assessments/dashboard/), select [**Custom Tests**](https://equip.co/recruiter/assessments/cms/home/) in the left sidebar. Click **New** to create a quiz, or open the existing quiz you want to add questions to.
-  </Step>
-  <Step title="Open the import dialog">
-    Click the **Import** button at the top right of the quiz screen.
-    {/* screenshot: custom quiz editor with the Import button highlighted at top right */}
+    From your [**Assessments Dashboard**](https://equip.co/recruiter/assessments/dashboard/), select [**Custom Tests**](https://equip.co/recruiter/assessments/cms/home/). Click **New**, or open an existing quiz.
   </Step>
   <Step title="Download the template">
-    Click **Download Template**. Alternatively, open the [Google Sheets template](https://docs.google.com/spreadsheets/d/1_QgE_eX2Rb4mKcNtpnc8ojhi7wAQGRrys3Gte7hWcS0/edit?usp=sharing) and download it as an Excel file via **File > Download**.
+    Click **Import** at the top right of the quiz, then **Download Template**. Alternatively, download the [Google Sheets template](https://docs.google.com/spreadsheets/d/1_QgE_eX2Rb4mKcNtpnc8ojhi7wAQGRrys3Gte7hWcS0/edit?usp=sharing) as an Excel file.
+    {/* screenshot: custom quiz editor with the Import button highlighted at top right */}
   </Step>
   <Step title="Fill in your questions">
-    Add one question per row, following the column rules in the next section. Save the file when you are done.
+    Add one question per row, following the column rules in the next section.
   </Step>
   <Step title="Upload the file">
     Back in your quiz, click the **Import from Excel** icon and select your file. Optionally enable **Autocalculate Negative Points** before uploading.
@@ -43,8 +38,6 @@ Do not remove any columns from the template. Your file must contain **only one s
 </Warning>
 
 ## Formatting Questions
-
-Each row in the template is one question. Columns marked with an asterisk in the template cannot be left empty.
 
 | Column | Required | What to Enter |
 |---|---|---|
@@ -59,12 +52,12 @@ Each row in the template is one question. Columns marked with an asterisk in the
 | **Tags** | No | One or more tags, separated by commas |
 
 <Note>
-The Excel import supports MCQ and MCA questions only. Your quiz itself is fully editable after the import, so you can add other [question types](/custom-quiz-question-types), reassign points, or tweak any imported question afterwards.
+The Excel import supports MCQ and MCA questions only. You can add other [question types](/custom-quiz-question-types) in the quiz after the import.
 </Note>
 
 ### Autocalculate Negative Points
 
-If you are uploading many questions and want negative marking, enable **Autocalculate Negative Points** during the import. Every MCQ is then assigned negative points automatically:
+Enable **Autocalculate Negative Points** during the import to assign negative points to every MCQ automatically:
 
 ```
 Negative Points = Points Assigned / Number of Options
@@ -74,30 +67,26 @@ For example, an MCQ worth 2 points with 4 options gets 0.5 negative points. MCAs
 
 ## Markdown and LaTeX Support
 
-Use the **Markdown** column to control formatting: enter `1` in that column and the question text and options render as Markdown. Leave it blank for plain text.
+Enter `1` in the **Markdown** column to render the question text and options as Markdown. Leave it blank for plain text.
 
-For mathematical equations, write them in **LaTeX** inside your Excel file, then enable LaTeX in the quiz's **Advanced Settings** so they render correctly for candidates.
+<Note>
+Write mathematical equations in **LaTeX** inside your Excel file, then enable LaTeX in the quiz's **Advanced Settings** so they render for candidates.
+</Note>
 
 {/* screenshot: quiz Advanced Settings panel with the LaTeX toggle enabled */}
 
-<Tip>
-Combine the Markdown column with the **Image** column to build rich questions: formatted text, code snippets, and a supporting image, all from a single spreadsheet row.
-</Tip>
-
 ## Troubleshooting Imports
 
-Most failed or messy imports come down to a formatting issue in the file. Check these first:
-
-| Symptom | Likely Cause | Fix |
-|---|---|---|
-| Upload rejected | Columns were removed, the file has multiple sheets, or there are empty rows | Restore the original template columns, keep a single sheet, and delete blank rows |
-| Wrong answers marked correct | **CorrectAnsInd** formatted incorrectly | Use a single number for MCQs; for MCAs, separate numbers with a comma and no space (`2,3`) |
-| A question has too few choices | Fewer than two options filled in | Every question needs at least **Opt1** and **Opt2** |
-| Images not showing | The Image URL is not a direct link | Use a URL ending in `.jpg`, `.png`, etc. Google Drive links and links to pages containing an image do not work |
-| Equations show as raw text | LaTeX not enabled on the quiz | Turn on LaTeX in the quiz's **Advanced Settings** |
+| Symptom | Fix |
+|---|---|
+| Upload rejected | Restore the original template columns, keep a single sheet, and delete blank rows |
+| Wrong answers marked correct | In **CorrectAnsInd**, use a single number for MCQs; for MCAs, separate numbers with a comma and no space (`2,3`) |
+| A question has too few choices | Every question needs at least **Opt1** and **Opt2** |
+| Images not showing | Use a direct URL ending in `.jpg`, `.png`, etc. Google Drive links and links to pages containing an image do not work |
+| Equations show as raw text | Turn on LaTeX in the quiz's **Advanced Settings** |
 
 <Note>
-Duplicate uploads create duplicate questions, because imported questions are appended rather than merged. If you import the same file twice, remove the extra questions in the quiz editor.
+Importing the same file twice creates duplicate questions. Remove the extra questions in the quiz editor.
 </Note>
 
 ## Related Resources

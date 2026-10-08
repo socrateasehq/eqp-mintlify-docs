@@ -7,24 +7,17 @@ description: "How each test in an assessment is scored, and how per-test scores 
 Every test in an assessment gets its own **Individual Score**. Equip then combines them into one **Overall Score** using the weightage you assign to each test in the **Test Order** tab. Weightages always add up to 100.
 </Tip>
 
-An assessment on Equip can combine multiple tests. For example, a Software Developer assessment might contain a **Quiz** and a **Programming Challenge**, and the candidate attempts them one after another from a single link. In the results, you see each test's Individual Score plus a single Overall Score for the candidate.
+An assessment on Equip can combine multiple tests. For example, a Software Developer assessment might contain a **Quiz** and a **Programming Challenge**, and the candidate attempts them one after another from a single link.
 
 ## Per-Test Scores
 
-Individual Test Scores appear in the assessment's results on the Recruiter Dashboard. Click any test score to open the candidate's report for that test, with three tabs: **Test Summary**, **Proctoring**, and **Session Recording**.
+Individual Test Scores appear in the assessment's results on the Recruiter Dashboard. Click any test score to open the candidate's report for that test.
 
 {/* screenshot: assessment results page showing per-test scores and the overall score column */}
 
-How a test is scored depends on its type:
+A test is auto-graded, AI-graded, manually graded, or not scored, depending on its type. [Grading Tests](/grading-tests) lists which is which.
 
-| Grading | Test types |
-|---|---|
-| **Auto-graded** | Quiz (MCQ, MCA and similar question types), Programming, SQL, English Communication (CEFR), Excel, Typing Test |
-| **AI-graded** | Text, audio, and video answers evaluated by Equip AI, with manual overrides allowed |
-| **Manually graded** | Video Response, CSS Challenge |
-| **Not scored** | Psychometric (personality tests have no right answers) |
-
-If a test contains questions that need your attention, it is labelled **ungraded**, and the Overall Score stays ungraded until every test is graded. Use the **Show Ungraded** filter on the results dashboard to find affected submissions, and see [Grading Tests](/grading-tests) for the full workflow.
+If a test contains questions that need your attention, it is labelled **ungraded**, and the Overall Score stays ungraded until every test is graded. Use the **Show Ungraded** filter on the results dashboard to find affected submissions.
 
 <Note>
 You can edit an awarded score at any time using the pencil icon on a response. The test score and Overall Score recompute automatically.
@@ -45,14 +38,11 @@ To calculate the Overall Score, Equip multiplies each test's percentage score by
 To set or change weightage:
 
 <Steps>
-  <Step title="Open Assessment Settings">
-    From the [Assessments Dashboard](https://equip.co/recruiter/assessments/dashboard/), open the assessment's settings.
-  </Step>
-  <Step title="Go to the Test Order tab">
-    Here you can also drag tests to rearrange the order candidates attempt them in.
+  <Step title="Open the Test Order tab">
+    From the [Assessments Dashboard](https://equip.co/recruiter/assessments/dashboard/), open the assessment's settings and go to **Test Order**.
   </Step>
   <Step title="Assign weightage per test">
-    Enter a weightage for each test. Equip validates that the values add up to 100.
+    The values must add up to 100.
   </Step>
 </Steps>
 
@@ -68,7 +58,7 @@ A test with weightage 0 contributes nothing to the Overall Score. Equip warns yo
 
 Equip does not define a universal passing score; what counts as good depends on your role and hiring bar. The results dashboard gives you **score and cutoff filters** so you can view only the candidates above your threshold.
 
-A reliable approach is relative shortlisting: sort candidates by Overall Score and take the top N into the next round. Candidates start as **Uncategorized**, and you can mark them **Shortlisted**, **Rejected**, or **Hired** individually or in bulk. For guidance on choosing a threshold, see [What Is a Good Assessment Score?](/good-assessment-score).
+You can mark candidates **Shortlisted**, **Rejected**, or **Hired** individually or in bulk. For guidance on choosing a threshold, see [What Is a Good Assessment Score?](/good-assessment-score).
 
 <Warning>
 Grade any ungraded questions before comparing Overall Scores or applying a cutoff. Otherwise you may shortlist against incomplete scores.

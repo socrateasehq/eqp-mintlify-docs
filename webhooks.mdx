@@ -6,40 +6,36 @@ description: "Receive JSON notifications in your own systems when candidates com
 **Webhooks** let Equip push results into your own systems the moment they are ready. When a candidate's attempt is fully graded, Equip sends an HTTP POST request with a JSON payload to a URL you provide, so your ATS, CRM, or internal tools stay in sync without polling.
 
 <Tip>
-If you only want results to land in a spreadsheet, you do not need webhooks. The no-code [Write Results to Google Sheets](/write-results-to-google-sheets) option covers that use case.
+If you only want results in a spreadsheet, use the no-code [Write Results to Google Sheets](/write-results-to-google-sheets) option instead.
 </Tip>
 
 ## Setting Up a Webhook
 
-Webhooks are configured at the **team level**. Your team has a single webhook URL, and every completion event for your team is sent to it. If no URL is configured, Equip sends nothing.
+Webhooks are configured at the **team level**. Your team has a single webhook URL, and every completion event is sent to it.
 
 <Steps>
   <Step title="Prepare your endpoint">
-    Set up an endpoint that accepts **HTTP POST** requests with a JSON body. It should respond within **10 seconds**; acknowledge the request quickly and do any heavy processing asynchronously.
+    Set up an endpoint that accepts HTTP POST requests with a JSON body and responds within **10 seconds**. Do any heavy processing asynchronously.
   </Step>
   <Step title="Share your URL with Equip">
-    There is no self-serve settings page for webhooks yet. Send your endpoint URL to the Equip team over the in-product live chat or by emailing [hello@equip.co](mailto:hello@equip.co), and they will configure it for your team.
+    There is no self-serve settings page for webhooks yet. Send your endpoint URL to the Equip team over the in-product live chat or at [hello@equip.co](mailto:hello@equip.co). Use the same channels to change or remove it later.
   </Step>
   <Step title="Verify with a real completion">
-    Once the URL is set, have a candidate complete an assessment or AI interview and confirm your endpoint receives the event. Remember that events arrive only after grading is fully complete.
+    Have a candidate complete an assessment or AI interview and confirm your endpoint receives the event.
   </Step>
 </Steps>
 
-<Note>
-The webhook URL can be up to **500 characters** long. To change or remove it later, contact the Equip team again through the same channels.
-</Note>
-
 ## Events
 
-Equip currently sends two event types. Both fire **once per candidate attempt**, and only after grading is complete, so the scores in the payload are final.
+Equip sends two event types. Both fire **once per candidate attempt**, after grading is complete, so the scores in the payload are final.
 
 | Event | When it fires |
 |---|---|
-| `assessment.completed` | Once, when every test in a candidate's assessment attempt has been graded. |
-| `ai_interview.completed` | Once, when a candidate's AI interview attempt is fully graded. |
+| `assessment.completed` | Every test in a candidate's assessment attempt has been graded. |
+| `ai_interview.completed` | A candidate's AI interview attempt is fully graded. |
 
 <Note>
-Because events wait for grading to finish, an attempt that needs [manual grading](/manual-grading) triggers its webhook only after you finalize the grade, not at submission time.
+An attempt that needs [manual grading](/manual-grading) triggers its webhook only after you finalize the grade, not at submission time.
 </Note>
 
 ## Payloads
@@ -76,33 +72,17 @@ Each entry in `tests` includes `test_title`, `test_report_url`, `points_scored`,
 
 ### ai_interview.completed
 
-The `data` object contains:
+The `data` object has the same fields as `assessment.completed`, with two differences:
 
-| Field | Description |
-|---|---|
-| `job_opening_label` | Identifier of the job opening. |
-| `job_title` | Title of the job opening. |
-| `candidate_email` | The candidate's email address. |
-| `candidate_name` | The candidate's name. |
-| `ai_interview_label` | Identifier of the AI interview. |
-| `ai_interview_report_url` | Link to the candidate's interview report on Equip. |
-| `overall_score_percentage` | The candidate's overall score as a percentage. |
-| `started_at` | When the candidate started the interview. |
-| `finished_at` | When the candidate finished the interview. |
+- `ai_interview_label` and `ai_interview_report_url` replace `assessment_label` and `assessment_report_url`.
+- There is no `hiring_status` or `tests` field.
 
 ## Delivery Behavior
 
-Deliveries are **fire-and-forget**: Equip sends each event in the background and does not block anything in the product on your endpoint's response.
-
-| Aspect | Behavior |
-|---|---|
-| Method | HTTP POST with a JSON body |
-| Timeout | 10 seconds |
-| Retries | None |
-| Duplicates | Deduplicated; each event is sent once per attempt |
+Deliveries are **fire-and-forget**: Equip sends each event once, in the background, and does not retry.
 
 <Warning>
-If your endpoint is down or takes longer than 10 seconds to respond, the event is **not retried** and is lost. Keep your endpoint fast and reliable. If you miss an event, the results are still safe on Equip: open the candidate's report on your dashboard, or pull results through the [API](/api-integrations).
+If your endpoint is down or takes longer than 10 seconds to respond, the event is **not retried** and is lost. If you miss an event, the results are still safe on Equip: open the candidate's report on your dashboard, or pull results through the [API](/api-integrations).
 </Warning>
 
 ## Related Resources

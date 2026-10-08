@@ -3,13 +3,11 @@ title: "Proctoring Settings and How to Change Them"
 description: "Every proctoring option, its default, and how to configure it per test."
 ---
 
-Every test in an assessment carries its own set of **proctoring settings**. When you create an assessment, each test starts with sensible defaults for its test type, and you can adjust them per test from the assessment's settings.
-
-Proctoring on Equip is powered by AutoProctor. Candidates see exactly which measures are active before they start, and they consent to the proctoring report being shared with you.
+Every test in an assessment carries its own **proctoring settings**. Each test starts with defaults for its test type, and you can change them per test from the assessment's settings.
 
 ## Available Settings
 
-Each test has 12 proctoring toggles. Here is what each one does:
+Each test has 12 proctoring toggles.
 
 | Setting | What It Does |
 |---|---|
@@ -19,32 +17,28 @@ Each test has 12 proctoring toggles. Here is what each one does:
 | **Switched Tab Screenshot** | Captures a screenshot of the tab the candidate switched to. Works on Chrome, Edge, Safari, and Firefox desktop browsers. |
 | **Take Random Photos** | Captures a few photos of the candidate at random points throughout the test. |
 | **Prevent Multiple Monitors** | Blocks candidates connected to more than one monitor from taking the test until they disconnect the extra displays. Requires a Chromium-based browser. |
-| **Capture Photo Before Start Test** | Takes a photo of the candidate's face before the test starts. Enabled by default for every test. |
+| **Capture Photo Before Start Test** | Takes a photo of the candidate's face before the test starts. |
 | **Show Webcam Preview** | Lets the candidate see their own webcam preview throughout the test. |
-| **Enforce Full Screen** | Candidates cannot take the test without entering full-screen mode. Recommended to discourage tab switching. |
-| **Enforce Desktop** | Candidates can only use a desktop or laptop. Useful for coding challenges that need a large screen. |
+| **Enforce Full Screen** | Candidates cannot take the test without entering full-screen mode. |
+| **Enforce Desktop** | Candidates can only use a desktop or laptop. |
 | **Record User Session** | Records the candidate's screen and actions (mouse clicks, keyboard typing) as they attempt the test. |
 | **Auxiliary Device** | Candidates must pair their phone as a second camera watching their hands, keyboard, and screen. |
 
 <Frame caption="The Proctoring Settings panel with its toggles">
-  <img src="/images/proctoring-settings-toggles.png" alt="Proctoring Settings panel for a Quiz showing 11 toggles including Detect Audio, Detect Face, and Record User Session" />
+  <img src="/images/proctoring-settings-toggles.png" alt="Proctoring Settings panel for a Quiz" />
 </Frame>
 
-<Note>
-**Switched Tab Screenshot** depends on **Detect Switched Tab**. Enabling the screenshot option automatically turns on tab detection, and disabling tab detection turns the screenshot option off.
-</Note>
-
-A related option, **Disable Copy & Paste**, lives with the test's anti-cheating settings rather than this panel. See [Anti-Cheating Settings](/anti-cheating-settings) for that and other question-level protections.
+A related option, **Disable Copy & Paste**, lives with the test's anti-cheating settings rather than this panel. See [Anti-Cheating Settings](/anti-cheating-settings).
 
 <Tip>
-Some measures run on every attempt regardless of these toggles, such as device fingerprinting, IP recording, and multi-session detection. See [AI Proctoring](/ai-proctoring) for the full picture, including how the evidence appears in the candidate report.
+Some measures run on every attempt regardless of these toggles, such as device fingerprinting, IP recording, and multi-session detection. See [AI Proctoring](/ai-proctoring).
 </Tip>
 
 ## Defaults by Test Type
 
-New tests start with most settings **on**. The exceptions depend on the test type, because some measures make no sense for certain formats: for example, **Detect Audio** stays off for spoken-answer tests, where talking is the whole point.
+New tests start with most settings **on**. The exceptions depend on the test type.
 
-**Auxiliary Device** is off by default for every test type. You must enable it explicitly.
+**Auxiliary Device** is off by default for every test type.
 
 | Test Type | Off by Default |
 |---|---|
@@ -58,29 +52,20 @@ New tests start with most settings **on**. The exceptions depend on the test typ
 | **AI Interview (Conversational)** | Detect Audio, Detect Face, Take Random Photos, Enforce Desktop |
 
 <Note>
-A few toggles are locked, not just defaulted. Camera-related options stay locked off for custom video response tests, because you already see the candidate on camera in every answer. Psychometric tests keep tab-switch detection locked off.
+A few toggles are locked, not just defaulted. Camera-related options stay locked off for custom video response tests. Psychometric tests keep tab-switch detection locked off.
 </Note>
-
 
 ## Changing Settings
 
-Proctoring settings are edited per test after the assessment is created.
-
 <Steps>
-  <Step title="Create the assessment">
-    Each test starts with the default proctoring settings for its test type.
-  </Step>
   <Step title="Open the assessment's Settings">
-    From your assessment dashboard, open the settings of the assessment you want to change.
+    Create the assessment first, then open its settings from your assessment dashboard.
   </Step>
   <Step title="Go to the Test Order tab">
     Find the test you want to modify and click **Edit Settings**.
   </Step>
   <Step title="Toggle the settings you need">
-    Switch individual options on or off, then click **Save Settings**.
-  </Step>
-  <Step title="Click Update">
-    Your changes apply to future attempts of that test.
+    Click **Save Settings**. Then click **Update**, and your changes apply to future attempts of that test.
   </Step>
 </Steps>
 
@@ -89,7 +74,7 @@ Proctoring settings are edited per test after the assessment is created.
 </Frame>
 
 <Tip>
-The panel includes **Enable All** and **Disable All** links, so you can flip every toggle at once and then fine-tune from there.
+The panel includes **Enable All** and **Disable All** links to flip every toggle at once.
 </Tip>
 
 ## Related Resources
