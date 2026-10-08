@@ -27,6 +27,10 @@ One template can be reused across many interviews.
 
 {/* screenshot: AI Interview Reports template list showing name, status, and created date */}
 
+<Frame caption="The report template library, with each template's description, status and created date">
+  <img src="/images/custom-report-templates/templates-list.png" width="976" alt="AI Interview Report Templates page with a Create Template button and a list with Technical Interview Evaluation and Sales Role Scorecard marked Active and Leadership Screen (v1) marked Archived, each with a description and a created date" />
+</Frame>
+
 Only **Active** templates can be attached to an interview. Archive a template to retire it from the dropdown without deleting it. Deleting a template that is currently in use archives it instead.
 
 ## Evaluation Prompts
@@ -64,6 +68,10 @@ The **Jinja Template** tab is where you design the report itself. Write HTML and
 In the **Preview** tab, paste sample data as JSON, such as `{"communication_score": 85}`, to see how a finished report will look.
 
 {/* screenshot: template editor Preview tab rendering sample data */}
+
+<Frame caption="The Preview tab renders the layout with the template's sample data">
+  <img src="/images/custom-report-templates/template-preview.png" width="977" alt="Preview tab of the Technical Interview Evaluation report template showing a rendered Interview Summary with Communication 85 out of 100, Technical 78 out of 100, an overall summary, three strengths and two areas for improvement" />
+</Frame>
 
 <Warning>
 Keep the field names in your Jinja layout identical to the field names in your Response Schema. A variable that does not exist in the schema will never receive a value.

@@ -15,6 +15,10 @@ If you have a folder of CVs from a job board, an agency, or an old ATS, you do n
     The uploader accepts PDF files only, up to 100 files per batch and 10 MB per file. For more than 100 CVs, upload several batches.
     {/* screenshot: bulk CV upload dialog showing "Select PDF files to upload" with the "PDF only · Max 100 files · Max 10MB each" hint */}
 
+    <Frame caption="The uploader on the Bulk CV Import page, with its file limits under the prompt">
+      <img src="/images/bulk-cv-import/upload-cvs.png" width="772" alt="Upload CVs card with a dashed drop area reading Select PDF files to upload, the hint PDF only, Max 100 files, Max 10MB each, a Select Files button, and a note that the Job Fit Score may be inaccurate because the candidate is not reviewing the details" />
+    </Frame>
+
     Confirm the upload. The batch is processed in the background, so you can leave the page.
   </Step>
 </Steps>
@@ -30,6 +34,10 @@ Each CV goes through the same **AI parsing** as a direct application. See [CV Pa
 The batch detail page shows the batch status and a result for each file. Every failed file shows a reason.
 
 {/* screenshot: batch detail page with progress counts and per-file success/failed/skipped lists */}
+
+<Frame caption="A finished batch with its counts, where View on each card opens that list of files">
+  <img src="/images/bulk-cv-import/batch-detail.png" width="776" alt="Bulk CV Import detail page for Full Stack Developer, import ID 1, marked Completed with 12 of 12 processed at 100 percent, cards showing 8 Success, 3 Failed and 1 Skipped, and a link to view applications for the 8 CVs processed successfully" />
+</Frame>
 
 <Note>
 Common failure reasons are a missing email, a missing name, a duplicate application for the same job, or a CV the parser could not read. Fix the file or resolve the duplicate, then re-upload just the affected CVs in a new batch.
