@@ -1,6 +1,6 @@
 ---
 title: "Scorecards"
-description: "Score candidates consistently on criteria you define, at phone screening, video interview, and custom stages."
+description: "Score candidates consistently on criteria you define, at phone screening, live interview, and custom stages."
 ---
 
 **Scorecards** are structured questionnaires your team fills in after evaluating a candidate. Instead of free-form impressions, every interviewer rates the same criteria, so candidates are compared fairly and hiring decisions are backed by data.
@@ -11,13 +11,13 @@ Scorecards are managed as reusable **templates**. Create a template once, then a
 
 <Steps>
   <Step title="Open the Scorecards templates page">
-    Go to **Account → Templates → Scorecards**.
+    Go to [**Account → Templates → Scorecards**](https://equip.co/recruiter/account/templates/scorecards/).
   </Step>
   <Step title="Create a new template">
-    Give the template a name, for example "Technical Interview Scorecard". Names can be up to 100 characters.
+    Give the template a name, for example "Technical Interview Scorecard". Names can be up to 100 characters. Pick a layout and the stage types the template applies to.
   </Step>
   <Step title="Define the criteria">
-    New templates start with four default criteria. Add your own, remove ones you do not need, and drag to reorder them. At least one criterion must remain.
+    New templates start with four default criteria. Add your own, remove ones you do not need, and use the up/down arrows to reorder them. At least one criterion must remain.
   </Step>
   <Step title="Save the template">
     The template is now available in the scorecard dropdown when you configure supported pipeline stages.
@@ -35,6 +35,17 @@ The default criteria gives you a sensible starting point:
 | **Problem Solving** | Analytical and critical thinking |
 | **Cultural Fit** | Alignment with team values |
 
+A template's **layout** is chosen once, when you create it:
+
+| | Compact | Detailed |
+|---|---|---|
+| **Structure** | One list of criteria | Criteria grouped into weighted sections |
+| **Limits** | Up to 10 criteria | Up to 5 sections, with up to 10 criteria each |
+| **Feedback blocks** | No | Yes, such as an overall recommendation, strengths and concerns, and a level read |
+| **Best for** | A phone screen or a single scorer | An interview panel |
+
+In a Detailed scorecard, each section carries a weight, and the weights add up to 100. You can also choose whether the note under each criterion is required, optional, or hidden.
+
 <Tip>
 Create separate templates for different rounds, such as a phone-screen template with broad criteria and a technical-round template with deeper ones. Interviewers then rate only what their round is designed to assess.
 </Tip>
@@ -46,7 +57,7 @@ Scorecards attach to the pipeline stages where a human evaluates the candidate. 
 | Stage type | Scorecard support |
 |---|---|
 | **Phone Screening** | Yes |
-| **Video Interview** | Yes |
+| **Live Interview** | Yes |
 | **Custom** | Yes |
 | Assessment, AI Interviews | No, these stages are auto-scored |
 | Applied, Offered, terminal stages | No |
@@ -76,6 +87,10 @@ When a candidate reaches a stage with a scorecard attached, evaluators fill it i
 </Steps>
 
 {/* screenshot: scorecard star-rating form on a candidate profile */}
+
+<Note>
+Live Interview stages work differently. Each panellist fills in the scorecard on their own scoring page, and the scores combine into a single result. See [Interview Feedback and Results](/interview-feedback-and-results).
+</Note>
 
 <Warning>
 Opening an existing scorecard and submitting it again always creates a new scorecard event. It does not overwrite the earlier submission, so treat each submission as a fresh evaluation.

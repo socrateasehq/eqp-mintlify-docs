@@ -1,0 +1,125 @@
+---
+title: "Ashby Integration"
+description: "Start Equip assessments and AI interviews from an Ashby interview plan, and see each candidate's status and score on their Ashby profile."
+---
+
+The **Ashby integration** lets your team run Equip without leaving Ashby. You add an Equip assessment or AI interview to a job's interview plan, start it for a candidate from Ashby, and Ashby shows the status and score on the candidate's profile as soon as Equip has them.
+
+<Tip>
+Setup takes about five minutes and needs two things: an **Ashby API key** created from the Equip tile in Ashby, and an **Equip secret** that Equip shows you once when you connect. You paste each one into the other product.
+</Tip>
+
+## Connecting Ashby to Equip
+
+You need to be the **primary admin** of your Equip team, on a plan that includes integrations, and an admin in Ashby.
+
+<Steps>
+  <Step title="Create an API key for Equip in Ashby">
+    In Ashby, open **Admin → Integrations** and find the **Equip** tile under Assessments. In the **Ashby API Key** field, create a key for Equip (the link icon next to the field opens Ashby's API Credentials page). Ashby pre-selects the permissions Equip needs, including writing to candidates. Copy the key.
+  </Step>
+  <Step title="Paste the key into Equip">
+    In Equip, go to [**Account → Integrations → Ashby**](https://equip.co/recruiter/account/integrations/ashby/), paste the key, and click **Connect**.
+  </Step>
+  <Step title="Copy the Equip secret">
+    Equip now shows your **Equip secret** together with the partner base URL. Copy the secret straight away: it is shown only this once.
+  </Step>
+  <Step title="Enable the integration in Ashby">
+    Back on the Equip tile in Ashby, paste the Equip secret into the **Equip API Key** field, choose the Ashby key you created in the first step, and enable the integration.
+    <Frame caption="The Equip tile in Ashby once it is enabled">
+      <img src="/images/ashby-integration-ashby-tile.png" width="640" alt="Ashby's Equip integration panel with the Equip API Key, Ashby API Key and base URL fields filled in" />
+    </Frame>
+  </Step>
+  <Step title="Test the connection">
+    In Equip, click **Test connection** on the Ashby page. Equip checks that Ashby accepts your key and that it can write results to candidates.
+    <Frame caption="The Ashby page in Equip once connected">
+      <img src="/images/ashby-integration-equip-connected.png" width="640" alt="Equip's Ashby integration page showing Connected, the masked Ashby API key with Update key, the masked Equip secret with Rotate, and Test connection and Disconnect Ashby buttons" />
+    </Frame>
+  </Step>
+</Steps>
+
+<Warning>
+If you close the secret dialog without copying the secret, click **Rotate** on the Ashby page in Equip to get a new one. Rotating replaces the old secret, so paste the new one into Ashby before Ashby next calls Equip.
+</Warning>
+
+## Using Equip from Ashby
+
+Once connected, Equip appears as an assessment option in Ashby's interview plans.
+
+<Steps>
+  <Step title="Add Equip to an interview plan">
+    Open the job's **Interview Plan** in Ashby, click **Add Activity** on the stage where the assessment belongs, and choose **Equip** under Integrations.
+    <Frame caption="Equip in Ashby's Add Activity panel">
+      <img src="/images/ashby-integration-add-activity.png" width="380" alt="Ashby's Add Activity panel with Equip listed under Integrations" />
+    </Frame>
+    Then pick the assessment or AI interview. Ashby lists everything active in your Equip account, named as **opening number · job title · stage**, so you can tell apart assessments that belong to different jobs.
+    <Frame caption="Picking the Equip assessment for the stage">
+      <img src="/images/ashby-integration-assessment-picker.png" width="620" alt="Ashby's Add Equip Activity panel with the assessment type picker open, listing Equip assessments by opening number, job title and stage" />
+    </Frame>
+    <Frame caption="An Equip assessment on the Technical Quiz stage">
+      <img src="/images/ashby-integration-interview-plan-stage.png" alt="A Technical Quiz stage in an Ashby interview plan with an Equip Assessment activity named 23 · Data Analyst · Data Analyst" />
+    </Frame>
+  </Step>
+  <Step title="Start it for a candidate">
+    When a candidate reaches that stage, start the assessment from their Ashby profile. Equip emails the candidate the invitation and Ashby shows the status **Invited**.
+  </Step>
+  <Step title="Follow progress in Ashby">
+    When the candidate opens the link, the status changes to **Started**. When Equip has finished scoring, it changes to **Completed** and the score appears.
+  </Step>
+</Steps>
+
+<Note>
+The invitation email is the one set up for that stage in Equip: the template linked to the pipeline stage, otherwise the email on the assessment's Invite tab, otherwise Equip's default. Replies go to the first member of the job's hiring team in Ashby.
+</Note>
+
+## What Ashby shows on the candidate
+
+Equip writes to the candidate's Ashby profile at each step. Nothing else in Ashby is changed.
+
+| Status | When | What Ashby shows |
+|---|---|---|
+| **Invited** | You start the assessment from Ashby | The name of the Equip assessment |
+| **Started** | The candidate opens the invitation link | The start time |
+| **Completed** | Equip has scored the attempt | Overall score as a percentage, a score per test, the [Trust Score](/trust-score), time taken, and a link to the full report in Equip |
+
+<Frame caption="A completed Equip assessment on a candidate's Ashby profile">
+  <img src="/images/ashby-integration-candidate-result.png" width="560" alt="The Equip Assessment activity on an Ashby candidate profile showing status Completed, overall score 76.57 percent, a View in Equip link, per-test scores, trust score and time taken" />
+</Frame>
+
+The full report, with answers, recordings and proctoring evidence, stays in Equip. The **View in Equip** link on the candidate's Ashby profile opens it.
+
+## Cancelling an assessment
+
+Cancel from Ashby, not from Equip.
+
+| Situation | What happens |
+|---|---|
+| The candidate has not opened the link yet | Equip revokes the link, refunds the credit, and Ashby shows **Cancelled** |
+| The candidate has already opened the link | Ashby shows a message that it can no longer be cancelled. The attempt continues and the result still reaches Ashby |
+
+<Note>
+Starting the same assessment twice for the same application is refused while the first one is open. Cancel it first, or wait for it to complete.
+</Note>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Ashby says something went wrong when enabling the integration">
+    The Equip secret in Ashby is missing or out of date. Open the Ashby page in Equip, click **Rotate** to get a new secret, and paste it into Ashby.
+  </Accordion>
+  <Accordion title="Results are not appearing in Ashby">
+    Click **Test connection** on the Ashby page in Equip. If Ashby rejects the key, or the key cannot write to candidates, create a new key from the Equip tile in Ashby and click **Update key** in Equip. Results arrive within about a minute of scoring; an attempt that needs [manual grading](/manual-grading) is reported once you finalize the grade.
+  </Accordion>
+  <Accordion title="Ashby cannot start the assessment">
+    Ashby shows the reason. The usual ones are: the candidate has no email address in Ashby; the assessment was archived or deleted in Equip; your Equip plan no longer includes integrations. Fix the cause in Equip or Ashby and start it again.
+  </Accordion>
+  <Accordion title="I disconnected Ashby by mistake">
+    Disconnecting removes the stored keys, so Ashby can no longer start assessments and results stop flowing. Reconnect by pasting a key from Ashby again; Equip issues a new secret, which you paste into Ashby.
+  </Accordion>
+</AccordionGroup>
+
+## Related Resources
+
+- [Webhooks](/webhooks) - send completion events to your own systems
+- [Trust Score](/trust-score) - what the proctoring score on the candidate means
+- [Manual Grading](/manual-grading) - how attempts that need a human grade reach their final score
+- [How Credits Work](/how-credits-work) - what an assessment started from Ashby costs

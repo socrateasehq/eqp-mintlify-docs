@@ -1,0 +1,110 @@
+---
+title: "Automation Triggers, Conditions, and Actions"
+description: "The full reference for building automation rules: every trigger, stage status, condition field, and action."
+---
+
+Every automation rule is built from a **trigger**, optional **conditions**, and one or more **actions**. This page lists every option the Automation dialog offers. To set up your first rule, start with [Stage Automation](/stage-automation).
+
+## Triggers
+
+A rule has exactly one trigger.
+
+| Trigger | When it runs |
+|---|---|
+| **Candidate enters this stage** | Once, the moment a candidate is moved into the stage |
+| **Candidate leaves this stage** | Once, when a candidate is moved out of the stage to any other stage |
+| **Status changes to** | Each time the candidate's status inside the stage becomes the one you pick |
+| **An external system sends an update** | When a system you notified with a webhook from this stage sends its result back |
+
+All four triggers are available on every stage that supports automation, except that **Applied** has no "Candidate leaves this stage" trigger.
+
+<Note>
+Use **Status changes to** for Equip's own events, such as an assessment being graded. The external update trigger is only for integrations; see [Automation Webhooks and External Updates](/automation-webhooks).
+</Note>
+
+## Stage Statuses
+
+Inside a stage, each candidate carries a **stage status** that tracks their progress. On job openings with automation, it shows as a small badge on Kanban cards and in the applications table.
+
+| Stage | Statuses |
+|---|---|
+| **Applied** | Invited, Submitted, Graded, Finalized |
+| **Assessment** | Invited, Instructions Seen, Started, a Started status for each test, Submitted, Graded, PDF Report Generated, Finalized |
+| **One-Way AI Interview** | Invited, Instructions Seen, Started, Submitted, Graded, Finalized |
+| **Conversational AI Interview** | Invited, Instructions Seen, Started, Submitted, Transcribed, Evaluated, Graded, Finalized |
+| **Phone Screening** | Invited, Finalized |
+| **Live Interview** | To schedule, Scheduled, Feedback complete |
+| **Custom** | Invited, Finalized, plus your own statuses |
+
+### Custom statuses
+
+A **Custom** stage can define its own statuses, for steps like a background check or a reference call. Open the stage's Automation dialog and click **Add status** under **Statuses in this stage**.
+
+Each status has a **Name** (up to 40 characters) and an **ID**, which Equip fills in from the name. The first status in the list is set automatically when a candidate arrives.
+
+<Warning>
+A status ID cannot be changed once saved, so that existing candidates keep their status. You can still rename the status at any time.
+</Warning>
+
+## Conditions
+
+Conditions narrow a rule to the candidates it should apply to. When a rule has several, **all of them must match**.
+
+Number and date fields accept all six operators: **is**, **is not**, **is more than**, **is less than**, **is at least**, and **is at most**. Text and yes/no fields accept **is** and **is not**.
+
+| Group | Fields |
+|---|---|
+| **This stage** | Job fit score, Scorecard score, Overall score, Overall result (depending on the stage type), Stage Status, Stage Entered At |
+| **Previous stage** | The scores produced by the stage before this one |
+| **Application** | First Name, Last Name, Email, Phone, Total Experience (months), Graduation Year, Notice Period (days), Highest Qualification, Willing to Relocate, Application Source, Current Stage, Is Starred, Action Pending On |
+| **Job Opening** | Job Title, Seniority Level, Employment Type |
+
+{/* screenshot: condition row with the field picker open, showing the grouped fields */}
+
+## Actions
+
+A rule needs at least one action and can have several.
+
+| Action | What you configure |
+|---|---|
+| **Move candidate to** | **Next Stage** or **Previous Stage**. On Applied, only Next Stage. |
+| **Reject Candidate** | Nothing required. Optionally a message shown to the candidate on screen. |
+| **Set status to** | One of the stage's statuses |
+| **Send an email** | An email template, and an optional delay |
+| **Notify an external system (webhook)** | A method, a URL, and optional headers |
+| **Reassign to** | A team member |
+| **Notify on Slack** | A channel in your team's connected Slack workspace |
+
+### Moving candidates into a test or interview
+
+When a rule moves a candidate into an **Assessment** or **AI Interview** stage, Equip invites them automatically, using credits from your balance.
+
+If the candidate is still on the page when the rule runs, for example right after they apply or submit a test, a **Next step for the candidate** option appears:
+
+| Option | What the candidate experiences |
+|---|---|
+| **Email an invitation** | They receive the invitation by email. This is the default. |
+| **Continue right away** | They carry straight on to the next step, and still get the invitation email |
+
+### Rejecting on screen
+
+In the same situation, **Reject Candidate** offers a **Tell the candidate on screen** checkbox. Tick it to show a short message (up to 400 characters) on the page the candidate just submitted from. A default message is provided, and you can edit it.
+
+### Delayed emails
+
+**Send an email** goes to the candidate, using any of your active email templates. Set a **Delay** in minutes, hours, or days, up to **30 days**, or leave it at zero to send immediately.
+
+<Warning>
+A delayed email is sent even if the candidate has moved to another stage in the meantime. Keep delays short for messages that only make sense while the candidate is in the stage.
+</Warning>
+
+### Slack notifications
+
+**Notify on Slack** posts a one-line update to the channel you pick. The message names the candidate, the job, the stage, and the status, along with the stage's scores and a link to the candidate in Equip.
+
+## Related Resources
+
+- [Stage Automation](/stage-automation) - Create, pause, and edit rules
+- [Automation Webhooks and External Updates](/automation-webhooks) - The webhook action and the external update trigger in detail
+- [Email Templates](/email-templates) - The templates the Send an email action uses
+- [How Credits Work](/how-credits-work) - What automatic invitations cost

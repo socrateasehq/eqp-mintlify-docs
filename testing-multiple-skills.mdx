@@ -17,14 +17,20 @@ An assessment is a container for tests: candidates attempt each test one by one,
     Select the test type you want from the list, such as Quiz, Programming, or Psychometric.
   </Step>
   <Step title="Add the test">
-    For quizzes, click the **Add Quiz** button at the bottom right of the quiz card. Then choose **Equip's Content**, **My Content** (an existing custom test), or **Create New**.
+    Click the **Add** button for that test type, then choose **Equip's Content**, **My Content**, or **Create New**.
   </Step>
   <Step title="Configure it">
-    For Equip's Content, click **Add Skill**, then set the **Difficulty Level** and **Number of Questions** for each skill. For My Content, select the test you want from your saved tests.
+    Configure the questions you want to add. For Equip's Content, this means setting the skills, difficulty, and number of questions, or the equivalent for that test type, such as difficulty and languages for Programming. For My Content, select the test you want from your saved tests.
   </Step>
 </Steps>
 
-{/* screenshot: Tests tab showing the Add Skill (bottom left) and Add Quiz (bottom right) buttons on a quiz card */}
+<Frame caption="Adding a test from the Tests tab">
+  <img src="/images/testing-multiple-skills-adding-tests.png" alt="Tests tab showing a quiz configured with two skills and the Add Skill and Add Quiz options" />
+</Frame>
+
+<Tip>
+Want randomized questions from your own content instead of a regular custom quiz? Use a [Question Bank Quiz](/question-bank-quiz).
+</Tip>
 
 <Note>
 Two custom quizzes cannot be merged into one. If you have built them separately, add them to the assessment as two separate tests.
@@ -34,17 +40,21 @@ Two custom quizzes cannot be merged into one. If you have built them separately,
 
 If you are using Equip's quiz content, you do not need a separate quiz per skill. Click the **Add Skill** button at the bottom right of the quiz card to add up to **6 skills** to the same quiz. Questions from different question banks are jumbled together and shown to the candidate as one quiz, so a C++ question might be followed by an English Grammar question.
 
+<Frame caption="Adding multiple skills to the same quiz">
+  <img src="/images/testing-multiple-skills-adding-skills.png" alt="Tests tab with two skills, Data Structures and Algorithms and Python, added to the same quiz" />
+</Frame>
+
 | | One quiz with multiple skills | Separate quiz per skill |
 |---|---|---|
 | **Candidate experience** | One quiz to start and submit | A new quiz to start for every skill |
 | **Results** | One combined quiz score | A separate score per quiz |
-| **Credits** | 1 credit per candidate | 1 credit per candidate for each quiz |
+| **Credits** | 1 credit per candidate | 1 credit per candidate, per quiz |
 | **Skills per quiz** | Up to 6 | 1 each, across as many quizzes as you need |
 
-We strongly recommend the first approach. Candidates attempt one quiz instead of starting several, you see a single quiz score that makes comparing and shortlisting simpler, and you spend fewer credits because every test in an assessment costs **1 credit per candidate**.
+We strongly recommend combining skills into one quiz. Candidates attempt one quiz instead of starting several, you see a single quiz score that makes comparing and shortlisting simpler, and you spend fewer credits because every test in an assessment costs **1 credit per candidate**.
 
 <Tip>
-Even in a combined quiz, candidate results include skill-wise and difficulty-wise breakdowns, so you do not lose visibility into individual skills.
+For a combined **Equip Content** quiz, candidate results still include skill-wise and difficulty-wise breakdowns, so you do not lose visibility into individual skills. For **custom quizzes**, add tags to your questions to get the same skill-wise breakdown in results.
 </Tip>
 
 <Note>
@@ -60,13 +70,15 @@ When an assessment has multiple tests, each test's **weightage** decides how muc
     In Assessment Settings, go to the **Test Order** tab. You can also drag tests here to change the order candidates attempt them in.
   </Step>
   <Step title="Set each test's weightage">
-    Enter a weightage for every test. The builder checks that the values sum to 100 before you can save.
+    Enter a weightage for every test. Equip automatically checks that the values sum to 100 before you can save.
   </Step>
 </Steps>
 
-{/* screenshot: Test Order tab with per-test weightage inputs summing to 100 */}
+<Frame caption="Setting weightage for each test in the Test Order tab">
+  <img src="/images/testing-multiple-skills-weightage.png" alt="Test Order tab with weightage inputs of 40, 30, and 30 across three tests" />
+</Frame>
 
-The Overall Score is the sum of each test's percentage multiplied by its weightage. For example, scoring 80% on a test weighted 70 and 50% on a test weighted 30 gives an Overall Score of 71%.
+The Overall Score is the sum of each test's percentage multiplied by its weightage. See [Test Scores and Overall Score](/test-scores-and-overall-score) for a worked example.
 
 <Warning>
 If any test's weightage is 0, it will not contribute to the Overall Score at all, and Equip warns you about this while saving. Psychometric and Typing Tests are always weightless by design and are excluded from the Overall Score.

@@ -9,25 +9,28 @@ Your plan sets a **seat limit**: **Standard** includes 2 seats, **Premium** 5, a
 
 ## Inviting Members
 
-Any team member can invite new teammates from the **Team** page.
+Any team member can invite new teammates from the [**Team** page](https://equip.co/recruiter/account/team/).
 
 <Steps>
   <Step title="Open the Team page">
-    In your recruiter dashboard, go to **Account > Team** in the left sidebar.
+    In your recruiter dashboard, go to [**Account > Team**](https://equip.co/recruiter/account/team/) in the left sidebar.
+    <Frame caption="The Team link in the Account section">
+      <img src="/images/manage-team-members-open-team-page.png" alt="Account sidebar section with the Team link" />
+    </Frame>
   </Step>
   <Step title="Click Invite members">
     In the **Members** section, click the **Invite members** button.
+    <Frame caption="The Invite members button">
+      <img src="/images/manage-team-members-invite-button.png" alt="Invite members button" />
+    </Frame>
   </Step>
   <Step title="Enter email addresses one by one">
     Type an email ID and press **Enter** to add it to the list, then repeat for each additional teammate. Each invitee receives an email with a link to join your team.
+    <Frame caption="The Invite members dialog">
+      <img src="/images/manage-team-members-invite-modal.png" alt="Invite members dialog with an email address entered" style={{maxWidth: "320px"}} />
+    </Frame>
   </Step>
 </Steps>
-
-{/* screenshot: Team page Members section with the Invite members button and email entry dialog */}
-
-<Frame caption="Invite teammates by entering their email addresses">
-  <img src="/images/manage-team-members/invite-members-dialog.png" alt="Invite members dialog with an email address typed into the field and a hint that multiple emails can be separated with commas" />
-</Frame>
 
 <Note>
 Invitations are restricted to your team's **email domain**, and Equip allows one team per domain. If a colleague tries to sign up separately with the same domain, Equip tells them a team already exists and who the admin is, so they can request an invite instead.
@@ -39,11 +42,23 @@ Adding a member counts against your plan's seat limit. Check **Seats Remaining**
 
 ### Pending Invites
 
-Invitations that have not been accepted yet appear in the **Pending Invites** section of the Team page. If you invited the wrong address or the person no longer needs access, click **Remove invite** and confirm in the **Remove Pending Invite?** dialog to cancel it.
+Invitations that have not been accepted yet appear in the **Pending Invites** section of the [Team page](https://equip.co/recruiter/account/team/). If you invited the wrong address or the person no longer needs access, click **Remove invite** and confirm in the **Remove Pending Invite** dialog to cancel it.
 
 <Tip>
-New members do not need to set a password. Equip login is passwordless: members sign in with a **6-digit code** sent to their email, valid for 30 minutes.
+New members do not need to set a password. Equip login is passwordless: members sign in with a **6-digit code** sent to their email, valid for 10 minutes.
 </Tip>
+
+## Joining via Email
+
+Colleagues with your team's **email domain** don't always need an invite. They can go to the [login page](https://equip.co/account/login/role/recruiter/), sign in with their work email, and Equip adds them straight to your existing team.
+
+<Note>
+Turn this off from [**Account > Team**](https://equip.co/recruiter/account/team/), on the [**Organization** tab](https://equip.co/recruiter/account/team/organization/), by setting **Allow Auto-join** to **No**. Colleagues will then be asked to request an invite from the Team Admin instead of joining on their own.
+</Note>
+
+<Frame caption="The Allow Auto-join setting">
+  <img src="/images/manage-team-members-allow-auto-join.png" alt="Allow Auto-join dropdown with Yes and No options" style={{maxWidth: "320px"}} />
+</Frame>
 
 ## Removing Members
 
@@ -51,7 +66,7 @@ Only the **Team Admin** can remove a member. Regular members do not see this opt
 
 <Steps>
   <Step title="Find the member">
-    On the **Team** page, locate the member in the Members list.
+    On the [**Team** page](https://equip.co/recruiter/account/team/), locate the member in the Members list.
   </Step>
   <Step title="Open the actions menu">
     Click the **three dots** next to their name and choose **Remove**.
@@ -61,10 +76,8 @@ Only the **Team Admin** can remove a member. Regular members do not see this opt
   </Step>
 </Steps>
 
-{/* screenshot: three-dots menu next to a team member showing the Remove option */}
-
-<Frame caption="Remove is in the menu beside each member">
-  <img src="/images/manage-team-members/member-menu-remove.png" alt="Team member card for David Park with its three-dots menu open, showing Set as my manager, Unset as my reportee, Make Admin, and Remove" />
+<Frame caption="The Remove option in the member actions menu">
+  <img src="/images/manage-team-members-remove-option.png" alt="Team member actions menu with Set as my manager, Set as my reportee, Make Admin, and Remove options" style={{maxWidth: "290px"}} />
 </Frame>
 
 <Warning>
@@ -97,7 +110,7 @@ Only the current admin can hand over the role.
 
 <Steps>
   <Step title="Open the Team page">
-    Go to **Account > Team** in the sidebar.
+    Go to [**Account > Team**](https://equip.co/recruiter/account/team/) in the sidebar.
   </Step>
   <Step title="Pick the new admin">
     Click the **three dots** next to the member who should become the admin and select **Make Admin**.
@@ -107,14 +120,12 @@ Only the current admin can hand over the role.
   </Step>
 </Steps>
 
-{/* screenshot: three-dots menu showing the Make Admin option */}
-
-<Frame caption="Making someone else the admin removes your own admin privileges">
-  <img src="/images/manage-team-members/make-admin-confirmation.png" alt="Make Admin confirmation dialog asking whether to make David Park the team admin and warning that you will lose your admin privileges" />
+<Frame caption="The Make Admin option in the member actions menu">
+  <img src="/images/manage-team-members-make-admin-option.png" alt="Team member actions menu with the Make Admin option highlighted" style={{maxWidth: "290px"}} />
 </Frame>
 
 <Note>
-The Team page also supports an optional reporting structure. A member can be assigned a **manager**, shown as "Manager: name" in the list, which Equip's analytics use to group activity.
+The [Team page](https://equip.co/recruiter/account/team/) also supports an optional reporting structure. A member can be assigned a **manager**, shown as "Manager: name" in the list, which Equip's analytics use to group activity.
 </Note>
 
 ## Related Resources

@@ -3,7 +3,7 @@ title: "Email Templates"
 description: "Template types, variables, and how stage-transition emails reach candidates."
 ---
 
-Equip includes **email templates** for every candidate-facing message your pipeline can send: invitations, rejections, and offers. Default templates are provided for each type, and you can edit them or create your own with dynamic variables that fill in per candidate.
+Equip includes **email templates** for every message your pipeline sends: invitations, interview briefs, and rejections. Default templates are provided for each type, and you can edit them or create your own with dynamic variables that fill in per candidate.
 
 ## Template Types
 
@@ -12,12 +12,12 @@ There are five template types. Each maps to a specific moment in your [candidate
 | Template Type | When It Is Used |
 |---|---|
 | **Assessment/AI Interview Invitation** | Inviting a candidate to an Assessment, One-Way AI Interview, or Conversational AI Interview stage |
-| **Video Interview Invitation** | Inviting a candidate to a Video Interview stage run on your own videoconferencing tool |
+| **Live Interview Invitation** | Inviting a candidate to a Live Interview stage, with the time and place of the interview |
+| **Live Interview Panel Brief** | Briefing the interview panel when a live interview is scheduled |
 | **Custom Stage Invitation** | Inviting a candidate to a Custom stage |
 | **Rejection Email** | Optionally notifying a candidate when you reject them from any non-terminal stage |
-| **Offer Email** | Sending an offer, with a link for the candidate to sign the offer letter |
 
-Templates are managed in the **Templates** section of your account, and each pipeline stage can have its own template attached. In the pipeline builder, you can attach an invitation template to Assessment, AI Interview, Video Interview, and Custom stages, and a rejection template to any non-terminal stage.
+Templates are managed in the [**Templates**](https://equip.co/recruiter/account/templates/) section of your account, and each pipeline stage can have its own template attached. In the pipeline builder, you can attach an invitation template to Assessment, AI Interview, Live Interview, and Custom stages, and a rejection template to any non-terminal stage.
 
 {/* screenshot: email templates list in the Templates section */}
 
@@ -26,7 +26,7 @@ Templates are managed in the **Templates** section of your account, and each pip
 </Frame>
 
 <Note>
-Templates are rich text, so you can format the message and place the test link or signing link wherever you like in the body.
+Templates are rich text, so you can format the message and place the test link wherever you like in the body.
 </Note>
 
 ## Template Variables
@@ -64,11 +64,29 @@ Assessment and AI Interview invitation templates add variables for the link and 
 | `cannot_start_after_time_in_utc` | Latest Start Time (UTC) |
 | `link_expiry_in_days` | Link Expiry (Days) |
 
-Video Interview and Custom Stage invitation templates add a `stage_type` variable that fills in the **Stage Type**.
+Live Interview and Custom Stage invitation templates add a `stage_type` variable that fills in the **Stage Type**.
 
-### Offer email variables
+### Live interview variables
 
-The Offer Email template adds `signing_link`, the **Offer Letter Signing Link** the candidate uses to view and sign their offer.
+The Live Interview Invitation and Live Interview Panel Brief templates add variables for the booked interview:
+
+| Variable | Fills In |
+|---|---|
+| `interview_date_time` | Interview Date & Time |
+| `interview_date_time_utc` | Interview Date & Time (UTC) |
+| `interview_duration` | Interview Duration |
+| `interview_mode` | Interview Mode |
+| `interview_where` | Meeting Link, Phone or Address |
+| `interview_reception_note` | Ask For at Reception |
+| `interview_panel_names` | Panel Members |
+| `interview_hybrid_link` | Video Link for Remote Panellists |
+| `interview_page_link` | Interview Page Link (panel brief only) |
+
+Two more variables, `add_to_google_calendar_link` and `add_to_outlook_calendar_link`, let the recipient add the interview to their calendar.
+
+<Note>
+The offer email is not a template type. It is written on the offer packet, alongside the documents the candidate signs. See [Offer Documents and Packets](/offer-documents-and-packets).
+</Note>
 
 <Tip>
 Include the timezone-aware start-window variables in invitation emails. Candidates see the deadline in their own timezone, which cuts down on missed attempts and support questions.
@@ -76,7 +94,7 @@ Include the timezone-aware start-window variables in invitation emails. Candidat
 
 ## Stage-Transition Emails
 
-Emails are **recruiter-triggered**, never automatic. Moving a candidate to a new stage opens a contextual dialog, and you decide whether an email goes out.
+When you move a candidate yourself, emails are **recruiter-triggered**. Moving a candidate to a new stage opens a contextual dialog, and you decide whether an email goes out. Templates can also be sent by [Stage Automation](/stage-automation) rules.
 
 <Steps>
   <Step title="Move the candidate">

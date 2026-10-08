@@ -6,7 +6,7 @@ description: "Step 1 of creating a job opening: the details candidates see."
 When you create a job opening on Equip, a three-step wizard walks you through **Job Post** (details candidates see), **Application Form** (fields candidates fill out), and **Candidate Pipeline** (stages and automations). This article covers the first step: the job post itself.
 
 <Tip>
-The fastest way to fill in a job post is to upload an existing job description PDF or paste its text. Equip's AI parses it and pre-fills every field, usually in 30-45 seconds. See [AI Job-Description Import](#ai-job-description-import) below.
+The fastest way to fill in a job post is to upload an existing job description PDF. Equip's AI parses it and pre-fills every field, usually in 30-45 seconds. See [AI Job-Description Import](#ai-job-description-import) below.
 </Tip>
 
 ## Job Post Details
@@ -59,8 +59,8 @@ You can edit any of these details after the job opening is created. The opening'
 If you already have a job description, you do not need to retype it. Upload it and let Equip's AI fill in the form.
 
 <Steps>
-  <Step title="Upload or paste your JD">
-    On the Job Post step, use **Upload Job Description PDF** to drag and drop a PDF or click **Choose PDF File** to browse. PDF is the only supported file format, with a 10 MB size limit. You can also paste the job description as plain text instead.
+  <Step title="Upload your JD">
+    From the **Job Opening Dashboard**, click **+ Job Opening**. This opens the upload screen, a separate full-page view shown before the three-step wizard; the Job Post step only renders after the upload completes. Use **Upload Job Description PDF** to drag and drop a PDF or click **Choose PDF File** to browse. PDF is the only supported file format, with a 10 MB size limit.
   </Step>
   <Step title="Wait for parsing">
     Equip shows "Uploading file..." and then "Processing your PDF...". Parsing usually takes 30-45 seconds.
@@ -100,22 +100,22 @@ Equip validates the job post before it can be published. These are the limits to
 | Field | Limit |
 |---|---|
 | **Job Summary** | 50 to 2,000 characters |
-| **Years of experience** | Maximum 50 years; the gap between minimum and maximum can be at most 20 years |
-| **Salary range** | Maximum salary can be at most 3x the minimum salary |
+| **Years of experience** | Maximum 50 years; a gap wider than 20 years between minimum and maximum shows a warning, but is still allowed |
+| **Salary range** | A maximum more than 3x the minimum shows a warning, but is still allowed |
 | **Skills** | Up to 10 mandatory skills, 15 skills in total |
 | **Hybrid policy** | 10 to 300 characters |
 | **Location restriction** | Minimum 3 characters |
 | **Timezone restriction** | 1 to 12 hours of overlap |
-| **Application deadline** | Up to 6 months in the future |
-| **Key callout** | Maximum 200 characters and 30 words |
+| **Application deadline** | A date more than 6 months out shows a warning, but is still allowed |
+| **Key callout** | Maximum 200 characters |
 
-<Warning>
-The application deadline cannot be set more than 6 months out. If your role stays open longer, extend the deadline from the opening's Settings page before it passes.
-</Warning>
+<Note>
+The application deadline can be set beyond 6 months, but Equip shows a warning to reconsider a closer date. This is a soft nudge, not a hard limit.
+</Note>
 
 ## Job Post Status
 
-Every job post has a **status** that controls whether candidates can see it and apply. You change it from a dropdown on the Job Openings dashboard.
+Every job post has a **status** that controls whether candidates can see it and apply. You change it from a dropdown on the [Job Openings dashboard](https://equip.co/recruiter/job-openings/dashboard/).
 
 {/* screenshot: Job Openings dashboard row with the status dropdown open */}
 
@@ -123,7 +123,7 @@ Every job post has a **status** that controls whether candidates can see it and 
 |---|---|
 | **Published** | Visible to candidates and accepting applications |
 | **Hidden** | Not visible to candidates; the public link returns a 404 page |
-| **Archived** | No longer accepting applications; the post may still be visible for reference |
+| **Archived** | No longer accepting applications; the public link shows a "Position Closed" page instead of the post. Your team can still open it from the dashboard for reference. |
 
 <Note>
 Only **Published** job posts appear on your [careers page](/careers-page). Hiding or archiving a post removes it from the public listing without deleting any of its applications.

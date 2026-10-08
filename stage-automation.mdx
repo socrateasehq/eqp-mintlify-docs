@@ -1,0 +1,101 @@
+---
+title: "Stage Automation"
+description: "Set up rules on a pipeline stage that move, reject, email, or reassign candidates for you."
+---
+
+**Automation** lets a pipeline stage act on its own. Each stage can hold one or more **rules**: when a trigger happens and the conditions match, Equip carries out the actions you chose, such as moving the candidate to the next stage or sending an email.
+
+<Note>
+Automation is included with the **Premium** plan and above.
+</Note>
+
+## Create a Rule
+
+<Steps>
+  <Step title="Open the pipeline settings">
+    Open the job opening's **Settings** and go to the **Candidate Pipeline** tab. Automation is available on saved job openings, not in the job creation wizard.
+  </Step>
+  <Step title="Turn on Automation for a stage">
+    Switch on **Automation** on the stage card, then click **New rule**. You can also start from the **auto-advance** or **auto-reject** starter.
+  </Step>
+  <Step title="Choose the trigger">
+    Name the rule (up to 60 characters) and pick what starts it, for example **Status changes to** Graded.
+  </Step>
+  <Step title="Add conditions">
+    Click **Add condition** to limit the rule to certain candidates, for example **Overall score** is at least 80. With no conditions, the rule runs for every candidate who reaches the trigger.
+  </Step>
+  <Step title="Add actions and save">
+    Click **Add action** for each thing the rule should do, then click **Save**. A rule needs at least one action.
+  </Step>
+</Steps>
+
+{/* screenshot: Automation dialog with one rule expanded, showing Trigger, Conditions, and Actions */}
+
+<Warning>
+The rest of the Candidate Pipeline tab saves automatically, but the Automation dialog does not. Click **Save** before closing it, or your changes are discarded.
+</Warning>
+
+## How a Rule Works
+
+Every rule has the same three parts:
+
+| Part | What it answers | How many |
+|---|---|---|
+| **Trigger** | When does the rule start? | Exactly one |
+| **Conditions** | Which candidates does it apply to? | None or more. All must match. |
+| **Actions** | What should Equip do? | One or more |
+
+When a trigger fires, every active rule on that stage is checked in the order listed. Once an action moves the candidate out of the stage, the remaining rules on that stage are skipped.
+
+For the full list of triggers, condition fields, and actions, see [Automation Triggers, Conditions, and Actions](/automation-rule-reference).
+
+## Stages That Support Automation
+
+Automation is available on the stages where candidates are evaluated. Each stage type offers its own scores to use in conditions.
+
+| Stage | Scores you can use |
+|---|---|
+| **Applied** | Job fit score |
+| **Assessment**, **One-Way AI Interview**, **Conversational AI Interview** | Overall score, Overall result |
+| **Phone Screening**, **Live Interview**, **Custom** | Scorecard score |
+| **Offered**, **Hired**, **Rejected**, **Withdrawn** | No automation |
+
+A rule can also use scores from the **previous stage** in the pipeline, so a Live Interview rule can check the assessment score that came before it.
+
+## Pause or Edit Rules
+
+The stage card shows the state of its automation, for example "2 rules" or "2 rules, 1 paused". Click it to open the dialog and edit.
+
+| To | Do this |
+|---|---|
+| **Pause every rule on a stage** | Switch off **Automation** on the stage card. The rules are kept and resume when you switch it back on. |
+| **Pause one rule** | Open the dialog and change the rule's status from **Active** to **Paused** |
+| **Remove a rule** | Open the dialog and click the rule's delete icon, then **Save** |
+
+{/* screenshot: stage card showing the Automation switch and "2 rules, 1 paused" link */}
+
+<Warning>
+A rule that rejects candidates when they enter a stage, with no conditions, rejects every candidate who reaches that stage. Equip warns you in the dialog; add a condition unless that is what you intend.
+</Warning>
+
+## Example Rules
+
+These are common starting points. Each is written in the same terms the dialog uses.
+
+| Goal | Stage | Trigger | Condition | Action |
+|---|---|---|---|---|
+| **Advance high scorers** | Assessment | Status changes to Graded | Overall score is at least 80 | Move candidate to Next Stage |
+| **Reject low scorers** | Assessment | Status changes to Graded | Overall score is less than 40 | Reject Candidate |
+| **Fast-track strong CVs** | Applied | Candidate enters this stage | Job fit score is at least 80 | Move candidate to Next Stage |
+| **Hand off to a colleague** | Phone Screening | Candidate enters this stage | None | Reassign to a team member |
+
+<Tip>
+Start with one rule on one job opening and watch a few candidates pass through it. Once you trust the thresholds, repeat the rule on other openings.
+</Tip>
+
+## Related Resources
+
+- [Automation Triggers, Conditions, and Actions](/automation-rule-reference) - Every option available in a rule
+- [Automation Webhooks and External Updates](/automation-webhooks) - Connect a rule to your own systems
+- [Pipeline Stages](/pipeline-stages) - The stage types automation runs on
+- [Changing Stages](/changing-stages) - Moving candidates by hand

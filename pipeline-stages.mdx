@@ -24,9 +24,9 @@ There are **11 stage types**. Applied always comes first, Offered and the termin
 | **Assessment** | Configurable | Invite candidates to a skill test: quiz, coding, communication, and more. |
 | **One-Way AI Interview** | Configurable | Fixed questions. Candidates record subjective responses via text, audio, or video. |
 | **Conversational AI Interview** | Configurable | An AI interviewer auto-generates questions and engages in a back-and-forth conversation. |
-| **Video Interview** | Configurable | Run live interviews on your own videoconferencing tool, then rank and review. |
+| **Live Interview** | Configurable | Hold a video, phone, or in-person round, then schedule, score, and review candidates. |
 | **Custom** | Configurable | Any step that does not fit the above, with optional ranking. |
-| **Offered** | System | Supports sending an offer email and an offer letter. |
+| **Offered** | System | Supports sending an offer email and documents for the candidate to sign. |
 | **Hired** | Terminal | The candidate accepted and joined. |
 | **Rejected** | Terminal | You turned the candidate down. |
 | **Withdrawn** | Terminal | The candidate dropped out of the process. |
@@ -34,7 +34,7 @@ There are **11 stage types**. Applied always comes first, Offered and the termin
 **Terminal stages** (Hired, Rejected, Withdrawn) mark the end of a candidate's journey and cannot be deleted. Candidates in terminal stages are excluded from the dashboard's default **Relevant** filter, so your working view stays focused on active candidates.
 
 <Note>
-When you add a **One-Way AI Interview** or **Conversational AI Interview** stage, Equip automatically creates the underlying interview for you. You can then review and adjust its content.
+When you add an **Assessment**, **One-Way AI Interview**, or **Conversational AI Interview** stage, Equip automatically creates the underlying assessment or interview for you. You can then review and adjust its content.
 </Note>
 
 ## Per-Stage Configuration
@@ -45,20 +45,20 @@ When you add a **One-Way AI Interview** or **Conversational AI Interview** stage
   <img src="/images/pipeline-stages/stage-configuration.png" alt="Assessment stage in the pipeline builder with Stage Name set to Assessment, Internal Name set to SQL take-home test, and Invitation Email and Rejection Email template dropdowns" />
 </Frame>
 
-Each stage carries two names. The **internal name** (up to 200 characters) is what your team sees in dashboards, so make it specific, for example "Tech Round 2 with Hiring Manager". The **candidate-facing stage name** (up to 20 characters) is the short label candidates may see, so keep it simple.
+Each stage carries two names. The **internal name** (up to 30 characters) is a short dashboard label your team sees, for example "July Hiring". The **candidate-facing stage name** (up to 40 characters) is used in filters and stage-change menus, for example "Interview 2"; candidates themselves see only the job title, except that Live Interview and Custom invitation emails can include the stage name.
 
 Beyond naming, what you can attach to a stage depends on its type:
 
 | Capability | Available on |
 |---|---|
-| **Scorecard** | Phone Screening, Video Interview, Custom |
-| **Invitation email template** | Assessment, One-Way AI Interview, Conversational AI Interview, Video Interview, Custom |
+| **Scorecard** | Phone Screening, Live Interview, Custom |
+| **Invitation email template** | Assessment, One-Way AI Interview, Conversational AI Interview, Live Interview, Custom |
 | **Rejection email template** | Every non-terminal stage except Offered |
 | **Assignee** | Every stage except Hired, Rejected, Withdrawn |
 
 An **assignee** is the team member responsible for candidates in that stage.
 
-Attached email templates pre-fill the invitation or rejection dialog when you move a candidate, but nothing is ever sent automatically; a recruiter always confirms each email.
+Attached email templates pre-fill the invitation or rejection dialog when you move a candidate, and you confirm each email before it goes out. To have a stage act on its own, add [Stage Automation](/stage-automation) rules to it.
 
 <Tip>
 Attach a **scorecard** to interview-style stages so every reviewer rates candidates on the same criteria. See [Scorecards](/scorecards) for how templates work.

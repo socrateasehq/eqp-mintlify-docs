@@ -55,7 +55,7 @@ Advanced formats combine multiple elements, such as a passage with nested questi
 | **Coding Editor** | Candidates write code in an editor with syntax highlighting and autocomplete. You choose the programming language. The code is not executed. |
 | **Comprehension** | Nest questions inside a parent. Write a passage of text and ask multiple questions based on it. |
 | **Document** | Upload a PDF and ask multiple sub-questions based on it. Ideal for case studies. See [Using Documents in Custom Tests](/documents-in-custom-tests). |
-| **Answer Any** | Create a set of questions, say 5, and let each candidate answer any 3 of them. |
+| **Answer Any** | Create a set of questions, say 5. Candidates see all 5 upfront and choose any 3 to answer. |
 | **Question Pool** | Add several questions to a pool; each candidate is shown one question chosen at random from it. |
 
 {/* screenshot: a Document question with a PDF and sub-questions, as the candidate sees it */}
@@ -67,6 +67,24 @@ The **Coding Editor** question type does not run the candidate's code, so it is 
 <Tip>
 **Question Pool** is the simplest way to show different candidates different questions inside one quiz. For larger-scale randomization across many questions, use a [Question Bank Quiz](/question-bank-quiz).
 </Tip>
+
+## Reusing a Question Across Quizzes
+
+Every question in a custom quiz has its own **Question ID**. Use it to copy a question from one custom quiz into another instead of recreating it from scratch.
+
+<Steps>
+  <Step title="Export the question">
+    On the question you want to reuse, hover the icon in the top-right of its card. On a question that already has content, it shows **Export Question using Question ID**; click it to copy that question's ID to your clipboard.
+    {/* screenshot: question card with the Export Question using Question ID tooltip visible */}
+  </Step>
+  <Step title="Import it into another quiz">
+    Add a new, empty question to the quiz where you want to reuse it. The same icon now shows **Import** instead of Export, since the question is empty. Click it and paste the copied Question ID to load that question's content in.
+  </Step>
+</Steps>
+
+<Note>
+This only works within **Custom Tests**. Equip's library content does not have Question IDs to export.
+</Note>
 
 ## Related Resources
 

@@ -1,0 +1,100 @@
+---
+title: "Sending and Tracking Offers"
+description: "Send an offer for signature, follow its status, and counter-sign, remind, or void it."
+---
+
+Sending an offer moves the candidate to the **Offered** stage and emails them a link to review and sign their documents. From then on, the candidate's **Offer** section shows where the offer stands and what you can do next.
+
+## Send an Offer
+
+Before you start, attach a packet to the job's Offered stage. See [Offer Documents and Packets](/offer-documents-and-packets).
+
+<Steps>
+  <Step title="Move the candidate to Offered">
+    Choose **Offered** as the target stage, then click **Continue to the offer page**. Nothing is sent, and the candidate stays in their current stage, until you send the offer.
+  </Step>
+  <Step title="Fill in the offer details">
+    Enter a value for each field, such as salary or start date. Fields start with the sample values saved on the document, and every field is required.
+  </Step>
+  <Step title="Review">
+    Read the email, then click **Render documents** to check each document.
+  </Step>
+  <Step title="Send">
+    Confirm how many days the offer stands, then click **Send offer**. To check the real email and documents first, click **Send to myself**; the candidate is not contacted.
+  </Step>
+</Steps>
+
+{/* screenshot: Send offer page on the Send step, showing the expiry box and both buttons */}
+
+What happens when you move a candidate to Offered depends on the stage's packet:
+
+| Offered stage setup | What happens |
+|---|---|
+| **No packet** | The candidate moves and nothing is sent |
+| **Packet with only an email** | A dialog lets you send the offer email to one or many candidates, with Reply-To and Schedule Send |
+| **Packet with documents or variables** | You continue to the offer page, one candidate at a time |
+
+<Warning>
+An offer can only go to a verified email address. If the candidate has not verified theirs, copy the verification link from the email column and share it with them first.
+</Warning>
+
+## Offer Statuses
+
+Open the candidate's details to see the **Current offer** card and its status.
+
+| Status | Meaning |
+|---|---|
+| **Sent** | The offer has gone out |
+| **Viewed** | The candidate opened the signing page |
+| **Signed by Candidate** | The candidate signed; a counter-signature may still be pending |
+| **Counter-Signed** | Your counter-signer has signed |
+| **Completed** | Everyone has signed and the signed copies are stored |
+| **Declined** | The candidate declined, with a reason |
+| **Voided** | You cancelled the offer, or replaced it with a new one |
+
+{/* screenshot: Current offer card with status pill, document downloads, and action buttons */}
+
+Each document on the card has a download button: **Sent** for the PDF as it went out, and **Signed** once the signed copy is ready. Every step is also logged in the **Candidate Journey**.
+
+<Note>
+Signing does not move the candidate. When an offer is completed, move the candidate to **Hired** yourself; if it is declined, move them to Rejected or Withdrawn.
+</Note>
+
+## Manage a Sent Offer
+
+The **Current offer** card carries the actions for a live offer:
+
+| Action | What it does |
+|---|---|
+| **Counter-sign** | Opens the signing session for your counter-signer once the candidate has signed |
+| **Copy link** | Copies the signing link the candidate was emailed |
+| **Send reminder** | Emails whoever the offer is waiting on. The expiry date does not change. |
+| **Send a new offer** | Opens the offer page again. Sending replaces the current offer. |
+| **Void** | Cancels the offer so the candidate can no longer sign. The candidate is not notified. |
+
+An offer's expiry date is fixed when you send it, and the signing link stops working on that date. To extend an expired offer, send a new one.
+
+<Tip>
+The **Offer** section shows while the candidate is in the Offered stage. Download the signed copies before you move the candidate on to Hired. The candidate also receives their signed copies by email.
+</Tip>
+
+## Counter-Signing
+
+If the packet's **Who signs** setting is **Candidate and Recruiter**, the order you chose decides who is emailed when:
+
+| | Candidate signs first | Company signs first |
+|---|---|---|
+| **On send** | The candidate is emailed the offer | The counter-signer is emailed |
+| **Next** | The counter-signer is emailed once the candidate signs | The candidate is emailed once the counter-signer signs |
+| **Completes when** | The counter-signer signs | The candidate signs |
+
+Only the packet's designated counter-signer can sign. They can sign from the emailed link, or use **Counter-sign** on the Current offer card when the candidate has signed first.
+
+When a candidate declines, Equip emails the recruiter who sent the offer and the job opening's assignee, with the reason the candidate gave.
+
+## Related Resources
+
+- [Offer Documents and Packets](/offer-documents-and-packets) - Build the documents and packet an offer is sent from
+- [Signing Your Offer](/signing-an-offer) - The candidate's side of reviewing, signing, and declining
+- [Changing Stages](/changing-stages) - How stage moves, Reply-To, and Schedule Send work
+- [ATS Insights](/ats-insights) - Offer acceptance, time to offer, and offer outcome charts

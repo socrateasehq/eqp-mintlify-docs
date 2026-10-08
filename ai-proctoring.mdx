@@ -17,7 +17,9 @@ When the test ends, Equip generates a proctoring report for that attempt. It inc
 
 You can experience most of these measures yourself through Equip's [self-serve proctoring demo](https://equip.co/demo/proctoring/). No login is needed.
 
-{/* screenshot: candidate proctoring report with Trust Score and violations list */}
+<Frame caption="A candidate's Trust Score and session details">
+  <img src="/images/ai-proctoring-trust-score.png" alt="Candidate proctoring report showing a 65% Trust Score, tracking icons, and session start and submission times" />
+</Frame>
 
 <Note>
 Proctoring keeps working even if the candidate goes offline. Evidence is captured on the device and synced back to Equip when the connection returns, so a dropped internet connection does not create a blind spot.
@@ -25,7 +27,7 @@ Proctoring keeps working even if the candidate goes offline. Evidence is capture
 
 ## What Gets Tracked
 
-Equip offers proctoring measures across four areas. Most are configurable per test in [Proctoring Settings](/proctoring-settings); a few run on every attempt automatically.
+Equip offers proctoring measures across three areas, all configurable per test in [Proctoring Settings](/proctoring-settings).
 
 ### Candidate activity
 
@@ -34,7 +36,6 @@ Equip offers proctoring measures across four areas. Most are configurable per te
 | **Face detection** | Flags when no face, or more than one face, appears on camera, and captures a photo as evidence |
 | **Audio cues** | Detects background noise and records the audio |
 | **Tab or application switch** | Detects when the candidate switches away from the test, and can capture a screenshot of what they switched to |
-| **Auto-submit on tab switch** | Automatically submits the test if the candidate switches away more than a set number of times |
 | **External monitor detection** | Detects extra displays and blocks the test until they are disconnected |
 | **Random photos** | Captures photos of the candidate at irregular intervals throughout the test |
 
@@ -44,7 +45,7 @@ Equip offers proctoring measures across four areas. Most are configurable per te
 |---|---|
 | **Full-screen enforcement** | The test only runs in full-screen mode, so other tabs and applications stay out of view |
 | **Copy-paste disabled** | Candidates cannot copy questions out or paste text in from elsewhere |
-| **Auxiliary Device** | The candidate pairs their phone as a second camera for 360-degree proctoring of their hands, keyboard, and screen |
+| **Auxiliary Device** | The candidate pairs their phone as a second camera for 360-degree proctoring of their hands, keyboard, and screen. See [Detecting AI Usage](/ai-usage-detection) for the full setup. |
 | **Session Recording** | Records the candidate's screen and actions, including mouse clicks and typing, for playback |
 
 ### Question rendering and selection
@@ -56,18 +57,6 @@ These settings make it harder for candidates to share answers with each other. T
 - **Shuffle coding questions**: different candidates receive different programming questions.
 - **Question banks**: each candidate gets a random draw of questions matched by difficulty.
 - **Question display mode**: show questions one-by-one with per-question timers, or all at once.
-
-### Advanced AI proctoring
-
-| Measure | What it does |
-|---|---|
-| **Device fingerprinting** | Records the device and browser used for each session |
-| **IP and geotagging** | Records the IP address of each session and looks up its geolocation |
-| **Multi-session detection** | Flags the attempt if the test is resumed from a different tab, browser, device, or IP address |
-
-<Note>
-Device fingerprinting, IP recording, multi-session detection, and offline evidence capture run on every attempt, at no extra cost.
-</Note>
 
 ## Preventing ChatGPT and AI Tool Usage
 
@@ -100,7 +89,9 @@ Every completed attempt gets a **Trust Score** from 0 to 100%, shown at the top 
   </Step>
 </Steps>
 
-{/* screenshot: Proctoring tab of a candidate report showing violations and evidence */}
+<Frame caption="Violations listed with timestamps and evidence">
+  <img src="/images/ai-proctoring-violations.png" alt="Proctoring tab listing violations such as switched applications, a random photo, and noise detected, each with a timestamp and evidence" />
+</Frame>
 
 <Warning>
 The Trust Score is calculated by AI, and AI can make mistakes. Never disqualify a candidate on the Trust Score alone. Always review the underlying evidence before making a decision.
