@@ -32,50 +32,106 @@ footer a[href*="mintlify.com"] {
   display: none !important;
 }
 
-/* ---- Sidebar visual hierarchy ----
-   Three levels, each distinguished by a different signal rather than weight alone:
-   1. Category  (h3.sidebar-title)      - large, dark, with generous space above
-   2. Subcategory (group toggle button) - small-caps label, letterspaced, muted
-   3. Article   (links)                 - regular text, indented under its rail  */
-
-/* 1. Categories: the biggest thing in the sidebar. */
-h3.sidebar-title {
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  color: #111827;
+/* ---- Sidebar: Two-tone Panel (author pick 2026-10-08, design option S4) ----
+   The sidebar sits on a very light Mist panel (#f3f7fa; the screenshot tray
+   is full Mist #e3ecf2) beside the white article, so navigation and reading
+   are two surfaces. Author pick 2026-10-08. Three
+   levels, all sentence case:
+   1. Category  (h3.sidebar-title, with its icon)  - 14.5px semibold; the open
+      category's icon turns navy (custom.js sets data-eqp-open on its header)
+   2. Subcategory (group toggle button)             - 13.5px medium, muted
+   3. Article   (links)                             - 14px regular; the current
+      one is a white card with a hairline border
+   Categories are separated by gentle hairlines instead of large gaps. */
+#sidebar {
+  background: #f3f7fa; /* a much lighter Mist; the tray keeps full Mist */
+  border-right: 1px solid #e2e9ef !important;
 }
 
-.dark h3.sidebar-title {
-  color: #f3f4f6;
+/* Hairline between categories. */
+#navigation-items > div + div {
+  border-top: 1px solid #e1e8ee;
+  margin-top: 0.375rem;
+  padding-top: 0.375rem;
 }
 
-/* Breathing room between categories so each block reads as a section. */
-#sidebar-content > div + div,
-nav[aria-label="Pages"] > div + div {
-  margin-top: 1.25rem;
-}
-
-/* 2. Subcategories: small-caps label style, not bold body text.
-   The uppercase + letterspacing reads as a label, which separates it from
-   both the large category above and the sentence-case articles below. */
-ul.sidebar-group > li > button > div > span {
-  font-size: 0.8125rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
+/* 1. Categories. */
+.sidebar-group-header {
+  padding: 0.5rem 0.625rem;
+  margin-bottom: 0 !important;
+  border-radius: 10px;
   color: #6b7280;
+}
+
+.sidebar-group-header:hover {
+  background: #e6edf3;
+}
+
+.sidebar-group-header[data-eqp-open="1"] {
+  color: #1f3b88;
+}
+
+h3.sidebar-title {
+  font-size: 0.90625rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: #1f2937;
+}
+
+/* 2. Subcategories: sentence case, muted, no rail. */
+ul.sidebar-group > li > button {
+  border-left: 0 !important;
+  margin-left: 1.5rem !important;
+}
+
+ul.sidebar-group > li > button > div > span {
+  font-size: 0.84375rem;
+  font-weight: 500;
+  color: #5f6776;
   -webkit-font-smoothing: antialiased;
 }
 
-.dark ul.sidebar-group > li > button > div > span {
-  color: #9ca3af;
+ul.sidebar-group > li > button:hover > div > span {
+  color: #111827;
 }
 
-/* 3. Articles: plain sentence-case, the quietest level. */
+ul.sidebar-group > li > button[aria-expanded="true"] > div > span {
+  color: #111827;
+  font-weight: 600;
+}
+
+/* 3. Articles: no rail; the current one is a white card. */
 ul.sidebar-group a {
   font-weight: 400;
   font-size: 0.875rem;
+  color: #4b5563;
+  border-left: 0 !important;
+  margin: 2px 6px 2px 1.5rem !important;
+  padding-left: 0.75rem !important;
+  border-radius: 8px;
+}
+
+/* Articles inside a subcategory sit one step further in than its label. */
+ul.sidebar-group li > ul a {
+  margin-left: 2.5rem !important;
+}
+
+ul.sidebar-group a,
+ul.sidebar-group > li > button {
+  width: auto !important;
+}
+
+ul.sidebar-group a:hover {
+  background: #e6edf3;
+  color: #111827;
+}
+
+ul.sidebar-group a[aria-current="page"] {
+  background: #ffffff;
+  color: #1f3b88;
+  font-weight: 600;
+  text-shadow: none !important;
+  box-shadow: 0 0 0 1px #e3e6ee, 0 1px 2px rgba(15, 23, 42, 0.06);
 }
 
 /* Hide the Previous / Next pagination block at the bottom of every article. */
@@ -99,6 +155,46 @@ ul.sidebar-group a {
 .frame img {
   max-width: 100%;
   height: auto;
+}
+
+/* ---- Screenshot tray (author pick 2026-10-08: design option B, centred, Mist) ----
+   Each screenshot sits on a tray: the image plus the same 16px gutter on every
+   side, so a small image gets a small tray. The tray is Mist, a pale blue-grey
+   (author pick 2026-10-08); the sidebar uses a much lighter tint of the same
+   hue. White screenshots read clearly against it. The caption sits
+   below the tray, not inside it, and wraps to the tray's width instead of
+   widening it. Each <img> carries its CSS display width (shots-apply writes it);
+   only images wider than the column shrink. */
+.frame {
+  --tray: #e3ecf2;
+  padding: 0 !important;
+  background: none !important;
+  border-radius: 0 !important;
+  overflow: visible !important;
+}
+
+/* Mintlify's grid texture and inner border overlays: the tray replaces both. */
+.frame > div.absolute {
+  display: none;
+}
+
+.frame > div.relative {
+  padding: 16px;
+  background: var(--tray);
+  border-radius: 14px !important;
+}
+
+.frame > div.relative img {
+  border-radius: 8px !important;
+  box-shadow: 0 0 0 1px rgba(25, 55, 85, 0.14);
+}
+
+.frame > figcaption {
+  contain: inline-size;
+  margin-top: 0.625rem !important;
+  padding: 0 0.5rem !important;
+  font-size: 0.875rem;
+  color: #6b7280;
 }
 
 /* ---- Article links ----

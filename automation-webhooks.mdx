@@ -25,6 +25,10 @@ These webhooks are set per rule, on a pipeline stage. For team-wide notification
 
 {/* screenshot: webhook action row with method, URL, and the Headers section expanded */}
 
+<Frame caption="A webhook action with its method, URL and two headers">
+  <img src="/images/automation-webhooks/webhook-action.png" width="670" alt="Expanded rule Tell the ATS when they move on, with the trigger Candidate leaves this stage, no conditions, and the action Notify an external system (webhook) set to POST https://ats.example.com/hooks/equip/stage-left. Headers 2 is expanded, listing Content-Type application/json and Authorization Bearer followed by a token, with Add header and Add action links below" />
+</Frame>
+
 <Warning>
 Header values are stored with the rule and are visible to every recruiter on your team who opens it. Use a token that is scoped to this integration only.
 </Warning>

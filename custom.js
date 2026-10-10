@@ -66,6 +66,7 @@
 
     function render(isOpen, animate) {
       open = isOpen;
+      header.dataset.eqpOpen = isOpen ? '1' : '0'; // styled in custom.css (open icon)
       var arrow = header.querySelector('.eqp-chevron');
       list.style.overflow = 'hidden';
       list.style.transition = animate ? 'max-height .2s ease, opacity .15s ease' : 'none';
