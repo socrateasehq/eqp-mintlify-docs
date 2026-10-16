@@ -19,7 +19,7 @@ Automation is included with the **Premium** plan and above.
     Switch on **Automation** on the stage card. Click **New rule**, or start from the auto-advance or auto-reject starter.
   </Step>
   <Step title="Choose the trigger and conditions">
-    Pick what starts the rule, for example **Status changes to** Graded. Click **Add condition** to limit it to certain candidates, for example **Overall score** is at least 80. With no conditions, the rule runs for every candidate who reaches the trigger.
+    Pick what starts the rule, for example **Status changes to** Finalized. Click **Add condition** to limit it to certain candidates, for example **Overall score** is at least 80. With no conditions, the rule runs for every candidate who reaches the trigger.
   </Step>
   <Step title="Add actions and save">
     Click **Add action** for each thing the rule should do, then click **Save**.
@@ -57,7 +57,7 @@ Automation is available on the stages where candidates are evaluated. Each stage
 | Stage | Scores you can use |
 |---|---|
 | **Applied** | Job fit score |
-| **Assessment**, **One-Way AI Interview**, **Conversational AI Interview** | Overall score, Overall result |
+| **Assessment**, **One-Way AI Interview**, **Conversational AI Interview** | Overall score |
 | **Phone Screening**, **Live Interview**, **Custom** | Scorecard score |
 | **Offered**, **Hired**, **Rejected**, **Withdrawn** | No automation |
 
@@ -89,9 +89,9 @@ These are common starting points, written in the same terms the dialog uses.
 
 | Goal | Stage | Trigger | Condition | Action |
 |---|---|---|---|---|
-| **Advance high scorers** | Assessment | Status changes to Graded | Overall score is at least 80 | Move candidate to Next Stage |
-| **Reject low scorers** | Assessment | Status changes to Graded | Overall score is less than 40 | Reject Candidate |
-| **Fast-track strong CVs** | Applied | Candidate enters this stage | Job fit score is at least 80 | Move candidate to Next Stage |
+| **Advance high scorers** | Assessment | Status changes to Finalized | Overall score is at least 80 | Move candidate to Next Stage |
+| **Reject low scorers** | Assessment | Status changes to Finalized | Overall score is less than 40 | Reject Candidate |
+| **Fast-track strong CVs** | Applied | Status changes to Finalized | Job fit score is at least 80 | Move candidate to Next Stage |
 | **Hand off to a colleague** | Phone Screening | Candidate enters this stage | None | Reassign to a team member |
 
 <Tip>

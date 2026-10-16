@@ -28,13 +28,15 @@ Inside a stage, each candidate carries a **stage status** that tracks their prog
 
 | Stage | Statuses |
 |---|---|
-| **Applied** | Invited, Submitted, Graded, Finalized |
-| **Assessment** | Invited, Instructions Seen, Started, a Started status for each test, Submitted, Graded, PDF Report Generated, Finalized |
-| **One-Way AI Interview** | Invited, Instructions Seen, Started, Submitted, Graded, Finalized |
-| **Conversational AI Interview** | Invited, Instructions Seen, Started, Submitted, Transcribed, Evaluated, Graded, Finalized |
+| **Applied** | Invited, Submitted, Finalized |
+| **Assessment** | Invited, Started, a Finished status for each test (Test 1 Finished, Test 2 Finished, and so on), Submitted, Finalized |
+| **One-Way AI Interview** | Invited, Started, Submitted, Finalized |
+| **Conversational AI Interview** | Invited, Started, Submitted, Finalized |
 | **Phone Screening** | Invited, Finalized |
 | **Live Interview** | To schedule, Scheduled, Feedback complete |
 | **Custom** | Invited, Finalized, plus your own statuses |
+
+**Finalized** means the score is final. On Applied, that is when the Job Fit Score is calculated. On an Assessment, it is when every test is graded, so an assessment with manually graded questions finalizes only after a recruiter grades them. To act on a score, use the trigger **Status changes to** Finalized.
 
 ### Custom statuses
 
@@ -54,7 +56,7 @@ Text and yes/no fields accept only **is** and **is not**. Number and date fields
 
 | Group | Fields |
 |---|---|
-| **This stage** | Job fit score, Scorecard score, Overall score, Overall result (depending on the stage type), Stage Status, Stage Entered At |
+| **This stage** | Job fit score, Scorecard score, Overall score (depending on the stage type), Stage Status, Stage Entered At |
 | **Previous stage** | The scores produced by the stage before this one |
 | **Application** | First Name, Last Name, Email, Phone, Total Experience (months), Graduation Year, Notice Period (days), Highest Qualification, Willing to Relocate, Application Source, Current Stage, Is Starred, Action Pending On |
 | **Job Opening** | Job Title, Seniority Level, Employment Type |

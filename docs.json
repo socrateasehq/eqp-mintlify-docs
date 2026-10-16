@@ -40,7 +40,8 @@
               },
               "sharing-job-posts",
               "careers-page",
-              "job-boards"
+              "job-boards",
+              "duplicate-applications"
             ]
           },
           {
@@ -80,6 +81,7 @@
           {
             "group": "Automation",
             "pages": [
+              "automated-hiring-pipeline",
               "stage-automation",
               "automation-rule-reference",
               "automation-webhooks"
@@ -268,6 +270,7 @@
             "group": "Credits & Billing",
             "pages": [
               "how-credits-work",
+              "compare-plans",
               "credit-deduction-policy",
               "reclaim-credits",
               "invoices",
