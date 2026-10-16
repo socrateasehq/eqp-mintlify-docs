@@ -19,10 +19,7 @@ Stage automation is included with the **Premium** plan and above. See [Compare P
     Attach an assessment to each Assessment stage and an AI interview to each AI interview stage, so Equip knows what to invite candidates to.
   </Step>
   <Step title="Add a rule to each stage">
-    Switch on **Automation** on the stage card and add a rule that moves candidates on when they score well. See [Stage Automation](/stage-automation).
-  </Step>
-  <Step title="Allow automatic invitations">
-    When you save a rule that moves candidates into a test or interview, Equip asks you to confirm that those invitations will use credits. Click **Allow and save**.
+    Add a rule that moves candidates on when they score well; see [Stage Automation](/stage-automation). When Equip asks you to confirm that the invitations will use credits, click **Allow and save**.
   </Step>
 </Steps>
 
@@ -37,22 +34,11 @@ This pipeline screens CVs, runs a short one-way AI interview, then a [communicat
 | **Assessment** | Status changes to Finalized | Overall score is at least 65 | Move candidate to Next Stage |
 | **Review** (Custom) | Candidate enters this stage | None | Reassign to a team member |
 
-A stage is **Finalized** once its score is final: on Applied when the [Job Fit Score](/job-fit-score) is calculated, and on an Assessment when every test is graded. Candidates below a threshold stay in their stage until you act on them.
-
-<Tip>
-Each stage can hold up to 4 rules, and each rule up to 4 actions. Every rule that runs is recorded in the candidate's journey, so you can see why someone moved.
-</Tip>
+Each rule waits until the stage's score is final (see [what Finalized means](/automation-rule-reference#stage-statuses)). Candidates below a threshold stay in their stage until you act on them.
 
 ## What Still Needs a Recruiter
 
-| Step | Runs on its own? |
-|---|---|
-| **Scoring CVs** | Yes, when Job Fit Score is on for the job |
-| **Inviting to the next test or interview** | Yes, using credits from your balance |
-| **Grading quizzes, coding and AI interviews** | Yes |
-| **Grading video responses, CSS challenges, and voice or short-text quiz answers** | No, a recruiter grades them, and the stage finalizes afterwards. See [Manual Grading](/manual-grading). |
-| **Reviewing proctoring evidence** | No, check the [Trust Score](/trust-score) and flags on each report |
-| **Final hiring decisions** | No |
+CV scoring, invitations and auto-graded tests run on their own. A recruiter still grades the test types listed in [How Tests Are Graded](/grading-tests#manually-graded-tests), reviews proctoring evidence, and makes the hiring decision.
 
 <Warning>
 If your credit balance runs out, an automatic invitation is skipped, the candidate stays in their current stage, and you are notified. Keep enough credits for the volume you expect. See [How Credits Work](/how-credits-work).
@@ -67,7 +53,6 @@ Rules cannot read the Trust Score, so a rule that moves candidates on by score a
 | **See scores on the board** | In Kanban view, open **Fields** and turn on **All scores** to show every assessment and AI interview score on each card |
 | **Rank by assessment score** | Open the assessment's results page, which sorts by **Overall Score**. See [Test Scores and Overall Score](/test-scores-and-overall-score). |
 | **Rank by AI interview score** | Sort the AI interview's results by **Score** |
-| **Check proctoring results** | Open each shortlisted candidate's report and review the [Trust Score](/trust-score) and evidence |
 
 {/* screenshot: Kanban view of the Review stage with the Fields menu open and All scores switched on */}
 
