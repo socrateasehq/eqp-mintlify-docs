@@ -181,9 +181,11 @@
 - Changing Business Information After an Invoice
 - Demo and Trial Accounts
 
-## Team & Organization
+## Organization & Team
 
-- Adding and Removing Team Members and Admins
+- Members and Seats
+- Roles and Permissions
+- Departments (Elite)
 - Organization Settings
 
 ## Integrations & API

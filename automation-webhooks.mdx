@@ -3,7 +3,11 @@ title: "Automation Webhooks and External Updates"
 description: "Notify your own systems from an automation rule, and let them send a result back to Equip."
 ---
 
+import { PlanGate } from "/snippets/plan-gate.mdx";
+
 Automation rules can talk to systems outside Equip. The **Notify an external system (webhook)** action sends candidate details to a URL you choose, and the **An external system sends an update** trigger lets that system report back, for example when a background check clears.
+
+<PlanGate plan="Elite" />
 
 <Tip>
 These webhooks are set per rule, on a pipeline stage. For team-wide notifications when a candidate completes an assessment or AI interview, see [Webhooks](/webhooks) instead.

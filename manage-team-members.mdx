@@ -1,114 +1,62 @@
 ---
-title: "Adding and Removing Team Members and Admins"
-description: "Add teammates within your plan's seat limit, remove members who leave, and transfer the Team Admin role."
+title: "Members and Seats"
+description: "Invite recruiters to your organization, remove people who leave, and buy extra seats."
 ---
 
-A **team** on Equip shares one workspace: everyone sees the same job openings, candidates, results, and credit balance.
+Everyone who works in Equip with you is a **member** of your organization, managed on the [**People** tab](https://equip.co/recruiter/account/organization/people/) of **Account > Organization**. Each member and each pending invite uses one **seat**. See [Roles and Permissions](/roles-and-permissions) for who can invite and remove people.
 
-Your plan sets a **seat limit**: Standard includes 2 seats, Premium 5, and Elite is unlimited; see [Compare Plans](/compare-plans). Each team member you add counts against this limit.
-
-## Inviting Members
-
-Any team member can invite new teammates from the [**Team** page](https://equip.co/recruiter/account/team/).
+## Invite Members
 
 <Steps>
-  <Step title="Open the Team page">
-    Go to [**Account > Team**](https://equip.co/recruiter/account/team/) in the left sidebar.
-    <Frame>
-      <img src="/images/manage-team-members-open-team-page.png" alt="Account sidebar section with the Team link" />
-    </Frame>
-  </Step>
   <Step title="Click Invite members">
-    <Frame>
-      <img src="/images/manage-team-members-invite-button.png" alt="Invite members button" />
-    </Frame>
+    On the People tab, click **Invite members**.
   </Step>
-  <Step title="Enter email addresses one by one">
-    Press **Enter** after each email ID. Each invitee receives an email with a link to join your team.
-    <Frame>
-      <img src="/images/manage-team-members-invite-modal.png" alt="Invite members dialog with an email address entered" style={{maxWidth: "320px"}} />
-    </Frame>
+  <Step title="Enter email addresses and send">
+    Add one or more work email addresses and click **Send Invite**. If you use [departments](/departments), pick one, or leave the invite org-wide so the person sees every job opening.
   </Step>
 </Steps>
 
-<Note>
-Invitations are restricted to your team's **email domain**, and Equip allows one team per domain. Check **Seats Remaining** on the [Billing page](/how-credits-work#subscribing-to-a-plan) before inviting, or upgrade your plan for more room.
-</Note>
+{/* screenshot: Invite members dialog with two email addresses and the Department picker */}
 
-### Pending Invites
-
-Invitations that have not been accepted yet appear under **Pending Invites** on the [Team page](https://equip.co/recruiter/account/team/). Click **Remove invite** to cancel one.
-
-## Joining via Email
-
-Colleagues with your team's **email domain** don't always need an invite. They can sign in on the [login page](https://equip.co/account/login/role/recruiter/) with their work email, and Equip adds them straight to your existing team.
-
-<Note>
-To turn this off, go to [Account > Team](https://equip.co/recruiter/account/team/), open the [Organization tab](https://equip.co/recruiter/account/team/organization/), and set **Allow Auto-join** to No. Colleagues will then need an invite from the Team Admin.
-</Note>
-
-<Frame caption="The Allow Auto-join setting">
-  <img src="/images/manage-team-members-allow-auto-join.png" alt="Allow Auto-join dropdown with Yes and No options" style={{maxWidth: "320px"}} />
+<Frame caption="The Invite members dialog with the Department picker open">
+  <img src="/images/manage-team-members/invite-members-dialog.png" alt="Invite members dialog with ryan.cole@example.co and hannah.lee@example.co added, and the Department picker open showing Org-wide, Engineering and Sales" />
 </Frame>
 
-## Removing Members
+<Note>
+Invites must use one of your organization's **email domains**; see [Organization Settings](/organization-settings). For any other address, click **Request an exception** in the dialog.
+</Note>
 
-Only the **Team Admin** can remove a member.
+Invites that have not been accepted yet appear under **Pending invites**. Click the bin icon on a row to cancel one and free its seat.
 
-<Steps>
-  <Step title="Open the actions menu">
-    On the [Team page](https://equip.co/recruiter/account/team/), click the **three dots** next to the member's name and choose Remove.
-  </Step>
-  <Step title="Confirm">
-    Confirm in the **Remove Team Member** dialog.
-  </Step>
-</Steps>
+## Seats
 
-<Frame caption="The member actions menu">
-  <img src="/images/manage-team-members-remove-option.png" alt="Team member actions menu with Make Admin and Remove options" style={{maxWidth: "290px"}} />
+The **Seats** section on the People tab shows how many seats are in use. The Owner clicks **Buy or remove seats** to add extra seats or remove them; removals apply at your next renewal. See [Compare Plans](/compare-plans) for the seats each plan includes and the price of extra seats.
+
+{/* screenshot: Seats section on the People tab with the Buy or remove seats button */}
+
+<Frame caption="The Seats section on the People tab">
+  <img src="/images/manage-team-members/seats-section.png" alt="Seats section showing 8 of 10 seats used, 5 seats from the plan and 5 extra seats, with a Buy or remove seats button and a Billing link" />
 </Frame>
 
 <Warning>
-The Team Admin cannot be removed from the team. To remove the person who is currently the admin, transfer the admin role to someone else first, then have the new admin remove them.
+If your organization has more members than seats, for example after a downgrade, access is blocked until you remove members or buy seats.
 </Warning>
 
-If the admin is the only member, they invite a teammate first, then make that teammate the admin.
+## Joining Without an Invite
 
-## The Team Admin Role
+Colleagues on your email domain can sign in at the [login page](https://equip.co/account/login/role/recruiter/) with their work email and join your organization directly. To require an invite instead, set **Allow auto-join** to No on the [Company tab](https://equip.co/recruiter/account/organization/company/).
 
-Every team has exactly **one Team Admin**. The person who creates the team becomes the admin by default.
+## Remove a Member
 
-All members see the same data and can do the same day-to-day work. The admin role only adds a few responsibilities:
-
-| Action | Member | Team Admin |
-|---|---|---|
-| Create job openings, assessments, and AI interviews | Yes | Yes |
-| Invite candidates and view results | Yes | Yes |
-| Invite new team members | Yes | Yes |
-| Remove team members | No | Yes |
-| Transfer the admin role | No | Yes |
-| Receive invoices and low-balance email alerts | No | Yes |
-
-### Changing the Team Admin
-
-Only the current admin can hand over the role.
-
-<Steps>
-  <Step title="Open the Team page">
-    Go to [**Account > Team**](https://equip.co/recruiter/account/team/) in the sidebar.
-  </Step>
-  <Step title="Pick the new admin">
-    Click the **three dots** next to the member who should become the admin and select Make Admin. You become a regular member.
-  </Step>
-</Steps>
+On the People tab, click the **three dots** on the member's row and choose **Remove**.
 
 <Note>
-The [Team page](https://equip.co/recruiter/account/team/) also supports an optional reporting structure. A member can be assigned a **manager**, which Equip's analytics use to group activity.
+Removing a member frees a seat but does not lower your bill. To pay for fewer seats, also remove the extra seat.
 </Note>
 
 ## Related Resources
 
-- [Organization Settings](/organization-settings) - Update your brand name, legal entity name, timezone, and logo on the same Team page
-- [How Credits Work](/how-credits-work) - Understand the shared credit balance your whole team draws from
-- [Invoices](/invoices) - Where invoices go after purchase and how any member can download them
-- [Security and Privacy](/security-privacy) - Passwordless login and how Equip protects your account
+- [Roles and Permissions](/roles-and-permissions) - What the Owner, Admins and Recruiters can each do
+- [Departments](/departments) - Limit what each group of recruiters can see
+- [Organization Settings](/organization-settings) - Company details, auto-join and defaults
+- [Compare Plans](/compare-plans) - Seats included in each plan

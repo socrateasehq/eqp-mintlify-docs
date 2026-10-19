@@ -1,0 +1,62 @@
+---
+title: "Departments"
+description: "Split your organization into departments so each group of recruiters sees only its own job openings and candidates."
+---
+
+import { PlanGate } from "/snippets/plan-gate.mdx";
+
+**Departments** split one organization into groups, such as Engineering and Sales. Recruiters in a department see only that department's job openings, candidates and requisitions, plus anything org-wide.
+
+<PlanGate plan="Elite" />
+
+## Create a Department
+
+<Steps>
+  <Step title="Open Departments">
+    Go to [**Account > Organization > Departments**](https://equip.co/recruiter/account/organization/departments/) and click **New department**.
+  </Step>
+  <Step title="Name the department">
+    Enter a name and, optionally, a description, then save.
+  </Step>
+  <Step title="Add members">
+    Click **Manage** on the department, then **Add a member** and pick a recruiter. Set each person's role to **Department admin** or **Member**.
+  </Step>
+</Steps>
+
+{/* screenshot: Departments tab listing two departments with their admins, members and openings */}
+
+<Frame caption="Two departments with their admins, members and openings">
+  <img src="/images/departments/departments-list.png" alt="Departments tab listing Engineering, admin Kenji Sato, 2 members and 2 openings, and Sales, admin Marcus Reed, 2 members and 1 opening, with Manage, Edit and delete actions and a New department button" />
+</Frame>
+
+You can also put new people straight into a department when you [invite them](/manage-team-members#invite-members).
+
+## Who Sees What
+
+| Person | Sees | Can assign a job opening to |
+|---|---|---|
+| **Owner, Admins and recruiters in no department** | Everything | Any department, or **Org-wide** |
+| **Department admins and members** | Org-wide work, plus their own departments' | One of their own departments |
+
+A **Department admin** can also invite people into their department and manage its members.
+
+When someone opens a job opening, application or requisition from another department, Equip shows which department it belongs to and offers **Ask for access**. The [Job Openings dashboard](https://equip.co/recruiter/job-openings/dashboard/) has a **Department** filter, and an opening created from a [job requisition](/job-requisitions) takes the requisition's department.
+
+<Note>
+Until you create your first department, nothing changes: everyone sees everything and no department fields appear.
+</Note>
+
+## Delete a Department
+
+Click the bin icon on the department's row. Its members stay in your organization, and its job openings and requisitions become org-wide.
+
+<Warning>
+After you delete a department, its openings and candidates become visible to every recruiter.
+</Warning>
+
+## Related Resources
+
+- [Roles and Permissions](/roles-and-permissions) - Who can create departments and manage members
+- [Members and Seats](/manage-team-members) - Invite people straight into a department
+- [Job Requisitions](/job-requisitions) - Requests for headcount, which carry a department too
+- [Compare Plans](/compare-plans) - What each plan includes

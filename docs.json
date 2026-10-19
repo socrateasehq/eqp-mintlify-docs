@@ -38,6 +38,7 @@
                   "candidate-pipeline"
                 ]
               },
+              "job-requisitions",
               "sharing-job-posts",
               "careers-page",
               "job-boards",
@@ -279,9 +280,11 @@
             ]
           },
           {
-            "group": "Team & Organization",
+            "group": "Organization & Team",
             "pages": [
               "manage-team-members",
+              "roles-and-permissions",
+              "departments",
               "organization-settings"
             ]
           },

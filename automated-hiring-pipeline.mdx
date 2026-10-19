@@ -3,11 +3,11 @@ title: "Automate a Hiring Pipeline End to End"
 description: "Chain automation rules so candidates move from application through AI interviews and tests on their own, then compare the strongest side by side."
 ---
 
+import { PlanGate } from "/snippets/plan-gate.mdx";
+
 With **stage automation**, a job opening can run most of its funnel without a recruiter clicking through each candidate. Each stage scores the candidate, a rule checks the score, and the candidate moves on and is invited to the next step automatically.
 
-<Note>
-Stage automation is included with the **Premium** plan and above. See [Compare Plans](/compare-plans).
-</Note>
+<PlanGate plan="Premium" />
 
 ## Build the Pipeline
 
@@ -55,6 +55,10 @@ Rules cannot read the Trust Score, so a rule that moves candidates on by score a
 | **Rank by AI interview score** | Sort the AI interview's results by **Score** |
 
 {/* screenshot: Kanban view of the Review stage with the Fields menu open and All scores switched on */}
+
+<Frame caption="The Review stage with All scores turned on">
+  <img src="/images/automated-hiring-pipeline/kanban-review-scores.png" alt="Kanban board with the Review column's cards expanded to show AI Interview and Assessment scores, beside the open Fields menu with All scores ticked under Shown on hover" />
+</Frame>
 
 ## Related Resources
 
