@@ -1,27 +1,36 @@
 ---
-title: "Bulk CV Import"
-description: "Upload up to 100 CVs at once and let AI parse them into applications."
+title: "Bulk Importing Candidates"
+description: "Add many applicants at once from PDF CVs or a CSV file."
 ---
 
 import { PlanGate } from "/snippets/plan-gate.mdx";
 
-If you have a folder of CVs from a job board, an agency, or an old ATS, you do not need to add candidates one by one. **Bulk CV Import** lets you upload up to 100 CVs in a single batch. Equip parses each file with AI and creates a job application automatically.
+If you have a folder of CVs from a job board, an agency, or an old ATS, or a spreadsheet of candidate details, you do not need to add candidates one by one. **Bulk Import** lets you upload up to 100 CVs or one CSV file in a single batch, and Equip turns each one into a job application automatically.
 
 <PlanGate plan="Premium" />
 
-## Uploading CVs
+## Starting a Bulk Import
 
 <Steps>
-  <Step title="Open the job opening and click Bulk Import CVs">
-    In your [job opening dashboard](/candidates-and-cvs), open the job you want to add candidates to and click **Bulk Import CVs**. Every parsed CV becomes an application in that job's pipeline.
+  <Step title="Open the job opening and click Bulk Import">
+    In your [job opening dashboard](/candidates-and-cvs), open the job you want to add candidates to and click **Bulk Import**. Every file or row becomes an application in that job's pipeline.
   </Step>
-  <Step title="Select your PDF files and start the import">
-    The uploader accepts PDF files only, up to 100 files per batch and 10 MB per file. For more than 100 CVs, upload several batches.
-    {/* screenshot: bulk CV upload dialog showing "Select PDF files to upload" with the "PDF only · Max 100 files · Max 10MB each" hint */}
+  <Step title="Choose CVs or a CSV, and start the import">
+    The same drop zone accepts either PDF CVs or a single CSV file, not both in the same batch.
 
-    <Frame caption="The uploader on the Bulk CV Import page, with its file limits under the prompt">
-      <img src="/images/bulk-cv-import/upload-cvs.png" width="772" alt="Upload CVs card with a dashed drop area reading Select PDF files to upload, the hint PDF only, Max 100 files, Max 10MB each, a Select Files button, and a note that the Job Fit Score may be inaccurate because the candidate is not reviewing the details" />
+    | | PDF CVs | CSV |
+    |---|---|---|
+    | Per batch | Up to 100 files, 10 MB each | 1 file, up to 200 rows |
+    | Cost | 0.01 credit per CV | Free |
+    | How it's read | Equip's AI parses each CV | Equip reads the columns you filled in |
+
+    <Frame caption="The Bulk Import drop zone, accepting either PDF CVs or a CSV file">
+      <img src="/images/bulk-cv-import/bulk-import-dropzone.png" width="760" alt="Bulk Import page for a job opening, with a drop zone reading Drop CVs or a CSV file here, a Choose files button, hints for PDF CVs (up to 100, 10 MB each, AI reads them, 0.01 credit per CV) and one CSV (up to 200 rows, free, with a Download template link), and a note that imported candidates start unverified" />
     </Frame>
+
+    <Tip>
+    Click **Download template** to get a sample CSV with the expected columns filled in as examples. **First Name** and **Email** are the only required columns; the rest, including **Last Name**, **Phone**, **LinkedIn URL**, **Current City**, **Total Experience (years)**, **Notice Period (days)**, **Expected Salary Min/Max**, **Current Company**, **Current Job Title**, **Current Role Start (YYYY-MM)**, **Skills** (semicolon-separated), and **Notes**, are optional.
+    </Tip>
 
     Confirm the upload. The batch is processed in the background, so you can leave the page.
   </Step>
@@ -29,27 +38,25 @@ If you have a folder of CVs from a job board, an agency, or an old ATS, you do n
 
 ## Parsing and Costs
 
-Bulk CV Import costs **0.01 credits per CV**, so a full batch of 100 CVs costs 1 credit. The cost is checked against your team's credit balance before the batch starts.
+A PDF CV batch costs **0.01 credits per CV**, so a full batch of 100 CVs costs 1 credit. A CSV import is **free**, regardless of row count. The cost is checked against your team's credit balance before the batch starts.
 
-Each CV goes through the same **AI parsing** as a direct application. See [CV Parsing](/cv-parsing) for the list of extracted fields.
+Each CV goes through the same **AI parsing** as a direct application. See [CV Parsing](/cv-parsing) for the list of extracted fields. A CSV import skips parsing entirely: Equip reads the columns you filled in directly.
 
 ### Tracking your batch
 
 The batch detail page shows the batch status and a result for each file. Every failed file shows a reason.
 
-{/* screenshot: batch detail page with progress counts and per-file success/failed/skipped lists */}
-
 <Frame caption="A finished batch with its counts, where View on each card opens that list of files">
-  <img src="/images/bulk-cv-import/batch-detail.png" width="776" alt="Bulk CV Import detail page for Full Stack Developer, import ID 1, marked Completed with 12 of 12 processed at 100 percent, cards showing 8 Success, 3 Failed and 1 Skipped, and a link to view applications for the 8 CVs processed successfully" />
+  <img src="/images/bulk-cv-import/batch-detail.png" width="776" alt="Bulk Import detail page for Full Stack Developer, import ID 1, marked Completed with 12 of 12 processed at 100 percent, cards showing 8 Success, 3 Failed and 1 Skipped, and a link to view applications for the 8 CVs processed successfully" />
 </Frame>
 
 <Note>
-Common failure reasons are a missing email, a missing name, a [duplicate application](/duplicate-applications), or a CV the parser could not read. Fix the file or resolve the duplicate, then re-upload just the affected CVs in a new batch.
+Common failure reasons are a missing email, a missing name, a [duplicate application](/duplicate-applications), or a CV the parser could not read. Fix the file or row, or resolve the duplicate, then re-upload just the affected CVs or rows in a new batch.
 </Note>
 
 ## Unverified Candidates
 
-Candidates added through Bulk CV Import never confirmed their email address themselves, so Equip marks them as **unverified**.
+Candidates added through Bulk Import, whether from a CV or a CSV row, never confirmed their email address themselves, so Equip marks them as **unverified**.
 
 Unverified candidates receive **no stage-change emails**. You can still move them through the pipeline, but invitation and rejection emails are held back until the email is verified.
 
@@ -61,7 +68,7 @@ If you invite an unverified candidate to an assessment or AI interview stage, th
 To verify a candidate, open their profile and copy the **verification link** from the email popover, then share it with the candidate directly.
 </Tip>
 
-Each imported application records its **source** as "Bulk CV Upload", which the [ATS Insights](/ats-insights) dashboard reports on.
+Each application imported from a CV records its **source** as "Bulk CV Upload", which the [ATS Insights](/ats-insights) dashboard reports on.
 
 ## Related Resources
 
