@@ -75,6 +75,19 @@ Write mathematical equations in **LaTeX** inside your Excel file, then enable La
 
 {/* screenshot: quiz Advanced Settings panel with the LaTeX toggle enabled */}
 
+## Cell Contents and Formatting
+
+Question and option cells are rendered as HTML. That lets you use simple tags such as `<strong>` or `<code>`, but it also means anything that looks like a tag is interpreted rather than displayed. Tags that have no visible output, such as `<link>` or `<meta>`, disappear entirely and leave the option blank. If a question is *about* HTML and you want candidates to see the tag itself, write the angle brackets as HTML entities:
+
+| You want candidates to see | Enter in the cell |
+|---|---|
+| `<link rel="preload">` | `&lt;link rel="preload"&gt;` |
+| `<button>Add to Cart</button>` | `&lt;button&gt;Add to Cart&lt;/button&gt;` |
+
+<Warning>
+Excel only sends us the **value** of a cell, not its display format. A cell typed as `$35.00` or `12%` is usually stored by Excel as the number `35` or `0.12`, and that is what will appear in the question. Before typing values that begin with a symbol, format the Question and Opt1 to Opt5 cells as **Text** (Format Cells > Text), or prefix the value with an apostrophe.
+</Warning>
+
 ## Troubleshooting Imports
 
 | Symptom | Fix |
@@ -84,6 +97,8 @@ Write mathematical equations in **LaTeX** inside your Excel file, then enable La
 | A question has too few choices | Every question needs at least **Opt1** and **Opt2** |
 | Images not showing | Use a direct URL ending in `.jpg`, `.png`, etc. Google Drive links and links to pages containing an image do not work |
 | Equations show as raw text | Turn on LaTeX in the quiz's **Advanced Settings** |
+| Options appear blank, as broken images, or look identical | The cell contains HTML tags. Write angle brackets as `&lt;` and `&gt;`, see [Cell Contents and Formatting](#cell-contents-and-formatting) |
+| A `$`, `%` or decimal is missing from an option | Excel stored the cell as a formatted number. Format the cell as **Text** before typing the value |
 
 <Note>
 Importing the same file twice creates duplicate questions. Remove the extra questions in the quiz editor.
