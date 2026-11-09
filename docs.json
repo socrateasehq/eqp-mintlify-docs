@@ -172,7 +172,6 @@
               "cefr-scores",
               "psychometric-scores",
               "download-reports",
-              "write-results-to-google-sheets",
               "missing-results",
               "cannot-see-quiz-questions"
             ]
@@ -263,6 +262,39 @@
         ]
       },
       {
+        "group": "APIs, Integrations & MCP",
+        "icon": "code",
+        "expanded": true,
+        "pages": [
+          {
+            "group": "APIs",
+            "pages": [
+              "api-integrations",
+              "api-keys-and-authentication",
+              "developer-playground",
+              "api-rate-limits-and-errors"
+            ]
+          },
+          {
+            "group": "Integrations",
+            "pages": [
+              "ashby-integration",
+              "webhooks",
+              "write-results-to-google-sheets"
+            ]
+          },
+          {
+            "group": "MCP",
+            "pages": [
+              "connect-ai-assistant",
+              "mcp-claude-code",
+              "mcp-codex",
+              "mcp-gemini-cli"
+            ]
+          }
+        ]
+      },
+      {
         "group": "Account & Billing",
         "icon": "credit-card",
         "expanded": true,
@@ -286,14 +318,6 @@
               "roles-and-permissions",
               "departments",
               "organization-settings"
-            ]
-          },
-          {
-            "group": "Integrations & API",
-            "pages": [
-              "ashby-integration",
-              "api-integrations",
-              "webhooks"
             ]
           },
           {

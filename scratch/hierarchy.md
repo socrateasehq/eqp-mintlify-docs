@@ -105,7 +105,6 @@
 - Understanding CEFR Adaptive Test Scores
 - Why Psychometric Tests Don't Have a Score
 - Downloading Results and Reports
-- Write Results to Google Sheets
 - Why Are Some Assessment Results Missing?
 - Why Can't I See Quiz Questions?
 
@@ -168,6 +167,28 @@
 - A Candidate Faced (or Is Facing) Issues
 - Candidate Says They Submitted, But I Can't See It
 
+# APIs, Integrations & MCP
+
+## APIs
+
+- API Integrations
+- API Keys and Authentication
+- Developer Playground
+- API Rate Limits and Errors
+
+## Integrations
+
+- Ashby Integration
+- Webhooks
+- Write Results to Google Sheets
+
+## MCP
+
+- Connect Your AI Assistant to Equip
+- Connect Claude Code to Equip
+- Connect Codex to Equip
+- Connect Gemini CLI to Equip
+
 # Account & Billing
 
 ## Credits & Billing
@@ -187,12 +208,6 @@
 - Roles and Permissions
 - Departments (Elite)
 - Organization Settings
-
-## Integrations & API
-
-- API Integrations
-- Using Equip Assessments with Lever
-- Webhooks
 
 ## Support & Policies
 

@@ -1,0 +1,120 @@
+---
+title: "API Rate Limits and Errors"
+description: "How many API requests your organization can make per minute and per hour, the RateLimit headers every response carries, and what each error code means and how to fix it."
+---
+
+Equip's API counts requests per **organization**, so every integration that uses your API key, plus your recruiters' dashboard sessions, draws from the same allowance. When the allowance is used up, the API answers **429 Too Many Requests** and tells you how long to wait. Every other error comes back as JSON with a `message` you can act on.
+
+## Rate Limits by Plan
+
+Each organization has a **per-minute** and a **per-hour** allowance set by its plan. Both windows apply at once: a request is refused as soon as either one is full.
+
+| Plan | Requests per minute | Requests per hour |
+|---|---|---|
+| **Standard** | 300 | 10,000 |
+| **Premium** | 600 | 20,000 |
+| **Elite** | 1,000 | 50,000 |
+
+A few **expensive** operations have an extra, tighter cap of **30 per minute and 300 per hour** on top of the plan allowance. These include inviting candidates to an assessment or AI interview, bulk CV imports and generating PDF reports; the reference marks them.
+
+<Note>
+A plan change applies to your allowance within about a minute. An organization whose subscription has lapsed drops to a smaller allowance until it is restored, and API access itself is a plan feature (see [Compare Plans](/compare-plans)).
+</Note>
+
+## Rate Limit Headers
+
+Every counted response carries three headers describing the tightest window you are in. A `429` adds `Retry-After`.
+
+| Header | Meaning |
+|---|---|
+| `RateLimit-Limit` | The size of the window that is closest to full |
+| `RateLimit-Remaining` | Requests left in that window |
+| `RateLimit-Reset` | Seconds until that window resets |
+| `Retry-After` | Only on a `429`: seconds to wait before retrying |
+
+Read `RateLimit-Remaining` as you go and slow down before it reaches zero. When you do get a `429`, wait for `Retry-After` seconds and retry; do not retry in a tight loop, since every refused request is still counted as an attempt.
+
+```http
+HTTP/1.1 429 Too Many Requests
+RateLimit-Limit: 600
+RateLimit-Remaining: 0
+RateLimit-Reset: 23
+Retry-After: 23
+```
+
+<Tip>
+If you poll for results, switch to [webhooks](/webhooks). Equip pushes each completed assessment or interview to you once, which removes the polling traffic from your allowance entirely.
+</Tip>
+
+## Error Codes
+
+Every error is a JSON object. Most carry a `message`; some add a `details` object or, for field-access errors, an `error` field.
+
+| Status | Message you will see | Cause | Fix |
+|---|---|---|---|
+| **400** | Varies, for example a filter or `limit` the endpoint does not accept | The request is malformed or uses a parameter the operation does not declare | Check the operation's parameters in the [Developer Playground](/developer-playground) |
+| **401** | `Invalid API key` | The key was mistyped, or it has been rotated | Copy the current key from a run that works, or rotate and update every system |
+| **401** | `Unauthorized: Missing JWT in headers or cookies ...` | No credential was sent at all, or the `Authorization` value is not an `eqp_` key, so Equip looked for a dashboard session instead | Send the key in `X-API-Key: eqp_...` or `Authorization: Bearer eqp_...` |
+| **402** | `Credit balance is negative`, `Subscription is no longer active`, `Free trial has ended` or `Organization has more members than its plan's seats` | Your organization's access is blocked until an admin fixes the billing or seat issue the message names | Open [Billing](https://equip.co/recruiter/account/billing/) (or [Organization](https://equip.co/recruiter/account/organization/people/) for seats) and resolve it, then retry |
+| **403** | `API & Webhooks isn't included in your plan` | Your plan does not include API access, or it lapsed; `details.error_code` is `FEATURE_NOT_IN_PLAN` | Upgrade on [Billing](https://equip.co/recruiter/account/billing/); see [Compare Plans](/compare-plans) |
+| **403** | `API key authentication is read-only for this endpoint` | A write on organizations, users or the credits ledger | Make the change in the Equip dashboard instead |
+| **403** | `API key authentication is not allowed for this endpoint` | The endpoint is outside what a key may call | Use the dashboard; the reference lists only endpoints a key can call |
+| **403** | `Access to requested fields denied` | Your `fields` or `expand` parameter names a column the key may not read | Remove the fields listed in `unauthorized_fields`; `allowed_fields` tells you what you may ask for |
+| **404** | `<Resource> not found`, for example `JobOpening not found` | The id in the path does not exist, or belongs to another organization | List the collection first and use an id from the response |
+| **429** | `Too many requests` | A rate-limit window is full; `details` names the window and limit | Wait `Retry-After` seconds and retry |
+
+<Warning>
+A `401 Invalid API key` right after someone clicked **Rotate API Key** is expected: the old key stopped working at that moment. Update every integration with the new key.
+</Warning>
+
+## Example Error Bodies
+
+A plan refusal carries a `details` object with the feature, the tier it needs and your current tier.
+
+```json
+{
+  "message": "API & Webhooks isn't included in your plan",
+  "details": {
+    "error_code": "FEATURE_NOT_IN_PLAN",
+    "feature": "developer_access",
+    "required_tier": "PREMIUM",
+    "current_tier": "STANDARD",
+    "upgrade_url": "/recruiter/account/billing/"
+  }
+}
+```
+
+A rate-limit refusal names the window that filled up and how long to wait.
+
+```json
+{
+  "message": "Too many requests",
+  "details": {
+    "scope": "organization",
+    "window": "minute",
+    "limit": 600,
+    "retry_after_seconds": 23
+  }
+}
+```
+
+A field-access refusal uses an `error` field and lists both what you asked for and what is allowed.
+
+```json
+{
+  "error": "Access to requested fields denied",
+  "unauthorized_fields": ["internal_notes"],
+  "allowed_fields": ["id", "label", "title", "status", "created_at"]
+}
+```
+
+<Note>
+The field names in the last example are illustrative. The real `allowed_fields` list is the one the operation's reference page documents.
+</Note>
+
+## Related Resources
+
+- [API Keys and Authentication](/api-keys-and-authentication) - Where the key comes from and how plan checks apply
+- [Developer Playground](/developer-playground) - See the rate-limit headers live and check an operation's parameters
+- [Webhooks](/webhooks) - Replace polling with pushed events
+- [API Integrations](/api-integrations) - What the REST API lets you read and write
