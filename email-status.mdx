@@ -1,6 +1,6 @@
 ---
 title: "Email Status: Delivered, Opened, Clicked"
-description: "What each invitation email status means, and what to do when an email bounces or a candidate says they never received it."
+description: "What each invitation email status means, how to follow a candidate's progress and reminders, and what to do when an email bounces or a candidate says they never received it."
 ---
 
 When you invite candidates by email, Equip tracks each invitation: whether it reached the candidate's inbox, whether they opened it, and whether they clicked the **assessment** or **AI interview** link.
@@ -20,7 +20,7 @@ Status tracking is only available for **email invitations**. Candidates who join
   </Step>
 </Steps>
 
-{/* screenshot: Track Invitations tab showing the invitations table with the Email Status column */}
+{/* screenshot: Track Invitations tab showing the invitations table with the Email Status column. Retake: the table now also has Progress and Reminders columns, and the image below still shows the old columns */}
 
 ### Job Opening Stages
 
@@ -54,6 +54,36 @@ Some email clients, especially mobile apps, block open tracking. A candidate may
 The default invitation template contains exactly one link, so **Clicked** means the candidate clicked the invitation link. If you add extra links while customizing the [email template](/email-invitations), Equip cannot tell which link was clicked.
 </Tip>
 
+## Progress and Reminders
+
+Two more columns show what happened after the email.
+
+| Column | Meaning |
+|---|---|
+| **Progress** | **Not started**, **Started** or **Finished**, for the attempt the candidate began from this invitation's link. **Finished** is a link to the candidate's report |
+| **Reminders** | How many [reminders](/email-invitations#reminders) have gone out of those scheduled, such as **2 of 3 sent**, with the date of the next one or the reason they stopped. A dash means the invitation was sent without reminders |
+
+Select a row to list its reminders. Each line shows the reminder's date and its **Email Status**, in the same words as the invitation's own: a reminder that went out shows how far its email got.
+
+{/* screenshot: Track Invitations with one row expanded, listing three reminders with their dates and email statuses */}
+
+| Status | Meaning |
+|---|---|
+| **Scheduled** | The reminder will go out on its date if the candidate has not finished |
+| **Sending** | The reminder has been handed to the mail service, which has not yet confirmed that it left. This normally lasts a few seconds |
+| **Sent**, **Delivered**, **Opened**, **Clicked**, **Bounced** | The reminder went out, and this is how far its email got. See [What Each Status Means](#what-each-status-means) |
+| **Not sent**, Candidate finished | The candidate finished before the reminder was due |
+| **Not sent**, Link expired | The reminder fell on or after the link's expiry day |
+| **Not sent**, Invitation was not delivered | The invitation, or an earlier reminder, bounced or was reported as spam |
+| **Not sent**, A later reminder replaced it | Two reminders came due together, and only the later one was sent |
+| **Not sent**, Sending failed | The email could not be sent after three attempts. Later reminders still go out |
+
+Use the **Progress** and **Reminders** filters to find, for example, candidates who were reminded and still have not started. Both columns are included in the export.
+
+<Note>
+**Progress** follows this invitation's own link. A candidate who finished another way, for example through a second invitation, shows **Not started** here, and their reminders stop with **Not sent**, Candidate finished.
+</Note>
+
 ## When Emails Bounce
 
 A **Bounced** invitation never reached the candidate.
@@ -73,7 +103,7 @@ If the status says **Delivered** but the candidate cannot find the email, do not
 
 ## Related Resources
 
-- [Email Invitations](/email-invitations) - How to send invitations and customize the email template
+- [Email Invitations](/email-invitations) - How to send invitations, customize the email template and set reminders
 - [Invitation Links](/invitation-links) - How unique links, expiry, and revoking work
 - [Candidate Re-Attempts](/candidate-reattempts) - What to do when a candidate says they never got the invite
 - [Reclaim Credits](/reclaim-credits) - Recover credits from unused invitations
