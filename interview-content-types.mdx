@@ -56,26 +56,26 @@ Steer how the AI handles every item at once with the **Instructions for AI Inter
 
 ## Scenarios
 
-A **Scenario** presents reference material that the candidate can see in a side panel while they discuss it with the AI.
+A **Scenario** presents reference material that the candidate can see in a side panel while they discuss it with the AI. It works for technical and non-technical roles alike: a code snippet, a screen design, a customer email or a data table.
 
 A Scenario has two parts:
 
 | Field | Shown to candidate | Purpose |
 |---|---|---|
-| **Candidate view** (required) | Yes | The material itself, written in Markdown. Code blocks, image URLs, and tables are supported. |
-| **AI context** (optional) | No | Extra guidance for the AI. If left empty, the AI reads the candidate view as-is. |
+| **Candidate view** (required) | Yes | The material itself, written in Markdown. Code blocks, images, tables and quotes are supported. |
+| **AI context** (optional) | No | What the AI reads in place of the candidate view. If left empty, the AI reads the candidate view as-is. |
 
-Use **AI context** to describe anything the AI cannot parse from the candidate view, such as what an image or diagram shows.
+Use **AI context** for anything the AI cannot parse from the candidate view, such as what an image shows, or for the points a strong answer should cover.
+
+{/* screenshot: side by side, the recruiter's Scenario editor and the candidate's rendered Scenario panel */}
+
+<Frame caption="What you enter in a Scenario, and what the candidate sees">
+  <img src="/images/scenarios/code-review.png" width="1630" alt="Left, a Scenario item in the editor: a Candidate view in Markdown titled Why does this crash with a short Python function, an AI context naming the bug, and Answer format set to Written. Right, the candidate's screen showing the same content rendered as a heading, a code block and a question, with a code answer box below" />
+</Frame>
 
 <Note>
-Scenarios are rolling out gradually and may not yet appear in your Add item menu. Scenarios pair well with the [Interview Workspace](/interview-workspace).
+Scenarios are rolling out gradually and may not yet appear in your Add item menu. For more examples and tips on writing them, see [Scenarios](/scenarios).
 </Note>
-
-{/* screenshot: scenario editor showing the Candidate view Markdown field and the optional AI context field */}
-
-<Frame caption="A Scenario has a candidate view written in Markdown and an optional AI context">
-  <img src="/images/interview-content-types/scenario-editor.png" width="874" alt="Scenario item with Difficulty Expert and 1 follow-up, a Candidate view field in Markdown titled Design an evaluation plan, an AI context field describing the scenario for the AI, and Answer format set to Either" />
-</Frame>
 
 ## Difficulty Levels
 

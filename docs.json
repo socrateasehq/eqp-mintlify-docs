@@ -197,6 +197,7 @@
               "create-one-way-interview",
               "create-conversational-interview",
               "interview-content-types",
+              "scenarios",
               "interview-settings"
             ]
           },

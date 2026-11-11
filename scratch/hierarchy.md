@@ -121,6 +121,7 @@
 - Creating a One-Way AI Interview
 - Creating a Conversational AI Interview
 - Questions, Topics, and Scenarios
+- Scenarios
 - Interview Settings
 
 ## Reports & Templates
