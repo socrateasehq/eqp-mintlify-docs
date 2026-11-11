@@ -5,11 +5,54 @@ description: "Show candidates code, screen designs, emails or data during a conv
 
 A **Scenario** puts reference material in front of the candidate during a conversational interview. The candidate sees it in a panel on screen while the AI asks them about it, so you can test how someone works with real material, not just how they talk about it.
 
-Scenarios suit technical and non-technical roles alike. An engineer can review a code snippet, a designer can critique a screen, and a support hire can reply to an upset customer.
+Scenarios suit technical and non-technical roles alike. A developer can debug a code snippet, a designer can critique a screen, a support hire can reply to an upset customer, and a salesperson can handle a prospect's objection.
 
 <Note>
 Scenarios are rolling out gradually and may not yet appear in your Add item menu.
 </Note>
+
+## Example Scenarios by Role
+
+Here is what a Scenario looks like for four different roles. In each image, the left side is what you enter and the right side is what the candidate sees.
+
+| # | Role | What the candidate sees | Markdown used | Answer format |
+|---|---|---|---|---|
+| 1 | **Software developer** | A short function with a bug | Code block | Written |
+| 2 | **Product designer** | A screen design to critique | Image | Spoken |
+| 3 | **Customer support** | An upset customer's email | Quote | Written |
+| 4 | **Sales** | A prospect's price objection | List | Spoken |
+
+### 1. Software Developer
+
+Paste a short snippet with a bug in it and ask the candidate to find and fix it. The AI context tells the AI what the bug is, so it can probe and grade against it.
+
+<Frame caption="Software developer: a Python function that crashes on an empty list">
+  <img src="/images/scenarios/code-review.png" width="1630" alt="Left, a Scenario item in the editor with a Candidate view titled Why does this crash containing a three-line Python average function, an AI context naming the ZeroDivisionError, and Answer format Written. Right, the candidate's screen with the rendered heading, code block and question, and a code answer box set to Python" />
+</Frame>
+
+### 2. Product Designer
+
+Show a screen design as an image and ask what the candidate would change. The AI cannot see images, so the AI context describes what the screen shows and which problems to look for.
+
+<Frame caption="Product designer: a mobile sign-up form most people abandon">
+  <img src="/images/scenarios/design-critique.png" width="1630" alt="Left, a Scenario item in the editor with a Candidate view linking to an image of a mobile sign-up form, an AI context describing the form's eight fields and vague error, and Answer format Spoken. Right, the candidate's screen showing the sign-up form image and the question, with no answer box because the answer is spoken" />
+</Frame>
+
+### 3. Customer Support
+
+Quote a short customer email and ask the candidate to write a reply. The AI context sets out the right outcome and what a strong reply sounds like.
+
+<Frame caption="Customer support: an email about a double charge">
+  <img src="/images/scenarios/customer-reply.png" width="1630" alt="Left, a Scenario item in the editor with a Candidate view quoting an email from Dana about being charged twice, an AI context describing a strong reply, and Answer format Written. Right, the candidate's screen showing the rendered email as a quote and a text answer box with a reply being typed" />
+</Frame>
+
+### 4. Sales
+
+Describe a prospect and their objection, then ask the candidate to respond as they would on a call. With a **Spoken** answer, you hear how they handle pushback in real time.
+
+<Frame caption="Sales: a prospect says the product costs too much">
+  <img src="/images/scenarios/sales-objection.png" width="1630" alt="Left, a Scenario item in the editor with a Candidate view titled Handle the price objection listing the prospect and their objection, an AI context describing a strong answer, and Answer format Spoken. Right, the candidate's screen showing the rendered heading, two bullet points and the question, with no answer box because the answer is spoken" />
+</Frame>
 
 ## Adding a Scenario
 
@@ -32,40 +75,6 @@ Scenarios are rolling out gradually and may not yet appear in your Add item menu
 </Steps>
 
 During the interview, each Scenario appears as a numbered tab (Q1, Q2 and so on) above the candidate's answer area. The AI switches tabs as the conversation moves on.
-
-## Example Scenarios
-
-The three examples below show how one feature covers very different roles:
-
-| Example | Good for | Markdown used | Answer format |
-|---|---|---|---|
-| **Code review** | Software engineers | Code block | Written |
-| **Design critique** | Product designers, product managers | Image | Spoken |
-| **Customer reply** | Support, account managers, sales | Quote | Written |
-
-### Code Review
-
-Paste a short snippet with a bug in it and ask the candidate to find and fix it. The AI context tells the AI what the bug is, so it can probe and grade against it.
-
-<Frame caption="A code review Scenario: a Python function that crashes on an empty list">
-  <img src="/images/scenarios/code-review.png" width="1630" alt="Left, a Scenario item in the editor with a Candidate view titled Why does this crash containing a three-line Python average function, an AI context naming the ZeroDivisionError, and Answer format Written. Right, the candidate's screen with the rendered heading, code block and question, and a code answer box set to Python" />
-</Frame>
-
-### Design Critique
-
-Show a screen design as an image and ask what the candidate would change. The AI cannot see images, so the AI context describes what the screen shows and which problems to look for.
-
-<Frame caption="A design critique Scenario: a mobile sign-up form most people abandon">
-  <img src="/images/scenarios/design-critique.png" width="1630" alt="Left, a Scenario item in the editor with a Candidate view linking to an image of a mobile sign-up form, an AI context describing the form's eight fields and vague error, and Answer format Spoken. Right, the candidate's screen showing the sign-up form image and the question, with no answer box because the answer is spoken" />
-</Frame>
-
-### Customer Reply
-
-Quote a short customer email and ask the candidate to write a reply. The AI context sets out the right outcome and what a strong reply sounds like.
-
-<Frame caption="A customer reply Scenario: an email about a double charge">
-  <img src="/images/scenarios/customer-reply.png" width="1630" alt="Left, a Scenario item in the editor with a Candidate view quoting an email from Dana about being charged twice, an AI context describing a strong reply, and Answer format Written. Right, the candidate's screen showing the rendered email as a quote and a text answer box with a reply being typed" />
-</Frame>
 
 ## What You Can Put in the Candidate View
 
