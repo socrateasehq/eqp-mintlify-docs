@@ -1,6 +1,6 @@
 ---
 title: "Sending Email Invitations"
-description: "Invite candidates by email with unique one-time links, editable templates, and delivery tracking."
+description: "Invite candidates by email with unique one-time links, editable templates, automatic reminders, and delivery tracking."
 ---
 
 Email invitations are the most controlled way to share an assessment or AI interview. Each candidate receives a **unique, one-time link**, so only the people you invite can attempt, and you can track every email's delivery status. To compare this with sharing a common public link, see [Share URL vs Email Invitations](/share-url-vs-email).
@@ -50,6 +50,51 @@ Emails are always sent from **no-reply@equip.co**. See [Custom Sender Email](/cu
 <Note>
 Forwarding a link to someone else does not work, because the verification code still goes to the invited email address. See [Invitation Links](/invitation-links).
 </Note>
+
+## Reminders
+
+Equip can send the invitation again to candidates who have not finished. Reminders are off until you turn them on.
+
+<Steps>
+  <Step title="Turn on Send reminders">
+    On the **Send Invitations** tab, turn on **Send reminders**, below **Link Expiry (days)**.
+  </Step>
+  <Step title="Choose the days">
+    Reminders start at 3, 7 and 10 days after the invitation, shown as **Day 3**, **Day 7** and **Day 10**. Select a day to change it, use its **×** to remove it, or click **Add reminder**. You can set up to three, each between 1 and 60 days after the invitation, and no two on the same day.
+  </Step>
+</Steps>
+
+{/* screenshot: Send Invitations tab with Send reminders turned on, three reminder days and the link expiry warning */}
+
+<Frame caption="With a 10-day link, the Day 10 reminder is flagged because it would fall on the expiry day">
+  <img src="/images/email-invitations/send-reminders.png" width="740" alt="Link Expiry set to 10 days, and below it the Send reminders switch turned on with three chips reading Day 3, Day 7 and Day 10, the note 3 of 3, maximum reached, and a warning that Day 10 is on or after the link expiry of 10 days, so that reminder will not be sent" />
+</Frame>
+
+A reminder is the invitation email again, with **Reminder:** in front of the subject and the number of days the link has left. It is built from your email as it stands when the reminder goes out, so a later edit to the template reaches reminders that have not been sent yet.
+
+Reminders apply to invitations sent **after** you turn them on, whichever way they are sent: this tab, a job opening stage, stage automation, the API or an ATS. They cost no credits.
+
+### When reminders stop
+
+| Situation | What happens |
+|---|---|
+| The candidate finishes | The remaining reminders are not sent. A candidate who has started but not finished is still reminded |
+| The link expires | A reminder that falls on or after the expiry day is never sent. The tab warns you when a day you chose would be cut off |
+| The invitation, or an earlier reminder, bounced or was reported as spam | The remaining reminders are not sent |
+
+<Warning>
+An invitation keeps the reminder days it was sent with. Turning **Send reminders** off, or changing the days, affects new invitations only.
+
+For a candidate who has **not started**, [reclaiming the credit](/reclaim-credits) revokes the invitation and stops its reminders. Once a candidate has started, the credit cannot be reclaimed, and their reminders continue until they finish or the link expires.
+</Warning>
+
+### Job opening stages
+
+An assessment or AI interview linked to a job opening has no send form on its invite page, so you set its reminders where you invite: when you [move candidates](/changing-stages) into the stage, the invite dialog shows **Send reminders**.
+
+The days you send with are saved as the default for that assessment or interview. The dialog opens with them next time, and invitations sent by stage automation use them too.
+
+See which reminders went out in the **Track Invitations** tab. See [Email Status](/email-status#progress-and-reminders).
 
 ## Credit Costs
 
