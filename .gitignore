@@ -8,3 +8,6 @@ __pycache__/
 
 # OS files
 .DS_Store
+
+# Local settings (copy .env.example to .env)
+.env

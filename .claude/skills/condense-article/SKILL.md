@@ -176,7 +176,8 @@ Notes that pre-empt a question the reader has not asked yet. Keep only if gettin
 
 ## Procedure
 
-1. **Read the article** in full. Note the title and ask what the reader came to do.
+0. **Locate the Equip codebase.** Read `EQUIP_CODEBASE_PATH` from the repo's `.env`. If `.env` is missing, the value is empty, or the path does not exist, stop and ask the user for the absolute path to their Equip checkout, save it to `.env` as `EQUIP_CODEBASE_PATH=<path>`, then continue. Do not proceed without it.
+1. **Read the article** in full. Note the title and ask what the reader came to do. Then look up the screens it describes in the Equip codebase: the real button labels, field names and on-screen help text decide whether the UI is self-evident (R2), whether a default or edge case costs the reader something (R14), and whether a surviving sentence is still true.
 2. **Inventory every element**: each paragraph, table, callout, image and step. For each, mark keep, cut, merge or move, and the rule (R1 to R14) that applies. Do this before rewriting, so the cuts are deliberate rather than drift.
 3. **Rewrite.** Keep the heading structure unless a whole section is moved out. Follow the repo CLAUDE.md as usual: short paragraphs, bold key terms once, no em-dashes or double hyphens, one visual per H2.
 4. **Check the never-cut list.** Every link from the original must appear in the new version. Every distinct screen keeps one screenshot.

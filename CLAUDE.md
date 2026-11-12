@@ -28,10 +28,16 @@
 - Internal links are root-relative: `/slug` (files are flat at repo root).
 - **Link app pages.** Whenever an article names a page in the Equip app that has a fixed address (Team, Billing, Templates, Job Openings dashboard, and so on), make it a hyperlink to `https://equip.co/recruiter/...` so readers can open it directly. Skip step titles, headings, and screenshot comments.
 - English only. **USD only.** Never mention rupees, ₹, or INR prices; the help center must read as a USD site to every visitor. The single exception is `tds-for-purchases.mdx`, which covers Indian tax thresholds; it is kept out of the sidebar and reached from the GST section of `invoices.mdx`.
-- Do not invent facts. Every claim must come from the codebase, equip.co/llms.txt, or the original Crisp article. If a detail is unknown, write around it rather than guessing numbers or limits.
+- Do not invent facts. Every claim must come from the [Equip codebase](#equip-codebase), equip.co/llms.txt, or the original Crisp article. If a detail is unknown, write around it rather than guessing numbers or limits.
 - Frontmatter: keep the existing `title` and `description`; remove the migration `<Note>` stub when writing real content.
 - **Plan-gated features use `<PlanGate plan="Premium" />`** (import it with `import { PlanGate } from "/snippets/plan-gate.mdx";` after the frontmatter), placed right after the intro paragraph. Pass the minimum plan. Never write a plan tier in a `<Note>` or in prose; [Compare Plans](/compare-plans) is the one page that lists what each plan includes.
 - **Escape dollar amounts** as `\$10`. A bare `$` starts LaTeX math mode in Mintlify and can break the page.
+
+## Equip Codebase
+
+The Equip app codebase is the main source of truth for facts, labels and limits. Its location is set per machine in `.env` (gitignored) as `EQUIP_CODEBASE_PATH`; `.env.example` is the template.
+
+Before writing, checking or condensing an article, read `EQUIP_CODEBASE_PATH` from `.env`. If `.env` is missing, the value is empty, or the path does not exist, stop and ask the user for the absolute path to their Equip checkout, write it into `.env`, then continue. Never guess the location or fall back to writing from memory.
 
 ## Style Exemplars
 
