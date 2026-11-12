@@ -1,0 +1,73 @@
+---
+title: "Work with Recruitment Agencies"
+description: "Add the recruitment agencies you work with, set their fee terms and invite their recruiters to the agency portal."
+---
+
+import { PlanGate } from "/snippets/plan-gate.mdx";
+
+If outside agencies send you candidates, you can bring them into Equip instead of collecting CVs over email. Each agency gets its own **agency portal**, where it sees only the jobs you give it and the candidates it submitted.
+
+<PlanGate plan="Elite" />
+
+## Add an Agency
+
+Agencies live on the [**Agencies**](https://equip.co/recruiter/account/organization/agencies/) tab of your Organization page.
+
+<Steps>
+  <Step title="Add the agency and its terms">
+    Click **+ Agency**, then enter the **Agency name**, an optional **Contact email**, the **Success fee**, the **Replacement guarantee** and the **Ownership window**. These are the agency's default terms for every job you give it.
+    {/* screenshot: Add a recruitment agency dialog with name, contact email, success fee, guarantee and ownership window fields */}
+  </Step>
+  <Step title="Invite the agency's recruiters">
+    On the agency's card, type the email addresses of the people who will sign in for it. Each one gets an email with a link to the agency portal.
+    {/* screenshot: agency card with term chips, stat tiles and the email input for logins */}
+  </Step>
+  <Step title="Give it a job">
+    Open a job's **Settings**, go to **Sourcing**, and add the agency there. See [Give a Job to a Recruitment Agency](/assign-job-to-agency).
+  </Step>
+</Steps>
+
+<Note>
+Agency logins **don't use a recruiter seat**. Someone who is already a recruiter in your organization can't be added as an agency login, because they already see every candidate.
+</Note>
+
+## Fee Terms
+
+Equip records the terms you agree with each agency and shows them on every candidate it submits.
+
+| Term | What it sets | Allowed values |
+|---|---|---|
+| **Success fee** | A percentage of the hire's annual pay, or a fixed amount per hire in a currency you choose | 0 to 100 percent, or any amount |
+| **Replacement guarantee** | How many days after joining a hire who leaves is replaced or refunded | 0 to 365 days |
+| **Ownership window** | How long a submission holds the candidate on that job against other submissions | 1 to 730 days, 180 by default |
+
+The fee terms in force when the agency submits a candidate are saved on that candidate. Editing the agency later never changes what was agreed for candidates already submitted.
+
+<Tip>
+For one job with different terms, set a fee or guarantee on that job instead of editing the agency. See [Give a Job to a Recruitment Agency](/assign-job-to-agency).
+</Tip>
+
+## The Ownership Window
+
+The **ownership window** stops two agencies from claiming the same person. Equip matches candidates by email or phone number.
+
+| Situation | What happens |
+|---|---|
+| The person joined the job's pipeline, from any source, within this agency's window | The submission is refused as already in the job's pipeline |
+| Another agency submitted the person and its hold has not expired | The submission is refused, without naming the other agency |
+| Neither applies | The candidate is added, then your usual [duplicate rules](/duplicate-applications) run |
+
+## Archive an Agency
+
+Click **Archive** on an agency's card when you stop working with it. Click **Restore** to bring it back.
+
+<Warning>
+Once an agency is archived, its logins can no longer sign in to the agency portal or submit candidates. The candidates it already submitted stay in your pipeline and keep the agency as their source.
+</Warning>
+
+## Related Resources
+
+- [Give a Job to a Recruitment Agency](/assign-job-to-agency) - Choose which jobs each agency works on
+- [Submit Candidates as a Recruitment Agency](/agency-portal) - What your agency partners see and do
+- [Duplicate Applications](/duplicate-applications) - How Equip handles the same person applying twice
+- [Manage Team Members](/manage-team-members) - Add your own recruiters, who do use seats

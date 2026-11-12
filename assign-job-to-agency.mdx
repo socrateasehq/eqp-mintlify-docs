@@ -1,0 +1,68 @@
+---
+title: "Give a Job to a Recruitment Agency"
+description: "Let a recruitment agency submit candidates to one job, with its own fee and notes, and review what it sends."
+---
+
+import { PlanGate } from "/snippets/plan-gate.mdx";
+
+An agency sees a job only after you add it to that job. Each job can have its own fee, its own notes for the agency, and can be paused or removed at any time.
+
+<PlanGate plan="Elite" />
+
+## Add an Agency to a Job
+
+You need at least one agency set up first. See [Work with Recruitment Agencies](/recruitment-agencies).
+
+<Steps>
+  <Step title="Open the job's Sourcing settings">
+    From the [**Job Openings** dashboard](https://equip.co/recruiter/job-openings/dashboard/), open the job's **Settings** and go to the **Sourcing** tab.
+    {/* screenshot: Sourcing tab, Agencies section with agency rows and the Add agency button */}
+  </Step>
+  <Step title="Choose the agency and its terms">
+    Click **Add agency** and pick one. Leave the fee as the **Agency's default**, or set a different fee or guarantee for this job only.
+  </Step>
+  <Step title="Add notes for the agency">
+    Use **Notes for the agency** for what a strong candidate looks like, who not to send, or how interviews run. Click **Add agency** to finish.
+  </Step>
+</Steps>
+
+Every login of the agency gets an email with a link to the job in its portal. The agency sees the job's public post and your notes. It never sees other applicants or your pipeline.
+
+## Pause or Remove an Agency
+
+Each agency row on the **Sourcing** tab shows its fee, its counts and its status. A row marked **This job only** has terms that differ from the agency's default.
+
+| Status | Button | What the agency sees |
+|---|---|---|
+| **Active** | Pause | The job, and it can submit candidates |
+| **Paused** | Resume | The job and its candidates, but it cannot submit |
+| **Removed** | Add back | The job is gone from its list; its past candidates stay visible to it |
+
+To remove an agency, open the **⋯** menu on its row and choose **Remove from this job**. Candidates it already submitted stay in your pipeline.
+
+<Note>
+An agency also cannot submit while the job is not accepting applications, for example when its job post is no longer published.
+</Note>
+
+## Candidates from Agencies
+
+Agency candidates land in the **Applied** stage with the source **Recruitment Agency**. Move them through the pipeline like any other applicant.
+
+On the [candidate profile](/candidate-profile), Equip shows:
+
+- which agency and which of its recruiters sent the candidate
+- the fee terms agreed at the moment of submission
+- the date until which the agency holds the candidate on this job
+
+{/* screenshot: candidate profile with the agency attribution line */}
+
+<Warning>
+If your team is out of credits, agencies cannot upload CVs. Reading each CV uses your team's credits, the same as [Bulk CV Import](/bulk-cv-import), and the agency is told to contact the job's owner.
+</Warning>
+
+## Related Resources
+
+- [Work with Recruitment Agencies](/recruitment-agencies) - Add agencies, logins and default fee terms
+- [Submit Candidates as a Recruitment Agency](/agency-portal) - The portal your agency partners use
+- [What Job Boards Does Equip Publish To?](/job-boards) - Other ways to source candidates and how sources are recorded
+- [Changing Stages](/changing-stages) - Move agency candidates through your pipeline

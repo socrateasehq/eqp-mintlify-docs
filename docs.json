@@ -46,6 +46,14 @@
             ]
           },
           {
+            "group": "Recruitment Agencies",
+            "pages": [
+              "recruitment-agencies",
+              "assign-job-to-agency",
+              "agency-portal"
+            ]
+          },
+          {
             "group": "Resume Screening",
             "pages": [
               "job-fit-score",
