@@ -12,12 +12,6 @@
 - Your Careers Page
 - What Job Boards Does Equip Publish To?
 
-## Recruitment Agencies
-
-- Work with Recruitment Agencies
-- Give a Job to a Recruitment Agency
-- Submit Candidates as a Recruitment Agency (audience: agency recruiters)
-
 ## Resume Screening
 
 - What is the Job Fit Score?
@@ -56,6 +50,12 @@
 - ATS Insights: Hiring Analytics
 - Talent Rediscovery
 - Candidate Search
+
+## Recruitment Agencies
+
+- Work with Recruitment Agencies
+- Give a Job to a Recruitment Agency
+- Submit Candidates as a Recruitment Agency (audience: agency recruiters)
 
 # Assessments
 

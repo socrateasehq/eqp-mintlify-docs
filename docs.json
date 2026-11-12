@@ -46,14 +46,6 @@
             ]
           },
           {
-            "group": "Recruitment Agencies",
-            "pages": [
-              "recruitment-agencies",
-              "assign-job-to-agency",
-              "agency-portal"
-            ]
-          },
-          {
             "group": "Resume Screening",
             "pages": [
               "job-fit-score",
@@ -102,6 +94,14 @@
               "ats-insights",
               "talent-rediscovery",
               "candidate-search"
+            ]
+          },
+          {
+            "group": "Recruitment Agencies",
+            "pages": [
+              "recruitment-agencies",
+              "assign-job-to-agency",
+              "agency-portal"
             ]
           }
         ]
