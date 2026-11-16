@@ -32,6 +32,10 @@ If you would rather test without negative marking, create your own questions wit
   <Step title="Set points per question">
     Set negative points on each question, or skip them where you do not want deductions.
     {/* screenshot: custom quiz question editor showing points, timer, and negative points fields */}
+
+    <Frame caption="Points, negative points and the timer on a question">
+      <img src="/images/negative-marking/question-points.png" alt="Side panel of a custom quiz question with Type MCQ, Points 2, Negative 0 with a calculator icon, and a Time limit of 1 minute 0 seconds" />
+    </Frame>
   </Step>
   <Step title="Add the quiz to an assessment">
     In the assessment's Tests tab, add the quiz under **My Content**. An assessment can freely mix Equip content and custom tests.
@@ -39,7 +43,7 @@ If you would rather test without negative marking, create your own questions wit
 </Steps>
 
 <Tip>
-Importing questions from Excel? The importer's **Autocalculate Negative Points** option fills in deductions for MCQs automatically. See [Import Questions from Excel](/import-questions-from-excel).
+Importing questions from Excel? The Import dialog's **Auto-calculate negative points** switch fills in deductions for MCQs automatically. See [Import Questions from Excel](/import-questions-from-excel).
 </Tip>
 
 ## How Deductions Are Calculated
@@ -50,7 +54,7 @@ When negative points are assigned automatically, the formula is:
 negative points = question points / number of options
 ```
 
-For example, a 2-point MCQ with 4 options deducts **0.5 points** for a wrong answer. Equip's library quizzes use this calculation, and the Excel importer's Autocalculate option applies the same formula to your custom MCQs.
+For example, a 2-point MCQ with 4 options deducts **0.5 points** for a wrong answer. Equip's library quizzes use this calculation, and the Import dialog's auto-calculate switch applies the same formula to your custom MCQs.
 
 <Note>
 Multiple-answer questions (MCAs) are never auto-assigned negative points.

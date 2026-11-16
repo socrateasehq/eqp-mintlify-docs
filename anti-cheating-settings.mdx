@@ -11,8 +11,8 @@ Apart from [AI proctoring](/ai-proctoring), Equip has four **anti-cheating setti
 |---|---|
 | **Randomize the question order** | For quizzes that show questions all at once, each candidate sees the same set of questions in a different order. To have each candidate see a *different set* of questions from your own content, build a [Question Bank Quiz](/question-bank-quiz) first. |
 | **Shuffle choices within a question** | For quizzes with MCQs and MCAs, the answer choices appear in a different order for each candidate. |
-| **Disable Copy & Paste** | The candidate cannot copy the question text or paste anything into the test tab. |
-| **Auto-submit on Tab-switch** | If the candidate switches to a different tab more times than a limit you set, the test is submitted automatically. |
+| **Disable copy & paste** | The candidate cannot copy the question text or paste anything into the test tab. |
+| **Auto-submit on tab switch** | If the candidate switches to a different tab more times than a limit you set, the test is submitted automatically. |
 
 <Note>
 Candidates are told which measures are active before they start.
@@ -36,14 +36,22 @@ If a test uses your own content, all four settings are configurable **per test**
 
 {/* screenshot: anti-cheating settings panel while editing a custom test */}
 
+<Frame caption="Anti-cheating settings of a custom quiz">
+  <img src="/images/anti-cheating-settings/custom-test-settings.png" alt="Anti-cheating settings of a custom quiz with switches for Randomize the question order, Shuffle choices within a question (on), Disable copy and paste and Auto-submit on tab switch, and an If count exceeds field for the tab-switch limit" />
+</Frame>
+
 <Steps>
-  <Step title="Open the custom test">
-    Edit your assessment and open the [custom test](/custom-tests) you want to configure.
+  <Step title="Open the custom test's settings">
+    In [**Custom Tests**](https://equip.co/recruiter/assessments/cms/home/), open the [custom test](/custom-tests) you want to configure, select **Settings**, then **Anti-cheating**.
   </Step>
   <Step title="Adjust the anti-cheating options">
-    Turn the settings on or off, and set the tab-switch limit for **Auto-submit on Tab-switch**. Then save the test and update the assessment.
+    Turn the settings on or off. If you turn on **Auto-submit on tab switch**, enter the limit in **If count exceeds**. Then click **Save**.
   </Step>
 </Steps>
+
+<Note>
+In a quiz, **Shuffle choices within a question** sets the default for questions you add from then on. Each question can change its own setting on its card.
+</Note>
 
 ## In One-way AI Interviews
 
@@ -57,7 +65,7 @@ Conversational interviews are built from topics, not MCQs, so none of these sett
 
 ## How These Settings Work with Proctoring
 
-There are two tab-switch controls. **Detect Switched Tab** (a proctoring setting) records every switch as a violation in the report, while **Auto-submit on Tab-switch** goes further and ends the test once the limit is crossed.
+There are two tab-switch controls. **Detect Switched Tab** (a proctoring setting) records every switch as a violation in the report, while **Auto-submit on tab switch** goes further and ends the test once the limit is crossed.
 
 Disabled copy/paste, **Enforce Full Screen**, and tab-switch detection together make on-device AI tools like ChatGPT impractical. Stealth overlay tools and AI on a second phone are caught by [Auxiliary Device proctoring](/ai-usage-detection).
 

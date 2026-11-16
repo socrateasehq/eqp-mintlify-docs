@@ -5,16 +5,37 @@ description: "Where and how to set the duration of custom quizzes."
 
 ## Where to Set Time Limits
 
-You set time limits while creating or editing a **Custom Quiz**. Timers live inside the quiz itself, not in the assessment settings.
+You set time limits while creating or editing a **Custom Quiz**. Timers live inside the quiz itself, not in the assessment settings. Where the timer goes depends on the quiz's **Question display mode**:
+
+| Display mode | Where the time limit goes |
+|---|---|
+| **All-at-once** | One **Duration** for the whole quiz |
+| **One-by-one, with question navigation** | One **Duration** for the whole quiz |
+| **One-by-one, without question navigation** | A **Time limit** on each question's card |
 
 <Steps>
   <Step title="Open your Custom Quiz">
-    From the [Assessments Dashboard](https://equip.co/recruiter/assessments/dashboard/), open the [**Custom Tests**](https://equip.co/recruiter/assessments/cms/home/) section in the sidebar and select the quiz you want to edit.
+    From the [Assessments Dashboard](https://equip.co/recruiter/assessments/dashboard/), open [**Custom Tests**](https://equip.co/recruiter/assessments/cms/home/) and select the quiz you want to edit.
   </Step>
-  <Step title="Set the timer">
-    While adding or editing a question, set its **timer** along with its points and any negative points. If your quiz shows all questions at once, set a single time limit for the entire test instead. Then save the quiz.
+  <Step title="Check the display mode">
+    Open the quiz's **Settings**. Under **General**, **Question display mode** decides which timer applies.
+  </Step>
+  <Step title="Set the timer and save">
+    For the two modes with a quiz-wide timer, enter the **Duration (in mins)** below the display mode. For one-by-one without navigation, set the **Time limit** in minutes and seconds on each question's card instead. Then click **Save**.
   </Step>
 </Steps>
+
+{/* screenshot: Question display mode and Duration fields in the quiz's General settings */}
+
+<Frame caption="One Duration for the whole quiz">
+  <img src="/images/custom-quiz-time-limits/duration-setting.png" alt="General settings of a custom quiz with the hint that one-by-one without navigation has no quiz-wide Duration, Question display mode set to All-at-once (like Google Forms) and Duration (in mins) set to 20" />
+</Frame>
+
+{/* screenshot: question card with its Time limit field in a one-by-one quiz without navigation */}
+
+<Frame caption="A time limit on each question, in one-by-one mode without navigation">
+  <img src="/images/custom-quiz-time-limits/question-time-limit.png" alt="A question card in a custom quiz set to one-by-one without navigation, with Points, Negative and a Time limit in minutes and seconds in its side panel" />
+</Frame>
 
 Here is a short video walkthrough of setting the timer for a custom quiz:
 
@@ -32,20 +53,13 @@ Here is a short video walkthrough of setting the timer for a custom quiz:
 If you are using **Equip Content**, every question already has a fixed timer that cannot be changed. See [Time Limits on Equip](/time-limits) for how those timers work.
 </Note>
 
-Which timer you can set depends on the quiz's **display mode**:
-
-| Display mode | How questions appear | Where the time limit goes | Try it |
-|---|---|---|---|
-| **One-by-one** (screen-by-screen) | One question per screen, like Typeform | Per question only | [Demo quiz](https://equip.co/demo/load-test/rhbjr/?proctor=false) |
-| **All-at-once** | Every question on one page, like Google Forms | Whole test only | [Demo quiz](https://equip.co/demo/load-test/taptq/?proctor=false) |
-
 <Tip>
-Importing questions from Excel? The template's **Time** column accepts a value in seconds for each question, so you can set timers in bulk. See [Import Questions from Excel](/import-questions-from-excel).
+Importing questions from Excel? The template's **Time** column accepts a value in seconds for each question, so you can set per-question timers in bulk. See [Import Questions from Excel](/import-questions-from-excel).
 </Tip>
 
-## Per-Test Duration
+## Quiz-Wide Duration
 
-An **all-at-once** quiz has a single countdown for the whole test. To control how long candidates spend on each question, switch the quiz to one-by-one mode instead.
+In **all-at-once** and **one-by-one with navigation** quizzes, one countdown runs for the whole quiz and candidates choose how to spend it across questions. To control how long candidates spend on each question, switch the quiz to one-by-one without navigation instead.
 
 <Note>
 There is no time limit for an **entire assessment**, only for the tests and questions inside it. If a custom test has questions without timers, the Estimated Assessment Duration can be inaccurate. See [Assessment Duration](/assessment-duration) for details.
@@ -53,17 +67,17 @@ There is no time limit for an **entire assessment**, only for the tests and ques
 
 ## Switching Between Display Modes
 
-Custom quizzes can switch between one-by-one and all-at-once modes at any time, and the time limit model switches with it.
+You can change a quiz's display mode at any time, and the timer model switches with it.
 
 <Warning>
-Changes take effect as soon as you save. Candidates who start the quiz after you save will see the updated question flow and timers, so avoid switching modes in the middle of an active hiring drive.
+Changes take effect as soon as you save. Candidates who start the quiz after you save see the new question flow and timers, so avoid switching modes in the middle of an active hiring drive.
 </Warning>
 
-For a deeper comparison of the two modes, see [Quiz Display Modes](/quiz-display-modes).
+For what candidates see in each mode, see [Quiz Display Modes](/quiz-display-modes).
 
 ## Related Resources
 
-- [Quiz Display Modes](/quiz-display-modes) - How one-by-one and all-at-once quizzes differ for candidates
+- [Quiz Display Modes](/quiz-display-modes) - What candidates see in each of the three modes
 - [Time Limits on Equip](/time-limits) - Which test types support timers and at what level
 - [Assessment Duration](/assessment-duration) - Why assessments have no overall time limit
 - [Import Questions from Excel](/import-questions-from-excel) - Set question timers in bulk via the import template
