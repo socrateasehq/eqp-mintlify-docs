@@ -100,6 +100,40 @@ ul.sidebar-group > li > button[aria-expanded="true"] > div > span {
   font-weight: 600;
 }
 
+/* 2b. Sections inside a subcategory (e.g. Tests & Questions > Custom Content).
+   A section is a label for the articles under it, not a link, so it gets a
+   small uppercase label with a hairline above it instead of the article look
+   (author review 2026-11-16: sections needed a clearer hierarchy). */
+ul.sidebar-group li > ul > li > button {
+  border-left: 0 !important;
+  margin: 0.625rem 6px 0.125rem 3rem !important;
+  padding: 0.625rem 0.5rem 0.25rem 0 !important;
+  border-top: 1px solid #dfe6ec !important;
+  border-radius: 0;
+}
+
+ul.sidebar-group li > ul > li:first-child > button {
+  margin-top: 0.25rem !important;
+}
+
+ul.sidebar-group li > ul > li > button > div > span {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #6b7a90;
+}
+
+ul.sidebar-group li > ul > li > button:hover > div > span,
+ul.sidebar-group li > ul > li > button[aria-expanded="true"] > div > span {
+  color: #1f3b88;
+}
+
+/* Articles in a section line up with the section label. */
+ul.sidebar-group li > ul > li > ul a {
+  margin-left: 2.25rem !important;
+}
+
 /* 3. Articles: no rail; the current one is a white card. */
 ul.sidebar-group a {
   font-weight: 400;

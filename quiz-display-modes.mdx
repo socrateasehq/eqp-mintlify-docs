@@ -1,67 +1,97 @@
 ---
-title: "Screen-by-Screen vs All-at-Once Quizzes"
-description: "The two quiz display modes, how navigation and timers differ in each, and how to choose the right mode for your quiz."
+title: "Quiz Display Modes"
+description: "The three ways a custom quiz can show its questions, how navigation and timers work in each, and how to pick one."
 ---
 
 <Tip>
-A **screen-by-screen** quiz (also called one-by-one) shows questions one at a time, like a Typeform. An **all-at-once** quiz shows every question on a single page, like a Google Form. Quizzes built from Equip's question library are always screen-by-screen; for custom quizzes, you can choose either mode.
+A custom quiz can show every question on one page (**all at once**), or one question at a time (**one by one**), either with navigation between questions or without it. Pick the mode under **Question display mode** in the quiz's settings.
 </Tip>
 
-## The Two Display Modes
+## Choose a Display Mode
 
-| Feature | Screen-by-screen | All-at-once |
-|---|---|---|
-| **Question visibility** | One question at a time | All questions on one page |
-| **Timer** | Set per question | One timer for the whole test |
-| **Revisit questions** | No, skipped questions are gone | Yes, until the test is submitted |
-| **Review tools** | Progress bar showing questions left | Bookmark questions, filter by status |
-| **Equip Content quizzes** | Always used, cannot be changed | Not available |
-| **Custom quizzes** | Available | Available |
-
-### Screen-by-screen quizzes
-
-The candidate sees only one question at a time, with a progress bar, a timer for that question, and a **Skip** button.
-
-{/* screenshot: candidate view of a screen-by-screen quiz question with progress bar, per-question timer, and Skip button */}
-
-### All-at-once quizzes
-
-Equip quizzes have no concept of sections, so this mode shows every question in the quiz on one page.
-
-{/* screenshot: candidate view of an all-at-once quiz with overall timer, bookmarks, and status filters */}
-
-## Back Navigation
-
-In a screen-by-screen quiz, candidates cannot return to a question once they answer or skip it, and they cannot preview upcoming questions. In an all-at-once quiz, they move freely between questions until they submit.
-
-<Warning>
-Skipping is final in screen-by-screen quizzes. If a candidate clicks **Skip**, that question cannot be revisited, even if time remains.
-</Warning>
-
-## Choosing a Mode
-
-Equip recommends **screen-by-screen** quizzes for hiring. Candidates get much less time per question, which makes it far harder to look up answers or share questions with others.
-
-**All-at-once** works better when you want candidates to manage their own time, review their answers, and decide the order in which they attempt questions.
-
-For a **custom quiz**, you can switch the display mode at any time.
+You set the display mode for each custom quiz you build in [Custom Tests](https://equip.co/recruiter/assessments/cms/home/).
 
 <Steps>
-  <Step title="Open your custom quiz">
-    From the [Assessments Dashboard](https://equip.co/recruiter/assessments/dashboard/), open [**Custom Tests**](https://equip.co/recruiter/assessments/cms/home/) and select the quiz.
+  <Step title="Open the quiz settings">
+    From the [Assessments Dashboard](https://equip.co/recruiter/assessments/dashboard/), open [**Custom Tests**](https://equip.co/recruiter/assessments/cms/home/), find your quiz and click **Settings**.
   </Step>
-  <Step title="Change the display mode">
-    Update the setting that controls whether questions are shown one by one or all at once, then save. The new mode applies to candidates who start the quiz after you save.
+  <Step title="Pick a Question display mode">
+    Under **General**, choose one of the three modes from **Question display mode**.
+  </Step>
+  <Step title="Set the time limit and save">
+    For all at once and one by one with navigation, enter a **Duration** for the whole quiz. For one by one without navigation, set a time limit on each question's card instead. Then click **Save**.
   </Step>
 </Steps>
 
-<Tip>
-Switching modes also changes the timers: per question in screen-by-screen, one for the whole test in all-at-once. Review your time limits after switching.
-</Tip>
+{/* screenshot: Question display mode setting in the custom quiz settings */}
+
+<Frame caption="The Question display mode setting">
+  <img src="/images/quiz-display-modes/display-mode-setting.png" alt="General settings of a custom quiz with the Question display mode list showing All-at-once (like Google Forms), One-by-one with question navigation (like Typeform) and One-by-one without question navigation, above the Duration field" />
+</Frame>
+
+<Note>
+The new mode applies to candidates who start the quiz after you save.
+</Note>
+
+## The Three Modes
+
+| | All at once | One by one, with navigation | One by one, without navigation |
+|---|---|---|---|
+| **Questions shown** | Every question on one page | One at a time | One at a time |
+| **Going back** | Yes, until submitting | Yes, with **Previous** or the question numbers | No, answered and skipped questions are gone |
+| **Timer** | One **Duration** for the whole quiz | One **Duration** for the whole quiz | A time limit on each question |
+| **Review tools** | Bookmarks, status filter, question map | Bookmarks, status filter, numbered question buttons | Progress bar |
+| **Like** | Google Forms | Typeform | A timed exam |
+
+### All at once
+
+Every question in the quiz sits on one page. Beside them, the candidate sees the time left, a **Filter** for answered, unanswered and bookmarked questions, and a map of question numbers to jump to any question.
+
+{/* screenshot: candidate view of an all-at-once quiz */}
+
+<Frame caption="An all-at-once quiz, every question on one page">
+  <img src="/images/quiz-display-modes/all-at-once.png" alt="All-at-once quiz with questions listed on one page, each with a bookmark icon, beside a Time Left timer, a status Filter and a question map showing answered, unanswered and marked for review counts" />
+</Frame>
+
+### One by one, with navigation
+
+The candidate sees one question at a time, with **Next** and **Previous** buttons and a row of question numbers to jump between questions. Status counts show how many questions are answered, unanswered and marked for **Review**, and one timer runs for the whole quiz.
+
+{/* screenshot: candidate view of a one-by-one quiz with navigation */}
+
+<Frame caption="One by one, with question navigation">
+  <img src="/images/quiz-display-modes/one-by-one-with-navigation.png" alt="One-by-one quiz with navigation showing question 1 of 8, a quiz-wide timer and Submit Quiz button, a status filter with Answered, Unanswered and Review counts, numbered question buttons, a bookmark icon, and Next, Previous and Reset buttons" />
+</Frame>
+
+### One by one, without navigation
+
+The candidate sees one question at a time with a progress bar and a countdown for that question. They answer with **Submit** or move on with **Skip**, and cannot go back.
+
+{/* screenshot: candidate view of a one-by-one quiz without navigation */}
+
+<Frame caption="One by one, without question navigation">
+  <img src="/images/quiz-display-modes/one-by-one.png" alt="One-by-one quiz without navigation showing question 1 of 8 with a segmented progress bar, a countdown timer for the question, and Submit, Reset and Skip buttons" />
+</Frame>
+
+<Warning>
+Skipping is final in this mode. Once a candidate clicks **Skip**, that question cannot be revisited, even if time remains.
+</Warning>
+
+## Picking the Right Mode
+
+**One by one, without navigation** is the strictest choice for hiring. Each question has its own short time limit, and the next question is only sent to the candidate after the current one is answered, so the full quiz is never on screen to look up or share.
+
+**One by one, with navigation** keeps the focus of one question per screen while letting candidates manage their own time and return to questions they bookmarked.
+
+**All at once** suits quizzes where candidates should see the whole test, choose their own order and review every answer before submitting.
+
+<Note>
+Some tests always use a fixed mode. Quizzes from Equip's question library always show one question at a time. Programming, SQL and CSS tests show one question at a time with navigation, and video interview tests show one question at a time without navigation.
+</Note>
 
 ## Related Resources
 
-- [Time Limits](/time-limits) - Where timers can be set for each test type
-- [Custom Quiz Time Limits](/custom-quiz-time-limits) - How timers work in each display mode for custom quizzes
+- [Custom Quiz Time Limits](/custom-quiz-time-limits) - How timers work in each display mode
 - [Custom Tests](/custom-tests) - Create quizzes with your own questions
+- [Time Limits](/time-limits) - Where timers can be set for each test type
 - [Same or Random Questions](/same-or-random-questions) - How Equip randomizes quiz questions per candidate

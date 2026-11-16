@@ -22,14 +22,18 @@ Instead of typing questions into a **Custom Quiz** one at a time, fill an Excel 
     From your [**Assessments Dashboard**](https://equip.co/recruiter/assessments/dashboard/), select [**Custom Tests**](https://equip.co/recruiter/assessments/cms/home/). Click **New**, or open an existing quiz.
   </Step>
   <Step title="Download the template">
-    Click **Import** at the top right of the quiz, then **Download Template**. Alternatively, download the [Google Sheets template](https://docs.google.com/spreadsheets/d/1_QgE_eX2Rb4mKcNtpnc8ojhi7wAQGRrys3Gte7hWcS0/edit?usp=sharing) as an Excel file.
+    Click **Import** at the top right of the quiz, then **Download template** in the dialog that opens. Alternatively, download the [Google Sheets template](https://docs.google.com/spreadsheets/d/1_QgE_eX2Rb4mKcNtpnc8ojhi7wAQGRrys3Gte7hWcS0/edit?usp=sharing) as an Excel file.
     {/* screenshot: custom quiz editor with the Import button highlighted at top right */}
+
+    <Frame caption="The Import dialog of a custom quiz">
+      <img src="/images/import-questions-from-excel/import-dialog.png" alt="Import questions from Excel dialog with a Choose an Excel file drop zone and Browse button, a Download template button, an Auto-calculate negative points toggle, and Cancel and Import buttons" />
+    </Frame>
   </Step>
   <Step title="Fill in your questions">
     Add one question per row, following the column rules in the next section.
   </Step>
   <Step title="Upload the file">
-    Back in your quiz, click the **Import from Excel** icon and select your file. Optionally enable **Autocalculate Negative Points** before uploading.
+    Back in your quiz, click **Import** again, then **Browse** to choose your file or drop it on the dialog. Optionally turn on **Auto-calculate negative points**, then click **Import**.
   </Step>
 </Steps>
 
@@ -55,9 +59,9 @@ Do not remove any columns from the template. Your file must contain **only one s
 The Excel import supports MCQ and MCA questions only. You can add other [question types](/custom-quiz-question-types) in the quiz after the import.
 </Note>
 
-### Autocalculate Negative Points
+### Auto-calculate Negative Points
 
-Enable **Autocalculate Negative Points** during the import to assign negative points to every MCQ automatically:
+Turn on **Auto-calculate negative points** in the Import dialog to assign negative points to every MCQ automatically:
 
 ```
 Negative Points = Points Assigned / Number of Options
@@ -70,10 +74,14 @@ For example, an MCQ worth 2 points with 4 options gets 0.5 negative points. MCAs
 Enter `1` in the **Markdown** column to render the question text and options as Markdown. Leave it blank for plain text.
 
 <Note>
-Write mathematical equations in **LaTeX** inside your Excel file, then enable LaTeX in the quiz's **Advanced Settings** so they render for candidates.
+Write mathematical equations in **LaTeX** inside your Excel file, then turn on **Enable LaTeX** in the quiz's **Settings**, under **General**, so they render for candidates. Wrap each equation in `\(` and `\)`.
 </Note>
 
 {/* screenshot: quiz Advanced Settings panel with the LaTeX toggle enabled */}
+
+<Frame caption="Enable LaTeX in the quiz's General settings">
+  <img src="/images/import-questions-from-excel/latex-setting.png" alt="Enable LaTeX switched on in a custom quiz's General settings between Auto-submit when time's up and Show calculator, with the hint that equations use \( and \) as delimiters" />
+</Frame>
 
 ## Cell Contents and Formatting
 
@@ -96,7 +104,7 @@ Excel only sends us the **value** of a cell, not its display format. A cell type
 | Wrong answers marked correct | In **CorrectAnsInd**, use a single number for MCQs; for MCAs, separate numbers with a comma and no space (`2,3`) |
 | A question has too few choices | Every question needs at least **Opt1** and **Opt2** |
 | Images not showing | Use a direct URL ending in `.jpg`, `.png`, etc. Google Drive links and links to pages containing an image do not work |
-| Equations show as raw text | Turn on LaTeX in the quiz's **Advanced Settings** |
+| Equations show as raw text | Turn on **Enable LaTeX** in the quiz's **Settings**, under **General** |
 | Options appear blank, as broken images, or look identical | The cell contains HTML tags. Write angle brackets as `&lt;` and `&gt;`, see [Cell Contents and Formatting](#cell-contents-and-formatting) |
 | A `$`, `%` or decimal is missing from an option | Excel stored the cell as a formatted number. Format the cell as **Text** before typing the value |
 

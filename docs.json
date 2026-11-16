@@ -126,12 +126,17 @@
           {
             "group": "Tests & Questions",
             "pages": [
-              "test-types",
-              "question-difficulty-levels",
-              "question-limits",
-              "same-or-random-questions",
-              "quiz-display-modes",
-              "cant-find-role-or-skill",
+              {
+                "group": "How Tests Work",
+                "pages": [
+                  "test-types",
+                  "question-difficulty-levels",
+                  "question-limits",
+                  "same-or-random-questions",
+                  "quiz-display-modes",
+                  "cant-find-role-or-skill"
+                ]
+              },
               {
                 "group": "Equip Test Library",
                 "pages": [
@@ -150,13 +155,10 @@
                   "question-bank-quiz",
                   "import-questions-from-excel",
                   "custom-programming-test",
-                  "custom-programming-test-example",
                   "custom-sql-test",
                   "randomize-coding-questions",
                   "custom-quiz-time-limits",
-                  "documents-in-custom-tests",
-                  "video-response-questions",
-                  "custom-coding-challenge-issues"
+                  "video-response-questions"
                 ]
               }
             ]
@@ -355,6 +357,18 @@
   },
   "redirects": [
     {
+      "source": "/documents-in-custom-tests",
+      "destination": "/custom-quiz-question-types"
+    },
+    {
+      "source": "/custom-programming-test-example",
+      "destination": "/custom-programming-test"
+    },
+    {
+      "source": "/custom-coding-challenge-issues",
+      "destination": "/custom-programming-test"
+    },
+    {
       "source": "/en/article/adding-a-video-response-to-equip-assessments-c8mrxw",
       "destination": "/video-response-questions"
     },
@@ -508,7 +522,7 @@
     },
     {
       "source": "/en/article/issues-with-creating-custom-coding-challenges-gwqw44",
-      "destination": "/custom-coding-challenge-issues"
+      "destination": "/custom-programming-test"
     },
     {
       "source": "/en/article/language-support-on-equip-qq7zbc",
@@ -604,7 +618,7 @@
     },
     {
       "source": "/en/article/using-document-in-custom-tests-4z1kzz",
-      "destination": "/documents-in-custom-tests"
+      "destination": "/custom-quiz-question-types"
     },
     {
       "source": "/en/article/viewing-and-downloading-invoices-1f6r64i",

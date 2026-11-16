@@ -71,29 +71,29 @@
 
 ## Tests & Questions
 
-- Test Types in an Assessment
-- Question Difficulty Levels and Years of Experience
-- Question Limits per Test Type
-- Do Candidates See the Same or Random Questions?
-- Screen-by-Screen vs All-at-Once Quizzes
-- Can't Find a Role or Skill to Assess For?
+- How Tests Work
+  - Test Types in an Assessment
+  - Question Difficulty Levels and Years of Experience
+  - Question Limits per Test Type
+  - Do Candidates See the Same or Random Questions?
+  - Quiz Display Modes
+  - Can't Find a Role or Skill to Assess For?
 - Equip Test Library
   - Supported Programming Languages
   - Psychometric Tests: DISC and Big Five
   - The Communication (CEFR) Test
 - Custom Content
   - Creating Custom Tests
-  - Question Types in Custom Quizzes
+  - Question Types in Custom Quizzes (includes Document questions)
   - AI-Graded Questions: Text, Audio, and Video Answers
   - Multilingual Tests
   - Creating a Custom Question Bank Quiz
   - Import Questions Using Excel
-  - Creating a Custom Programming Test
+  - Creating a Custom Programming Test (includes the boilerplate examples and the pre-launch checks)
+  - Creating a Custom SQL Test
   - Randomizing Programming and SQL Questions
   - Setting Time Limits for a Custom Quiz
-  - Using Documents in Custom Tests
   - Adding Video Response Questions
-  - Issues with Custom Coding Challenges
 
 ## Run
 

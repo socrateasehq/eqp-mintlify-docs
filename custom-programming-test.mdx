@@ -3,61 +3,259 @@ title: "Creating a Custom Programming Test"
 description: "Author your own auto-evaluated coding challenge with a custom problem statement, languages, boilerplates, and test cases."
 ---
 
-When Equip's library does not have the problem you want candidates to solve, use **Custom Tests** to create your own **Programming Test** with your problem statement, languages, and test cases.
+When Equip's library does not have the problem you want candidates to solve, use **Custom Tests** to create your own **Programming Test** with your problem statement, languages, boilerplates and test cases.
 
 <Note>
-Equip recommends its own coding content for most teams. Build a custom challenge only when you need a problem the library does not cover; see [Issues with Custom Coding Challenges](/custom-coding-challenge-issues) for why setup mistakes are costly.
+Equip recommends its own coding content for most teams. Each library question has been attempted by thousands of candidates, so it is proven to work. Build a custom challenge only when you need a problem the library does not cover, because a small setup mistake can mark every submission incorrect. See [Equip Content vs Custom Content](/equip-vs-custom-content).
 </Note>
 
-## Setting Up the Challenge
+## Creating the Test
 
 <Steps>
   <Step title="Open Custom Tests">
     Open [**Custom Tests**](https://equip.co/recruiter/assessments/cms/home/) from the sidebar of your [Assessments Dashboard](https://equip.co/recruiter/assessments/dashboard/).
     {/* screenshot: Custom Tests section in the recruiter sidebar */}
+
+    <Frame caption="Custom Tests in the Assessments section of the sidebar">
+      <img src="/images/custom-programming-test/sidebar-custom-tests.png" alt="Recruiter sidebar with the Assessments section expanded, listing How It Works, Dashboard, Insights, Custom Tests, Usage and Latest Attempts" />
+    </Frame>
   </Step>
-  <Step title="Create a new Coding Challenge">
-    Click the **Coding Challenge** tab, then **Add New**, and select **Programming Test**.
+  <Step title="Create a new programming test">
+    Click the **Programming** tab, then **New programming test**.
   </Step>
-  <Step title="Write the problem statement">
-    State what the program should do, the input format, and the expected output format.
-    {/* screenshot: problem statement editor for a custom programming test */}
+  <Step title="Fill in the three tabs">
+    Write the problem on the **Statement** tab, pick languages and write boilerplates on the **Code** tab, and add test cases on the **Tests** tab. Each tab is described below.
   </Step>
-  <Step title="Choose languages and boilerplates">
-    Enable the languages candidates may use, and provide a **boilerplate** (also called driver or starter code) for each one.
-  </Step>
-  <Step title="Add test cases">
-    Write the **sample test cases** and **real test cases**, then save the test.
+  <Step title="Set the title, duration and anti-cheating options">
+    Open the test's **Settings** and fill in the fields described in [Settings](#settings), then click **Save**.
   </Step>
 </Steps>
 
-## Test Cases
+## The Editor at a Glance
 
-Programming tests are **auto-evaluated**: Equip runs each submission against the test cases you define and grades it automatically.
+| Tab | Field | What it does |
+|---|---|---|
+| **Statement** | Markdown | The problem statement, with a **What candidates see** preview beside it |
+| **Statement** | Tags | Optional labels for organizing your questions |
+| **Code** | Languages | The languages candidates can choose from |
+| **Code** | User Boilerplate | Starter code the candidate sees when the test loads, one per language |
+| **Code** | Compiler Boilerplate | Hidden code appended to what the candidate submits, one per language |
+| **Tests** | Sample | Test cases shown to the candidate to check their code |
+| **Tests** | Hidden | Test cases used to grade the submission |
+
+## Statement
+
+Write the problem in **Markdown** on the left; the right side shows exactly what candidates will see. State what the program should do, the **input format**, the **output format**, and an example.
+
+{/* screenshot: problem statement editor for a custom programming test */}
+
+<Frame caption="The problem statement, in Markdown with a live preview">
+  <img src="/images/custom-programming-test/problem-statement.png" alt="Statement tab of a custom programming test with Markdown on the left and what candidates see on the right, for the First Character of a String problem" />
+</Frame>
+
+<Tip>
+Spell out the input and output formats even when they seem obvious. Candidates used to another platform get stuck when the format is left to guesswork.
+</Tip>
+
+## Code
+
+A candidate never sees a blank file. They see your **boilerplate**: starter code with a single function left for them to fill in, while your code around it reads their input and prints their output.
+
+Each enabled language has two boilerplate fields:
+
+| Field | Candidate sees it? | What goes in it |
+|---|---|---|
+| **User Boilerplate** | Yes, preloaded when the test opens | The function signature the candidate completes |
+| **Compiler Boilerplate** | No, it is appended to their submission | Code that reads the input, calls their function and prints the result |
+
+{/* screenshot: Code tab with the Python3 User Boilerplate and Compiler Boilerplate */}
+
+<Frame caption="The candidate's function and the hidden input and output code">
+  <img src="/images/custom-programming-test/boilerplates.png" alt="Code tab for Python3 with the User Boilerplate holding the extract_first_char function stub, and the Compiler Boilerplate reading input and printing extract_first_char of it" />
+</Frame>
+
+<Warning>
+Test cases run against the *whole* program, not just the candidate's function. If the Compiler Boilerplate of any enabled language has a bug, every submission in that language fails, even correct ones.
+</Warning>
+
+See [Supported Programming Languages](/programming-languages) for the languages and versions available. If you need a language that is not listed, contact us on live chat or email hello@equip.co, and we can enable it for your account.
+
+## Tests
+
+Programming tests are **auto-evaluated**: Equip runs each submission against your test cases and grades it automatically. Each test case is an **Input (stdin)** and an **Expected output**.
 
 | Test case type | Purpose |
 |---|---|
-| **Sample test cases** | Shown to candidates as worked examples of the input and expected output. |
-| **Real test cases** | Used to evaluate the candidate's submission and produce the score. |
+| **Sample** | Shown to the candidate, so they can check their code before submitting |
+| **Hidden** | Used to grade the submission when the candidate submits |
+
+{/* screenshot: Tests tab with the sample and hidden test cases for this problem */}
+
+<Frame caption="One sample and three hidden test cases">
+  <img src="/images/custom-programming-test/test-cases.png" alt="Tests tab of a custom programming test with the sample test case equip giving e, and hidden test cases hello giving h, Zebra giving Z, and a giving a, counted as 4 of 16 testcases" />
+</Frame>
 
 <Note>
-A programming test allows up to **16 test cases** in total, combining sample and real test cases. See [Writing a Boilerplate and Test Cases](/custom-programming-test-example) for a full worked example.
+A programming test allows up to **16 test cases** in total, sample and hidden combined.
 </Note>
 
 <Warning>
-Be exact with input and output formats. Even a tiny mismatch, such as a stray space or a missing newline in your expected output, can mark every submission incorrect. Equip does not triage broken custom coding questions, because these issues are nearly always a setup error in the question itself.
+Be exact with input and output formats. A stray space or a missing newline in an expected output can mark every submission incorrect. Include boundary values too, or incorrect solutions can still score full marks.
 </Warning>
 
-<Tip>
-Before inviting candidates, [preview the assessment](/preview-assessment) and solve your own challenge end to end. Previews are free and unlimited.
-</Tip>
+## Settings
 
-## Choosing Languages
+Open the test's **Settings** tab to set the rest.
 
-Every enabled language needs its own **boilerplate** that reads input and prints output in the format your test cases expect. See [Supported Programming Languages](/programming-languages) for the languages and versions available.
+| Section | Field | What it does |
+|---|---|---|
+| **General** | Title | The test's name, shown to you and to candidates |
+| **General** | Duration (in mins) | The time limit for the test |
+| **Questions & points** | Points | What the question is worth |
+| **Anti-cheating** | Disable copy & paste | Candidates cannot copy or paste text |
+| **Anti-cheating** | Auto-submit on tab switch | Submits the test when the candidate leaves the test tab |
+| **Anti-cheating** | If count exceeds | How many tab switches are allowed before auto-submit; available once Auto-submit on tab switch is on |
+
+{/* screenshot: Anti-cheating settings of a custom programming test */}
+
+<Frame caption="Anti-cheating settings of a programming test">
+  <img src="/images/custom-programming-test/anti-cheating.png" alt="Anti-cheating settings of a custom programming test with Disable copy and paste and Auto-submit on tab switch switches, and an If count exceeds field for the number of tab switches allowed" />
+</Frame>
 
 <Note>
-If you need a language that is not listed, contact us on live chat or email hello@equip.co, and we can enable additional languages for your account.
+Copy and paste stays enabled when you preview the test yourself, for an easier review. Any switch away from the tab counts, even clicking an antivirus or low-battery popup.
+</Note>
+
+## Example 1: Single-Line Input
+
+**Problem statement:** Given a string, return its first character. For the input `equip`, the output is `e`.
+
+The test case is that pair: input `equip`, expected output `e`. The boilerplate reads one line, calls the candidate's function and prints the result:
+
+<CodeGroup>
+
+```python Python
+# User Boilerplate: the candidate writes this
+def extract_first_char(word):
+    # candidate's logic here
+    pass
+
+# Compiler Boilerplate: reads input, prints output
+inp = input()
+print(extract_first_char(inp))
+```
+
+```javascript JavaScript
+// User Boilerplate: the candidate writes this
+function extractFirstChar(word) {
+  // candidate's logic here
+}
+
+// Compiler Boilerplate: reads input, prints output
+const readline = require('readline').createInterface({ input: process.stdin });
+readline.on('line', (word) => {
+  console.log(extractFirstChar(word));
+  readline.close();
+});
+```
+
+```java Java
+import java.util.Scanner;
+
+// User Boilerplate: the candidate writes this
+class Solution {
+    public char firstChar(String input) {
+        // candidate's logic here
+        return ' ';
+    }
+}
+
+// Compiler Boilerplate: reads input, prints output
+class Driver {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String word = sc.next();
+        System.out.print(new Solution().firstChar(word));
+    }
+}
+```
+
+</CodeGroup>
+
+## Example 2: Multi-Line Input
+
+**Problem statement:** Given an array and an index, return the value at that index. The input arrives as three lines:
+
+```
+4
+5 6 3 2
+2
+```
+
+The first line is the array's length, the second is the array, and the third is the index. For this input, the expected output is `3`. The Compiler Boilerplate now reads three lines and builds structured data before calling the candidate's function:
+
+<CodeGroup>
+
+```python Python
+# User Boilerplate: the candidate writes this
+def get_value_at_index(index, arr):
+    # candidate's logic here
+    pass
+
+# Compiler Boilerplate: reads 3 lines, builds structured data, prints output
+length = int(input())
+arr = list(map(int, input().split()))
+index = int(input())
+print(get_value_at_index(index, arr))
+```
+
+```javascript JavaScript
+// User Boilerplate: the candidate writes this
+function getValueAtIndex(index, arr) {
+  // candidate's logic here
+}
+
+// Compiler Boilerplate: reads 3 lines, builds structured data, prints output
+const lines = [];
+const readline = require('readline').createInterface({ input: process.stdin });
+readline.on('line', (line) => {
+  lines.push(line);
+  if (lines.length === 3) {
+    const arr = lines[1].split(' ').map(Number);
+    const index = Number(lines[2]);
+    console.log(getValueAtIndex(index, arr));
+    readline.close();
+  }
+});
+```
+
+</CodeGroup>
+
+<Tip>
+Do the parsing in the Compiler Boilerplate, so the candidate's function gets clean, typed values and candidates are tested on the problem, not on input formatting.
+</Tip>
+
+## Checking the Test Before Inviting Candidates
+
+An input or output bug does not fail loudly. It marks every submission wrong, and you may only find out after candidates have finished. Confirm that a correct solution passes every test case in every enabled language first.
+
+<Steps>
+  <Step title="Review the problem statement">
+    Check that the input format, output format and any constraints are stated explicitly.
+  </Step>
+  <Step title="Check the boilerplate for every language">
+    Verify both boilerplates for each enabled language, not just the one you wrote the question in.
+  </Step>
+  <Step title="Verify the test cases">
+    Work through them by hand. Confirm each expected output matches exactly, including spacing and line breaks.
+  </Step>
+  <Step title="Solve it in Preview">
+    Add the test to an assessment and open it in [Preview](/preview-assessment). Submit a known-correct solution in each enabled language and confirm every test case passes. Previews are free and unlimited for your whole team.
+  </Step>
+</Steps>
+
+<Note>
+If you [randomize coding questions](/randomize-coding-questions), check every question in the pool the same way.
 </Note>
 
 ## Adding the Test to an Assessment
@@ -69,18 +267,30 @@ A custom test cannot be shared with candidates directly. It must sit inside an a
     Open the settings of a new or existing assessment and select the **Tests** tab. Click **Programming** in the left sidebar.
   </Step>
   <Step title="Add your test">
-    Hover over the **Add Programming** button and select **My Content**, then pick your custom programming test.
+    Click the **Add Programming** button and select **My Content**, then pick your custom programming test.
     {/* screenshot: Add Programming button with My Content option */}
+
+    <Frame caption="Add Programming, then My Content">
+      <img src="/images/custom-programming-test/add-programming-menu.png" alt="The Add Programming button in an assessment's Tests tab with its menu open, offering Equip Content and My Content" />
+    </Frame>
   </Step>
 </Steps>
 
 <Tip>
-Each programming test holds one question. To give different candidates different problems, create several custom challenges and use the Randomize option in the **Test Order** tab. See [Randomizing Coding Questions](/randomize-coding-questions).
+Each programming test holds one question. To give different candidates different problems, create several custom tests and use the randomize option in the assessment. See [Randomizing Programming and SQL Questions](/randomize-coding-questions).
 </Tip>
+
+## Getting Help
+
+Equip's support team **cannot triage custom coding questions**. When one misbehaves, the cause is almost always in its setup, and the checks above resolve the vast majority of issues.
+
+<Note>
+If the skill you want to test would be useful to other companies too, Equip can create the test for you, usually free of charge. Reach out on live chat or email hello@equip.co; most skills take around 5 business days. See [Can't Find a Role or Skill?](/cant-find-role-or-skill).
+</Note>
 
 ## Related Resources
 
-- [Custom Tests](/custom-tests) - Overview of all custom test types you can create
 - [Supported Programming Languages](/programming-languages) - Languages and versions available for coding tests
-- [Randomizing Coding Questions](/randomize-coding-questions) - Serve a random challenge from a pool to each candidate
-- [Issues with Custom Coding Challenges](/custom-coding-challenge-issues) - Common setup mistakes and Equip's support policy
+- [Randomizing Programming and SQL Questions](/randomize-coding-questions) - Serve a random challenge from a pool to each candidate
+- [Creating a Custom SQL Test](/custom-sql-test) - The same flow for SQL problems
+- [Previewing an Assessment](/preview-assessment) - Solve your own challenge for free before inviting candidates

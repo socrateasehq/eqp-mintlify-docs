@@ -13,6 +13,10 @@ A custom quiz can hold up to **100 questions**. If you need more, add a second q
 
 {/* screenshot: question type selector in the custom quiz builder */}
 
+<Frame caption="Choosing a question type">
+  <img src="/images/custom-quiz-question-types/question-type-menu.png" alt="A new question in the custom quiz builder with the Type menu open, listing MCQ, MCA, Essay Type, Single-line Input, Cloze, Match, Categorize and Comprehension" />
+</Frame>
+
 ## Objective Formats
 
 Objective questions have defined correct answers.
@@ -50,11 +54,9 @@ Custom quizzes also include **transcription** and **preference** question format
 |---|---|
 | **Coding Editor** | Candidates write code in an editor with syntax highlighting and autocomplete. You choose the programming language. The code is not executed. |
 | **Comprehension** | Nest questions inside a parent. Write a passage of text and ask multiple questions based on it. |
-| **Document** | Upload a PDF and ask multiple sub-questions based on it. Ideal for case studies. See [Using Documents in Custom Tests](/documents-in-custom-tests). |
+| **Document** | Upload a PDF and ask multiple sub-questions based on it. Ideal for case studies. See [Document Questions](#document-questions). |
 | **Answer Any** | Create a set of questions, say 5. Candidates see all 5 upfront and choose any 3 to answer. |
 | **Question Pool** | Add several questions to a pool; each candidate is shown one question chosen at random from it. |
-
-{/* screenshot: a Document question with a PDF and sub-questions, as the candidate sees it */}
 
 <Warning>
 The **Coding Editor** question type does not run the candidate's code, so it is best for evaluating approach and style. If you want code that compiles and runs against test cases, create a [custom programming test](/custom-programming-test) instead.
@@ -63,6 +65,46 @@ The **Coding Editor** question type does not run the candidate's code, so it is 
 <Tip>
 For larger-scale randomization across many questions, use a [Question Bank Quiz](/question-bank-quiz).
 </Tip>
+
+### Document Questions
+
+A **Document** question holds a single reference PDF and the sub-questions about it, such as MCQ, MCA or Short Text. Use it for case studies, reports and other multi-page material.
+
+<iframe
+  width="560"
+  height="315"
+  src="https://www.loom.com/embed/fbfbc2049d254e7aa93cc1fb523f2133"
+  title="Adding a Document question to a Custom Test on Equip"
+  frameBorder="0"
+  allowFullScreen
+  style={{width: "100%", maxWidth: "560px", borderRadius: "0.75rem"}}
+></iframe>
+
+<Steps>
+  <Step title="Add a Document question">
+    In your custom quiz, choose **Document** from the question type menu and attach the PDF. Instructions for candidates are optional and go in the **Description Text** field.
+  </Step>
+  <Step title="Add sub-questions">
+    Create the questions that refer to the document, and set **points** for each sub-question if required.
+  </Step>
+</Steps>
+
+{/* screenshot: custom quiz builder with the Document question type selected and a PDF uploaded */}
+
+Candidates see the PDF at the top with all sub-questions listed underneath. They can scroll through the document and answer the sub-questions in any order.
+
+{/* screenshot: a Document question with a PDF and sub-questions, as the candidate sees it */}
+
+<Note>
+A **time limit** can be set only on the parent Document question, not on its sub-questions. MCQ and MCA sub-questions are graded automatically, while Short Text answers need [manual grading](/manual-grading).
+</Note>
+
+**Document** and **Comprehension** both nest sub-questions under shared material; they differ in the format of that material.
+
+| Question type | Reference material | Best for |
+|---|---|---|
+| **Comprehension** | Long text or images entered directly in the question | Reading passages, short briefs |
+| **Document** | An uploaded PDF file | Case studies, reports, multi-page material |
 
 ## Reusing a Question Across Quizzes
 
